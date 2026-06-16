@@ -656,11 +656,13 @@ export const nutritionData = {
       },
       {
         id: "casera",
-        name: "Opción 4 (Nueva Casera)",
+        name: "Opción 4 (Pancackes Proteicos Casero)",
         ingredients: [
-          "2 galletas de arroz o 1 rebanada de pan integral.",
+          "50gr de Yogurt  griego",
           "1 huevo entero.",
-          "1/2 scoop de proteína en polvo.",
+          "1/2 scoop de proteína en polvo (15gr)",
+          "Esencia de Vainilla",
+          "Polvo para hornear",
           "1 manzana verde y 1 cucharadita de miel.",
           "1/2 puñado de nueces (15g)."
         ],
