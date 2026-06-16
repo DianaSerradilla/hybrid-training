@@ -454,7 +454,7 @@ export const routinesByWeek = {
                 name: "Bloque 2: Gimnasio (Descarga -30% Carga)",
                 exercises: [
                   { name: "Press Inclinado (Mancuernas)", sets: "1-2", reps: "3-5", rir: "3-4", note: "Fuerza clavicular suave." },
-                  { name: "Remo Gironda", sets: "1-2", reps: "3-5", rir: "3-4", note: "Tracción horizontal ligera." }
+                  { name: "Remo Bajo Convergente ", sets: "1-2", reps: "3-5", rir: "3-4", note: "Tracción horizontal ligera." }
                 ]
               },
               {
@@ -483,7 +483,7 @@ export const routinesByWeek = {
               name: "Bloque 2: Gimnasio (Hipertrofia Miofibrilar - Compuestos)",
               exercises: [
                 { name: "Press Inclinado (Mancuernas)", sets: isDeload ? "1-2" : "3", reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10", rir: isDeload ? "3" : rirVal, note: "Foco en porción clavicular del pectoral." },
-                { name: "Remo Gironda en Polea Baja", sets: isDeload ? "1-2" : "3", reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10", rir: isDeload ? "3" : rirVal, note: "Densidad con vector horizontal. Tirar al esternón, codos a 45°-60°." }
+                { name: "Remo Bajo Convergente  en Polea Baja", sets: isDeload ? "1-2" : "3", reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10", rir: isDeload ? "3" : rirVal, note: "Densidad con vector horizontal. Tirar al esternón, codos a 45°-60°." }
               ]
             },
             {
