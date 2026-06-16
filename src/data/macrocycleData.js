@@ -666,6 +666,27 @@ export const nutritionData = {
         ],
         macros: "Calorías: ~385 kcal | Proteínas: 20g | Carbohidratos: 43g | Grasas: 15g"
       }
+      ,
+      {
+        id: "rápida",
+        name: "Opción 5",
+        ingredients: [
+          "1 Scoop Proteina XTRENGHT",
+          "200ml leche protéica",
+          "2 galletas Cachafaz",
+        ],
+        macros: "Calorías: ~345 kcal | Proteínas: 38g | Carbohidratos: 30g | Grasas: 8g"
+      }
+      ,
+      {
+        id: "rápida",
+        name: "Opción 5",
+        ingredients: [
+          "1 Scoop NutreMax",
+          "2 huevos enteros",
+        ],
+        macros: "Calorías: ~360 kcal | Proteínas: 24g | Carbohidratos: 43g | Grasas: 10g"
+      }
     ]
   },
   bloque2: {
