@@ -56,17 +56,17 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
       {
         quote: "Solo triunfa quien soporta el proceso.",
         tag: "Motivación",
-        image: "/1.webp"
+        image: `${import.meta.env.BASE_URL}1.webp`
       },
       {
         quote: "En la incomodidad está el crecimiento.",
         tag: "Motivación",
-        image: "/2.webp"
+        image: `${import.meta.env.BASE_URL}4.webp`
       },
       {
         quote: "No hay otra vida para intentarlo.",
         tag: "Motivación",
-        image: "/3.jpg"
+        image: `${import.meta.env.BASE_URL}3.jpg`
       }
     ];
   }, []);
