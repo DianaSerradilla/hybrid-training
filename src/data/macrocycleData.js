@@ -608,7 +608,10 @@ export const nutritionData = {
     { name: "1 infusión caliente (Té, café, matcha, mate)", desc: "Consumida sola o con un chorrito mínimo de leche proteica. Llena el estómago.", calories: "0 - 15 kcal" },
     { name: "2 galletas Cachafaz", desc: "Te dan el factor dulce y crujiente exacto para mantener la energía mental frente a la pantalla. Es tu límite de carbohidratos rápidos controlado a la perfección.", calories: "133 kcal" },
     { name: "1 porción de gelatina light", desc: "Volumen puro a costo cero. Llena el estómago y engaña al cerebro con textura dulce sin generar ningún tipo de impacto calórico.", calories: "0 - 10 kcal" },
-    { name: "1 bocadito helado de yogur, proteína y frutos rojos", desc: "Tu salvavidas táctico congelado. Una micro-dosis de aminoácidos con textura de postre para matar la ansiedad al instante.", calories: "18 kcal" }
+    { name: "1 bocadito helado de yogur, proteína y frutos rojos", desc: "Tu salvavidas táctico congelado. Una micro-dosis de aminoácidos con textura de postre para matar la ansiedad al instante.", calories: "18 kcal" },
+    {
+      name: "1 Súper-Trufa de cacao y proteína", desc: "1 scoop (30g) de proteína. 40g de cacao amargo sin azúcar.70ml de café negro frío(o leche descremada). 1 cucharada(15g) de Yogur Griego La Serenísima. Gotas de edulcorante a gusto.", calories: "31 kcal"
+    }
   ],
   preWorkoutSnacks: [
     { name: "Dátiles", desc: "Consumir 2 o 3 dátiles. Son pura glucosa natural de absorción rapidísima." },
@@ -748,6 +751,17 @@ export const nutritionData = {
           "4 cucharadas soperas de garbanzos, lentejas, choclo, o 6 cdas de quinoa hervida."
         ],
         macros: "Calorías: ~400 kcal | Proteínas: 37g | Carbohidratos: 41g | Grasas: 11g"
+      },
+      {
+        id: "atun_wrap",
+        name: "Wrap XL Blindado",
+        ingredients: [
+          "120g de pechuga de pollo desmenuzada, carne magra a la plancha o 1 lata de atún al natural.",
+          "1 Rapidita Integral XL",
+          "Base libre de vegetales de volumen: lechuga crujiente, tomates cherry, pepino y zanahoria.",
+          "Aderezo zero grasas: abundante salsa de yogur (natural o griego) con jugo de limón, sal, pimienta y cebolla de verdeo.",
+        ],
+        macros: "Calorías: ~350 kcal | Proteínas: 32g | Carbohidratos: 35g | Grasas: 8g"
       }
     ]
   },
@@ -790,30 +804,8 @@ export const nutritionData = {
         macros: "Calorías: ~465 kcal | Proteínas: 40g | Carbohidratos: 21g | Grasas: 24g"
       },
       {
-        id: "clasica_convertida",
-        name: "Opción 4 (Clásica Convertida)",
-        ingredients: [
-          "180g de suprema de pollo.",
-          "1/2 palta chica.",
-          "Ensalada libre.",
-          "250g de calabaza."
-        ],
-        macros: "Proteína + Grasas + Calabaza"
-      },
-      {
-        id: "limpia_convertida",
-        name: "Opción 5 (Densidad Limpia Convertida)",
-        ingredients: [
-          "180g de bife magro.",
-          "1/4 palta o 1/2 cda de aceite.",
-          "Ensalada verde libre.",
-          "250g de calabaza."
-        ],
-        macros: "Proteína + Grasas + Calabaza"
-      },
-      {
         id: "pescado_convertida",
-        name: "Opción 6 (Pescado/Lípido Convertido)",
+        name: "Opción 4 (Pescado/Lípido Convertido)",
         ingredients: [
           "1 lata de atún al natural.",
           "1 huevo duro.",
@@ -823,6 +815,19 @@ export const nutritionData = {
         ],
         macros: "Proteína + Grasas + Calabaza"
       }
+      ,
+      {
+        id: "lomo_nube",
+        name: "Opción 5 - Sándwich Táctico (Lomo en Pan de Nube)",
+        ingredients: [
+          "150g de lomo magro a la plancha",
+          "2 tapas de pan de nube (armado con 3 claras batidas a punto nieve, 2 yemas y 1 cda de queso crema, horneadas).",
+          "Lechuga y tomate libre",
+          "1 cda de aderezo zero (mostaza o tu salsa de yogur con limón y verdeo).",
+        ],
+        macros: "Calorías: ~445 kcal | Proteínas: 51g | Carbohidratos: 4g | Grasas: 23g"
+      }
+
     ]
   }
 };
