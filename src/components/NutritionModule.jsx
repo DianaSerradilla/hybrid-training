@@ -42,6 +42,18 @@ export default function NutritionModule() {
                 <strong>Regla:</strong> 2Lts de Agua
               </span>
             </div>
+            <div className="flex items-center gap-2 bg-slate-900 border border-slate-800 px-3.5 py-2 rounded-xl">
+              <Zap className="w-4.5 h-4.5 text-indigo-400 fill-indigo-400/10" />
+              <span className="text-xs text-slate-300">
+                <strong>Regla Snack:</strong> scoop de proteína distribuido en el día (Lunes, Miércoles y Viernes).
+              </span>
+            </div>
+            <div className="flex items-center gap-2 bg-slate-900 border border-slate-800 px-3.5 py-2 rounded-xl">
+              <Apple className="w-4.5 h-4.5 text-fuchsia-400 fill-fuchsia-400/10" />
+              <span className="text-xs text-slate-300">
+                <strong>Regla Frutas:</strong> Dos frutas al día (ideal en estas instancias dos cítricos).
+              </span>
+            </div>
           </div>
         </div>
 

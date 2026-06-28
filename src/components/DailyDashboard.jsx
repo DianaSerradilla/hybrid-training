@@ -2,9 +2,9 @@ import React, { useState, useMemo, useEffect } from 'react';
 import {
   Flame, Calendar, Clock, Footprints, Zap, AlertTriangle,
   Info, CheckSquare, Plus, Minus, RefreshCw, Trophy, BookOpen,
-  CheckCircle
+  CheckCircle, Activity
 } from 'lucide-react';
-import { weeklySchedule, routinesByWeek, macrocycleWeeks } from '../data/macrocycleData';
+import { weeklySchedule, routinesByWeek, macrocycleWeeks, cardioSchedule } from '../data/macrocycleData';
 
 const motivationQuotes = [
   "La repetición número 1 y la repetición número 10 deben verse biomecánicamente idénticas.",
@@ -28,6 +28,10 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
 
   const activeDaySchedule = useMemo(() => {
     return weeklySchedule.find(s => s.day === currentDay) || weeklySchedule[0];
+  }, [currentDay]);
+
+  const activeCardio = useMemo(() => {
+    return cardioSchedule[currentDay] || null;
   }, [currentDay]);
 
   const calisthenicsData = useMemo(() => {
@@ -312,8 +316,42 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
         </div>
       </div>
 
+
+
       {/* 4. Panel de Hábitos Recomendados (Right Column) - Solo Informativo */}
       <div className="lg:col-span-3 lg:col-start-8 lg:row-start-2 space-y-6">
+        {activeCardio && (
+          <div className="glass-panel p-6 rounded-2xl glow-blue space-y-4 hover:border-blue-500/40 transition-all duration-300">
+            <div className="border-b border-slate-800 pb-3 flex items-center justify-between">
+              <div>
+                <h2 className="text-lg font-bold font-outfit text-white flex items-center gap-2">
+                  <Activity className="w-5 h-5 text-blue-400 animate-pulse" />
+                  Cardio del Día
+                </h2>
+                <p className="text-xs text-slate-400">Estructura de Cardio Semanal</p>
+              </div>
+              <span className="text-[10px] bg-blue-950 text-blue-400 border border-blue-900 px-2.5 py-1 rounded font-bold uppercase tracking-wider">
+                {activeCardio.machine}
+              </span>
+            </div>
+
+            <div className="space-y-3">
+              <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Protocolo</span>
+                <span className="text-xs font-semibold text-slate-200 block">
+                  {activeCardio.protocol}
+                </span>
+              </div>
+
+              <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Foco Biomecánico / Razón</span>
+                <p className="text-xs text-slate-400 leading-normal">
+                  {activeCardio.reason}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
         <div className="glass-panel p-6 rounded-2xl glow-fuchsia space-y-6">
           <div className="border-b border-slate-800 pb-3">
             <h2 className="text-lg font-bold font-outfit text-white">Hábitos Recomendados</h2>
@@ -362,6 +400,8 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
             </div>
           </div>
 
+
+
           {/* Grease the Groove (GTG) Module - Purely Informative */}
           <div className="border-t border-slate-800 pt-4 space-y-4">
             <div>
@@ -372,23 +412,6 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
               <p className="text-xs text-slate-500 mt-0.5">Frecuencia y dosificación recomendada durante la jornada</p>
             </div>
 
-            {/* Dynamic Alerts */}
-            {gtgState.allForbidden ? (
-              <div className="bg-red-950/30 border border-red-900/60 text-red-300 p-3.5 rounded-xl flex gap-2.5 text-xs">
-                <AlertTriangle className="w-4.5 h-4.5 text-red-400 shrink-0" />
-                <span>{gtgState.reason}</span>
-              </div>
-            ) : gtgState.pullupsSuspended || gtgState.pushupsSuspended ? (
-              <div className="bg-amber-950/30 border border-amber-900/60 text-amber-300 p-3.5 rounded-xl flex gap-2.5 text-xs">
-                <Info className="w-4.5 h-4.5 text-amber-400 shrink-0" />
-                <span>{gtgState.reason}</span>
-              </div>
-            ) : (
-              <div className="bg-emerald-950/20 border border-emerald-900/40 text-emerald-300 p-3.5 rounded-xl flex gap-2.5 text-xs">
-                <CheckCircle className="w-4.5 h-4.5 text-emerald-400 shrink-0" />
-                <span>Método GTG habilitado hoy: Ejecutar series dispersas en estado de máxima frescura neural.</span>
-              </div>
-            )}
 
             {/* GTG Reference Info */}
             <div className="space-y-3">
@@ -424,6 +447,8 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
             </div>
           </div>
         </div>
+
+
       </div>
 
     </div>

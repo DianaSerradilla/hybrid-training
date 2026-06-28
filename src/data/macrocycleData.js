@@ -145,6 +145,51 @@ export const weeklySchedule = [
   { day: "Domingo", label: "Cardio LISS + HS (9:00 AM)", target: "Recovery" }
 ];
 
+export const cardioSchedule = {
+  Lunes: {
+    title: "Cardio: Lunes HIIT + LISS",
+    machine: "Bici",
+    protocol: "15 min HIIT (Protocolo 15/45) + 15 min LISS",
+    reason: "Usás pura potencia de piernas en los sprints cortos para ganar explosividad, dejando tus hombros y pecho totalmente intactos para recuperarse del entrenamiento de la mañana."
+  },
+  Martes: {
+    title: "Cardio: Martes + LISS",
+    machine: "AirBike",
+    protocol: "30 min LISS puro",
+    reason: "A la tarde necesitás el 100% de tu fuerza de agarre y dorsales. Al hacer LISS suave en la AirBike, movés brazos y piernas oxigenando el cuerpo entero, pero sin generar ninguna fatiga local que arruine tu sesión de pesas posterior."
+  },
+  Miércoles: {
+    title: "Cardio: Miércoles + LISS",
+    machine: "Bici",
+    protocol: "30 min LISS puro",
+    reason: "El día de cuádriceps exige muchísimo al sistema nervioso y a las piernas. La Bici a ritmo de paseo lava el ácido láctico del día anterior, lubrica las rodillas y protege tu tanque de energía para las sentadillas de la tarde."
+  },
+  Jueves: {
+    title: "Cardio: Jueves HIIT + LISS",
+    machine: "AirBike",
+    protocol: "15 min HIIT (Protocolo 30/30) + 15 min LISS",
+    reason: "Tus cuádriceps están pesados por el miércoles y a la tarde te toca Tren Superior completo. La AirBike en modo HIIT reparte el daño periférico (empujás con todo el cuerpo), dándote un pico cardiovascular brutal sin fundir por completo ni los brazos ni las piernas."
+  },
+  Viernes: {
+    title: "Cardio: Viernes LISS",
+    machine: "Cinta con inclinación",
+    protocol: "30 min LISS puro",
+    reason: "Caminar con pendiente traslada el esfuerzo directamente a la cadena posterior (isquiotibiales, gemelos y glúteos). Es la pre-activación biomecánica perfecta para dejarte lista para la sesión de isquios de la tarde, evitando la fatiga lumbar y de agarre que te darían 30 minutos continuos de remo."
+  },
+  Sábado: {
+    title: "Cardio: Sábado HIIT + LISS",
+    machine: "Remo",
+    protocol: "15 min HIIT + 15 min LISS",
+    reason: "Es el último gran esfuerzo de la semana y ya no hay que guardar energía para otra sesión pesada. El Remo te permite usar toda la potencia que te queda en las piernas y la espalda para vaciar el tanque en esos intervalos explosivos."
+  },
+  Domingo: {
+    title: "Cardio: Domingo LISS",
+    machine: "Bici",
+    protocol: "30 min LISS puro",
+    reason: "Es el día de bajar revoluciones y resetear el sistema. Mantener un flujo de sangre constante, en Zona 2 estricta, sana las fibras musculares rotas y te deja lista física y mentalmente para arrancar la nueva semana."
+  }
+};
+
 export const routinesByWeek = {
   // We structure the routines dynamically based on whether it is in Mesocycle 1 (W1-4), Mesocycle 2 (W5-8), Mesocycle 3 Load (W9-11), or Tapering (W12)
   getWorkout: (weekNumber, dayName) => {
@@ -177,7 +222,7 @@ export const routinesByWeek = {
                 name: "Bloque 2: Gimnasio (Hipertrofia Miofibrilar Pesada - Compuestos)",
                 exercises: [
                   { name: "Press en Máquina Convergente de Palancas", sets: isDeload ? "1-2" : "3", reps: "8-10", rir: isDeload ? "3" : rirVal, note: "Empuje principal de pecho. Foco en tensión mecánica." },
-                  { name: "Press Militar Libre (Mancuernas)", sets: isDeload ? "1-2" : "3", reps: "8-10", rir: isDeload ? "3" : rirVal, note: "Foco en estabilización para transferencia a calistenia." }
+                  { name: weekNumber === 1 ? "Press Militar Libre (Barra)" : "Press Militar Libre (Mancuernas)", sets: isDeload ? "1-2" : "3", reps: "8-10", rir: isDeload ? "3" : rirVal, note: "Foco en estabilización para transferencia a calistenia." }
                 ]
               },
               {
@@ -185,8 +230,12 @@ export const routinesByWeek = {
                 exercises: [
                   { name: "Aperturas Pec-Dec", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Aducción pura. Contracción pico máxima." },
                   { name: "Elevaciones Laterales (Máquina o Mancuernas)", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Abducción del deltoides lateral." },
-                  { name: "Pushdown Clásico (Barra recta o V)", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Tríceps: Codo abajo para cabezas lateral y medial." },
-                  { name: "Extensión Unilateral Supina en Polea", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Tríceps: Palma hacia arriba. Innegociable para salud articular." }
+                  { name: "Pushdown Clásico (Soga)", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Tríceps: Codo abajo." },
+                  { name: "Extensión Unilateral Supina en Polea", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Tríceps: Palma hacia arriba. Innegociable para salud articular." },
+                  ...(weekNumber === 1 ? [
+                    { name: "Rueda Abdominal", sets: "2-3", reps: "12-14", rir: "2", note: "Core: Anti-extensión." },
+                    { name: "Extensión Lumbar", sets: "2-3", reps: "12-14", rir: "2", note: "Core posterior." }
+                  ] : [])
                 ],
                 intensityTechnique: weekNumber === 3 ? "Rest-Pause o DropSet en la última serie" : null
               }
@@ -431,6 +480,7 @@ export const routinesByWeek = {
               exercises: [
                 { name: "SUPERSET: Máquina Abductora + Máquina Aductora", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Trabajo antagonista para glúteo medio y cara interna del muslo." },
                 { name: "Elevaciones de Talón de Pie", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Gastrocnemio con rodilla bloqueada (recta)." },
+                ...(weekNumber === 1 ? [{ name: "Extensión Lumbar", sets: "2-3", reps: "12-14", rir: "2", note: "Fuerza lumbar." }] : []),
                 { name: "Crunches Pesados en Polea/Máquina", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Core: Flexión espinal pura contra resistencia." }
               ],
               intensityTechnique: weekNumber === 3 || weekNumber === 7 ? "Sillón de Cuádriceps ideal para Drop Set en la serie final" : null
@@ -475,23 +525,47 @@ export const routinesByWeek = {
             {
               name: "Bloque 1: Calistenia (Fuerza Relativa)",
               exercises: [
-                { name: "Flexiones Estándar (Push-ups)", sets: isDeload ? "2" : "3", reps: isDeload ? "6-8" : weekNumber === 11 ? "AMRAP" : weekNumber === 10 ? "Cluster (10 + 15s + 5)" : weekNumber === 9 ? "Cluster (8 + 15s + 4)" : weekNumber === 7 ? "Max (Obj 10-12)" : weekNumber === 6 ? "8-10" : weekNumber === 5 ? "6-8 (Declinadas)" : weekNumber === 3 ? "Max (Obj 8-10)" : weekNumber === 2 ? "6-8" : "5-6", rir: isDeload ? "3" : weekNumber === 11 || weekNumber === 7 || weekNumber === 3 ? "0" : rirVal, note: "Protracción escapular al extender los codos." },
-                { name: "Dominadas Supinas (Chin-ups)", sets: isDeload ? "2 (Australianas)" : "3", reps: isDeload ? "6-8" : weekNumber === 11 ? "Isométrica (Max tiempo)" : weekNumber === 10 ? "Max (Obj 15+)" : weekNumber === 9 ? "10-12" : weekNumber === 7 ? "Max" : weekNumber === 6 ? "5-7" : weekNumber === 5 ? "4-6 (LML Mitad Inferior)" : weekNumber === 3 ? "Max (Obj 4-6)" : weekNumber === 2 ? "3-4" : "2-3", rir: isDeload ? "3" : weekNumber === 11 || weekNumber === 7 || weekNumber === 3 ? "0" : rirVal, note: "Bíceps asisten en tracción vertical." }
+                {
+                  name: weekNumber === 5 || weekNumber === 6 || weekNumber === 7 ? "Flexiones Declinadas (Pies elevados)" : isDeload && weekNumber === 4 ? "Flexiones Inclinadas (Manos elevadas)" : "Flexiones Estándar (Push-ups)",
+                  sets: isDeload ? "2" : "3",
+                  reps: isDeload ? "6-8" : weekNumber === 11 ? "AMRAP" : weekNumber === 10 ? "Cluster (10 + 15s + 5)" : weekNumber === 9 ? "Cluster (8 + 15s + 4)" : weekNumber === 7 ? "Max (Obj 10-12)" : weekNumber === 6 ? "8-10" : weekNumber === 5 ? "6-8" : weekNumber === 3 ? "Max (Obj 8-10)" : weekNumber === 2 ? "6-8" : "5-6",
+                  rir: isDeload ? "3" : weekNumber === 11 || weekNumber === 7 || weekNumber === 3 ? "0" : rirVal,
+                  note: "Protracción escapular al extender los codos."
+                },
+                {
+                  name: isDeload && (weekNumber === 4 || weekNumber === 8) ? "Dominadas Australianas Supinas" : weekNumber === 9 || weekNumber === 10 ? "Remos Invertidos" : weekNumber === 11 ? "Dominadas Isométricas (Pausa arriba)" : weekNumber === 5 || weekNumber === 6 || weekNumber === 7 ? "Dominadas Supinas LML (Mitad inferior)" : "Dominadas Supinas (Chin-ups)",
+                  sets: isDeload ? "2" : "3",
+                  reps: isDeload && weekNumber === 4 ? "6-8" : isDeload && weekNumber === 8 ? "8" : isDeload ? "6-8" : weekNumber === 11 ? "Isométrica (Max tiempo)" : weekNumber === 10 ? "Max (Obj 15+)" : weekNumber === 9 ? "10-12" : weekNumber === 7 ? "Max" : weekNumber === 6 ? "5-7" : weekNumber === 5 ? "4-6" : weekNumber === 3 ? "Max (Obj 4-6)" : weekNumber === 2 ? "3-4" : "2-3",
+                  rir: isDeload ? "3" : weekNumber === 11 || weekNumber === 7 || weekNumber === 3 ? "0" : rirVal,
+                  note: "Bíceps asisten en tracción vertical."
+                }
               ]
             },
             {
               name: "Bloque 2: Gimnasio (Hipertrofia Miofibrilar - Compuestos)",
               exercises: [
-                { name: "Press Inclinado (Mancuernas)", sets: isDeload ? "1-2" : "3", reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10", rir: isDeload ? "3" : rirVal, note: "Foco en porción clavicular del pectoral." },
-                { name: "Remo Bajo Convergente  en Polea Baja", sets: isDeload ? "1-2" : "3", reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10", rir: isDeload ? "3" : rirVal, note: "Densidad con vector horizontal. Tirar al esternón, codos a 45°-60°." }
+                {
+                  name: weekNumber === 1 || weekNumber === 5 || weekNumber === 9 ? "Press Inclinado Machine" : "Press Inclinado (Mancuernas)",
+                  sets: isDeload ? "1-2" : "3",
+                  reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10",
+                  rir: isDeload ? "3" : rirVal,
+                  note: "Foco en porción clavicular del pectoral."
+                },
+                {
+                  name: "Remo Bajo Convergente  en Polea Baja",
+                  sets: isDeload ? "1-2" : "3",
+                  reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10",
+                  rir: isDeload ? "3" : rirVal,
+                  note: "Densidad con vector horizontal. Tirar al esternón, codos a 45°-60°."
+                }
               ]
             },
             {
-              name: "Bloque 3: Gimnasio (Hipertrofia Regional y Aislamiento)",
+              name: "Bloque 3: Gimnasio (Hipertrofia Regional and Aislamiento)",
               exercises: [
                 { name: "Vuelo Invertido Pec Dec", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Haz posterior del deltoides. Efecto visual 3D." },
                 { name: "Elevaciones Laterales (Máquina o Mancuernas)", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Haz lateral del deltoides." },
-                { name: "Extensiones Tras Nuca (Mancuerna)", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Tríceps: Codo arriba para máximo estiramiento de cabeza larga." },
+                { name: "Extensiones Tras Nuca (Polea)", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Tríceps: Codo arriba para máximo estiramiento de cabeza larga." },
                 { name: "Curl Scott o Predicador", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Bíceps: Codo adelante del torso para cabeza corta." }
               ],
               intensityTechnique: weekNumber === 3 || weekNumber === 7 ? "Curl Scott ideal para Rest-Pause o Drop Set" : null
@@ -528,7 +602,8 @@ export const routinesByWeek = {
               exercises: [
                 { name: "SUPERSET: Máquina Abductora + Máquina Aductora", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Estabilidad pélvica general." },
                 { name: "Elevaciones de Talón Sentado", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Sóleo con rodilla flexionada." },
-                { name: "Rueda Abdominal (Ab-wheel)", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Core: Anti-extensión de columna. Evitar cizallamiento." }
+                { name: weekNumber === 1 ? "Pallof Press" : "Rueda Abdominal (Ab-wheel)", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Core: Estabilización." },
+                ...(weekNumber === 1 ? [{ name: "Extensión Lumbar", sets: "2-3", reps: "12-14", rir: "2", note: "Fuerza lumbar." }] : [])
               ],
               intensityTechnique: weekNumber === 3 || weekNumber === 7 ? "Curl Femoral ideal para Rest-Pause o Drop Set" : null
             }
@@ -553,14 +628,28 @@ export const routinesByWeek = {
             ]
           };
         }
+        const isW4 = weekNumber === 4;
+        const isW8 = weekNumber === 8;
         return {
           title: isDeload ? "Brazos - Descarga" : "Brazos y Palanca de Core",
           blocks: [
             {
               name: "Bloque 1: Calistenia (Fuerza Relativa y Core)",
               exercises: [
-                { name: "Hollow Body Hold (Suelo)", sets: isDeload ? "2" : "3", reps: isDeload ? "30 seg (Plancha trad.)" : weekNumber === 11 ? "Al fallo técnico" : weekNumber === 10 ? "60 seg" : weekNumber === 9 ? "45 seg" : weekNumber === 7 ? "Al fallo técnico" : weekNumber === 6 ? "30-40 seg (Lastrado)" : weekNumber === 5 ? "20-30 seg (Lastrado)" : weekNumber === 2 ? "10-12 reps (Hollow Rocks)" : "20-30 seg", rir: isDeload ? "3" : "0", note: "Retroversión pélvica absoluta. Zona lumbar aplastando el suelo." },
-                { name: isDeload ? "Postura del Insecto Muerto (Dead bug)" : "Tuck Dragon Fly (Negativas)", sets: isDeload ? "2" : "3", reps: isDeload ? "10-12 por lado" : weekNumber === 11 ? "2-3 (Dragon Fly excéntrico completo)" : weekNumber === 10 ? "3 por pierna (Dinámico 1 pierna)" : weekNumber === 9 ? "3 (Dragon Fly)" : weekNumber === 7 ? "2-3 por pierna (Dinámico)" : weekNumber === 6 ? "3-4 (Negativas lentas)" : weekNumber === 5 ? "3-5 (Dinámico)" : weekNumber === 2 ? "3-4 (Advanced Tuck)" : "3-4", rir: isDeload ? "3" : "0", note: isDeload ? "Alineación lumbar sin palanca." : "Rodillas al pecho, elevas cadera y bajas controlando en 4 seg." }
+                {
+                  name: isW4 || isW8 ? "Plancha Abdominal Tradicional" : weekNumber === 2 ? "Hollow Body Hold con balanceo (Hollow Rocks)" : weekNumber === 5 || weekNumber === 6 || weekNumber === 7 ? "Hollow Body Hold Lastrado" : "Hollow Body Hold (Suelo)",
+                  sets: isDeload ? "2" : "3",
+                  reps: isW4 ? "30 seg" : isW8 ? "40 seg" : isDeload ? "30 seg (Plancha trad.)" : weekNumber === 11 ? "Al fallo técnico" : weekNumber === 10 ? "60 seg" : weekNumber === 9 ? "45 seg" : weekNumber === 7 ? "Al fallo técnico" : weekNumber === 6 ? "30-40 seg (Lastrado)" : weekNumber === 5 ? "20-30 seg (Lastrado)" : weekNumber === 2 ? "10-12 reps" : "20-30 seg",
+                  rir: isDeload ? "3" : "0",
+                  note: "Retroversión pélvica absoluta. Zona lumbar aplastando el suelo."
+                },
+                {
+                  name: isW4 ? "Postura del Insecto Muerto (Dead bug)" : isW8 ? "Elevación de piernas colgada (Hanging Leg Raises) a 90°" : weekNumber === 3 ? "Single-Leg Dragon Fly (Negativas)" : weekNumber === 5 ? "Advanced Tuck Dragon Fly (Dinámico)" : weekNumber === 6 ? "Single-Leg Dragon Fly (Negativas lentas)" : weekNumber === 7 ? "Single-Leg Dragon Fly (Dinámico)" : weekNumber === 9 ? "Advanced Tuck Dragon Fly (Dinámico)" : weekNumber === 10 ? "Single-Leg Dragon Fly (Dinámico a 1 pierna)" : weekNumber === 11 ? "Dragon Fly Excéntrico Completo" : isDeload ? "Postura del Insecto Muerto (Dead bug)" : "Tuck Dragon Fly (Negativas)",
+                  sets: isDeload ? "2" : "3",
+                  reps: isW4 ? "10-12 por lado" : isW8 ? "8 reps" : isDeload ? "10-12 por lado" : weekNumber === 11 ? "2-3 reps" : weekNumber === 10 ? "3 reps" : weekNumber === 9 ? "5-6 reps" : weekNumber === 7 ? "2-3 reps" : weekNumber === 6 ? "3-4 reps" : weekNumber === 5 ? "3-5 reps" : weekNumber === 3 ? "2-3 reps" : weekNumber === 2 ? "3-4 reps" : "3-4 reps",
+                  rir: isDeload ? "3" : "0",
+                  note: isDeload ? "Alineación lumbar sin palanca." : "Controlando la bajada."
+                }
               ]
             },
             {
@@ -606,17 +695,19 @@ export const nutritionData = {
     { name: "Vegetales de volumen", desc: "Medio choclo hervido, un puñado de tomates cherry o bastones de zanahoria cruda. Mucha masticación, mínimo impacto.", calories: "~30 - 50 kcal" },
     { name: "1 manzana verde", desc: "Aporta fibra dura que retrasa el vaciado gástrico", calories: "~80 kcal" },
     { name: "1 infusión caliente (Té, café, matcha, mate)", desc: "Consumida sola o con un chorrito mínimo de leche proteica. Llena el estómago.", calories: "0 - 15 kcal" },
-    { name: "2 galletas Cachafaz", desc: "Te dan el factor dulce y crujiente exacto para mantener la energía mental frente a la pantalla. Es tu límite de carbohidratos rápidos controlado a la perfección.", calories: "133 kcal" },
-    { name: "1 porción de gelatina light", desc: "Volumen puro a costo cero. Llena el estómago y engaña al cerebro con textura dulce sin generar ningún tipo de impacto calórico.", calories: "0 - 10 kcal" },
-    { name: "1 bocadito helado de yogur, proteína y frutos rojos", desc: "Tu salvavidas táctico congelado. Una micro-dosis de aminoácidos con textura de postre para matar la ansiedad al instante.", calories: "18 kcal" },
+    { name: "2 galletas Cachafaz", desc: "Te dan el factor dulce y crujiente exacto para mantener la energía mental frente a la pantalla. Es tu límite de carbohidratos rápidos controlado a la perfección.", calories: "~133 kcal" },
+    { name: "1 porción de gelatina light (sin azúcar)", desc: "Volumen puro a costo cero. Llena el estómago y engaña al cerebro con textura dulce sin generar ningún tipo de impacto calórico.", calories: "~10 kcal" },
+    { name: "1 bocadito helado de yogur, proteína y frutos rojos", desc: "Tu salvavidas táctico congelado. Una micro-dosis de aminoácidos con textura de postre para matar la ansiedad al instante.", calories: "~18 kcal" },
     {
-      name: "1 Súper-Trufa de cacao y proteína", desc: "1 scoop (30g) de proteína. 40g de cacao amargo sin azúcar.70ml de café negro frío(o leche descremada). 1 cucharada(15g) de Yogur Griego La Serenísima. Gotas de edulcorante a gusto.", calories: "31 kcal"
+      name: "1 bocadito de Súper-Trufa de cacao y proteína",
+      desc: "1 scoop (30g) de proteína. 40g de cacao amargo sin azúcar. 70ml de café negro frío (o leche descremada). 1 cucharada (15g) de Yogur Griego La Serenísima. Gotas de edulcorante a gusto.",
+      calories: "~31 kcal"
     }
   ],
   preWorkoutSnacks: [
     { name: "Dátiles", desc: "Consumir 2 o 3 dátiles. Son pura glucosa natural de absorción rapidísima." },
     { name: "Galleta de Arroz con Miel", desc: "1 o 2 galletas de arroz con una capa muy fina de miel o mermelada." },
-    { name: "Cafeína Anhidra en Cápsulas", desc: "Una cápsula de 200mg consumida entre 45 y 60 minutos antes de la actividad. Potencia el rendimiento, alivia la fatiga y disminuye la percepción del esfuerzo.", calories: "0 calorías" }
+    { name: "Cafeína Anhidra en Cápsulas", desc: "Una cápsula de 200mg consumida entre 45 y 60 minutos antes de la actividad. Su efecto dura hasta 4 o 5 horas, potencia el rendimiento, alivia la fatiga y disminuye la percepción del esfuerzo. Cero calorías", calories: "0 calorías" }
   ],
   bloque1: {
     title: "Bloque 1: Desayunos y Meriendas",
@@ -625,25 +716,25 @@ export const nutritionData = {
         id: "electrica",
         name: "Opción 1 (Eléctrica)",
         ingredients: [
-          "1 rebanada (25g a 30g) de pan integral o artesano (o 2 galletas de arroz).",
-          "1 huevo entero.",
-          "150cc de leche proteica en tu café o té.",
+          "1 rebanada (25g a 30g) de pan integral o artesano.",
+          "1 huevo entero + 2 a 3 claras.",
+          "Infusión de té.",
           "1 cucharada de queso untable (solo para sabor).",
           "1 puñado de nueces (30g)."
         ],
-        macros: "Calorías: ~390 kcal | Proteínas: 21g | Carbohidratos: 24g | Grasas: 25g",
-        extraNote: "Si tomas té o café solo, mantén los agregados extra de proteína: 1 huevo extra, 2 claras, 30g queso, 2 fetas jamón, 2 cdas ricota o ½ scoop de proteína."
+        macros: "Calorías: ~415 kcal | Proteínas: 21g | Carbohidratos: 20g | Grasas: 28g",
+        extraNote: "1 rebanada de pan integral o artesano (25g a 30g) = 2 galletas de arroz y usar 2 huevos completos. (Si tomas té o café solo, mantén los agregados extra de proteína como los listaste: 1 huevo extra, 2 claras, 30g queso, 2 fetas jamón, 2 cdas ricota o ½ scoop de proteína)."
       },
       {
         id: "anabolica",
         name: "Opción 2 (Anabólica)",
         ingredients: [
-          "30g del mix de pancakes Granger preparados.",
+          "50g del mix de pancakes Granger preparados + 1 huevo + 40ml de leche.",
           "150cc de leche proteica en tu infusión.",
           "1 taza de frutos rojos y 1 cucharadita de miel (solo 1, estricta).",
           "1/2 puñado de nueces (15g)."
         ],
-        macros: "Calorías: ~400 kcal | Proteínas: 20g | Carbohidratos: 47g | Grasas: 16g"
+        macros: "Calorías: ~510 kcal | Proteínas: 33g | Carbohidratos: 52g | Grasas: 19g"
       },
       {
         id: "rapida",
@@ -659,38 +750,32 @@ export const nutritionData = {
       },
       {
         id: "casera",
-        name: "Opción 4 (Pancackes Proteicos Casero)",
+        name: "Opción 4 (Pancake proteico casero)",
         ingredients: [
-          "50gr de Yogurt  griego",
           "1 huevo entero.",
-          "1/2 scoop de proteína en polvo (15gr)",
-          "Esencia de Vainilla",
-          "Polvo para hornear",
+          "1/2 scoop de proteína en polvo 15gr.",
+          "50gr de Yogurt Griego.",
+          "Esencia de Vainilla.",
+          "Polvo para hornear.",
           "1 manzana verde y 1 cucharadita de miel.",
           "1/2 puñado de nueces (15g)."
         ],
-        macros: "Calorías: ~385 kcal | Proteínas: 20g | Carbohidratos: 43g | Grasas: 15g"
-      }
-      ,
+        macros: "Calorías: ~350 kcal | Proteínas: 22g | Carbohidratos: 26g | Grasas: 18g"
+      },
       {
-        id: "rápida",
-        name: "Opción 5",
+        id: "falso_brownie",
+        name: "Opción 5 (Falso Brownie - Receta Completa)",
         ingredients: [
-          "1 Scoop Proteina XTRENGHT",
-          "200ml leche protéica",
-          "2 galletas Cachafaz",
+          "2 bananas maduras.",
+          "1 huevo.",
+          "1/2 taza de cacao amargo.",
+          "Leche (c/n).",
+          "1 cdita de polvo de hornear.",
+          "1 scoop de proteína.",
+          "(Opcional: frutos secos, chips o lo que prefieras - no contabilizados en los macros base)."
         ],
-        macros: "Calorías: ~345 kcal | Proteínas: 38g | Carbohidratos: 30g | Grasas: 8g"
-      }
-      ,
-      {
-        id: "rápida",
-        name: "Opción 5",
-        ingredients: [
-          "1 Scoop NutreMax",
-          "2 huevos enteros",
-        ],
-        macros: "Calorías: ~360 kcal | Proteínas: 24g | Carbohidratos: 43g | Grasas: 10g"
+        macros: "Calorías: ~509 kcal | Proteínas: 46.6g | Carbohidratos: 78g | Grasas: 12g",
+        extraNote: "Nota de cálculo: Al prepararse en una budinera, estos números corresponden a la receta entera. Si la divides exactamente por la mitad para encajar en tus meriendas de déficit, cada porción te aportaría: Calorías: ~254 kcal | Proteínas: 22g | Carbohidratos: 39g | Grasas: 6g"
       }
     ]
   },
@@ -713,7 +798,7 @@ export const nutritionData = {
         id: "limpia",
         name: "Opción 2 (Densidad Limpia)",
         ingredients: [
-          "180g de bife magro pesado en crudo (trae grasa intramuscular).",
+          "180g de bife magro pesado en crudo.",
           "1 unidad chica de papa o camote.",
           "1/4 de palta chica o 1/2 cucharada sopera (7.5cc) de aceite de oliva.",
           "Porción libre de ensalada verde."
@@ -736,7 +821,7 @@ export const nutritionData = {
         name: "Opción 4 (Pizza)",
         ingredients: [
           "2 porciones de masa de pizza.",
-          "1 huevo entero + 2 claras y 1 feta (30g) de queso light por encima.",
+          "1 huevo entero + 2 claras y 1 feta (30g) de queso light por encima de las porciones.",
           "Ensalada libre de acompañamiento."
         ],
         macros: "Calorías: ~480 kcal | Proteínas: 32g | Carbohidratos: 61g | Grasas: 13g"
@@ -745,23 +830,35 @@ export const nutritionData = {
         id: "completa",
         name: "Opción 5 (Ensalada Completa)",
         ingredients: [
-          "Base libre de ensalada de verdes y tomate.",
+          "Base libre de ensalada de greens y tomate.",
           "1 lata de atún o 2 huevos con 1 feta (30g) de queso.",
           "1/2 palta chica.",
-          "4 cucharadas soperas de garbanzos, lentejas, choclo, o 6 cdas de quinoa hervida."
+          "4 cucharadas soperas de garbanzos, lentejas, choclo, o 6 cucharadas de quinoa hervida."
         ],
         macros: "Calorías: ~400 kcal | Proteínas: 37g | Carbohidratos: 41g | Grasas: 11g"
       },
       {
         id: "atun_wrap",
-        name: "Wrap XL Blindado",
+        name: "Wrap XL Blindado (Post-Entreno)",
         ingredients: [
+          "1 Rapidita Integral XL.",
           "120g de pechuga de pollo desmenuzada, carne magra a la plancha o 1 lata de atún al natural.",
-          "1 Rapidita Integral XL",
           "Base libre de vegetales de volumen: lechuga crujiente, tomates cherry, pepino y zanahoria.",
-          "Aderezo zero grasas: abundante salsa de yogur (natural o griego) con jugo de limón, sal, pimienta y cebolla de verdeo.",
+          "Aderezo zero grasas: abundante salsa de yogur (natural o griego) con jugo de limón, sal, pimienta y cebolla de verdeo."
         ],
         macros: "Calorías: ~350 kcal | Proteínas: 32g | Carbohidratos: 35g | Grasas: 8g"
+      },
+      {
+        id: "vegetariana_convertida",
+        name: "Opción 2 (Vegetariana Ligera)",
+        ingredients: [
+          "Omelette de 1 huevo entero y 2 claras.",
+          "1 feta (30g) de queso magro o light.",
+          "1/2 puñado de nueces (15g).",
+          "Ensalada verde libre.",
+          "150g de papa o camote (pesados en crudo)."
+        ],
+        macros: "Se eliminó la calabaza"
       }
     ]
   },
@@ -804,18 +901,17 @@ export const nutritionData = {
         macros: "Calorías: ~465 kcal | Proteínas: 40g | Carbohidratos: 21g | Grasas: 24g"
       },
       {
-        id: "pescado_convertida",
-        name: "Opción 4 (Pescado/Lípido Convertido)",
+        id: "wrap_nube_blindado",
+        name: "Wrap de Nube Blindado",
         ingredients: [
-          "1 lata de atún al natural.",
-          "1 huevo duro.",
-          "1 cda de aceite de oliva.",
-          "Tomate/pepino libre.",
-          "250g de calabaza."
+          "1 Rapidita en formato \"pan de nube\" (armada con 2 claras batidas a punto nieve y 1 yema, horneada).",
+          "1 lata de atún al natural (120g escurrido).",
+          "1/2 palta (aprox. 60g) cortada en láminas o en formato puré.",
+          "Base libre de vegetales de volumen: lechuga, tomate, pepino y zanahoria.",
+          "Aderezo fresco: abundante salsa de yogur natural con jugo de limón, pepino picado y cebolla."
         ],
-        macros: "Proteína + Grasas + Calabaza"
-      }
-      ,
+        macros: "Calorías: ~340 kcal | Proteínas: 39g | Carbohidratos: 11g | Grasas: 15g"
+      },
       {
         id: "lomo_nube",
         name: "Opción 5 - Sándwich Táctico (Lomo en Pan de Nube)",
