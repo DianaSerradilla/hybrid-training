@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { 
   Home, Apple, CalendarRange, BookOpen, 
-  Dumbbell, Menu, X, ShieldAlert, Activity, Zap
+  Dumbbell, Menu, X, ShieldAlert, Activity, Zap, Scale
 } from 'lucide-react';
 import DailyDashboard from './components/DailyDashboard';
 import NutritionModule from './components/NutritionModule';
@@ -9,6 +9,7 @@ import TimelineModule from './components/TimelineModule';
 import WikiModule from './components/WikiModule';
 import MobilityModule from './components/MobilityModule';
 import HandstandDashboard from './components/HandstandDashboard';
+import BodyComposition from './components/BodyComposition';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard'); // dashboard, nutrition, timeline, wiki
@@ -19,6 +20,7 @@ export default function App() {
   const navigationItems = [
     { id: 'dashboard', name: 'Dashboard Diario', icon: Home, desc: 'Tus tareas para hoy' },
     { id: 'nutrition', name: 'Nutrición Visual', icon: Apple, desc: 'Déficit de 1700 kcal' },
+    { id: 'composition', name: 'Composición Corporal', icon: Scale, desc: 'Antropometría y evolución' },
     { id: 'mobility', name: 'Flexibilidad y Movilidad', icon: Activity, desc: 'Preparación y recuperación' },
     { id: 'handstand', name: 'Handstand (Vertical)', icon: Zap, desc: 'Práctica y progresión' },
     { id: 'timeline', name: 'Timeline Estratégico', icon: CalendarRange, desc: 'Plan de 12 semanas' },
@@ -143,6 +145,8 @@ export default function App() {
           )}
 
           {activeTab === 'nutrition' && <NutritionModule />}
+
+          {activeTab === 'composition' && <BodyComposition />}
 
           {activeTab === 'mobility' && <MobilityModule />}
 
