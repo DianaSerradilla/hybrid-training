@@ -4,12 +4,12 @@ export const personalProfile = {
   heightCm: 166.0,
   baseAge: 27, // Edad al inicio del macrociclo
   somaticType: {
-    endo: 4.6, // Valor de Junio (4.7 en Mayo)
-    meso: 6.3,
-    ecto: 1.5  // Valor de Junio (1.4 en Mayo)
+    endo: 4.3, // Valor de Julio (4.6 en Junio, 4.7 en Mayo)
+    meso: 6.4, // Valor de Julio (6.3 en Junio y Mayo)
+    ecto: 1.4  // Valor de Julio (1.5 en Junio, 1.4 en Mayo)
   },
   somaticTypeName: "Endo-Mesomorfo",
-  bmrKcal: 1393 // Promedio o valor de Junio (~1393-1395 kcal)
+  bmrKcal: 1394 // Valor de Julio (~1394.41 kcal)
 };
 
 export const anthropometryGoals = {
@@ -83,5 +83,39 @@ export const anthropometryHistory = [
       ecto: 1.5
     },
     bmrKcal: 1393.30
+  },
+  {
+    measurementNumber: 3,
+    date: "2026-07-21",
+    displayDate: "21 Jul 2026",
+    age: 27.39,
+    weightKg: 66.40,
+    fatMass: {
+      percentage: 30.15,
+      kg: 20.037
+    },
+    muscleMass: {
+      percentage: 45.82,
+      kg: 30.453
+    },
+    boneMass: {
+      percentage: 10.17,
+      kg: 6.691
+    },
+    residualMass: {
+      percentage: 8.86,
+      kg: 5.890
+    },
+    skinMass: {
+      percentage: 5.01,
+      kg: 3.329
+    },
+    somatotype: {
+      endo: 4.3,
+      meso: 6.4,
+      ecto: 1.4
+    },
+    bmrKcal: 1394.41
   }
 ];
+

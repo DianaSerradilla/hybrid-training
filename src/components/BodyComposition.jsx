@@ -1,23 +1,30 @@
 import React, { useState } from 'react';
 import { 
   Scale, TrendingDown, TrendingUp, ShieldAlert, 
-  Info, Calendar, Award, Sparkles, User, RefreshCw
+  Info, Calendar, Award, Sparkles, User, RefreshCw,
+  ChevronDown, ChevronUp
 } from 'lucide-react';
 import { personalProfile, anthropometryGoals, anthropometryHistory } from '../data/anthropometryData';
 
 export default function BodyComposition() {
   const [selectedPdf, setSelectedPdf] = useState(null);
+  const [expandedCardIndex, setExpandedCardIndex] = useState(anthropometryHistory.length - 1);
 
-  // Obtener los datos del primer mes (Mayo) y del último mes (Junio)
+  // Obtener los datos del primer mes (Mayo) y del último mes (Julio)
   const baseMeasurement = anthropometryHistory[0];
   const currentMeasurement = anthropometryHistory[anthropometryHistory.length - 1];
+  const previousMeasurement = anthropometryHistory[anthropometryHistory.length - 2];
 
-  // Cálculo de variaciones generales
+  // Cálculo de variaciones generales (Inicio vs Actual)
   const weightDiff = currentMeasurement.weightKg - baseMeasurement.weightKg;
   const fatKgDiff = currentMeasurement.fatMass.kg - baseMeasurement.fatMass.kg;
   const fatPctDiff = currentMeasurement.fatMass.percentage - baseMeasurement.fatMass.percentage;
   const muscleKgDiff = currentMeasurement.muscleMass.kg - baseMeasurement.muscleMass.kg;
   const musclePctDiff = currentMeasurement.muscleMass.percentage - baseMeasurement.muscleMass.percentage;
+
+  // Variaciones mes a mes (Último mes vs Mes Anterior: Julio vs Junio)
+  const lastMonthMuscleKgDiff = currentMeasurement.muscleMass.kg - previousMeasurement.muscleMass.kg;
+  const lastMonthFatKgDiff = currentMeasurement.fatMass.kg - previousMeasurement.fatMass.kg;
 
   // Progreso hacia la meta de grasa corporal (20%)
   const startFatPct = baseMeasurement.fatMass.percentage;
@@ -25,7 +32,7 @@ export default function BodyComposition() {
   const targetFatPct = anthropometryGoals.targetFatPercentage;
   
   const totalFatLossTarget = startFatPct - targetFatPct; // 31.16 - 20.00 = 11.16%
-  const currentFatLoss = startFatPct - currentFatPct; // 31.16 - 30.70 = 0.46%
+  const currentFatLoss = startFatPct - currentFatPct; // 31.16 - 30.15 = 1.01%
   const fatProgressPct = Math.min(100, Math.max(0, (currentFatLoss / totalFatLossTarget) * 100));
 
   // Regla de seguridad de masa muscular (No bajar de la masa muscular inicial)
@@ -51,7 +58,7 @@ export default function BodyComposition() {
             Visualización Antropométrica (Kerr 5 Componentes)
           </h2>
           <p className="text-xs text-slate-400 mt-0.5">
-            Monitoreo y evolución a partir de las fichas médicas oficiales de la carpeta <span className="text-indigo-300 font-mono">public/antropometria/</span>.
+            Monitoreo y evolución histórica basada en los informes antropométricos oficiales.
           </p>
         </div>
         
@@ -81,8 +88,8 @@ export default function BodyComposition() {
           </div>
           <div>
             <span className="text-[10px] text-slate-500 block uppercase font-bold tracking-wider">Edad</span>
-            <span className="text-base font-bold text-slate-200 font-outfit">{personalProfile.baseAge} años</span>
-            <span className="text-[10px] text-slate-400 block">Fórmula de Mayo/Junio</span>
+            <span className="text-base font-bold text-slate-200 font-outfit">{currentMeasurement.age} años</span>
+            <span className="text-[10px] text-slate-400 block">Medición 3 (Julio 2026)</span>
           </div>
         </div>
 
@@ -170,12 +177,12 @@ export default function BodyComposition() {
           <div className="bg-slate-950/40 border border-slate-900 p-3 rounded-xl text-[10px] text-slate-400 leading-normal flex items-start gap-2">
             <Info className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
             <p>
-              Has bajado de <strong>{startFatPct}%</strong> a <strong>{currentFatPct}%</strong> de grasa corporal (una reducción neta de <strong>{formatVal(Math.abs(fatPctDiff), 2)}%</strong> o <strong>{formatVal(Math.abs(fatKgDiff), 3)} kg</strong> de masa adiposa en 4 semanas).
+              Has bajado de <strong>{startFatPct}%</strong> a <strong>{currentFatPct}%</strong> de grasa corporal (una reducción neta acumulada de <strong>{formatVal(Math.abs(fatPctDiff), 2)}%</strong> o <strong>{formatVal(Math.abs(fatKgDiff), 3)} kg</strong> de masa adiposa en 3 mediciones).
             </p>
           </div>
         </div>
 
-        {/* Muscle Protection Warning */}
+        {/* Muscle Protection Warning / Progress */}
         <div className="glass-panel p-5 rounded-2xl space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="font-bold text-sm text-slate-200 uppercase tracking-wider flex items-center gap-1.5">
@@ -189,11 +196,11 @@ export default function BodyComposition() {
 
           <div className="space-y-3">
             <div className="flex justify-between items-center text-xs">
-              <span className="text-slate-400">Masa Muscular de Partida (Mayo):</span>
+              <span className="text-slate-400">Masa Muscular Inicial (Mayo):</span>
               <span className="font-semibold text-slate-300">{muscleBaseKg} kg</span>
             </div>
             <div className="flex justify-between items-center text-xs">
-              <span className="text-slate-400">Masa Muscular Actual (Junio):</span>
+              <span className="text-slate-400">Masa Muscular Actual (Julio):</span>
               <span className={`font-semibold ${isMuscleInDanger ? 'text-amber-400' : 'text-emerald-400'}`}>
                 {currentMuscleKg} kg
               </span>
@@ -207,19 +214,18 @@ export default function BodyComposition() {
                   ALERTA: Desviación detectada (-{formatVal(Math.abs(muscleLossFromStart) * 1000, 0)}g)
                 </div>
                 <p className="text-[10px] text-amber-300/90 leading-relaxed">
-                  Has bajado <strong>{formatVal(Math.abs(muscleLossFromStart), 3)} kg (151 gramos)</strong> de masa muscular desde el arranque. 
-                  Para frenar esta tendencia, asegúrate de mantener el déficit calórico controlado, no saltarte las ingestas de proteína (mínimo {2.2 * 65}g diarios) y entrenar con alta intensidad/cerca del fallo.
+                  Has bajado <strong>{formatVal(Math.abs(muscleLossFromStart), 3)} kg</strong> de masa muscular desde el arranque. 
                 </p>
               </div>
             ) : (
               <div className="bg-emerald-950/30 border border-emerald-900/50 p-3.5 rounded-xl space-y-1.5">
                 <div className="flex items-center gap-2 text-emerald-400 font-bold text-xs">
                   <Award className="w-4.5 h-4.5" />
-                  Masa Muscular Protegida
+                  Masa Muscular Protegida y En Aumento
                 </div>
                 <p className="text-[10px] text-emerald-300/90 leading-relaxed">
-                  ¡Excelente! Has mantenido tu masa muscular por encima del umbral de partida de {muscleBaseKg} kg. 
-                  Esto significa que el peso perdido proviene principalmente de oxidación de grasa. ¡Sigue así!
+                  ¡Excelente progreso! Has incrementado tu masa muscular a <strong>{currentMuscleKg} kg</strong> (<strong>+{formatVal((currentMuscleKg - muscleBaseKg) * 1000, 0)}g</strong> desde Mayo y <strong>+{formatVal(lastMonthMuscleKgDiff * 1000, 0)}g</strong> respecto a Junio). 
+                  La revalorización de masa magra demuestra un estímulo de entrenamiento de hipertrofia súper efectivo.
                 </p>
               </div>
             )}
@@ -231,103 +237,280 @@ export default function BodyComposition() {
       {/* 4. Comparative Month-to-Month Table & Custom SVG Chart */}
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
         
-        {/* Table - 2 columns width in xl */}
+        {/* Table / Accordion - 2 columns width in xl */}
         <div className="xl:col-span-2 glass-panel p-5 rounded-2xl space-y-4">
           <div className="flex items-center justify-between border-b border-slate-800 pb-2">
-            <h3 className="font-bold text-sm text-slate-200 uppercase tracking-wider flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
-              Evolución Comparativa
-            </h3>
-            <span className="text-xs text-slate-500 font-medium">Mediciones Antropométricas</span>
+            <div>
+              <h3 className="font-bold text-sm text-slate-200 uppercase tracking-wider flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
+                Evolución Comparativa Histórica
+              </h3>
+              <p className="text-[10px] text-slate-500 mt-0.5">Historial por fechas de medición</p>
+            </div>
+            <span className="text-[10px] bg-slate-900 text-slate-400 border border-slate-800 px-2 py-1 rounded-lg">
+              {anthropometryHistory.length} Mediciones
+            </span>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
+          {/* Desktop Table View */}
+          <div className="hidden md:block overflow-x-auto -mx-5 px-5 custom-scrollbar">
+            <table className="w-full text-left border-collapse min-w-[700px]">
               <thead>
-                <tr className="border-b border-slate-850 text-[10px] text-slate-400 uppercase tracking-wider">
-                  <th className="py-3 px-2 font-bold">Componente</th>
-                  <th className="py-3 px-2 font-bold text-right">Mayo (28/05)</th>
-                  <th className="py-3 px-2 font-bold text-right">Junio (25/06)</th>
-                  <th className="py-3 px-2 font-bold text-right">Variación Neta</th>
-                  <th className="py-3 px-2 font-bold text-right">Var. %</th>
+                <tr className="border-b border-slate-800 text-[10px] text-slate-400 uppercase tracking-wider">
+                  <th className="py-3 px-3 font-bold sticky left-0 bg-slate-900/95 backdrop-blur z-10 border-r border-slate-800/60 shadow-sm">
+                    Medición / Fecha
+                  </th>
+                  <th className="py-3 px-3 font-bold text-right text-slate-200">Peso Total</th>
+                  <th className="py-3 px-3 font-bold text-right text-fuchsia-400">Masa Adiposa (Grasa)</th>
+                  <th className="py-3 px-3 font-bold text-right text-emerald-400">Masa Muscular</th>
+                  <th className="py-3 px-3 font-bold text-right text-slate-400">Masa Ósea</th>
+                  <th className="py-3 px-3 font-bold text-right text-slate-400">Masa Residual</th>
+                  <th className="py-3 px-3 font-bold text-right text-slate-400">Masa Cutánea</th>
                 </tr>
               </thead>
               <tbody className="text-xs divide-y divide-slate-850/50">
-                {/* Peso */}
-                <tr className="hover:bg-slate-900/20 transition-colors">
-                  <td className="py-3 px-2 font-semibold text-slate-300">Peso Corporal Total</td>
-                  <td className="py-3 px-2 text-right text-slate-300">{formatVal(baseMeasurement.weightKg, 2)} kg</td>
-                  <td className="py-3 px-2 text-right text-slate-300">{formatVal(currentMeasurement.weightKg, 2)} kg</td>
-                  <td className="py-3 px-2 text-right font-semibold text-emerald-400">
+                {anthropometryHistory.map((m, idx) => {
+                  const isLatest = idx === anthropometryHistory.length - 1;
+                  return (
+                    <tr 
+                      key={idx} 
+                      className={`transition-colors ${
+                        isLatest ? 'bg-indigo-950/20 hover:bg-indigo-950/30' : 'hover:bg-slate-900/40'
+                      }`}
+                    >
+                      <td className="py-3 px-3 font-semibold text-slate-200 sticky left-0 bg-slate-900/95 backdrop-blur z-10 border-r border-slate-800/60">
+                        <div className="flex items-center gap-2">
+                          <span className={`w-2 h-2 rounded-full ${isLatest ? 'bg-emerald-400 animate-pulse' : 'bg-slate-600'}`}></span>
+                          <span>{m.displayDate}</span>
+                          {isLatest && (
+                            <span className="text-[9px] bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-1.5 py-0.5 rounded font-normal">
+                              Actual
+                            </span>
+                          )}
+                        </div>
+                      </td>
+                      <td className="py-3 px-3 text-right font-medium text-slate-200">
+                        {formatVal(m.weightKg, 2)} kg
+                      </td>
+                      <td className="py-3 px-3 text-right text-slate-300">
+                        <div className="font-semibold text-fuchsia-300">{formatVal(m.fatMass.kg, 3)} kg</div>
+                        <div className="text-[10px] text-slate-400">{m.fatMass.percentage.toFixed(2)}%</div>
+                      </td>
+                      <td className="py-3 px-3 text-right text-slate-300">
+                        <div className="font-semibold text-emerald-300">{formatVal(m.muscleMass.kg, 3)} kg</div>
+                        <div className="text-[10px] text-slate-400">{m.muscleMass.percentage.toFixed(2)}%</div>
+                      </td>
+                      <td className="py-3 px-3 text-right text-slate-400">
+                        <div>{formatVal(m.boneMass.kg, 3)} kg</div>
+                        <div className="text-[10px] text-slate-500">{m.boneMass.percentage.toFixed(2)}%</div>
+                      </td>
+                      <td className="py-3 px-3 text-right text-slate-400">
+                        <div>{formatVal(m.residualMass.kg, 3)} kg</div>
+                        <div className="text-[10px] text-slate-500">{m.residualMass.percentage.toFixed(2)}%</div>
+                      </td>
+                      <td className="py-3 px-3 text-right text-slate-400">
+                        <div>{formatVal(m.skinMass.kg, 3)} kg</div>
+                        <div className="text-[10px] text-slate-500">{m.skinMass.percentage.toFixed(2)}%</div>
+                      </td>
+                    </tr>
+                  );
+                })}
+
+                {/* Summary Row - Net Variation */}
+                <tr className="bg-slate-950/80 font-bold border-t-2 border-slate-800">
+                  <td className="py-3.5 px-3 text-indigo-300 uppercase text-[10px] tracking-wider sticky left-0 bg-slate-950 z-10 border-r border-slate-800/60">
+                    Var. Neta Acumulada
+                  </td>
+                  <td className="py-3.5 px-3 text-right text-emerald-400 font-semibold">
                     {weightDiff < 0 ? '' : '+'}{formatVal(weightDiff, 2)} kg
                   </td>
-                  <td className="py-3 px-2 text-right text-emerald-400">
-                    {((weightDiff / baseMeasurement.weightKg) * 100).toFixed(2)}%
+                  <td className="py-3.5 px-3 text-right text-emerald-400 font-semibold">
+                    <div>{fatKgDiff < 0 ? '' : '+'}{formatVal(fatKgDiff, 3)} kg</div>
+                    <div className="text-[10px] text-emerald-400/80">{fatPctDiff < 0 ? '' : '+'}{formatVal(fatPctDiff, 2)}% grasa</div>
                   </td>
-                </tr>
-
-                {/* Masa Adiposa */}
-                <tr className="hover:bg-slate-900/20 transition-colors">
-                  <td className="py-3 px-2 font-semibold text-slate-300">Masa Adiposa (Grasa)</td>
-                  <td className="py-3 px-2 text-right text-slate-300">
-                    {formatVal(baseMeasurement.fatMass.kg, 3)} kg <span className="text-[10px] text-slate-400">({baseMeasurement.fatMass.percentage}%)</span>
+                  <td className="py-3.5 px-3 text-right text-emerald-400 font-semibold">
+                    <div>{muscleKgDiff < 0 ? '' : '+'}{formatVal(muscleKgDiff, 3)} kg</div>
+                    <div className="text-[10px] text-emerald-400/80">{musclePctDiff < 0 ? '' : '+'}{formatVal(musclePctDiff, 2)}% rel.</div>
                   </td>
-                  <td className="py-3 px-2 text-right text-slate-300">
-                    {formatVal(currentMeasurement.fatMass.kg, 3)} kg <span className="text-[10px] text-slate-400">({currentMeasurement.fatMass.percentage}%)</span>
+                  <td className="py-3.5 px-3 text-right text-slate-400 font-normal">
+                    <div>{(currentMeasurement.boneMass.kg - baseMeasurement.boneMass.kg).toFixed(3)} kg</div>
+                    <div className="text-[10px] text-slate-500">{(currentMeasurement.boneMass.percentage - baseMeasurement.boneMass.percentage).toFixed(2)}% rel.</div>
                   </td>
-                  <td className="py-3 px-2 text-right font-semibold text-emerald-400">
-                    {fatKgDiff < 0 ? '' : '+'}{formatVal(fatKgDiff, 3)} kg
+                  <td className="py-3.5 px-3 text-right text-slate-400 font-normal">
+                    <div>{(currentMeasurement.residualMass.kg - baseMeasurement.residualMass.kg).toFixed(3)} kg</div>
+                    <div className="text-[10px] text-slate-500">{(currentMeasurement.residualMass.percentage - baseMeasurement.residualMass.percentage).toFixed(2)}% rel.</div>
                   </td>
-                  <td className="py-3 px-2 text-right text-emerald-400">
-                    {fatPctDiff < 0 ? '' : '+'}{formatVal(fatPctDiff, 2)}% grasa
+                  <td className="py-3.5 px-3 text-right text-slate-400 font-normal">
+                    <div>{(currentMeasurement.skinMass.kg - baseMeasurement.skinMass.kg).toFixed(3)} kg</div>
+                    <div className="text-[10px] text-slate-500">{(currentMeasurement.skinMass.percentage - baseMeasurement.skinMass.percentage).toFixed(2)}% rel.</div>
                   </td>
-                </tr>
-
-                {/* Masa Muscular */}
-                <tr className="hover:bg-slate-900/20 transition-colors">
-                  <td className="py-3 px-2 font-semibold text-slate-300">Masa Muscular</td>
-                  <td className="py-3 px-2 text-right text-slate-300">
-                    {formatVal(baseMeasurement.muscleMass.kg, 3)} kg <span className="text-[10px] text-slate-400">({baseMeasurement.muscleMass.percentage}%)</span>
-                  </td>
-                  <td className="py-3 px-2 text-right text-slate-300">
-                    {formatVal(currentMeasurement.muscleMass.kg, 3)} kg <span className="text-[10px] text-slate-400">({currentMeasurement.muscleMass.percentage}%)</span>
-                  </td>
-                  <td className={`py-3 px-2 text-right font-semibold ${isMuscleInDanger ? 'text-amber-400' : 'text-emerald-400'}`}>
-                    {muscleKgDiff < 0 ? '' : '+'}{formatVal(muscleKgDiff, 3)} kg
-                  </td>
-                  <td className={`py-3 px-2 text-right ${isMuscleInDanger ? 'text-amber-400' : 'text-emerald-400'}`}>
-                    {musclePctDiff < 0 ? '' : '+'}{formatVal(musclePctDiff, 2)}% rel.
-                  </td>
-                </tr>
-
-                {/* Masa Ósea */}
-                <tr className="hover:bg-slate-900/20 transition-colors text-slate-400">
-                  <td className="py-3 px-2">Masa Ósea</td>
-                  <td className="py-3 px-2 text-right">{formatVal(baseMeasurement.boneMass.kg, 3)} kg ({baseMeasurement.boneMass.percentage}%)</td>
-                  <td className="py-3 px-2 text-right">{formatVal(currentMeasurement.boneMass.kg, 3)} kg ({currentMeasurement.boneMass.percentage}%)</td>
-                  <td className="py-3 px-2 text-right">0.000 kg</td>
-                  <td className="py-3 px-2 text-right">+0.14% rel.</td>
-                </tr>
-
-                {/* Masa Residual */}
-                <tr className="hover:bg-slate-900/20 transition-colors text-slate-400">
-                  <td className="py-3 px-2">Masa Residual (Órganos/Vísceras)</td>
-                  <td className="py-3 px-2 text-right">{formatVal(baseMeasurement.residualMass.kg, 3)} kg ({baseMeasurement.residualMass.percentage}%)</td>
-                  <td className="py-3 px-2 text-right">{formatVal(currentMeasurement.residualMass.kg, 3)} kg ({currentMeasurement.residualMass.percentage}%)</td>
-                  <td className="py-3 px-2 text-right">{(currentMeasurement.residualMass.kg - baseMeasurement.residualMass.kg).toFixed(3)} kg</td>
-                  <td className="py-3 px-2 text-right">-0.10% rel.</td>
-                </tr>
-
-                {/* Masa Cutánea */}
-                <tr className="hover:bg-slate-900/20 transition-colors text-slate-400">
-                  <td className="py-3 px-2">Masa de la Piel (Cutánea)</td>
-                  <td className="py-3 px-2 text-right">{formatVal(baseMeasurement.skinMass.kg, 3)} kg ({baseMeasurement.skinMass.percentage}%)</td>
-                  <td className="py-3 px-2 text-right">{formatVal(currentMeasurement.skinMass.kg, 3)} kg ({currentMeasurement.skinMass.percentage}%)</td>
-                  <td className="py-3 px-2 text-right">{(currentMeasurement.skinMass.kg - baseMeasurement.skinMass.kg).toFixed(3)} kg</td>
-                  <td className="py-3 px-2 text-right">+0.04% rel.</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+
+          {/* Mobile Accordion View */}
+          <div className="block md:hidden space-y-3 pt-1">
+            {anthropometryHistory.map((m, idx) => {
+              const isLatest = idx === anthropometryHistory.length - 1;
+              const isExpanded = expandedCardIndex === idx;
+
+              return (
+                <div 
+                  key={idx} 
+                  className={`rounded-xl border transition-all overflow-hidden ${
+                    isLatest ? 'bg-indigo-950/20 border-indigo-500/40' : 'bg-slate-900/60 border-slate-800'
+                  }`}
+                >
+                  {/* Accordion Header */}
+                  <button 
+                    onClick={() => setExpandedCardIndex(isExpanded ? null : idx)}
+                    className="w-full p-3.5 flex items-center justify-between gap-3 text-left hover:bg-slate-850/50 transition-colors"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className={`w-7 h-7 rounded-full flex items-center justify-center border transition-colors ${
+                        isExpanded 
+                          ? 'bg-indigo-500 text-white border-indigo-400' 
+                          : 'bg-slate-800 text-slate-300 border-slate-700'
+                      }`}>
+                        {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <span className="font-bold text-xs text-white font-outfit">{m.displayDate}</span>
+                          {isLatest && (
+                            <span className="text-[9px] bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-1.5 py-0.5 rounded font-medium">
+                              Actual
+                            </span>
+                          )}
+                        </div>
+                        <span className="text-[10px] text-slate-400">Medición N° {m.measurementNumber}</span>
+                      </div>
+                    </div>
+
+                    <div className="text-right">
+                      <span className="font-bold text-xs text-slate-100 block">{formatVal(m.weightKg, 1)} kg</span>
+                      <span className="text-[10px] text-fuchsia-400 block font-medium">{m.fatMass.percentage.toFixed(1)}% grasa</span>
+                    </div>
+                  </button>
+
+                  {/* Accordion Body */}
+                  {isExpanded && (
+                    <div className="px-4 pb-4 pt-2 border-t border-slate-800/60 bg-slate-950/40 space-y-2.5 text-xs">
+                      <div className="flex justify-between items-center py-1.5 border-b border-slate-850">
+                        <span className="text-slate-400 font-medium">Peso Total</span>
+                        <span className="font-bold text-slate-100">{formatVal(m.weightKg, 2)} kg</span>
+                      </div>
+                      <div className="flex justify-between items-center py-1.5 border-b border-slate-850">
+                        <span className="text-slate-400 font-medium">Masa Adiposa (Grasa)</span>
+                        <div className="text-right">
+                          <span className="font-bold text-fuchsia-300">{formatVal(m.fatMass.kg, 3)} kg</span>
+                          <span className="text-[10px] text-slate-400 ml-1.5">({m.fatMass.percentage.toFixed(2)}%)</span>
+                        </div>
+                      </div>
+                      <div className="flex justify-between items-center py-1.5 border-b border-slate-850">
+                        <span className="text-slate-400 font-medium">Masa Muscular</span>
+                        <div className="text-right">
+                          <span className="font-bold text-emerald-300">{formatVal(m.muscleMass.kg, 3)} kg</span>
+                          <span className="text-[10px] text-slate-400 ml-1.5">({m.muscleMass.percentage.toFixed(2)}%)</span>
+                        </div>
+                      </div>
+                      <div className="flex justify-between items-center py-1.5 border-b border-slate-850">
+                        <span className="text-slate-400 font-medium">Masa Ósea</span>
+                        <div className="text-right">
+                          <span className="font-medium text-slate-300">{formatVal(m.boneMass.kg, 3)} kg</span>
+                          <span className="text-[10px] text-slate-500 ml-1.5">({m.boneMass.percentage.toFixed(2)}%)</span>
+                        </div>
+                      </div>
+                      <div className="flex justify-between items-center py-1.5 border-b border-slate-850">
+                        <span className="text-slate-400 font-medium">Masa Residual</span>
+                        <div className="text-right">
+                          <span className="font-medium text-slate-300">{formatVal(m.residualMass.kg, 3)} kg</span>
+                          <span className="text-[10px] text-slate-500 ml-1.5">({m.residualMass.percentage.toFixed(2)}%)</span>
+                        </div>
+                      </div>
+                      <div className="flex justify-between items-center py-1.5">
+                        <span className="text-slate-400 font-medium">Masa Cutánea</span>
+                        <div className="text-right">
+                          <span className="font-medium text-slate-300">{formatVal(m.skinMass.kg, 3)} kg</span>
+                          <span className="text-[10px] text-slate-500 ml-1.5">({m.skinMass.percentage.toFixed(2)}%)</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+
+            {/* Summary Card for Var. Neta Acumulada */}
+            <div className="rounded-xl border border-indigo-900/50 bg-slate-950/80 overflow-hidden">
+              <button 
+                onClick={() => setExpandedCardIndex(expandedCardIndex === 'summary' ? null : 'summary')}
+                className="w-full p-3.5 flex items-center justify-between gap-3 text-left hover:bg-slate-900/50 transition-colors"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center">
+                    {expandedCardIndex === 'summary' ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                  </div>
+                  <div>
+                    <span className="font-bold text-xs text-indigo-300 uppercase tracking-wider block">Var. Neta Acumulada</span>
+                    <span className="text-[10px] text-slate-400">Total desde el inicio</span>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <span className="font-bold text-xs text-emerald-400 block">
+                    {weightDiff < 0 ? '' : '+'}{formatVal(weightDiff, 2)} kg
+                  </span>
+                  <span className="text-[10px] text-emerald-400/80 block font-medium">
+                    {fatPctDiff < 0 ? '' : '+'}{formatVal(fatPctDiff, 2)}% grasa
+                  </span>
+                </div>
+              </button>
+
+              {expandedCardIndex === 'summary' && (
+                <div className="px-4 pb-4 pt-2 border-t border-slate-800/60 bg-slate-950/90 space-y-2.5 text-xs">
+                  <div className="flex justify-between items-center py-1.5 border-b border-slate-850">
+                    <span className="text-slate-400 font-medium">Peso Total</span>
+                    <span className="font-bold text-emerald-400">{weightDiff < 0 ? '' : '+'}{formatVal(weightDiff, 2)} kg</span>
+                  </div>
+                  <div className="flex justify-between items-center py-1.5 border-b border-slate-850">
+                    <span className="text-slate-400 font-medium">Masa Adiposa (Grasa)</span>
+                    <div className="text-right font-bold text-emerald-400">
+                      <div>{fatKgDiff < 0 ? '' : '+'}{formatVal(fatKgDiff, 3)} kg</div>
+                      <div className="text-[10px] text-emerald-400/80">{fatPctDiff < 0 ? '' : '+'}{formatVal(fatPctDiff, 2)}% grasa</div>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center py-1.5 border-b border-slate-850">
+                    <span className="text-slate-400 font-medium">Masa Muscular</span>
+                    <div className="text-right font-bold text-emerald-400">
+                      <div>{muscleKgDiff < 0 ? '' : '+'}{formatVal(muscleKgDiff, 3)} kg</div>
+                      <div className="text-[10px] text-emerald-400/80">{musclePctDiff < 0 ? '' : '+'}{formatVal(musclePctDiff, 2)}% rel.</div>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center py-1.5 border-b border-slate-850">
+                    <span className="text-slate-400 font-medium">Masa Ósea</span>
+                    <div className="text-right text-slate-400">
+                      <div>{(currentMeasurement.boneMass.kg - baseMeasurement.boneMass.kg).toFixed(3)} kg</div>
+                      <div className="text-[10px] text-slate-500">{(currentMeasurement.boneMass.percentage - baseMeasurement.boneMass.percentage).toFixed(2)}% rel.</div>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center py-1.5 border-b border-slate-850">
+                    <span className="text-slate-400 font-medium">Masa Residual</span>
+                    <div className="text-right text-slate-400">
+                      <div>{(currentMeasurement.residualMass.kg - baseMeasurement.residualMass.kg).toFixed(3)} kg</div>
+                      <div className="text-[10px] text-slate-500">{(currentMeasurement.residualMass.percentage - baseMeasurement.residualMass.percentage).toFixed(2)}% rel.</div>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center py-1.5">
+                    <span className="text-slate-400 font-medium">Masa Cutánea</span>
+                    <div className="text-right text-slate-400">
+                      <div>{(currentMeasurement.skinMass.kg - baseMeasurement.skinMass.kg).toFixed(3)} kg</div>
+                      <div className="text-[10px] text-slate-500">{(currentMeasurement.skinMass.percentage - baseMeasurement.skinMass.percentage).toFixed(2)}% rel.</div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
 
@@ -343,12 +526,12 @@ export default function BodyComposition() {
 
           {/* Simple custom React SVG Chart */}
           <div className="my-4 flex justify-center items-center">
-            <svg viewBox="0 0 300 200" className="w-full max-w-[260px] overflow-visible">
+            <svg viewBox="0 0 340 200" className="w-full max-w-[320px] overflow-visible">
               {/* Grid Lines */}
-              <line x1="40" y1="30" x2="280" y2="30" stroke="#1e293b" strokeDasharray="3" />
-              <line x1="40" y1="85" x2="280" y2="85" stroke="#1e293b" strokeDasharray="3" />
-              <line x1="40" y1="140" x2="280" y2="140" stroke="#1e293b" strokeDasharray="3" />
-              <line x1="40" y1="170" x2="280" y2="170" stroke="#334155" />
+              <line x1="40" y1="30" x2="320" y2="30" stroke="#1e293b" strokeDasharray="3" />
+              <line x1="40" y1="85" x2="320" y2="85" stroke="#1e293b" strokeDasharray="3" />
+              <line x1="40" y1="140" x2="320" y2="140" stroke="#1e293b" strokeDasharray="3" />
+              <line x1="40" y1="170" x2="320" y2="170" stroke="#334155" />
 
               {/* Y Axis Labels (Weights in kg) */}
               <text x="32" y="34" fill="#64748b" fontSize="9" textAnchor="end">30 kg</text>
@@ -356,27 +539,38 @@ export default function BodyComposition() {
               <text x="32" y="144" fill="#64748b" fontSize="9" textAnchor="end">10 kg</text>
               <text x="32" y="174" fill="#64748b" fontSize="9" textAnchor="end">0 kg</text>
 
-              {/* Mayo Bars (x=80) */}
-              {/* Muscle (29.93 kg) -> height = 29.925 * 4.66 = 140px. y = 170 - 140 = 30 */}
-              <rect x="70" y="30.3" width="18" height="139.7" fill="#6366f1" rx="2" opacity="0.85" />
-              {/* Fat (20.78 kg) -> height = 20.784 * 4.66 = 97px. y = 170 - 97 = 73 */}
-              <rect x="92" y="73.1" width="18" height="96.9" fill="#d946ef" rx="2" opacity="0.85" />
+              {/* Mayo Bars (x=70, 88) */}
+              {/* Muscle (29.93 kg) -> height = 29.925 * 4.66 = 139.5px. y = 170 - 139.5 = 30.5 */}
+              <rect x="62" y="30.5" width="15" height="139.5" fill="#6366f1" rx="2" opacity="0.75" />
+              {/* Fat (20.78 kg) -> height = 20.784 * 4.66 = 96.9px. y = 170 - 96.9 = 73.1 */}
+              <rect x="80" y="73.1" width="15" height="96.9" fill="#d946ef" rx="2" opacity="0.75" />
 
-              {/* Junio Bars (x=200) */}
-              {/* Muscle (29.77 kg) -> height = 29.774 * 4.66 = 139px. y = 170 - 139 = 31 */}
-              <rect x="180" y="31.0" width="18" height="139.0" fill="#6366f1" rx="2" />
-              {/* Fat (20.20 kg) -> height = 20.203 * 4.66 = 94.2px. y = 170 - 94.2 = 75.8 */}
-              <rect x="202" y="75.8" width="18" height="94.2" fill="#d946ef" rx="2" />
+              {/* Junio Bars (x=142, 160) */}
+              {/* Muscle (29.77 kg) -> height = 29.774 * 4.66 = 138.7px. y = 170 - 138.7 = 31.3 */}
+              <rect x="142" y="31.3" width="15" height="138.7" fill="#6366f1" rx="2" opacity="0.85" />
+              {/* Fat (20.20 kg) -> height = 20.203 * 4.66 = 94.1px. y = 170 - 94.1 = 75.9 */}
+              <rect x="160" y="75.9" width="15" height="94.1" fill="#d946ef" rx="2" opacity="0.85" />
+
+              {/* Julio Bars (x=222, 240) */}
+              {/* Muscle (30.45 kg) -> height = 30.453 * 4.66 = 141.9px. y = 170 - 141.9 = 28.1 */}
+              <rect x="222" y="28.1" width="15" height="141.9" fill="#6366f1" rx="2" />
+              {/* Fat (20.04 kg) -> height = 20.037 * 4.66 = 93.4px. y = 170 - 93.4 = 76.6 */}
+              <rect x="240" y="76.6" width="15" height="93.4" fill="#d946ef" rx="2" />
 
               {/* Bar Labels (Mass value text) */}
-              <text x="79" y="24" fill="#818cf8" fontSize="8" fontWeight="bold" textAnchor="middle">29.9</text>
-              <text x="101" y="67" fill="#f472b6" fontSize="8" fontWeight="bold" textAnchor="middle">20.8</text>
-              <text x="189" y="25" fill="#a5b4fc" fontSize="8" fontWeight="bold" textAnchor="middle">29.8</text>
-              <text x="211" y="70" fill="#f472b6" fontSize="8" fontWeight="bold" textAnchor="middle">20.2</text>
+              <text x="70" y="24" fill="#818cf8" fontSize="8" fontWeight="bold" textAnchor="middle">29.9</text>
+              <text x="88" y="67" fill="#f472b6" fontSize="8" fontWeight="bold" textAnchor="middle">20.8</text>
+
+              <text x="150" y="25" fill="#a5b4fc" fontSize="8" fontWeight="bold" textAnchor="middle">29.8</text>
+              <text x="168" y="70" fill="#f472b6" fontSize="8" fontWeight="bold" textAnchor="middle">20.2</text>
+
+              <text x="230" y="22" fill="#38bdf8" fontSize="8" fontWeight="bold" textAnchor="middle">30.5</text>
+              <text x="248" y="71" fill="#f472b6" fontSize="8" fontWeight="bold" textAnchor="middle">20.0</text>
 
               {/* X Axis Labels */}
-              <text x="90" y="186" fill="#94a3b8" fontSize="10" fontWeight="bold" textAnchor="middle">Mayo (Inicial)</text>
-              <text x="200" y="186" fill="#94a3b8" fontSize="10" fontWeight="bold" textAnchor="middle">Junio (Act.)</text>
+              <text x="79" y="186" fill="#94a3b8" fontSize="9" fontWeight="bold" textAnchor="middle">Mayo</text>
+              <text x="159" y="186" fill="#94a3b8" fontSize="9" fontWeight="bold" textAnchor="middle">Junio</text>
+              <text x="239" y="186" fill="#38bdf8" fontSize="9" fontWeight="bold" textAnchor="middle">Julio (Act.)</text>
             </svg>
           </div>
 
@@ -408,25 +602,21 @@ export default function BodyComposition() {
         </div>
 
         <div className="flex flex-wrap items-center gap-3">
-          <a 
-            href="/hybrid-training/antropometria/Antropometria 28-5-26.pdf" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 px-3.5 py-1.5 rounded-xl text-xs text-slate-300 hover:text-white transition-all"
-          >
-            <span>📄 Medición 1 (28/05/2026)</span>
-          </a>
-          <a 
-            href="/hybrid-training/antropometria/Antropometria 25-6-26.pdf" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 px-3.5 py-1.5 rounded-xl text-xs text-slate-300 hover:text-white transition-all"
-          >
-            <span>📄 Medición 2 (25/06/2026)</span>
-          </a>
+          {anthropometryHistory.map((m, idx) => (
+            <a 
+              key={idx}
+              href={`/hybrid-training/antropometria/Antropometria ${m.date.split('-')[2].replace(/^0/, '')}-${m.date.split('-')[1].replace(/^0/, '')}-${m.date.split('-')[0].slice(2)}.pdf`}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 px-3 py-1.5 rounded-xl text-xs text-slate-300 hover:text-white transition-all"
+            >
+              <span>📄 Medición {m.measurementNumber} ({m.displayDate})</span>
+            </a>
+          ))}
         </div>
       </div>
 
     </div>
   );
 }
+
