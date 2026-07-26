@@ -10,6 +10,7 @@ import WikiModule from './components/WikiModule';
 import MobilityModule from './components/MobilityModule';
 import HandstandDashboard from './components/HandstandDashboard';
 import BodyComposition from './components/BodyComposition';
+import GtgModule from './components/GtgModule';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard'); // dashboard, nutrition, timeline, wiki
@@ -19,10 +20,11 @@ export default function App() {
 
   const navigationItems = [
     { id: 'dashboard', name: 'Dashboard Diario', icon: Home, desc: 'Tus tareas para hoy' },
+    { id: 'gtg', name: 'Grease the Groove (GTG)', icon: Zap, desc: 'Micro-dosis Pomodoro diarias' },
     { id: 'nutrition', name: 'Nutrición Visual', icon: Apple, desc: 'Déficit de 1700 kcal' },
     { id: 'composition', name: 'Composición Corporal', icon: Scale, desc: 'Antropometría y evolución' },
     { id: 'mobility', name: 'Flexibilidad y Movilidad', icon: Activity, desc: 'Preparación y recuperación' },
-    { id: 'handstand', name: 'Handstand (Vertical)', icon: Zap, desc: 'Práctica y progresión' },
+    { id: 'handstand', name: 'Handstand (Vertical)', icon: Activity, desc: 'Práctica y progresión' },
     { id: 'timeline', name: 'Timeline Estratégico', icon: CalendarRange, desc: 'Plan de 12 semanas' },
     { id: 'wiki', name: 'Biblioteca y Skills', icon: BookOpen, desc: 'Biomecánica y calistenia' }
   ];
@@ -141,6 +143,13 @@ export default function App() {
               setCurrentWeek={setCurrentWeek} 
               currentDay={currentDay} 
               setCurrentDay={setCurrentDay} 
+            />
+          )}
+
+          {activeTab === 'gtg' && (
+            <GtgModule 
+              currentWeek={currentWeek} 
+              currentDay={currentDay} 
             />
           )}
 

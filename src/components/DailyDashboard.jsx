@@ -30,10 +30,6 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
     return weeklySchedule.find(s => s.day === currentDay) || weeklySchedule[0];
   }, [currentDay]);
 
-  const activeCardio = useMemo(() => {
-    return cardioSchedule[currentDay] || null;
-  }, [currentDay]);
-
   const calisthenicsData = useMemo(() => {
     switch (activeWeekObj.mesocycle) {
       case 1:
@@ -320,38 +316,6 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
 
       {/* 4. Panel de Hábitos Recomendados (Right Column) - Solo Informativo */}
       <div className="lg:col-span-3 lg:col-start-8 lg:row-start-2 space-y-6">
-        {activeCardio && (
-          <div className="glass-panel p-6 rounded-2xl glow-blue space-y-4 hover:border-blue-500/40 transition-all duration-300">
-            <div className="border-b border-slate-800 pb-3 flex items-center justify-between">
-              <div>
-                <h2 className="text-lg font-bold font-outfit text-white flex items-center gap-2">
-                  <Activity className="w-5 h-5 text-blue-400 animate-pulse" />
-                  Cardio del Día
-                </h2>
-                <p className="text-xs text-slate-400">Estructura de Cardio Semanal</p>
-              </div>
-              <span className="text-[10px] bg-blue-950 text-blue-400 border border-blue-900 px-2.5 py-1 rounded font-bold uppercase tracking-wider">
-                {activeCardio.machine}
-              </span>
-            </div>
-
-            <div className="space-y-3">
-              <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
-                <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Protocolo</span>
-                <span className="text-xs font-semibold text-slate-200 block">
-                  {activeCardio.protocol}
-                </span>
-              </div>
-
-              <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
-                <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Foco Biomecánico / Razón</span>
-                <p className="text-xs text-slate-400 leading-normal">
-                  {activeCardio.reason}
-                </p>
-              </div>
-            </div>
-          </div>
-        )}
         <div className="glass-panel p-6 rounded-2xl glow-fuchsia space-y-6">
           <div className="border-b border-slate-800 pb-3">
             <h2 className="text-lg font-bold font-outfit text-white">Hábitos Recomendados</h2>
@@ -380,8 +344,8 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
                   <span className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
                 </div>
                 <div>
-                  <span className="text-sm font-semibold text-slate-200 block">Práctica de Verticales</span>
-                  <span className="text-xs text-slate-500">20-30 min de Ranita y alineación articular</span>
+                  <span className="text-sm font-semibold text-slate-200 block">Práctica de GTG</span>
+                  <span className="text-xs text-slate-500">4 a 8 series diarias</span>
                 </div>
               </div>
             </div>
@@ -400,54 +364,7 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
             </div>
           </div>
 
-
-
-          {/* Grease the Groove (GTG) Module - Purely Informative */}
-          <div className="border-t border-slate-800 pt-4 space-y-4">
-            <div>
-              <h3 className="text-sm font-bold text-slate-200 uppercase tracking-wider flex items-center gap-1.5">
-                <Zap className="w-4 h-4 text-amber-400 fill-amber-400" />
-                Método Grease the Groove (GTG)
-              </h3>
-              <p className="text-xs text-slate-500 mt-0.5">Frecuencia y dosificación recomendada durante la jornada</p>
-            </div>
-
-
-            {/* GTG Reference Info */}
-            <div className="space-y-3">
-              {/* Pull-ups GTG info */}
-              <div className={`p-3.5 rounded-xl border ${gtgState.allForbidden || gtgState.pullupsSuspended ? 'border-slate-900 bg-slate-950/10 opacity-40' : 'border-slate-800 bg-slate-950/50'} flex items-center justify-between`}>
-                <div>
-                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block">Set Dominadas</span>
-                  <span className="text-sm font-semibold text-slate-200 block mt-0.5">2 Dominadas por serie</span>
-                  <span className="text-[10px] text-slate-400 block mt-1">Frecuencia: Máx 5 series dispersas en la jornada</span>
-                </div>
-                <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full uppercase ${gtgState.allForbidden || gtgState.pullupsSuspended ? 'bg-red-950 text-red-400 border border-red-900' : 'bg-emerald-950 text-emerald-400 border border-emerald-900'}`}>
-                  {gtgState.allForbidden || gtgState.pullupsSuspended ? 'Suspendido' : 'Habilitado'}
-                </span>
-              </div>
-
-              {/* Push-ups GTG info */}
-              <div className={`p-3.5 rounded-xl border ${gtgState.allForbidden || gtgState.pushupsSuspended ? 'border-slate-900 bg-slate-950/10 opacity-40' : 'border-slate-800 bg-slate-950/50'} flex items-center justify-between`}>
-                <div>
-                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block">Set Flexiones</span>
-                  <span className="text-sm font-semibold text-slate-200 block mt-0.5">3 Flexiones por serie</span>
-                  <span className="text-[10px] text-slate-400 block mt-1">Frecuencia: Máx 5 series dispersas en la jornada</span>
-                </div>
-                <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full uppercase ${gtgState.allForbidden || gtgState.pushupsSuspended ? 'bg-red-950 text-red-400 border border-red-900' : 'bg-emerald-950 text-emerald-400 border border-emerald-900'}`}>
-                  {gtgState.allForbidden || gtgState.pushupsSuspended ? 'Suspendido' : 'Habilitado'}
-                </span>
-              </div>
-            </div>
-
-            {/* Biomechanical Warning footer */}
-            <div className="text-[10px] text-slate-500 italic flex gap-1.5 leading-snug">
-              <Info className="w-3.5 h-3.5 text-slate-600 shrink-0" />
-              <span>Grease the Groove: Ejecutar al 40%-60% de tu máximo. Cero fatiga sistémica.</span>
-            </div>
-          </div>
         </div>
-
 
       </div>
 

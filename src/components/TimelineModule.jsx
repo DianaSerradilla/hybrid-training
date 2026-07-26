@@ -39,16 +39,16 @@ const calisthenicsMesoData = {
 const calisthenicsWeeksData = {
   1: "Microciclo 1 - Adaptación Base: Establecer los cerrojos biomecánicos (depresión, retracción y protracción escapular) bajo carga inicial. El sistema nervioso central (SNC) mapea el patrón motor. Volumen moderado, lejos del fallo muscular.",
   2: "Microciclo 2 - Expansión de Capacidad de Trabajo: Incrementar el tonelaje total tolerado por la placa motora. Se fuerza a las fibras de contracción lenta y rápida a trabajar en sinergia sin llegar a la acidez extrema.",
-  3: "Microciclo 3 - Clímax Neural (Overreaching): Máximo estrés neurológico. Empujamos el sistema al límite de la eficiencia técnica para forzar la supercompensación. Es la semana de mayor fatiga sistémica.",
-  4: "Microciclo 4 - Descarga y Resíntesis (Deload): Disipación total de la fatiga del SNC y fase aguda de reparación celular. El colágeno tipo I en los tendones de tus codos y hombros comienza su remodelación estructural tras el estrés de las semanas previas. Volumen cortado a la mitad.",
-  5: "Microciclo 5 - Choque Excéntrico: Introducción de Tiempos Bajo Tensión (TUT) prolongados. Las contracciones excéntricas lentas inducen microdesgarros masivos en el sarcolema y las líneas Z, activando las células satélite para la expansión mionuclear.",
-  6: "Microciclo 6 - Mecanotransducción Profunda: Explotar la rigidez de la titina como mecanosensor. Trabajo intenso en longitudes musculares largas (LML), como aguantar la porción más baja de un fondo o el estiramiento máximo de una dominada.",
-  7: "Microciclo 7 - Clímax Estructural: Máximo daño tisular tolerable (Miotrauma). Llevamos la musculatura al fallo técnico mediante el control extremo de la gravedad.",
-  8: "Microciclo 8 - Descarga y Supercompensación Tisular: Mitigación del fenómeno de protección contra el estrés (Stress Shielding) en los tendones mediante isometrías ligeras. El cuerpo fusiona los nuevos mionúcleos, consolidando tejido contráctil denso y funcional.",
-  9: "Microciclo 9 - Adaptación a la Densidad (Clusters): Entrenar la vía glucolítica anaeróbica. Uso de metodologías Cluster (micro-series con descansos de 10-15 segundos) para acumular un gran volumen de repeticiones de alta calidad antes de que la acumulación de iones de hidrógeno bloquee la contracción.",
-  10: "Microciclo 10 - Expansión del Umbral Láctico: Soportar el estrés metabólico extremo y la hinchazón celular (cell swelling). El músculo aprende a contraerse incluso en un entorno de hipoxia y alta acidez.",
-  11: "Microciclo 11 - Clímax de Rendimiento Absoluto: Exposición del sistema a la máxima demanda. Acercamiento al fallo volitivo puro (AMRAP submáximo) para preparar psicológicamente y fisiológicamente al cuerpo para el examen final.",
-  12: "Microciclo 12 - Tapering (Descarga Definitiva) y TEST (AMRAP): Efecto Peaking. Se erradica por completo la fatiga residual del trimestre. Los músculos están rebosantes de glucógeno y el sistema nervioso está hiper-excitado. Al final de esta semana, ejecutas el TEST OFICIAL (AMRAP) para registrar tus 15 dominadas, 20 flexiones, 20 fondos y 5 pike push-ups."
+  3: "Descarga 1 (Menstruación): Disipación total de la fatiga del SNC y fase aguda de reparación celular. El colágeno tipo I en tendones de codos y hombros comienza su remodelación estructural tras el estrés de las semanas previas. Volumen cortado a la mitad, peso -20%, GTG suspendido.",
+  4: "Microciclo 3 - Clímax Neural y Estructural: Máximo estrés neurológico. Empujamos el sistema al límite de la eficiencia técnica para forzar la supercompensación. Es la semana de mayor fatiga sistémica. RIR 1-0 en principales y RIR 0 en accesorios con Rest-Pause/DropSet.",
+  5: "Microciclo 5 - Choque Excéntrico (Adaptación Pesada): Introducción de Tiempos Bajo Tensión (TUT) prolongados. Las contracciones excéntricas lentas inducen microdesgarros masivos en el sarcolema y las líneas Z, activando las células satélite para la expansión mionuclear. Flexiones pica con déficit y Fondos LML.",
+  6: "Microciclo 6 - Mecanotransducción Profunda (Intensificación Pesada): Explotar la rigidez de la titina como mecanosensor. Trabajo intenso en longitudes musculares largas (LML), como aguantar la porción más baja de un fondo o el estiramiento máximo de una dominada.",
+  7: "Descarga 2: Reducción de series a la mitad, reducción de tonelaje (20% menos) y RIR 3 general para recuperar articulaciones y tendones antes de las cargas máximas. GTG de flexiones y dominadas suspendido.",
+  8: "Microciclo 6 - Clímax Pesado: Máximo daño tisular tolerable (Miotrauma). Llevamos la musculatura al fallo técnico en barras y fallo total en gimnasio. OBLIGATORIO: Drop Set o Rest-Pause SÓLO en la última serie de 2 o 3 ejercicios del Bloque 3.",
+  9: "Microciclo 7 - Adaptación a la Fuerza (Método Cluster): Entrenar la vía glucolítica anaeróbica. Uso de metodologías Cluster (micro-series de 3 a 5 reps con descansos de 15 segundos) para acumular un gran volumen de repeticiones de alta calidad sin fatiga metabólica paralizante.",
+  10: "Microciclo 8 - Intensificación de Fuerza (Método Cluster): Soportar el estrés metabólico extremo y la hinchazón celular (cell swelling). El músculo aprende a contraerse incluso en un entorno de hipoxia y alta acidez. Cargas más pesadas a RIR 1 y RIR 0.",
+  11: "Descarga 3 (Menstruación): Descanso estratégico antes del gran final. Cortás el volumen a la mitad y bajás los pesos un 30% a RIR 3 o 4, guardando toda la energía para la semana que viene. GTG suspendido.",
+  12: "Microciclo 12 - Peaking y EL EXAMEN (TEST AMRAP): Tapering de Lunes a Viernes (disipación total de fatiga). El SÁBADO ejecutas el TEST OFICIAL (AMRAP) para registrar tus récords finales: Test 1 Dominadas, Test 2 Fondos, Test 3 Flexiones Estándar, Test 4 Flexiones Pica."
 };
 
 export default function TimelineModule() {
@@ -58,17 +58,17 @@ export default function TimelineModule() {
 
   // Helper for week tag styling
   const getWeekColorClass = (w) => {
-    if (w.number === 4 || w.number === 8) {
-      return 'border-amber-600 bg-amber-950/40 text-amber-400 hover:bg-amber-900/40';
-    }
-    if (w.number === 11) {
-      return 'border-fuchsia-600 bg-fuchsia-950/40 text-fuchsia-400 hover:bg-fuchsia-900/40';
-    }
-    if (w.number === 12) {
-      return 'border-blue-600 bg-blue-950/40 text-blue-400 hover:bg-blue-900/40';
-    }
     if (w.number === selectedWeek) {
       return 'border-indigo-500 bg-indigo-600 text-white';
+    }
+    if (w.isDeload) {
+      return 'border-amber-600/70 bg-amber-950/40 text-amber-400 hover:bg-amber-900/40';
+    }
+    if (w.number === 12) {
+      return 'border-blue-500 bg-blue-950/60 text-blue-300 hover:bg-blue-900/40';
+    }
+    if (w.number === 4 || w.number === 8) {
+      return 'border-fuchsia-600/70 bg-fuchsia-950/40 text-fuchsia-400 hover:bg-fuchsia-900/40';
     }
     return 'border-slate-800 bg-slate-950 hover:bg-slate-900 text-slate-300';
   };
@@ -86,9 +86,9 @@ export default function TimelineModule() {
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-12 gap-2.5">
           {macrocycleWeeks.map((w) => {
             const isSelected = w.number === selectedWeek;
-            const isDeload = w.number === 4 || w.number === 8;
+            const isDeload = w.isDeload;
             const isTest = w.number === 12;
-            const isPR = w.number === 11;
+            const isClimax = w.number === 4 || w.number === 8;
 
             return (
               <button
@@ -99,7 +99,7 @@ export default function TimelineModule() {
                 <span>Semana</span>
                 <span className="text-lg font-bold leading-none">{w.number}</span>
                 <span className="text-[9px] uppercase font-bold tracking-normal opacity-80">
-                  {isTest ? 'Test' : isDeload ? 'Descarga' : isPR ? 'Récord' : 'Carga'}
+                  {isTest ? 'Examen' : isDeload ? 'Descarga' : isClimax ? 'Clímax' : 'Carga'}
                 </span>
               </button>
             );

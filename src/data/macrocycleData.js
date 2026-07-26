@@ -5,7 +5,7 @@ export const macrocycleWeeks = [
     number: 1,
     mesocycle: 1,
     mesocycleName: "Rango Base de Hipertrofia (Neuromuscular y Mielinización)",
-    focus: "Fase de adaptación. Las series de los ejercicios principales se trabajan en un rango de 8 a 10 repeticiones dejando un RIR 2. Las series de los accesorios se manejan a 12-14 repeticiones con RIR 2. Volumen moderado, lejos del fallo muscular. Mapeo del patrón motor.",
+    focus: "Fase de adaptación (Microciclo 1). Las series de los ejercicios principales se trabajan en un rango de 8 a 10 repeticiones dejando un RIR 2. Las series de los accesorios se manejan a 12-14 repeticiones con RIR 2. Volumen moderado, lejos del fallo muscular. Mapeo del patrón motor.",
     rirGeneral: 2,
     rirAccessories: 2,
     intensityLabel: "Adaptación Base (RIR 2)",
@@ -16,7 +16,7 @@ export const macrocycleWeeks = [
     number: 2,
     mesocycle: 1,
     mesocycleName: "Rango Base de Hipertrofia (Neuromuscular y Mielinización)",
-    focus: "Fase de intensificación. Mantienes el mismo rango de 8 a 10 repeticiones en los principales y 12-14 en accesorios, pero ajustas el peso para que todo el entrenamiento se ejecute a un RIR 1. Aumentamos el tonelaje y la palanca.",
+    focus: "Fase de intensificación (Microciclo 2). Mantienes el mismo rango de 8 a 10 repeticiones en los principales y 12-14 en accesorios, pero ajustas el peso para que todo el entrenamiento se ejecute a un RIR 1. Aumentamos el tonelaje y la palanca.",
     rirGeneral: 1,
     rirAccessories: 1,
     intensityLabel: "Intensificación (RIR 1)",
@@ -27,29 +27,29 @@ export const macrocycleWeeks = [
     number: 3,
     mesocycle: 1,
     mesocycleName: "Rango Base de Hipertrofia (Neuromuscular y Mielinización)",
-    focus: "Clímax del bloque. Las series principales combinan esfuerzos de RIR 1 y RIR 0 (fallo) manteniéndose en las 8-10 repeticiones. El trabajo accesorio llega al RIR 0 absoluto. Utilización de metodologías en accesorios. Máximo estrés neurológico, mayor fatiga sistémica. Si la postura en barras colapsa, la serie termina.",
-    rirGeneral: "1 - 0",
-    rirAccessories: 0,
-    intensityLabel: "Clímax Neural (RIR 1-0)",
-    isDeload: false,
+    focus: "Descarga 1 - Menstruación: Disipación de fatiga sistémica. Se cortan las series totales a la mitad, se reduce la carga un 20% en el gimnasio (RIR 3 general) y regresión de palancas en calistenia. GTG de flexiones y dominadas estrictamente suspendido.",
+    rirGeneral: 3,
+    rirAccessories: 3,
+    intensityLabel: "Descarga y Remodelación Tisular (RIR 3, -20% peso)",
+    isDeload: true,
     isPeaking: false
   },
   {
     number: 4,
     mesocycle: 1,
     mesocycleName: "Rango Base de Hipertrofia (Neuromuscular y Mielinización)",
-    focus: "Descarga y Resíntesis (Deload 1): Disipación de fatiga. Se cortan las series totales a la mitad, se reduce la carga un 20% en el gimnasio y se establece un RIR 3 general. Regresión de palancas en calistenia. El colágeno en tendones de codos y hombros comienza su remodelación estructural.",
-    rirGeneral: 3,
-    rirAccessories: 3,
-    intensityLabel: "Descarga y Resíntesis (RIR 3, -20% peso)",
-    isDeload: true,
+    focus: "Clímax del bloque (Microciclo 3): Semana de impacto máximo. Las series principales combinan esfuerzos de RIR 1 y RIR 0 (fallo técnico en calistenia) manteniéndose en 8-10 repeticiones. El trabajo accesorio llega al RIR 0 absoluto con Rest-Pause o DropSet en serie final.",
+    rirGeneral: "1 - 0",
+    rirAccessories: 0,
+    intensityLabel: "Clímax Neural y Estructural (RIR 1-0 / RIR 0)",
+    isDeload: false,
     isPeaking: false
   },
   {
     number: 5,
     mesocycle: 2,
     mesocycleName: "Rango de Hipertrofia Pesada y Densidad Contráctil",
-    focus: "Nueva adaptación pesada. Las repeticiones en los ejercicios principales bajan al bloque de 6 a 8 y el esfuerzo neurológico se reinicia a un RIR 2. Los ejercicios accesorios bajan al rango de 10 a 12 repeticiones, también a RIR 2. Introducción de Tiempos Bajo Tensión (TUT) prolongados e inducción de microdesgarros masivos.",
+    focus: "Fase de adaptación pesada (Semana 5). Esfuerzo neurológico a RIR 2. Principales bajan al bloque de 6 a 8 reps. Accesorios bajan a 10 a 12 reps a RIR 2. Introducción de Tiempos Bajo Tensión (TUT), Flexiones Pica con déficit y Fondos LML.",
     rirGeneral: 2,
     rirAccessories: 2,
     intensityLabel: "Choque Excéntrico y Estiramiento (RIR 2)",
@@ -60,7 +60,7 @@ export const macrocycleWeeks = [
     number: 6,
     mesocycle: 2,
     mesocycleName: "Rango de Hipertrofia Pesada y Densidad Contráctil",
-    focus: "Intensificación pesada. Las series principales (6 a 8 repeticiones) y los accesorios (10 a 12 repeticiones) se empujan a un RIR 1. Mecanotransducción profunda: explotar la rigidez de la titina como mecanosensor. Trabajo intenso en longitudes musculares largas (LML).",
+    focus: "Fase de intensificación pesada (Semana 6). Las series principales (6 a 8 repeticiones) y los accesorios (10 a 12 repeticiones) se empujan a un RIR 1. Mecanotransducción profunda: explotar la rigidez de la titina como mecanosensor. Trabajo en LML.",
     rirGeneral: 1,
     rirAccessories: 1,
     intensityLabel: "Mecanotransducción Profunda (RIR 1)",
@@ -71,18 +71,7 @@ export const macrocycleWeeks = [
     number: 7,
     mesocycle: 2,
     mesocycleName: "Rango de Hipertrofia Pesada y Densidad Contráctil",
-    focus: "Clímax pesado. Tanto los movimientos principales como los accesorios alcanzan el RIR 0 de forma constante en sus respectivos rangos. Máximo daño tisular tolerable (Miotrauma). Fallo técnico en calistenia y fallo total (RIR 0) en gimnasio con Drop-Sets o Rest-Pause en accesorios.",
-    rirGeneral: 0,
-    rirAccessories: 0,
-    intensityLabel: "Clímax Estructural (RIR 0)",
-    isDeload: false,
-    isPeaking: false
-  },
-  {
-    number: 8,
-    mesocycle: 2,
-    mesocycleName: "Rango de Hipertrofia Pesada y Densidad Contráctil",
-    focus: "Descarga 2: Idéntica a la Semana 4. Reducción de series a la mitad, reducción de tonelaje (20% menos) y RIR 3 para recuperar articulaciones y tendones antes de las cargas máximas. Mitigación del fenómeno de protección contra el estrés en los tendones.",
+    focus: "Descarga 2: Idéntica a la Semana 3. Reducción de series a la mitad, reducción de tonelaje (20% menos) y RIR 3 general para recuperar articulaciones y tendones antes de las cargas máximas. GTG suspendido.",
     rirGeneral: 3,
     rirAccessories: 3,
     intensityLabel: "Descarga y Supercompensación Tisular (RIR 3, -20% peso)",
@@ -90,13 +79,24 @@ export const macrocycleWeeks = [
     isPeaking: false
   },
   {
+    number: 8,
+    mesocycle: 2,
+    mesocycleName: "Rango de Hipertrofia Pesada y Densidad Contráctil",
+    focus: "Clímax pesado (Microciclo 6): Tanto los movimientos principales como los accesorios alcanzan el RIR 0 de forma constante. Máximo miotrauma tolerable. OBLIGATORIO: Drop Set o Rest-Pause SÓLO en la última serie de 2 o 3 ejercicios del Bloque 3.",
+    rirGeneral: 0,
+    rirAccessories: 0,
+    intensityLabel: "Clímax Pesado (RIR 0 + DropSet/RestPause)",
+    isDeload: false,
+    isPeaking: false
+  },
+  {
     number: 9,
     mesocycle: 3,
     mesocycleName: "El Bloque de Fuerza Máxima",
-    focus: "Adaptación a la Fuerza. Los ejercicios principales bajan drásticamente de repeticiones (4 a 6 repeticiones o Clusters) dejando un RIR 2. Acostumbras al sistema nervioso a mover cargas muy pesadas sin llegar al fallo. Accesorios en 8-10 repeticiones a RIR 1. Entrenamiento de la vía glucolítica anaeróbica.",
+    focus: "Adaptación a la Fuerza (Microciclo 7): Ejercicios principales bajan drásticamente (4 a 6 repeticiones o Método Cluster: micro-pausas de 15s) dejando RIR 2. Accesorios en 8-10 reps a RIR 1. Acostumbras al SNC a cargas muy pesadas sin fallo.",
     rirGeneral: 2,
     rirAccessories: 1,
-    intensityLabel: "Adaptación a la Densidad - Método Cluster (RIR 2/1)",
+    intensityLabel: "Adaptación a la Fuerza - Método Cluster (RIR 2/1)",
     isDeload: false,
     isPeaking: false
   },
@@ -104,10 +104,10 @@ export const macrocycleWeeks = [
     number: 10,
     mesocycle: 3,
     mesocycleName: "El Bloque de Fuerza Máxima",
-    focus: "Intensificación de Fuerza. En los principales te manejas en rangos de 5 repeticiones a RIR 1, y algunos de 6 a 8 repeticiones llegando al RIR 0. Los accesorios llegan al fallo (RIR 0) en el rango de 8-10 repeticiones. Expansión del umbral láctico y tolerancia a la hipoxia y alta acidez.",
+    focus: "Intensificación de Fuerza (Microciclo 8): Carga sube. En los principales te manejas en rangos de 5 reps a RIR 1 (o Clusters intensos) y algunos de 6 a 8 reps a RIR 0. Los accesorios llegan al fallo (RIR 0) en el rango de 8-10 reps.",
     rirGeneral: 1,
     rirAccessories: 0,
-    intensityLabel: "Expansión del Umbral Láctico - Clusters Intensos (RIR 1/0)",
+    intensityLabel: "Intensificación de Fuerza - Clusters (RIR 1/0)",
     isDeload: false,
     isPeaking: false
   },
@@ -115,22 +115,22 @@ export const macrocycleWeeks = [
     number: 11,
     mesocycle: 3,
     mesocycleName: "El Bloque de Fuerza Máxima",
-    focus: "Clímax de Rendimiento Absoluto (Peaking). Llevas los ejercicios principales al RIR 0 en rangos de 3 a 5 repeticiones. Es la semana para probar tus récords personales (PR) en las máquinas pesadas o empujes. Modo AMRAP submáximo (hasta que la técnica falle o no puedas más). Exposición a la máxima demanda metabólica.",
-    rirGeneral: 0,
-    rirAccessories: 0,
-    intensityLabel: "Clímax de Rendimiento Absoluto - PRs (RIR 0 / AMRAP)",
-    isDeload: false,
-    isPeaking: true
+    focus: "Descarga 3 - Menstruación: Descanso estratégico antes del gran final. Cortás el volumen a la mitad y bajás los pesos un 30% a RIR 3 o 4, guardando toda la energía para la semana que viene. GTG suspendido.",
+    rirGeneral: "3 - 4",
+    rirAccessories: "3 - 4",
+    intensityLabel: "Descarga 3 - Menstruación (RIR 3-4, -30% peso)",
+    isDeload: true,
+    isPeaking: false
   },
   {
     number: 12,
     mesocycle: 3,
     mesocycleName: "El Bloque de Fuerza Máxima",
-    focus: "Descarga Definitiva / Tapering: Después de llevar tu sistema nervioso central al límite absoluto, cortas el volumen a la mitad y bajas los pesos un 30% a RIR 3 o 4. Se erradica por completo la fatiga residual del trimestre. El sábado ejecutas el TEST OFICIAL (AMRAP).",
-    rirGeneral: "3 - 4",
-    rirAccessories: "3 - 4",
-    intensityLabel: "Tapering y TEST OFICIAL (RIR 3-4, -30% peso)",
-    isDeload: true,
+    focus: "Clímax No Escrito - Peaking / EL EXAMEN: Disipación total de fatiga de Lunes a Viernes. El Sábado ejecutas el TEST OFICIAL (AMRAP): Test 1 Dominadas, Test 2 Fondos, Test 3 Flexiones Estándar, Test 4 Flexiones Pica.",
+    rirGeneral: 0,
+    rirAccessories: 0,
+    intensityLabel: "Peaking -> SÁBADO: EL EXAMEN (TEST AMRAP)",
+    isDeload: false,
     isPeaking: true
   }
 ];
@@ -191,7 +191,7 @@ export const cardioSchedule = {
 };
 
 export const routinesByWeek = {
-  // We structure the routines dynamically based on whether it is in Mesocycle 1 (W1-4), Mesocycle 2 (W5-8), Mesocycle 3 Load (W9-11), or Tapering (W12)
+  // We structure the routines dynamically based on whether it is in Mesocycle 1 (W1-4), Mesocycle 2 (W5-8), Mesocycle 3 Load (W9-11), or Tapering/Peaking (W12)
   getWorkout: (weekNumber, dayName) => {
     const isMeso1 = weekNumber >= 1 && weekNumber <= 4;
     const isMeso2 = weekNumber >= 5 && weekNumber <= 8;
@@ -209,20 +209,20 @@ export const routinesByWeek = {
       case "Lunes":
         if (isMeso1) {
           return {
-            title: isDeload ? "Push - Descarga y Remodelación Tisular" : "Push - Enfoque Empujes",
+            title: isDeload ? "Push - Descarga 1 (Menstruación)" : weekNumber === 4 ? "Push - Clímax Neural y Estructural" : "Push - Enfoque Empujes",
             blocks: [
               {
                 name: "Bloque 1: Calistenia (Fuerza Relativa y Condicionamiento Neural)",
                 exercises: [
-                  { name: "Flexiones en Pica (Pike Push-ups)", sets: isDeload ? "2" : "3", reps: isDeload ? "6" : weekNumber === 3 ? "Max (Obj 5+)" : weekNumber === 2 ? "4" : "3", rir: isDeload ? "3" : weekNumber === 3 ? "0" : weekNumber === 2 ? "1" : "2", note: "Tempo: 3 seg bajando, pausa 1 seg abajo. Elevación escapular máxima." },
-                  { name: "Fondos en Paralelas (Dips)", sets: isDeload ? "2" : "3", reps: isDeload ? "6 (Asistidos)" : weekNumber === 3 ? "Max (Obj 6-8)" : weekNumber === 2 ? "4-5" : "3-4", rir: isDeload ? "3" : weekNumber === 3 ? "0" : weekNumber === 2 ? "1" : "2", note: "Depresión escapular inquebrantable." }
+                  { name: "Flexiones en Pica (Pike Push-ups)", sets: isDeload ? "2" : "3", reps: isDeload ? "6 (Inclinadas)" : weekNumber === 4 ? "Max (Obj 5+)" : weekNumber === 2 ? "4" : "3", rir: isDeload ? "3" : weekNumber === 4 ? "0" : weekNumber === 2 ? "1" : "2", note: "Tempo: 3 seg bajando, pausa 1 seg abajo. Elevación escapular máxima." },
+                  { name: "Fondos en Paralelas (Dips)", sets: isDeload ? "2" : "3", reps: isDeload ? "6 (Asistidos en banco)" : weekNumber === 4 ? "Max (Obj 6-8)" : weekNumber === 2 ? "4-5" : "3-4", rir: isDeload ? "3" : weekNumber === 4 ? "0" : weekNumber === 2 ? "1" : "2", note: "Depresión escapular inquebrantable." }
                 ]
               },
               {
                 name: "Bloque 2: Gimnasio (Hipertrofia Miofibrilar Pesada - Compuestos)",
                 exercises: [
                   { name: "Press en Máquina Convergente de Palancas", sets: isDeload ? "1-2" : "3", reps: "8-10", rir: isDeload ? "3" : rirVal, note: "Empuje principal de pecho. Foco en tensión mecánica." },
-                  { name: weekNumber === 1 ? "Press Militar Libre (Barra)" : "Press Militar Libre (Mancuernas)", sets: isDeload ? "1-2" : "3", reps: "8-10", rir: isDeload ? "3" : rirVal, note: "Foco en estabilización para transferencia a calistenia." }
+                  { name: "Press Militar Libre (Mancuernas)", sets: isDeload ? "1-2" : "3", reps: "8-10", rir: isDeload ? "3" : rirVal, note: "Foco en estabilización para transferencia a calistenia." }
                 ]
               },
               {
@@ -231,25 +231,22 @@ export const routinesByWeek = {
                   { name: "Aperturas Pec-Dec", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Aducción pura. Contracción pico máxima." },
                   { name: "Elevaciones Laterales (Máquina o Mancuernas)", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Abducción del deltoides lateral." },
                   { name: "Pushdown Clásico (Soga)", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Tríceps: Codo abajo." },
-                  { name: "Extensión Unilateral Supina en Polea", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Tríceps: Palma hacia arriba. Innegociable para salud articular." },
-                  ...(weekNumber === 1 ? [
-                    { name: "Rueda Abdominal", sets: "2-3", reps: "12-14", rir: "2", note: "Core: Anti-extensión." },
-                    { name: "Extensión Lumbar", sets: "2-3", reps: "12-14", rir: "2", note: "Core posterior." }
-                  ] : [])
+                  { name: "Rompecráneos en suelo o extensión tras nuca", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Tríceps: Innegociable para salud articular." },
+                  { name: "Rueda Abdominal", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Core: Anti-extensión." }
                 ],
-                intensityTechnique: weekNumber === 3 ? "Rest-Pause o DropSet en la última serie" : null
+                intensityTechnique: weekNumber === 4 ? "Rest-Pause o DropSet en la última serie" : null
               }
             ]
           };
         } else if (isMeso2) {
           return {
-            title: isDeload ? "Push - Descarga y Supercompensación Tisular" : "Push - Choque Excéntrico y Estiramiento",
+            title: isDeload ? "Push - Descarga 2 (Supercompensación Tisular)" : weekNumber === 8 ? "Push - Clímax Pesado" : "Push - Choque Excéntrico y Estiramiento",
             blocks: [
               {
                 name: "Bloque 1: Calistenia (Fuerza Relativa y Condicionamiento Neural)",
                 exercises: [
-                  { name: "Flexiones en Pica con Déficit (Manos elevadas en discos/libros)", sets: isDeload ? "2" : "3", reps: isDeload ? "6-8 (Suelo)" : weekNumber === 7 ? "Max (Obj 6-8+)" : weekNumber === 6 ? "5-7" : "4-6", rir: isDeload ? "3" : weekNumber === 7 ? "0" : weekNumber === 6 ? "1" : "2", note: "El déficit permite que la cabeza baje más, aumentando el estiramiento pasivo." },
-                  { name: "Fondos en Paralelas con Parciales Alargadas (Dips LML)", sets: isDeload ? "2" : "3", reps: isDeload ? "8-10 (Bancos)" : weekNumber === 7 ? "Max (Obj 6-8)" : weekNumber === 6 ? "5-6" : "4-5", rir: isDeload ? "3" : weekNumber === 7 ? "0" : weekNumber === 6 ? "1" : "2", note: "Bajas al máximo estiramiento, subes solo a la mitad, vuelves a bajar al fondo y subes completo = 1 rep." }
+                  { name: "Flexiones en Pica con Déficit (Manos elevadas en discos/libros)", sets: isDeload ? "2" : "3", reps: isDeload ? "6-8 (Estándar suelo)" : weekNumber === 8 ? "Max (Obj 6-8+)" : weekNumber === 6 ? "5-7" : "4-6", rir: isDeload ? "3" : weekNumber === 8 ? "0" : weekNumber === 6 ? "1" : "2", note: "El déficit permite que la cabeza baje más, aumentando el estiramiento pasivo." },
+                  { name: "Fondos en Paralelas con Parciales Alargadas (Dips LML)", sets: isDeload ? "2" : "3", reps: isDeload ? "8-10 (Fondos banco)" : weekNumber === 8 ? "Max (Obj 6-8)" : weekNumber === 6 ? "5-6" : "4-5", rir: isDeload ? "3" : weekNumber === 8 ? "0" : weekNumber === 6 ? "1" : "2", note: "Bajas al máximo estiramiento, subes solo a la mitad, vuelves a bajar al fondo y subes completo = 1 rep." }
                 ]
               },
               {
@@ -264,67 +261,67 @@ export const routinesByWeek = {
                 exercises: [
                   { name: "Aperturas Pec-Dec", sets: isDeload ? "1-2" : "2-3", reps: "10-12", rir: isDeload ? "3" : rirAccVal, note: "Aducción pura. Foco en sarcomerogénesis (estiramiento)." },
                   { name: "Elevaciones Laterales (Máquina o Mancuernas)", sets: isDeload ? "1-2" : "2-3", reps: "10-12", rir: isDeload ? "3" : rirAccVal, note: "Abducción del deltoides lateral." },
-                  { name: "Pushdown Clásico (Barra recta o V)", sets: isDeload ? "1-2" : "2-3", reps: "10-12", rir: isDeload ? "3" : rirAccVal, note: "Extensiones clásicas para cabezas lateral y medial." },
-                  { name: "Extensión Unilateral Supina en Polea", sets: isDeload ? "1-2" : "2-3", reps: "10-12", rir: isDeload ? "3" : rirAccVal, note: "Aislamiento y protección articular unilateral." }
+                  { name: "Pushdown Clásico (Soga)", sets: isDeload ? "1-2" : "2-3", reps: "10-12", rir: isDeload ? "3" : rirAccVal, note: "Extensiones clásicas para cabezas lateral y medial." },
+                  { name: "Rompecráneos en suelo o extensión tras nuca", sets: isDeload ? "1-2" : "2-3", reps: "10-12", rir: isDeload ? "3" : rirAccVal, note: "Innegociable para salud articular." }
                 ],
-                intensityTechnique: weekNumber === 7 ? "Drop Set o Rest-Pause en la serie final de 2-3 ejercicios del Bloque 3" : null
+                intensityTechnique: weekNumber === 8 ? "Drop Set o Rest-Pause en la serie final de 2-3 ejercicios del Bloque 3" : null
               }
             ]
           };
         } else if (isMeso3) {
           return {
-            title: isW12 ? "Push - Descarga Activa" : "Push - Adaptación a la Densidad (Método Cluster)",
+            title: isDeload ? "Push - Descarga 3 (Menstruación)" : weekNumber === 10 ? "Push - Intensificación de Fuerza (Clusters)" : "Push - Adaptación a la Fuerza (Método Cluster)",
             blocks: [
               {
                 name: "Bloque 1: Calistenia (Fuerza Relativa y Condicionamiento Neural)",
                 exercises: [
-                  { name: "Flexiones en Pica (Pike Push-ups)", sets: "3", reps: weekNumber === 11 ? "AMRAP (Obj total 12+ reps)" : weekNumber === 10 ? "Cluster (4 + 15s + 3)" : "Cluster (3 + 15s + 2)", rir: weekNumber === 11 ? "0 (Fallo Técnico)" : rirVal, note: "Descanso de 15s en la micro-pausa intra-serie." },
-                  { name: "Fondos en Paralelas (Dips)", sets: "3", reps: weekNumber === 11 ? "AMRAP (Obj total 35+ reps)" : weekNumber === 10 ? "Cluster (6 + 15s + 4)" : "Cluster (5 + 15s + 3)", rir: weekNumber === 11 ? "0 (Fallo Técnico)" : rirVal, note: "Técnica de competición estricta." }
+                  { name: "Flexiones en Pica (Pike Push-ups)", sets: isDeload ? "2" : "3", reps: isDeload ? "6-8 (Suelo)" : weekNumber === 10 ? "Cluster (4 + 15s + 3)" : "Cluster (3 + 15s + 2)", rir: isDeload ? "3-4" : weekNumber === 10 ? "1" : "2", note: "Descanso de 15s en la micro-pausa intra-serie." },
+                  { name: "Fondos en Paralelas (Dips)", sets: isDeload ? "2" : "3", reps: isDeload ? "8-10 (Banco)" : weekNumber === 10 ? "Cluster (6 + 15s + 4)" : "Cluster (5 + 15s + 3)", rir: isDeload ? "3-4" : weekNumber === 10 ? "1" : "2", note: "Técnica de competición estricta." }
                 ]
               },
               {
                 name: "Bloque 2: Gimnasio (Hipertrofia Miofibrilar Pesada - Compuestos)",
                 exercises: [
-                  { name: "Press en Máquina Convergente de Palancas", sets: "3", reps: weekNumber === 11 ? "3-5" : weekNumber === 10 ? "5" : "4-6", rir: rirVal, note: "Fuerza máxima absoluta. Sin llegar al fallo en semanas de adaptación." },
-                  { name: "Press Militar Libre (Mancuernas)", sets: "3", reps: weekNumber === 11 ? "3-5" : weekNumber === 10 ? "5" : "4-6", rir: rirVal, note: "Fuerza de empuje vertical y estabilización máxima." }
+                  { name: "Press en Máquina Convergente de Palancas", sets: isDeload ? "1-2" : "3", reps: isDeload ? "6-8" : weekNumber === 10 ? "5" : "4-6", rir: isDeload ? "3-4 (-30% kg)" : rirVal, note: "Fuerza máxima absoluta. Sin llegar al fallo en semanas de adaptación." },
+                  { name: "Press Militar Libre (Mancuernas)", sets: isDeload ? "1-2" : "3", reps: isDeload ? "6-8" : weekNumber === 10 ? "5" : "4-6", rir: isDeload ? "3-4 (-30% kg)" : rirVal, note: "Fuerza de empuje vertical y estabilización máxima." }
                 ]
               },
               {
                 name: "Bloque 3: Gimnasio (Hipertrofia Regional y Aislamiento)",
                 exercises: [
-                  { name: "Aperturas Pec-Dec", sets: "2-3", reps: weekNumber === 11 ? "8-10" : "8-10", rir: rirAccVal, note: "Aislamiento de fibras pectorales sin tríceps." },
-                  { name: "Elevaciones Laterales (Máquina o Mancuernas)", sets: "2-3", reps: weekNumber === 11 ? "8-10" : "8-10", rir: rirAccVal, note: "Haz lateral del hombro." },
-                  { name: "Pushdown Clásico (Barra recta o V)", sets: "2-3", reps: weekNumber === 11 ? "8-10" : "8-10", rir: rirAccVal, note: "Tríceps: Codo abajo." },
-                  { name: "Extensión Unilateral Supina en Polea", sets: "2-3", reps: weekNumber === 11 ? "8-10" : "8-10", rir: rirAccVal, note: "Cierre de sesión. Salud del codo." }
+                  { name: "Aperturas Pec-Dec", sets: isDeload ? "1-2" : "2-3", reps: isDeload ? "10-12" : "8-10", rir: isDeload ? "3-4" : rirAccVal, note: "Aislamiento de fibras pectorales sin tríceps." },
+                  { name: "Elevaciones Laterales (Máquina o Mancuernas)", sets: isDeload ? "1-2" : "2-3", reps: isDeload ? "10-12" : "8-10", rir: isDeload ? "3-4" : rirAccVal, note: "Haz lateral del hombro." },
+                  { name: "Pushdown Clásico (Soga)", sets: isDeload ? "1-2" : "2-3", reps: isDeload ? "10-12" : "8-10", rir: isDeload ? "3-4" : rirAccVal, note: "Tríceps: Codo abajo." },
+                  { name: "Rompecráneos en suelo o extensión tras nuca", sets: isDeload ? "1-2" : "2-3", reps: isDeload ? "10-12" : "8-10", rir: isDeload ? "3-4" : rirAccVal, note: "Cierre de sesión. Salud del codo." }
                 ]
               }
             ]
           };
-        } else { // Week 12 Tapering
+        } else { // Week 12 Peaking
           return {
-            title: "Push - Descarga Activa Total (-30% Peso)",
+            title: "Push - Peaking (Semana del Examen)",
             blocks: [
               {
-                name: "Bloque 1: Calistenia (Volumen al 50%)",
+                name: "Bloque 1: Calistenia (Pre-Activación Muy Suave)",
                 exercises: [
-                  { name: "Flexiones Inclinadas", sets: "2", reps: "8", rir: "3-4", note: "Descarga activa. Foco en la técnica pura." },
-                  { name: "Fondos Asistidos", sets: "2", reps: "8", rir: "3-4", note: "Banda elástica o apoyo para disipar fatiga articular." }
+                  { name: "Flexiones en Pica", sets: "2", reps: "2-3", rir: "3", note: "Mismo peso/postura, bajísimas reps para conservar 100% de energía para el sábado." },
+                  { name: "Fondos en Paralelas", sets: "2", reps: "2-3", rir: "3", note: "Sin fatigar el tríceps ni el pectoral." }
                 ]
               },
               {
-                name: "Bloque 2: Gimnasio (Descarga -30% Carga)",
+                name: "Bloque 2: Gimnasio (Mismo Peso Pesado, Pocas Reps)",
                 exercises: [
-                  { name: "Press en Máquina Convergente de Palancas", sets: "1-2", reps: "3-5", rir: "3-4", note: "Disminución del 30% del peso en crudo." },
-                  { name: "Press Militar Libre (Mancuernas)", sets: "1-2", reps: "3-5", rir: "3-4", note: "Carga reducida para resíntesis neural." }
+                  { name: "Press en Máquina Convergente de Palancas", sets: "2", reps: "2-3", rir: "3", note: "Conservar el patrón motor con peso alto pero sin fatiga." },
+                  { name: "Press Militar Libre (Mancuernas)", sets: "2", reps: "2-3", rir: "3", note: "Activación neural previa al examen." }
                 ]
               },
               {
-                name: "Bloque 3: Gimnasio (Aislamiento Ligero)",
+                name: "Bloque 3: Gimnasio (Aislamiento Mínimo)",
                 exercises: [
-                  { name: "Aperturas Pec-Dec", sets: "1-2", reps: "8-10", rir: "3-4", note: "Estiramiento suave." },
-                  { name: "Elevaciones Laterales", sets: "1-2", reps: "8-10", rir: "3-4", note: "Flujo sanguíneo sin carga." },
-                  { name: "Pushdown Clásico", sets: "1-2", reps: "8-10", rir: "3-4", note: "Codos calientes, sin estrés." },
-                  { name: "Extensión Unilateral Supina", sets: "1-2", reps: "8-10", rir: "3-4", note: "Regenerativo." }
+                  { name: "Aperturas Pec-Dec", sets: "1", reps: "6-8", rir: "2", note: "Mantenimiento de flujo sanguíneo." },
+                  { name: "Elevaciones Laterales", sets: "1", reps: "6-8", rir: "2", note: "Sin generar ácido láctico." },
+                  { name: "Pushdown Clásico", sets: "1", reps: "6-8", rir: "2", note: "Tríceps fresco." },
+                  { name: "Rompecráneos en suelo o extensión tras nuca", sets: "1", reps: "6-8", rir: "2", note: "Salud articular." }
                 ]
               }
             ]
@@ -334,50 +331,49 @@ export const routinesByWeek = {
       case "Martes":
         if (isMeso1) {
           return {
-            title: isDeload ? "Pull - Descarga y Remodelación Tisular" : "Pull - Enfoque Tracción",
+            title: isDeload ? "Pull - Descarga 1 (Menstruación)" : weekNumber === 4 ? "Pull - Clímax Neural y Estructural" : "Pull - Enfoque Tracción",
             blocks: [
               {
                 name: "Bloque 1: Calistenia (Fuerza Relativa y Condicionamiento Neural)",
                 exercises: [
-                  { name: "Dominadas Pronas Estrictas (Pull-ups)", sets: isDeload ? "3 (Australianas)" : "4", reps: isDeload ? "6-8" : weekNumber === 3 ? "Max (Obj 3-5)" : weekNumber === 2 ? "2-3" : "1-2", rir: isDeload ? "3" : weekNumber === 3 ? "0" : weekNumber === 2 ? "1" : "2", note: "Retracción escapular inicial para romper la inercia." },
-                  { name: "Dominadas Negativas", sets: isDeload ? "0 (Eliminadas)" : "3", reps: weekNumber === 3 ? "5 (Excéntrico total)" : weekNumber === 2 ? "4" : "3", rir: weekNumber === 3 ? "0" : "2", note: "Salta, bloquea arriba y resiste la bajada en 4-5 segundos." }
+                  { name: "Dominadas Pronas Estrictas (Pull-ups)", sets: isDeload ? "4" : "4", reps: isDeload ? "1-2 (con banda)" : weekNumber === 4 ? "Max (Obj 3-5)" : weekNumber === 2 ? "2-3" : "1-2", rir: isDeload ? "3" : weekNumber === 4 ? "0" : weekNumber === 2 ? "1" : "2", note: "Retracción escapular inicial para romper la inercia." },
+                  { name: isDeload ? "Dominadas Australianas (Remos barra baja)" : "Dominadas Negativas", sets: "3", reps: isDeload ? "6-8" : weekNumber === 4 ? "5 (Agotamiento excéntrico total)" : weekNumber === 2 ? "4" : "3", rir: isDeload ? "3" : "0", note: isDeload ? "Opción liviana." : "Salta, bloquea arriba y resiste la bajada en 4-5 segundos." }
                 ]
               },
               {
                 name: "Bloque 2: Gimnasio (Hipertrofia Miofibrilar Pesada - Compuestos)",
                 exercises: [
-                  { name: "Remo con Pecho Apoyado (Palancas o Barra T)", sets: isDeload ? "1-2" : "3", reps: "8-10", rir: isDeload ? "3" : rirVal, note: "Vector horizontal para densidad. Mantener codos a 45°-60°." },
-                  { name: "Jalón al Pecho", sets: isDeload ? "1-2" : "3", reps: "8-10", rir: isDeload ? "3" : rirVal, note: "Vector vertical para amplitud del dorsal ancho." }
+                  { name: "Remo con Pecho Apoyado (Palancas o Barra T)", sets: isDeload ? "1-2" : "3", reps: "8-10", rir: isDeload ? "3 (-20% kg)" : rirVal, note: "Vector horizontal para densidad. Mantener codos a 45°-60°." }
                 ]
               },
               {
                 name: "Bloque 3: Gimnasio (Hipertrofia Regional, Estrés Metabólico y Aislamiento)",
                 exercises: [
-                  { name: "Pullover en Polea o Máquina", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Aislamiento de dorsal. Rango completo de estiramiento." },
-                  { name: "Facepull", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Higiene articular innegociable. Rota externamente el húmero." },
+                  { name: "Pullover en Polea o Máquina", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Aislamiento de dorsal. 2 series." },
+                  { name: "Facepull", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Higiene articular innegociable. 2 series." },
                   { name: "Curl Inclinado con Mancuernas", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Bíceps: Codo atrás del torso para cabeza larga." },
-                  { name: "Curl Martillo", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Bíceps: Agarre neutro. Desarrolla braquial y supinador." }
+                  { name: "Curl Martillo", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Bíceps: Agarre neutro." },
+                  { name: "Extensión Lumbar", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Fortalecimiento de erectores espinales." }
                 ],
-                intensityTechnique: weekNumber === 3 ? "Rest-Pause o DropSet en la última serie" : null
+                intensityTechnique: weekNumber === 4 ? "Rest-Pause o DropSet en la última serie" : null
               }
             ]
           };
         } else if (isMeso2) {
           return {
-            title: isDeload ? "Pull - Descarga y Supercompensación Tisular" : "Pull - Choque Excéntrico y Estiramiento",
+            title: isDeload ? "Pull - Descarga 2 (Supercompensación Tisular)" : weekNumber === 8 ? "Pull - Clímax Pesado" : "Pull - Choque Excéntrico y Estiramiento",
             blocks: [
               {
                 name: "Bloque 1: Calistenia (Fuerza Relativa y Condicionamiento Neural)",
                 exercises: [
-                  { name: "Dominadas Pronas Estrictas (Pull-ups)", sets: isDeload ? "3 (Australianas)" : "4", reps: isDeload ? "8 (Altura cadera)" : weekNumber === 7 ? "Max (Obj 5-8)" : weekNumber === 6 ? "4-6" : "3-5", rir: isDeload ? "3" : weekNumber === 7 ? "0" : weekNumber === 6 ? "1" : "2", note: "Retracción escapular inicial estricta." },
-                  { name: "Dominadas Excéntricas con Pausa Isométrica (90°)", sets: isDeload ? "0 (Eliminadas)" : "3", reps: weekNumber === 7 ? "Fallo Excéntrico" : weekNumber === 6 ? "4-5" : "3-4", rir: weekNumber === 7 ? "0" : "2", note: "Baja lento, congela 2 seg a mitad de recorrido (90°) sin rebotar, luego baja completo. Supera el 'Stress Shielding'." }
+                  { name: "Dominadas Pronas Estrictas (Pull-ups)", sets: isDeload ? "4" : "4", reps: isDeload ? "1-2 (con banda)" : weekNumber === 8 ? "Max (Obj 5-8)" : weekNumber === 6 ? "4-6" : "3-5", rir: isDeload ? "3" : weekNumber === 8 ? "0" : weekNumber === 6 ? "1" : "2", note: "Retracción escapular inicial estricta." },
+                  { name: isDeload ? "Dominadas Australianas (Remos barra baja)" : "Dominadas Excéntricas con Pausa Isométrica (90°)", sets: "3", reps: isDeload ? "6-8" : weekNumber === 8 ? "Fallo Excéntrico (90°)" : weekNumber === 6 ? "4-5" : "3-4", rir: isDeload ? "3" : "0", note: isDeload ? "Descarga." : "Baja lento, congela 2 seg a mitad de recorrido (90°) sin rebotar, luego baja completo." }
                 ]
               },
               {
                 name: "Bloque 2: Gimnasio (Hipertrofia Pesada - Compuestos)",
                 exercises: [
-                  { name: "Remo con Pecho Apoyado (Palancas o Barra T)", sets: isDeload ? "1-2" : "3", reps: "6-8", rir: isDeload ? "3" : rirVal, note: "Densidad de espalda alta. Codos separados 45°-60°." },
-                  { name: "Jalón al Pecho", sets: isDeload ? "1-2" : "3", reps: "6-8", rir: isDeload ? "3" : rirVal, note: "Amplitud dorsal. Mantener el torso erguido." }
+                  { name: "Remo con Pecho Apoyado (Palancas o Barra T)", sets: isDeload ? "1-2" : "3", reps: "6-8", rir: isDeload ? "3 (-20% kg)" : rirVal, note: "Densidad de espalda alta. Codos separados 45°-60°." }
                 ]
               },
               {
@@ -386,65 +382,67 @@ export const routinesByWeek = {
                   { name: "Pullover en Polea o Máquina", sets: isDeload ? "1-2" : "2-3", reps: "10-12", rir: isDeload ? "3" : rirAccVal, note: "Aislamiento total del dorsal sin interferencia de bíceps." },
                   { name: "Facepull", sets: isDeload ? "1-2" : "2-3", reps: "10-12", rir: isDeload ? "3" : rirAccVal, note: "Salud articular. Fortalece el manguito rotador." },
                   { name: "Curl Inclinado con Mancuernas", sets: isDeload ? "1-2" : "2-3", reps: "10-12", rir: isDeload ? "3" : rirAccVal, note: "Máximo estiramiento de la cabeza larga." },
-                  { name: "Curl Martillo", sets: isDeload ? "1-2" : "2-3", reps: "10-12", rir: isDeload ? "3" : rirAccVal, note: "Grosor del brazo. Agarre neutro." }
+                  { name: "Curl Martillo", sets: isDeload ? "1-2" : "2-3", reps: "10-12", rir: isDeload ? "3" : rirAccVal, note: "Grosor del brazo. Agarre neutro." },
+                  { name: "Extensión Lumbar", sets: isDeload ? "1-2" : "2-3", reps: "10-12", rir: isDeload ? "3" : rirAccVal, note: "Salud lumbar." }
                 ],
-                intensityTechnique: weekNumber === 7 ? "Rest-Pause o DropSet en la última serie" : null
+                intensityTechnique: weekNumber === 8 ? "Rest-Pause o DropSet en la última serie" : null
               }
             ]
           };
         } else if (isMeso3) {
           return {
-            title: isW12 ? "Pull - Descarga Activa" : "Pull - Adaptación a la Densidad (Método Cluster)",
+            title: isDeload ? "Pull - Descarga 3 (Menstruación)" : weekNumber === 10 ? "Pull - Intensificación de Fuerza (Clusters)" : "Pull - Adaptación a la Fuerza (Método Cluster)",
             blocks: [
               {
                 name: "Bloque 1: Calistenia (Fuerza Relativa y Condicionamiento Neural)",
                 exercises: [
-                  { name: "Dominadas Pronas Estrictas (Pull-ups)", sets: "4", reps: weekNumber === 11 ? "AMRAP (Fallo técnico)" : weekNumber === 10 ? "Cluster (4 + 15s + 3)" : "Cluster (3 + 15s + 2)", rir: weekNumber === 11 ? "0" : rirVal, note: "Pausa de 15 segundos entre micro-series." },
-                  { name: "Dominadas Supinas (Chin-ups)", sets: "3", reps: weekNumber === 11 ? "AMRAP" : weekNumber === 10 ? "Cluster (5 + 15s + 3)" : "Cluster (4 + 15s + 2)", rir: weekNumber === 11 ? "0" : rirVal, note: "Retracción controlada y estiramiento máximo." }
+                  { name: "Dominadas Pronas Estrictas (Pull-ups)", sets: isDeload ? "4" : "4", reps: isDeload ? "1-2 (con banda)" : weekNumber === 10 ? "Cluster (4 + 15s + 3)" : "Cluster (3 + 15s + 2)", rir: isDeload ? "3-4" : weekNumber === 10 ? "1" : "2", note: "Pausa de 15 segundos entre micro-series." },
+                  { name: isDeload ? "Dominadas Australianas" : "Dominadas Supinas (Chin-ups)", sets: "3", reps: isDeload ? "6-8" : weekNumber === 10 ? "Cluster (5 + 15s + 3)" : "Cluster (4 + 15s + 2)", rir: isDeload ? "3-4" : weekNumber === 10 ? "1" : "2", note: "Retracción controlada y estiramiento máximo." }
                 ]
               },
               {
                 name: "Bloque 2: Gimnasio (Hipertrofia Miofibrilar - Compuestos)",
                 exercises: [
-                  { name: "Remo con Pecho Apoyado (Palancas o Barra T)", sets: "3", reps: weekNumber === 11 ? "3-5" : weekNumber === 10 ? "5" : "4-6", rir: rirVal, note: "Remo pesado con soporte. Sin tracción lumbar." },
-                  { name: "Jalón al Pecho", sets: "3", reps: weekNumber === 11 ? "3-5" : weekNumber === 10 ? "5" : "4-6", rir: rirVal, note: "Jalón con agarre neutro amplio." }
+                  { name: "Remo con Pecho Apoyado (Palancas o Barra T)", sets: isDeload ? "1-2" : "2", reps: isDeload ? "6-8" : weekNumber === 10 ? "5" : "4-6", rir: isDeload ? "3-4 (-30% kg)" : rirVal, note: "Remo pesado con soporte. Sin tracción lumbar." }
                 ]
               },
               {
                 name: "Bloque 3: Gimnasio (Hipertrofia Regional y Aislamiento)",
                 exercises: [
-                  { name: "Pullover en Polea o Máquina", sets: "2-3", reps: "8-10", rir: rirAccVal, note: "Aislamiento de dorsal." },
-                  { name: "Facepull", sets: "2-3", reps: "8-10", rir: rirAccVal, note: "Higiene y estabilidad escapular." },
-                  { name: "Curl Inclinado con Mancuernas", sets: "2-3", reps: "8-10", rir: rirAccVal, note: "Cabeza larga de bíceps." },
-                  { name: "Curl Martillo", sets: "2-3", reps: "8-10", rir: rirAccVal, note: "Grosor lateral del bíceps/antebrazo." }
+                  { name: "Pullover en Polea o Máquina", sets: isDeload ? "1-2" : "2-3", reps: isDeload ? "10-12" : "8-10", rir: isDeload ? "3-4" : rirAccVal, note: "Aislamiento de dorsal." },
+                  { name: "Facepull", sets: isDeload ? "1-2" : "2-3", reps: isDeload ? "10-12" : "8-10", rir: isDeload ? "3-4" : rirAccVal, note: "Higiene y estabilidad escapular." },
+                  { name: "Curl Inclinado con Mancuernas", sets: isDeload ? "1-2" : "2-3", reps: isDeload ? "10-12" : "8-10", rir: isDeload ? "3-4" : rirAccVal, note: "Cabeza larga de bíceps." },
+                  { name: "Curl Martillo", sets: isDeload ? "1-2" : "2-3", reps: isDeload ? "10-12" : "8-10", rir: isDeload ? "3-4" : rirAccVal, note: "Grosor lateral del bíceps/antebrazo." },
+                  { name: "Extensión Lumbar", sets: isDeload ? "1-2" : "2-3", reps: isDeload ? "10-12" : "8-10", rir: isDeload ? "3-4" : rirAccVal, note: "Densidad lumbar." }
                 ]
               }
             ]
           };
         } else { // Week 12
           return {
-            title: "Pull - Descarga Activa Total (-30% Peso)",
+            title: "Pull - Peaking (Semana del Examen)",
             blocks: [
               {
-                name: "Bloque 1: Calistenia (Volumen al 50%)",
+                name: "Bloque 1: Calistenia (Pre-Activación Muy Suave)",
                 exercises: [
-                  { name: "Dominadas Australianas", sets: "3", reps: "8", rir: "3-4", note: "Cero dominadas colgadas para sanar tendón flexor." }
+                  { name: "Dominadas Pronas Estrictas", sets: "2", reps: "2-3", rir: "3", note: "Cero fatiga. Solo marcar la retracción inicial." },
+                  { name: "Dominadas Supinas", sets: "1", reps: "2-3", rir: "3", note: "Reserva 100% de fuerza para el sábado." }
                 ]
               },
               {
-                name: "Bloque 2: Gimnasio (Descarga -30% Carga)",
+                name: "Bloque 2: Gimnasio (Descarga Neural Mismo Peso)",
                 exercises: [
-                  { name: "Remo con Pecho Apoyado", sets: "1-2", reps: "3-5", rir: "3-4", note: "Peso reducido un 30%." },
-                  { name: "Jalón al Pecho", sets: "1-2", reps: "3-5", rir: "3-4", note: "Enfoque en tracción suave." }
+                  { name: "Remo con Pecho Apoyado", sets: "2", reps: "2-3", rir: "3", note: "Mantenimiento del tono muscular sin microtrauma." }
                 ]
               },
               {
                 name: "Bloque 3: Gimnasio (Aislamiento Ligero)",
                 exercises: [
-                  { name: "Pullover en Polea", sets: "1-2", reps: "8-10", rir: "3-4", note: "Movimiento fluido." },
-                  { name: "Facepull", sets: "1-2", reps: "8-10", rir: "3-4", note: "Salud articular del hombro." },
-                  { name: "Curl Inclinado con Mancuernas", sets: "1-2", reps: "8-10", rir: "3-4", note: "Estiramiento regenerativo del bíceps." },
-                  { name: "Curl Martillo", sets: "1-2", reps: "8-10", rir: "3-4", note: "Agarre neutro ligero." }
+                  { name: "Pullover en Polea", sets: "1", reps: "6-8", rir: "2", note: "Fluidez articular." },
+                  { name: "Facepull", sets: "2", reps: "6-8", rir: "2", note: "Salud del manguito rotador." },
+                  { name: "Curl Inclinado con Mancuernas", sets: "1", reps: "6-8", rir: "2", note: "Estiramiento suave." },
+                  { name: "Curl Martillo", sets: "1", reps: "6-8", rir: "2", note: "Cero esfuerzo." },
+                  { name: "Extensión Lumbar", sets: "1", reps: "6-8", rir: "2", note: "Movilidad lumbar." }
                 ]
               }
             ]
@@ -452,8 +450,43 @@ export const routinesByWeek = {
         }
 
       case "Miércoles":
+        if (isW12) {
+          return {
+            title: "Legs 1 - Peaking (Semana del Examen)",
+            blocks: [
+              {
+                name: "Bloque 1: Calistenia",
+                exercises: [
+                  { name: "Descanso / Sin estímulo neural", sets: "0", reps: "0", rir: "0", note: "Recuperación para el sábado." }
+                ]
+              },
+              {
+                name: "Bloque 1 (Inicial): Gimnasio (Pre-Fatiga Suave)",
+                exercises: [
+                  { name: "Sillón de Cuádriceps (Extensiones)", sets: "2", reps: "6-8", rir: "2", note: "Solo bombeo de sangre a la rodilla." },
+                  { name: "Curl Femoral (Sentado o Tumbado)", sets: "2", reps: "6-8", rir: "2", note: "Flexión de rodilla ligera." }
+                ]
+              },
+              {
+                name: "Bloque 2: Gimnasio (Trabajo Mínimo)",
+                exercises: [
+                  { name: "Prensa Inclinada", sets: "2", reps: "3-4", rir: "2", note: "Mantenimiento del tono muscular." },
+                  { name: "Sentadilla Búlgara", sets: "2", reps: "3-4", rir: "2", note: "Unilateral ligero." }
+                ]
+              },
+              {
+                name: "Bloque 3: Gimnasio (Aislamiento Continuación)",
+                exercises: [
+                  { name: "SUPERSET: Máquina Abductora + Aductora", sets: "1", reps: "8", rir: "2", note: "Movilidad pélvica." },
+                  { name: "Elevaciones de Talón de Pie", sets: "1", reps: "8", rir: "2", note: "Sin fatiga." },
+                  { name: "Crunch Abdominal", sets: "1", reps: "8", rir: "2", note: "Activación ligera." }
+                ]
+              }
+            ]
+          };
+        }
         return {
-          title: isDeload ? "Legs 1 - Descarga Quads" : "Legs 1 - Foco Quads con Pre-Fatiga",
+          title: isDeload ? `Legs 1 - Descarga ${weekNumber === 3 ? '1 (Menstruación)' : weekNumber === 7 ? '2' : '3 (Menstruación)'}` : "Legs 1 - Foco Quads con Pre-Fatiga",
           blocks: [
             {
               name: "Bloque 1: Calistenia (Fuerza Relativa)",
@@ -464,15 +497,15 @@ export const routinesByWeek = {
             {
               name: "Bloque 3 (Inicial): Gimnasio (Aislamiento / Pre-Fatiga)",
               exercises: [
-                { name: "Sillón de Cuádriceps (Extensiones)", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Aísla el recto femoral y bombea sangre a la rodilla." },
-                { name: "Curl Nórdico (Negativas)", sets: isDeload ? "2 (Asistidas)" : "3", reps: isDeload ? "3" : isMeso2 ? "4-6" : "3-5", rir: isDeload ? "3" : weekNumber === 7 ? "0 (Fallo Técnico)" : rirAccVal, note: "Excéntricas de 4-5 seg. Único isquio del día. Fuerza extrema." }
+                { name: "Sillón de Cuádriceps (Extensiones)", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3 (-20% kg)" : rirAccVal, note: "Aísla el recto femoral y bombea sangre a la rodilla." },
+                { name: "Curl Femoral (Sentado o Tumbado)", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3 (-20% kg)" : rirAccVal, note: "Flexión de rodilla para aislar cabeza corta." }
               ]
             },
             {
               name: "Bloque 2: Gimnasio (Hipertrofia Miofibrilar - Compuestos)",
               exercises: [
-                { name: "Prensa Inclinada", sets: isDeload ? "1-2" : "3", reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10", rir: isDeload ? "3" : rirVal, note: "Empuje bilateral para vastos. Usando menos carga por la pre-fatiga." },
-                { name: "Sentadilla Búlgara con Mancuernas", sets: isDeload ? "1-2" : "3", reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10", rir: isDeload ? "3" : rirVal, note: "Patrón unilateral. Torso erguido, rodilla pasando la punta del pie." }
+                { name: "Prensa Inclinada", sets: isDeload ? "1-2" : "3", reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10", rir: isDeload ? "3 (-20% kg)" : rirVal, note: "Empuje bilateral para vastos. Usando menos carga por la pre-fatiga." },
+                { name: "Sentadilla Búlgara con Mancuernas", sets: isDeload ? "1-2" : "3", reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10", rir: isDeload ? "3 (-20% kg)" : rirVal, note: "Patrón unilateral. Torso erguido, rodilla pasando la punta del pie." }
               ]
             },
             {
@@ -480,64 +513,69 @@ export const routinesByWeek = {
               exercises: [
                 { name: "SUPERSET: Máquina Abductora + Máquina Aductora", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Trabajo antagonista para glúteo medio y cara interna del muslo." },
                 { name: "Elevaciones de Talón de Pie", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Gastrocnemio con rodilla bloqueada (recta)." },
-                ...(weekNumber === 1 ? [{ name: "Extensión Lumbar", sets: "2-3", reps: "12-14", rir: "2", note: "Fuerza lumbar." }] : []),
-                { name: "Crunches Pesados en Polea/Máquina", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Core: Flexión espinal pura contra resistencia." }
+                { name: "Crunch Abdominal", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Core: Flexión espinal pura contra resistencia." }
               ],
-              intensityTechnique: weekNumber === 3 || weekNumber === 7 ? "Sillón de Cuádriceps ideal para Drop Set en la serie final" : null
+              intensityTechnique: weekNumber === 4 || weekNumber === 8 ? "Sillón de Cuádriceps ideal para Drop Set en la serie final" : null
             }
           ]
         };
 
       case "Jueves":
-        if (isDeload && isW12) {
+        if (isW12) {
           return {
-            title: "Tren Superior - Descarga Activa Total (-30% Peso)",
+            title: "Tren Superior - Peaking (Descarga Pre-Examen)",
             blocks: [
               {
-                name: "Bloque 1: Calistenia (Volumen al 50%)",
+                name: "Bloque 1: Calistenia (Activación Mínima)",
                 exercises: [
-                  { name: "Colgado Activo (Retracción escapular)", sets: "3", reps: "20 seg", rir: "3-4", note: "Descompresión espinal." },
-                  { name: "Plancha Abdominal", sets: "2", reps: "30 seg", rir: "3-4", note: "Estabilidad del core sin carga." }
+                  { name: "Flexiones Estándar", sets: "2", reps: "5", rir: "3", note: "Soltar la musculatura." },
+                  { name: "Remos Invertidos / Dominada Australiana", sets: "2", reps: "5", rir: "3", note: "Muy liviano." }
                 ]
               },
               {
-                name: "Bloque 2: Gimnasio (Descarga -30% Carga)",
+                name: "Bloque 2: Gimnasio (Mismo Peso Pesado, Pocas Reps)",
                 exercises: [
-                  { name: "Press Inclinado (Mancuernas)", sets: "1-2", reps: "3-5", rir: "3-4", note: "Fuerza clavicular suave." },
-                  { name: "Remo Bajo Convergente ", sets: "1-2", reps: "3-5", rir: "3-4", note: "Tracción horizontal ligera." }
+                  { name: "Press Inclinado en Máquina Convergente", sets: "1", reps: "8-10", rir: "3 (peso liviano)", note: "Solo fluidez y técnica." }
                 ]
               },
               {
-                name: "Bloque 3: Gimnasio (Aislamiento)",
+                name: "Bloque 3: Gimnasio (Aislamiento Ligero)",
                 exercises: [
-                  { name: "Vuelo Invertido Pec Dec", sets: "1-2", reps: "8-10", rir: "3-4", note: "Hombro posterior." },
-                  { name: "Elevaciones Laterales", sets: "1-2", reps: "8-10", rir: "3-4", note: "Deltoides lateral." },
-                  { name: "Extensiones Tras Nuca", sets: "1-2", reps: "8-10", rir: "3-4", note: "Tríceps cabeza larga." },
-                  { name: "Curl Scott", sets: "1-2", reps: "8-10", rir: "3-4", note: "Bíceps cabeza corta." }
+                  { name: "Pájaros en banco", sets: "1", reps: "8-10", rir: "3", note: "Haz posterior del deltoides." },
+                  { name: "Elevaciones Laterales", sets: "1", reps: "8-10", rir: "3", note: "Haz lateral del deltoides." },
+                  { name: "Extensiones Tras Nuca (Polea)", sets: "1", reps: "8-10", rir: "3", note: "Tríceps cabeza larga." },
+                  { name: "Curl Scott o Predicador", sets: "1", reps: "8-10", rir: "3", note: "Bíceps cabeza corta." }
                 ]
               }
             ]
           };
         }
         return {
-          title: isDeload ? "Tren Superior - Descarga Híbrida" : "Tren Superior - Híbrido",
+          title: isDeload ? `Tren Superior - Descarga ${weekNumber === 3 ? '1 (Menstruación)' : weekNumber === 7 ? '2' : '3 (Menstruación)'}` : "Tren Superior - Híbrido",
           blocks: [
             {
               name: "Bloque 1: Calistenia (Fuerza Relativa)",
               exercises: [
                 {
-                  name: weekNumber === 5 || weekNumber === 6 || weekNumber === 7 ? "Flexiones Declinadas (Pies elevados)" : isDeload && weekNumber === 4 ? "Flexiones Inclinadas (Manos elevadas)" : "Flexiones Estándar (Push-ups)",
-                  sets: isDeload ? "2" : "3",
-                  reps: isDeload ? "6-8" : weekNumber === 11 ? "AMRAP" : weekNumber === 10 ? "Cluster (10 + 15s + 5)" : weekNumber === 9 ? "Cluster (8 + 15s + 4)" : weekNumber === 7 ? "Max (Obj 10-12)" : weekNumber === 6 ? "8-10" : weekNumber === 5 ? "6-8" : weekNumber === 3 ? "Max (Obj 8-10)" : weekNumber === 2 ? "6-8" : "5-6",
-                  rir: isDeload ? "3" : weekNumber === 11 || weekNumber === 7 || weekNumber === 3 ? "0" : rirVal,
+                  name: weekNumber === 5 || weekNumber === 6 || weekNumber === 7 || weekNumber === 8 ? "Flexiones Declinadas (Pies elevados)" : "Flexiones Estándar (Push-ups)",
+                  sets: isDeload ? "3" : "3",
+                  reps: isDeload ? "5-6 (o 6-8)" : weekNumber === 10 ? "Cluster (10 + 15s + 5)" : weekNumber === 9 ? "Cluster (8 + 15s + 4)" : weekNumber === 8 ? "Max (Obj 10-12)" : weekNumber === 6 ? "8-10" : weekNumber === 5 ? "6-8" : weekNumber === 4 ? "Max (Obj 8-10)" : weekNumber === 2 ? "6-8" : "5-6",
+                  rir: isDeload ? "3" : weekNumber === 8 || weekNumber === 4 ? "0" : rirVal,
                   note: "Protracción escapular al extender los codos."
                 },
                 {
-                  name: isDeload && (weekNumber === 4 || weekNumber === 8) ? "Dominadas Australianas Supinas" : weekNumber === 9 || weekNumber === 10 ? "Remos Invertidos" : weekNumber === 11 ? "Dominadas Isométricas (Pausa arriba)" : weekNumber === 5 || weekNumber === 6 || weekNumber === 7 ? "Dominadas Supinas LML (Mitad inferior)" : "Dominadas Supinas (Chin-ups)",
-                  sets: isDeload ? "2" : "3",
-                  reps: isDeload && weekNumber === 4 ? "6-8" : isDeload && weekNumber === 8 ? "8" : isDeload ? "6-8" : weekNumber === 11 ? "Isométrica (Max tiempo)" : weekNumber === 10 ? "Max (Obj 15+)" : weekNumber === 9 ? "10-12" : weekNumber === 7 ? "Max" : weekNumber === 6 ? "5-7" : weekNumber === 5 ? "4-6" : weekNumber === 3 ? "Max (Obj 4-6)" : weekNumber === 2 ? "3-4" : "2-3",
-                  rir: isDeload ? "3" : weekNumber === 11 || weekNumber === 7 || weekNumber === 3 ? "0" : rirVal,
+                  name: isDeload ? "Dominadas Supinas con banda (Chin-ups)" : weekNumber === 9 ? "Remos Invertidos / Dominada Australiana" : weekNumber === 10 ? "Remos Invertidos" : weekNumber === 5 || weekNumber === 6 || weekNumber === 7 || weekNumber === 8 ? "Dominadas Supinas LML (Mitad inferior)" : "Dominadas Supinas (Chin-ups)",
+                  sets: isDeload ? "3" : "3",
+                  reps: isDeload ? "2-3" : weekNumber === 10 ? "Max (Obj 15+)" : weekNumber === 9 ? "10-12" : weekNumber === 8 ? "Max" : weekNumber === 6 ? "5-7" : weekNumber === 5 ? "4-6" : weekNumber === 4 ? "Max (Obj 4-6)" : weekNumber === 2 ? "2-3" : "2-3",
+                  rir: isDeload ? "3" : weekNumber === 8 || weekNumber === 4 ? "0" : rirVal,
                   note: "Bíceps asisten en tracción vertical."
+                },
+                {
+                  name: "Dead Hang con lastre",
+                  sets: "2",
+                  reps: "Al fallo técnico",
+                  rir: isDeload ? "3" : "0",
+                  note: "Aguantando pasivamente al fallo técnico de agarre."
                 }
               ]
             },
@@ -545,67 +583,79 @@ export const routinesByWeek = {
               name: "Bloque 2: Gimnasio (Hipertrofia Miofibrilar - Compuestos)",
               exercises: [
                 {
-                  name: weekNumber === 1 || weekNumber === 5 || weekNumber === 9 ? "Press Inclinado Machine" : "Press Inclinado (Mancuernas)",
+                  name: "Press Inclinado en Máquina Convergente de Palancas",
                   sets: isDeload ? "1-2" : "3",
                   reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10",
-                  rir: isDeload ? "3" : rirVal,
+                  rir: isDeload ? "3 (-20% kg)" : rirVal,
                   note: "Foco en porción clavicular del pectoral."
                 },
                 {
-                  name: "Remo Bajo Convergente  en Polea Baja",
+                  name: "Remo Bajo Iso Convergente",
                   sets: isDeload ? "1-2" : "3",
                   reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10",
-                  rir: isDeload ? "3" : rirVal,
-                  note: "Densidad con vector horizontal. Tirar al esternón, codos a 45°-60°."
+                  rir: isDeload ? "3 (-20% kg)" : rirVal,
+                  note: "Densidad con vector horizontal de estiramiento."
                 }
               ]
             },
             {
-              name: "Bloque 3: Gimnasio (Hipertrofia Regional and Aislamiento)",
+              name: "Bloque 3: Gimnasio (Hipertrofia Regional y Aislamiento)",
               exercises: [
-                { name: "Vuelo Invertido Pec Dec", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Haz posterior del deltoides. Efecto visual 3D." },
+                { name: "Pájaros en banco", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Haz posterior del deltoides." },
                 { name: "Elevaciones Laterales (Máquina o Mancuernas)", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Haz lateral del deltoides." },
-                { name: "Extensiones Tras Nuca (Polea)", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Tríceps: Codo arriba para máximo estiramiento de cabeza larga." },
-                { name: "Curl Scott o Predicador", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Bíceps: Codo adelante del torso para cabeza corta." }
+                { name: "Extensiones Tras Nuca (Polea)", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Tríceps: Codo arriba." },
+                { name: "Curl Scott o Predicador", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Bíceps: Codo adelante." }
               ],
-              intensityTechnique: weekNumber === 3 || weekNumber === 7 ? "Curl Scott ideal para Rest-Pause o Drop Set" : null
+              intensityTechnique: weekNumber === 4 || weekNumber === 8 ? "Rest-Pause o DropSet en serie final" : null
             }
           ]
         };
 
       case "Viernes":
+        if (isW12) {
+          return {
+            title: "Legs 2 - Descanso Total Pre-Examen",
+            blocks: [
+              {
+                name: "Recuperación Neural y Tisular Total",
+                exercises: [
+                  { name: "Descanso Total de Pesas y Calistenia", sets: "0", reps: "0", rir: "0", note: "Cero estímulo. Cero pesas. Acumulás energía para el sábado. Solo podés caminar o estirar suavemente." }
+                ]
+              }
+            ]
+          };
+        }
         return {
-          title: isDeload ? "Legs 2 - Descarga Isquios" : "Legs 2 - Foco Isquiosurales con Pre-Fatiga",
+          title: isDeload ? `Legs 2 - Descarga ${weekNumber === 3 ? '1 (Menstruación)' : weekNumber === 7 ? '2' : '3 (Menstruación)'}` : "Legs 2 - Foco Isquiosurales con Pre-Fatiga",
           blocks: [
             {
               name: "Bloque 1: Calistenia (Fuerza Relativa)",
               exercises: [
-                { name: isDeload ? "Descanso Absoluto (Tapering)" : "Descanso / Sin estímulo neural en barras", sets: "0", reps: "0", rir: "0", note: "El SNC se preserva para el peso muerto rumano (RDL)." }
+                { name: "Descanso / Sin estímulo neural en barras", sets: "0", reps: "0", rir: "0", note: "El SNC se preserva para el peso muerto rumano (RDL)." }
               ]
             },
             {
-              name: "Bloque 3 (Inicial): Gimnasio (Aislamiento / Pre-Fatiga)",
+              name: "Bloque 1 (Inicial): Gimnasio (Aislamiento / Pre-Fatiga)",
               exercises: [
-                { name: "Curl Femoral (Sentado o Tumbado)", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Flexión de rodilla para aislar cabeza corta de los isquios." },
-                { name: "Pistol Squat (Asistida con anillas/TRX)", sets: isDeload ? "2" : "2-3", reps: isDeload ? "5 (Asistida fácil)" : "5-6", rir: isDeload ? "3" : rirAccVal, note: "Único quad del día. Fuerza unilateral." }
+                { name: "Curl Femoral (Sentado o Tumbado)", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3 (-20% kg)" : rirAccVal, note: "Flexión de rodilla para aislar cabeza corta." },
+                { name: "Pistol Squat (Asistida con anillas/TRX)", sets: isDeload ? "2" : "2-3", reps: isDeload ? "4-5 (fáciles)" : "5-6", rir: isDeload ? "3" : rirAccVal, note: "Único quad del día. Sissy o Reverse Nordic como opción." }
               ]
             },
             {
               name: "Bloque 2: Gimnasio (Hipertrofia Miofibrilar - Compuestos)",
               exercises: [
-                { name: "Peso Muerto Rumano (RDL)", sets: isDeload ? "1-2" : "3", reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10", rir: isDeload ? "3" : rirVal, note: "Bisagra de cadera. Al estar pre-fatigada, requieres menos peso externo, blindando tus lumbares." },
-                { name: "Hip Thrust o Glute Bridge", sets: isDeload ? "1-2" : "3", reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10", rir: isDeload ? "3" : rirVal, note: "Empuje horizontal para glúteos. Acortamiento máximo." }
+                { name: "Peso Muerto Rumano (RDL)", sets: isDeload ? "1-2" : "3", reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10", rir: isDeload ? "3 (-20% kg)" : rirVal, note: "Bisagra de cadera. Al estar pre-fatigada, requieres menos peso externo, blindando tus lumbares." },
+                { name: "Hip Thrust o Glute Bridge", sets: isDeload ? "1-2" : "3", reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10", rir: isDeload ? "3 (-20% kg)" : rirVal, note: "Empuje horizontal para glúteos." }
               ]
             },
             {
               name: "Bloque 3 (Continuación): Gimnasio (Hipertrofia Regional y Core)",
               exercises: [
-                { name: "SUPERSET: Máquina Abductora + Máquina Aductora", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Estabilidad pélvica general." },
-                { name: "Elevaciones de Talón Sentado", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Sóleo con rodilla flexionada." },
-                { name: weekNumber === 1 ? "Pallof Press" : "Rueda Abdominal (Ab-wheel)", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Core: Estabilización." },
-                ...(weekNumber === 1 ? [{ name: "Extensión Lumbar", sets: "2-3", reps: "12-14", rir: "2", note: "Fuerza lumbar." }] : [])
+                { name: "SUPERSET: Máquina Abductora + Máquina Aductora", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Estabilidad pélvica." },
+                { name: "Elevaciones de Talón (Sóleo)", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Rodilla flexionada." },
+                { name: "Extensión Lumbar", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Salud lumbar." }
               ],
-              intensityTechnique: weekNumber === 3 || weekNumber === 7 ? "Curl Femoral ideal para Rest-Pause o Drop Set" : null
+              intensityTechnique: weekNumber === 4 || weekNumber === 8 ? "Curl Femoral ideal para Rest-Pause o Drop Set" : null
             }
           ]
         };
@@ -628,40 +678,38 @@ export const routinesByWeek = {
             ]
           };
         }
-        const isW4 = weekNumber === 4;
-        const isW8 = weekNumber === 8;
         return {
-          title: isDeload ? "Brazos - Descarga" : "Brazos y Palanca de Core",
+          title: isDeload ? `Brazos - Descarga ${weekNumber === 3 ? '1 (Menstruación)' : weekNumber === 7 ? '2' : '3 (Menstruación)'}` : "Brazos y Palanca de Core",
           blocks: [
             {
               name: "Bloque 1: Calistenia (Fuerza Relativa y Core)",
               exercises: [
                 {
-                  name: isW4 || isW8 ? "Plancha Abdominal Tradicional" : weekNumber === 2 ? "Hollow Body Hold con balanceo (Hollow Rocks)" : weekNumber === 5 || weekNumber === 6 || weekNumber === 7 ? "Hollow Body Hold Lastrado" : "Hollow Body Hold (Suelo)",
+                  name: isDeload ? "Plancha Abdominal Tradicional" : weekNumber === 2 ? "Hollow Body Hold con balanceo (Hollow Rocks)" : weekNumber === 5 || weekNumber === 6 || weekNumber === 7 || weekNumber === 8 ? "Hollow Body Hold Lastrado" : "Hollow Body Hold (Suelo)",
                   sets: isDeload ? "2" : "3",
-                  reps: isW4 ? "30 seg" : isW8 ? "40 seg" : isDeload ? "30 seg (Plancha trad.)" : weekNumber === 11 ? "Al fallo técnico" : weekNumber === 10 ? "60 seg" : weekNumber === 9 ? "45 seg" : weekNumber === 7 ? "Al fallo técnico" : weekNumber === 6 ? "30-40 seg (Lastrado)" : weekNumber === 5 ? "20-30 seg (Lastrado)" : weekNumber === 2 ? "10-12 reps" : "20-30 seg",
+                  reps: isDeload ? "40 seg (Plancha trad.)" : weekNumber === 10 ? "60 seg" : weekNumber === 9 ? "45 seg" : weekNumber === 8 ? "Al fallo técnico" : weekNumber === 6 ? "30-40 seg (Lastrado)" : weekNumber === 5 ? "20-30 seg (Lastrado)" : weekNumber === 2 ? "10-12 reps" : "20-30 seg",
                   rir: isDeload ? "3" : "0",
                   note: "Retroversión pélvica absoluta. Zona lumbar aplastando el suelo."
                 },
                 {
-                  name: isW4 ? "Postura del Insecto Muerto (Dead bug)" : isW8 ? "Elevación de piernas colgada (Hanging Leg Raises) a 90°" : weekNumber === 3 ? "Single-Leg Dragon Fly (Negativas)" : weekNumber === 5 ? "Advanced Tuck Dragon Fly (Dinámico)" : weekNumber === 6 ? "Single-Leg Dragon Fly (Negativas lentas)" : weekNumber === 7 ? "Single-Leg Dragon Fly (Dinámico)" : weekNumber === 9 ? "Advanced Tuck Dragon Fly (Dinámico)" : weekNumber === 10 ? "Single-Leg Dragon Fly (Dinámico a 1 pierna)" : weekNumber === 11 ? "Dragon Fly Excéntrico Completo" : isDeload ? "Postura del Insecto Muerto (Dead bug)" : "Tuck Dragon Fly (Negativas)",
+                  name: isDeload ? "Elevación de piernas colgada (Hanging Leg Raises) a 90°" : weekNumber === 5 ? "Advanced Tuck Dragon Fly (Dinámico)" : weekNumber === 6 ? "Single-Leg Dragon Fly (Negativas lentas)" : weekNumber === 8 ? "Single-Leg Dragon Fly (Dinámico)" : weekNumber === 9 ? "Advanced Tuck Dragon Fly (Dinámico)" : weekNumber === 10 ? "Single-Leg Dragon Fly (Dinámico a 1 pierna)" : "Tuck Dragon Fly (Negativas)",
                   sets: isDeload ? "2" : "3",
-                  reps: isW4 ? "10-12 por lado" : isW8 ? "8 reps" : isDeload ? "10-12 por lado" : weekNumber === 11 ? "2-3 reps" : weekNumber === 10 ? "3 reps" : weekNumber === 9 ? "5-6 reps" : weekNumber === 7 ? "2-3 reps" : weekNumber === 6 ? "3-4 reps" : weekNumber === 5 ? "3-5 reps" : weekNumber === 3 ? "2-3 reps" : weekNumber === 2 ? "3-4 reps" : "3-4 reps",
+                  reps: isDeload ? "8 reps" : weekNumber === 10 ? "3 reps por pierna" : weekNumber === 9 ? "5-6 reps" : weekNumber === 8 ? "2-3 reps por pierna" : weekNumber === 6 ? "3-4 reps" : weekNumber === 5 ? "3-5 reps" : weekNumber === 2 ? "3-4 reps" : "3-4 reps",
                   rir: isDeload ? "3" : "0",
-                  note: isDeload ? "Alineación lumbar sin palanca." : "Controlando la bajada."
+                  note: isDeload ? "Descarga." : "Controlando la bajada."
                 }
               ]
             },
             {
               name: "Bloque 2 y 3: Gimnasio (Aislamiento de Brazos y Corrección)",
               exercises: [
-                { name: "Press Francés Tumbado", sets: "2", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Tríceps: Codo arriba." },
-                { name: "Pushdown Clásico", sets: "2", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Tríceps: Codo abajo." },
-                { name: "Extensión Unilateral Supina", sets: "2", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Tríceps: Fijo." },
-                { name: "Curl Inclinado con Mancuernas", sets: "2", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Bíceps: Estiramiento." },
-                { name: "Curl Predicador", sets: "2", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Bíceps: Contracción pico." },
-                { name: "Curl Martillo", sets: "2", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Bíceps: Neutro." },
-                { name: "Facepull", sets: isDeload ? "1" : "2", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Higiene articular semanal doble." }
+                { name: "Extensiones Tras Nuca (Polea)", sets: "2", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3 (-20% kg)" : rirAccVal, note: "Tríceps: Codo arriba." },
+                { name: "Pushdown Clásico", sets: "2", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3 (-20% kg)" : rirAccVal, note: "Tríceps: Codo abajo." },
+                { name: "Extensión Unilateral", sets: "2", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3 (-20% kg)" : rirAccVal, note: "Tríceps: Fijo." },
+                { name: "Curl Inclinado con Mancuernas", sets: "2", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3 (-20% kg)" : rirAccVal, note: "Bíceps: Estiramiento." },
+                { name: "Curl Predicador", sets: "2", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3 (-20% kg)" : rirAccVal, note: "Bíceps: Contracción pico." },
+                { name: "Curl Martillo", sets: "2", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3 (-20% kg)" : rirAccVal, note: "Bíceps: Neutro." },
+                { name: "Y-raises", sets: isDeload ? "1" : "2", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Higiene articular semanal doble." }
               ]
             }
           ]
@@ -689,6 +737,12 @@ export const nutritionData = {
   kcalTarget: 1700,
   proteinMass: "29,925 kg",
   weightLossRate: "0.5 kg por semana",
+  newTips: [
+    { id: 1, title: "Snack Proteico en Desayuno", desc: "Scoop de proteína distribuido en el desayuno reemplazando los huevos.", days: "Martes, Miércoles y Viernes", badge: "Obligatorio" },
+    { id: 2, title: "Dos Frutas al Día", desc: "Consumir dos frutas diarias, idealmente dos cítricos para micronutrientes y recuperación.", days: "Diario", badge: "Cítricos" },
+    { id: 3, title: "Consumo Racionado de Carne", desc: "Comer carne solo 3 a 4 veces por semana para controlar la densidad calórica y digestión.", days: "3 a 4 veces/semana", badge: "Control" },
+    { id: 4, title: "Hidratación Pre-Entrenamiento", desc: "Tomar 2 litros de agua antes de llegar a entrenar para mantener el rendimiento muscular.", days: "Pre-Entreno", badge: "2 Litros" }
+  ],
   colacionesMicroCaloricas: [
     { name: "1 huevo duro", desc: "Pura proteína y grasas saciantes", calories: "~70 kcal" },
     { name: "Medio scoop de proteína en polvo con agua", desc: "Frena el catabolismo y calma la ansiedad por lo dulce", calories: "~60 kcal" },
@@ -700,10 +754,31 @@ export const nutritionData = {
     { name: "1 bocadito helado de yogur, proteína y frutos rojos", desc: "Tu salvavidas táctico congelado. Una micro-dosis de aminoácidos con textura de postre para matar la ansiedad al instante.", calories: "~18 kcal" },
     {
       name: "1 bocadito de Súper-Trufa de cacao y proteína",
-      desc: "1 scoop (30g) de proteína. 40g de cacao amargo sin azúcar. 70ml de café negro frío (o leche descremada). 1 cucharada (15g) de Yogur Griego La Serenísima. Gotas de edulcorante a gusto.",
-      calories: "~31 kcal"
+      desc: "Bloque anabólico oscuro. Receta para 10 bocaditos: 1 scoop (30g) proteína Integralmedica, 40g cacao amargo sin azúcar, 70ml café negro frío / leche descremada, 1 cda (15g) Yogur Griego La Serenísima, edulcorante a gusto. (Congelar 15 min y cortar en 10 cuadraditos).",
+      calories: "~31 kcal",
+      macros: "P: ~4.4g | C: ~2.9g | G: ~1g"
     }
   ],
+  superTrufaRecipe: {
+    title: "Receta Táctica: Súper-Trufa de Cacao y Proteína",
+    yield: "1 Bloque de 10 Bocaditos",
+    perServingMacros: "Calorías: ~31 kcal | Proteínas: ~4.4g | Carbohidratos: ~2.9g | Grasas: ~1g",
+    ingredients: [
+      "1 scoop (30g) de proteína Integralmedica.",
+      "40g de cacao amargo sin azúcar.",
+      "70ml de café negro frío (o leche descremada).",
+      "1 cucharada (15g) de Yogur Griego La Serenísima.",
+      "Gotas de edulcorante a gusto."
+    ],
+    execution: [
+      "1. Polvos: Mezcla en un bol el scoop de proteína y los 40g de cacao amargo.",
+      "2. Hidratación: Agrega los 70ml de líquido muy de a poco mientras revuelves constantemente.",
+      "3. El Cemento: Cuando esté casi integrado, suma el yogur griego y el edulcorante. Mezcla con fuerza hasta obtener una pasta súper espesa y pesada.",
+      "4. El Moldeado: Pasa la mezcla a un trozo de papel film, cúbrela y dale forma de bloque cuadrado o rectangular con las manos.",
+      "5. El Frío: Llévalo al freezer por 15 minutos o a la heladera hasta que solidifique.",
+      "6. La División: Retira el film, espolvorea una pizca extra de cacao por encima y corta el bloque con un cuchillo en 10 cuadraditos exactos."
+    ]
+  },
   preWorkoutSnacks: [
     { name: "Dátiles", desc: "Consumir 2 o 3 dátiles. Son pura glucosa natural de absorción rapidísima." },
     { name: "Galleta de Arroz con Miel", desc: "1 o 2 galletas de arroz con una capa muy fina de miel o mermelada." },
@@ -727,7 +802,7 @@ export const nutritionData = {
       },
       {
         id: "anabolica",
-        name: "Opción 2 (Anabólica)",
+        name: "Opción 2 (Anabólica - Ajuste: Mitad de nueces)",
         ingredients: [
           "50g del mix de pancakes Granger preparados + 1 huevo + 40ml de leche.",
           "150cc de leche proteica en tu infusión.",
@@ -781,7 +856,7 @@ export const nutritionData = {
   },
   bloque2: {
     title: "Bloque 2: Comidas Carbo-Proteicas (Almuerzos o Cenas de Carga)",
-    rule: "Siempre incluir después del entrenamiento intenso",
+    rule: "Ideal para tu comida post-entrenamiento PPL",
     options: [
       {
         id: "clasica",
@@ -850,7 +925,7 @@ export const nutritionData = {
       },
       {
         id: "vegetariana_convertida",
-        name: "Opción 2 (Vegetariana Ligera)",
+        name: "Opción 2 (Vegetariana Ligera - Sin Calabaza)",
         ingredients: [
           "Omelette de 1 huevo entero y 2 claras.",
           "1 feta (30g) de queso magro o light.",
@@ -858,13 +933,13 @@ export const nutritionData = {
           "Ensalada verde libre.",
           "150g de papa o camote (pesados en crudo)."
         ],
-        macros: "Se eliminó la calabaza"
+        macros: "Ajuste: Se eliminó la calabaza para esta variante."
       }
     ]
   },
   bloque3: {
     title: "Bloque 3: Comidas Solo Proteicas (Ajustado con Calabaza)",
-    rule: "Ideal para la cena los días de menor intensidad",
+    rule: "Ideal para la cena los días de tren superior o menor intensidad",
     options: [
       {
         id: "basica_pumpkin",
@@ -879,7 +954,7 @@ export const nutritionData = {
       },
       {
         id: "vegetariana_pumpkin",
-        name: "Opción 2 (Vegetariana Ligera)",
+        name: "Opción 2 (Vegetariana Ligera - Ajuste de nueces)",
         ingredients: [
           "Omelette de 1 huevo entero y 2 claras.",
           "1 feta (30g) de queso magro o light.",
@@ -916,16 +991,84 @@ export const nutritionData = {
         id: "lomo_nube",
         name: "Opción 5 - Sándwich Táctico (Lomo en Pan de Nube)",
         ingredients: [
-          "150g de lomo magro a la plancha",
-          "2 tapas de pan de nube (armado con 3 claras batidas a punto nieve, 2 yemas y 1 cda de queso crema, horneadas).",
-          "Lechuga y tomate libre",
-          "1 cda de aderezo zero (mostaza o tu salsa de yogur con limón y verdeo).",
+          "150g de lomo magro a la plancha.",
+          "2 tapas de pan de nube (armado con 3 claras a punto nieve, 2 yemas y 1 cda queso crema, horneadas).",
+          "Lechuga y tomate libre.",
+          "1 cda de aderezo zero (mostaza o salsa de yogur con limón y verdeo)."
         ],
         macros: "Calorías: ~445 kcal | Proteínas: 51g | Carbohidratos: 4g | Grasas: 23g"
       }
-
     ]
   }
+};
+
+export const gtgSchedule = {
+  Lunes: {
+    gymFocus: "Gym: Pull Pesado",
+    movA: { name: "Ranita / Handstand", pauses: 4, desc: "4 pausas Pomodoro dedicadas a práctica de Ranita o Handstand." },
+    movB: { name: "Flexiones", pauses: 4, desc: "4 pausas Pomodoro de 3 flexiones por serie (50% de máx evaluado)." },
+    restriction: "Restricción respetada: Cero dominadas (día de Pull pesado en gym).",
+    pullupsSuspended: true,
+    pushupsSuspended: false
+  },
+  Martes: {
+    gymFocus: "Gym: Push Pesado",
+    movA: { name: "Ranita / Handstand", pauses: 4, desc: "4 pausas Pomodoro dedicadas a Ranita o Handstand." },
+    movB: { name: "Dominadas", pauses: 4, desc: "4 pausas Pomodoro de 2 dominadas por serie (50% de máx evaluado)." },
+    restriction: "Restricción respetada: Cero flexiones (día de Push pesado en gym).",
+    pullupsSuspended: false,
+    pushupsSuspended: true
+  },
+  Miércoles: {
+    gymFocus: "Gym: Cuádriceps",
+    movA: { name: "Descanso GtG", pauses: 0, desc: "Cero exigencia a las muñecas. Pura recuperación del sistema nervioso." },
+    movB: { name: "Descanso GtG", pauses: 0, desc: "Descanso total de pausas Pomodoro de fuerza." },
+    restriction: "Descanso total de GTG para recuperación articular y neural.",
+    pullupsSuspended: true,
+    pushupsSuspended: true
+  },
+  Jueves: {
+    gymFocus: "Gym: Tren Superior Híbrido",
+    movA: { name: "Ranita / Handstand", pauses: 4, desc: "4 pausas Pomodoro dedicadas a Ranita o Handstand." },
+    movB: { name: "Compresiones de Flexores (Día 1 de 3)", pauses: 4, desc: "4 pausas Pomodoro de trabajo de pica/compresión de core." },
+    restriction: "Restricción respetada: Cero dominadas y cero flexiones.",
+    pullupsSuspended: true,
+    pushupsSuspended: true
+  },
+  Viernes: {
+    gymFocus: "Gym: Cadena Posterior (Isquios)",
+    movA: { name: "Descanso GtG", pauses: 0, desc: "Recuperación total del SNC y articulaciones." },
+    movB: { name: "Descanso GtG", pauses: 0, desc: "Sin estímulo de fuerza en pausas Pomodoro." },
+    restriction: "Descanso total de GTG para recuperar cadera y muñecas.",
+    pullupsSuspended: true,
+    pushupsSuspended: true
+  },
+  Sábado: {
+    gymFocus: "Gym: Brazos y Core",
+    movA: { name: "Ranita / Handstand", pauses: 4, desc: "4 pausas Pomodoro de Ranita / Handstand." },
+    movB: { name: "Compresiones de Flexores (Día 2 de 3)", pauses: 4, desc: "4 pausas de compresiones. (Opción: 2 pausas compresiones + 2 flexiones)." },
+    restriction: "Volumen opcional de empuje si los hombros están frescos.",
+    pullupsSuspended: true,
+    pushupsSuspended: false
+  },
+  Domingo: {
+    gymFocus: "Descanso total del Gym",
+    movA: { name: "Ranita / Handstand", pauses: 4, desc: "4 pausas Pomodoro de Ranita / Handstand." },
+    movB: { name: "Compresiones de Flexores (Día 3 de 3)", pauses: 4, desc: "4 pausas de compresiones. (Opción: reemplazar por dominadas si la espalda está fresca)." },
+    restriction: "Acondicionamiento ligero y práctica de equilibrio.",
+    pullupsSuspended: false,
+    pushupsSuspended: true
+  }
+};
+
+export const gtgRules = {
+  definition: "El Método Grease the Groove (GTG) está diseñado para optimizar la coordinación del sistema neuromuscular mediante ejecuciones repetidas bajo frescura neurológica total (40%-60% de tu máximo).",
+  rules: [
+    { title: "Intensidad Estricta", desc: "2 dominadas y 3 flexiones por serie (50% de tu capacidad máxima evaluada). Cero fallo muscular." },
+    { title: "Frecuencia Máxima", desc: "Máximo 8 series dispersas a lo largo de la jornada laboral de Pomodoro." },
+    { title: "Suspensión en Descarga", desc: "Durante las semanas de descarga (Semanas 3, 7 y 11), el GTG de flexiones y dominadas queda ESTRICTAMENTE PROHIBIDO para disipar fatiga del SNC." },
+    { title: "Restricción por Días Pesados", desc: "Días de Pull pesado en gym: dominadas suspendidas. Días de Push pesado en gym: flexiones suspendidas." }
+  ]
 };
 
 export const wikiBiomechanics = [
