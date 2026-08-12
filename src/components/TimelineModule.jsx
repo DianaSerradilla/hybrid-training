@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import {
-  ShieldAlert, Eye, Trophy, Info,
-  HelpCircle, ChevronRight, Zap, CheckCircle,
-  Calendar, Award, PlayCircle, Video
+  ShieldAlert, Trophy, Zap, Layers, Activity, Flame, CheckCircle2
 } from 'lucide-react';
 import { macrocycleWeeks } from '../data/macrocycleData';
 
@@ -16,7 +14,7 @@ const gymMesoData = {
     desc: "Bloque enfocado en el aumento de la tensión mecánica y la sobrecarga progresiva. Bajamos a rangos de 6-8 repeticiones en compuestos grandes con foco en daño tisular profundo."
   },
   3: {
-    title: "Mesociclo 3: El Bloque de Fuerza Máxima (Semanas 9 a 12)",
+    title: "Mesociclo 3: El Bloque de Fuerza Máxima y Peaking (Semanas 9 a 12)",
     desc: "Bloque enfocado en la fuerza absoluta y peaking. Reducción drástica de repeticiones (4-6 / clusters) para reclutamiento neural máximo y búsqueda de récords personales (PR)."
   }
 };
@@ -24,39 +22,129 @@ const gymMesoData = {
 const calisthenicsMesoData = {
   1: {
     title: "Mesociclo 1: Acondicionamiento Neuromuscular y Mielinización (Semanas 1 a 4)",
-    global: "Objetivo Global: Construir la autopista nerviosa. En esta fase, las ganancias de fuerza no provienen de músculos más grandes, sino de una mayor sincronización de las unidades motoras y el engrosamiento de la vaina de mielina de los axones."
+    target: "Objetivo: Construir la autopista nerviosa y establecer los cerrojos biomecánicos (depresión, retracción y protracción escapular). Lograr 7 dominadas, 10 fondos, 12 flexiones."
   },
   2: {
     title: "Mesociclo 2: Sobrecarga Excéntrica y Densidad Contráctil (Semanas 5 a 8)",
-    global: "Objetivo Global: Construcción del \"hardware\". Una vez que el sistema nervioso sabe enviar la señal de fuerza, necesitamos que las fibras musculares sean más gruesas (hipertrofia miofibrilar) para ejecutarla. Nos enfocaremos en el daño muscular a través de las fases excéntricas lentas."
+    target: "Objetivo: Construcción del \"hardware\". Hipertrofia miofibrilar y consolidación de la fuerza base. Lograr 8-9 dominadas, 11 fondos, 14 flexiones, 2-3 pike push-ups."
   },
   3: {
     title: "Mesociclo 3: Intensificación, Tolerancia Láctica y Peaking (Semanas 9 a 12)",
-    global: "Objetivo Global: Resistencia Anaeróbica y Fuerza Absoluta. Tienes los nervios (M1) y tienes el músculo (M2); ahora debes entrenar a la célula para que recicle el ATP a máxima velocidad y tolere el ácido láctico para poder exprimir esas 15 a 20 repeticiones continuas."
+    target: "Objetivo: Entrenar la vía glucolítica para exprimir repeticiones continuas, ejecutar el TEST OFICIAL y consolidar el rendimiento."
   }
 };
 
 const calisthenicsWeeksData = {
-  1: "Microciclo 1 - Adaptación Base: Establecer los cerrojos biomecánicos (depresión, retracción y protracción escapular) bajo carga inicial. El sistema nervioso central (SNC) mapea el patrón motor. Volumen moderado, lejos del fallo muscular.",
-  2: "Microciclo 2 - Expansión de Capacidad de Trabajo: Incrementar el tonelaje total tolerado por la placa motora. Se fuerza a las fibras de contracción lenta y rápida a trabajar en sinergia sin llegar a la acidez extrema.",
-  3: "Descarga 1 (Menstruación): Disipación total de la fatiga del SNC y fase aguda de reparación celular. El colágeno tipo I en tendones de codos y hombros comienza su remodelación estructural tras el estrés de las semanas previas. Volumen cortado a la mitad, peso -20%, GTG suspendido.",
-  4: "Microciclo 3 - Clímax Neural y Estructural: Máximo estrés neurológico. Empujamos el sistema al límite de la eficiencia técnica para forzar la supercompensación. Es la semana de mayor fatiga sistémica. RIR 1-0 en principales y RIR 0 en accesorios con Rest-Pause/DropSet.",
-  5: "Microciclo 5 - Choque Excéntrico (Adaptación Pesada): Introducción de Tiempos Bajo Tensión (TUT) prolongados. Las contracciones excéntricas lentas inducen microdesgarros masivos en el sarcolema y las líneas Z, activando las células satélite para la expansión mionuclear. Flexiones pica con déficit y Fondos LML.",
-  6: "Microciclo 6 - Mecanotransducción Profunda (Intensificación Pesada): Explotar la rigidez de la titina como mecanosensor. Trabajo intenso en longitudes musculares largas (LML), como aguantar la porción más baja de un fondo o el estiramiento máximo de una dominada.",
-  7: "Descarga 2: Reducción de series a la mitad, reducción de tonelaje (20% menos) y RIR 3 general para recuperar articulaciones y tendones antes de las cargas máximas. GTG de flexiones y dominadas suspendido.",
-  8: "Microciclo 6 - Clímax Pesado: Máximo daño tisular tolerable (Miotrauma). Llevamos la musculatura al fallo técnico en barras y fallo total en gimnasio. OBLIGATORIO: Drop Set o Rest-Pause SÓLO en la última serie de 2 o 3 ejercicios del Bloque 3.",
-  9: "Microciclo 7 - Adaptación a la Fuerza (Método Cluster): Entrenar la vía glucolítica anaeróbica. Uso de metodologías Cluster (micro-series de 3 a 5 reps con descansos de 15 segundos) para acumular un gran volumen de repeticiones de alta calidad sin fatiga metabólica paralizante.",
-  10: "Microciclo 8 - Intensificación de Fuerza (Método Cluster): Soportar el estrés metabólico extremo y la hinchazón celular (cell swelling). El músculo aprende a contraerse incluso en un entorno de hipoxia y alta acidez. Cargas más pesadas a RIR 1 y RIR 0.",
-  11: "Descarga 3 (Menstruación): Descanso estratégico antes del gran final. Cortás el volumen a la mitad y bajás los pesos un 30% a RIR 3 o 4, guardando toda la energía para la semana que viene. GTG suspendido.",
-  12: "Microciclo 12 - Peaking y EL EXAMEN (TEST AMRAP): Tapering de Lunes a Viernes (disipación total de fatiga). El SÁBADO ejecutas el TEST OFICIAL (AMRAP) para registrar tus récords finales: Test 1 Dominadas, Test 2 Fondos, Test 3 Flexiones Estándar, Test 4 Flexiones Pica."
+  1: {
+    title: "Microciclo 1 (Semana 1 - Menstruación): Descarga y Resíntesis",
+    desc: "Disipación de fatiga inicial y oxigenación del tejido conectivo.",
+    methodology: "Metodología: Rango Completo Asistido (Bandas Pesadas). Ejecución súper fluida y terapéutica para bombear sangre sin estrés articular. RIR 3."
+  },
+  2: {
+    title: "Microciclo 2 (Semana 2 - Fase Folicular): Adaptación Base",
+    desc: "El SNC mapea el patrón motor con la energía en aumento.",
+    methodology: "Metodología: Acomodación de Resistencia (Bandas Elásticas). Se busca acumular volumen limpio en rango completo asistiéndote solo en los puntos de mayor desventaja mecánica. RIR 2."
+  },
+  3: {
+    title: "Microciclo 3 (Semana 3 - Fase Ovulatoria): Clímax Neural",
+    desc: "Máximo estrés neurológico aprovechando el pico hormonal para forzar la supercompensación de la vaina de mielina.",
+    methodology: "Metodología: Entrenamiento Excéntrico (Negativas Lentas). Fases excéntricas de 4-5 segundos al final de las series para reclutar las fibras de más alto umbral. RIR 0-1."
+  },
+  4: {
+    title: "Microciclo 4 (Semana 4 - Fase Lútea): Expansión de Capacidad",
+    desc: "Se educa a la placa motora a tolerar volumen bajo fatiga controlada (retención de líquidos/SPM).",
+    methodology: "Metodología: Método Piramidal Sub-máximo. Series ascendentes y descendentes con descansos intermedios. Mantienes el volumen, pero sin tocar el fallo para proteger el SNC. RIR 1 estricto."
+  },
+  5: {
+    title: "Microciclo 5 (Semana 5 - Menstruación): Descarga Tisular",
+    desc: "Fusión de nuevos mionúcleos y consolidación de tejido denso.",
+    methodology: "Metodología: Rango Completo Asistido. Volumen cortado al 50%, máxima asistencia. RIR 3."
+  },
+  6: {
+    title: "Microciclo 6 (Semana 6 - Fase Folicular): Reinicio y Choque Isométrico",
+    desc: "Introducción a tiempos bajo tensión (TUT) prolongados preparando el cuerpo para cargas pesadas.",
+    methodology: "Metodología: Isometrías Estratégicas. Pausas estáticas de 2 segundos en los puntos de máxima contracción concéntrica para regenerar tejido conectivo y vencer el stress shielding. RIR 2."
+  },
+  7: {
+    title: "Microciclo 7 (Semana 7 - Fase Ovulatoria): Clímax Estructural",
+    desc: "Miotrauma absoluto. El máximo daño tisular tolerable de todo el mesociclo, escudado por tu ventana biológica dorada.",
+    methodology: "Metodología: Negativas Puras Lastradas / Híbridas. Series llevadas al fallo técnico, rematando con excéntricas hiper-lentas controlando la gravedad al milímetro (con lastre si es necesario). RIR 0."
+  },
+  8: {
+    title: "Microciclo 8 (Semana 8 - Fase Lútea): Mecanotransducción Profunda",
+    desc: "Tensión muscular pura sin agotar el sistema nervioso central.",
+    methodology: "Metodología: Parciales Alargadas (LML). Trabajo exclusivo en el tercio inferior del movimiento (máximo estiramiento pasivo) para inducir sarcomerogénesis y explotar la rigidez de la titina. RIR 1 estricto."
+  },
+  9: {
+    title: "Microciclo 9 (Semana 9 - Menstruación): Tapering y Descarga Estratégica",
+    desc: "Resíntesis masiva de glucógeno y erradicación total de la fatiga del trimestre antes de la gran prueba.",
+    methodology: "Metodología: Movimiento Fluido Asistido. Bandas elásticas, volumen al 50%. Ningún esfuerzo que genere lactato. RIR 3-4."
+  },
+  10: {
+    title: "Microciclo 10 (Semana 10 - Fase Folicular): Adaptación a la Densidad",
+    desc: "Acostumbrar al cuerpo a cargas casi máximas sin colapsar el patrón motor.",
+    methodology: "Metodología: Series Cluster Lastrado (Conglomerados). Micro-series de 1 o 2 repeticiones intercaladas con descansos de 15 segundos para reponer ATP y evadir la acidez extrema. RIR 2."
+  },
+  11: {
+    title: "Microciclo 11 (Semana 11 - Fase Ovulatoria): TEST Y RENDIMIENTO ABSOLUTO (PEAKING)",
+    desc: "El sistema está hiper-excitado, rebosante de energía y en su punto hormonal más fuerte.",
+    methodology: "Metodología: AMRAP Oficial (As Many Reps As Possible). Sin metodologías intra-serie, sin pausas, sin bandas. Ejecución pura y estricta el día sábado para registrar los PRs (Récords Personales) oficiales del macrociclo. RIR 0 absoluto."
+  },
+  12: {
+    title: "Microciclo 12 (Semana 12 - Fase Lútea): Expansión del Umbral Láctico",
+    desc: "Tras haber roto tus marcas, consolidamos la resistencia a la fatiga mientras sobrellevamos la hinchazón celular (cell swelling).",
+    methodology: "Metodología: Clusters Densos / Piramidal. Aumentamos las repeticiones dentro del clúster. El SNC se expone a altísima demanda metabólica y resistencia láctica, pero queda totalmente prohibido llegar al fallo técnico para no lesionarse al cierre del ciclo. RIR 1 estricto."
+  }
 };
+
+const blocksFisiologia = [
+  {
+    num: 1,
+    title: "Bloque 1: Fuerza Relativa y Condicionamiento Neural (Calistenia Básica)",
+    color: "border-indigo-500 text-indigo-400 bg-indigo-950/40",
+    badgeColor: "bg-indigo-950 text-indigo-300 border-indigo-800",
+    bioState: "Tu SNC está intacto y fresco. Los depósitos de ATP intracelular están al 100%.",
+    fisiologia: "Adaptación neural, sincronización de unidades motoras y mielinización axónica. Aquí no buscamos \"bombear\" el músculo, buscamos que tu cerebro aprenda a reclutar la mayor cantidad de fibras musculares en una fracción de segundo para vencer tu peso corporal (fuerza relativa).",
+    practica: "Realizarás progresiones de dominadas, flexiones y fondos. Es un trabajo de pura tensión mecánica en desventaja anatómica, donde los estabilizadores del core (retroversión pélvica) y las escápulas (depresión/retracción) están trabajando al máximo. Si hay fatiga previa, la técnica colapsa y el riesgo de lesión se dispara.",
+    clinicaRule: "En este bloque NUNCA se busca el fallo muscular total (RIR 0) que comprometa la postura. Terminada la serie, el sistema nervioso debe sentirse \"encendido\", no frito."
+  },
+  {
+    num: 2,
+    title: "Bloque 2: Hipertrofia Miofibrilar Pesada (Gimnasio - Compuestos Grandes)",
+    color: "border-emerald-500 text-emerald-400 bg-emerald-950/40",
+    badgeColor: "bg-emerald-950 text-emerald-300 border-emerald-800",
+    bioState: "El SNC tiene una ligera fatiga residual, pero el SNP (el músculo en sí) está pre-activado y listo para absorber toneladas de carga.",
+    fisiologia: "Daño muscular localizado (miotrauma) a través de altos niveles de tensión mecánica y sobrecarga progresiva lineal.",
+    practica: "Pasamos a las máquinas de palancas, jalones pesados y presses. Al utilizar respaldos o rieles guiados (como la máquina de palancas convergentes o el remo con apoyo al pecho), \"apagamos\" la necesidad de estabilizar el cuerpo. Esto permite que el músculo objetivo (pectoral o dorsal ancho) reciba un estímulo de hipertrofia absoluto y seguro, permitiéndote empujar pesos masivos incluso con la fatiga nerviosa arrastrada del Bloque 1.",
+    clinicaRule: null
+  },
+  {
+    num: 3,
+    title: "Bloque 3: Hipertrofia Regional, Estrés Metabólico y Aislamiento (Gimnasio)",
+    color: "border-amber-500 text-amber-400 bg-amber-950/40",
+    badgeColor: "bg-amber-950 text-amber-300 border-amber-800",
+    bioState: "Las fibras de contracción rápida (Tipo II) están fatigadas. Se inicia la acumulación de metabolitos (lactato, iones de hidrógeno).",
+    fisiologia: "Hipertrofia regional mediante entrenamiento a longitudes musculares largas (LML) y estrés metabólico (hinchazón celular o cell swelling).",
+    practica: "Ejercicios analíticos obligatorios (sillón de cuádriceps, extensiones de tríceps, elevaciones laterales, curl de bíceps). Aquí manipulamos los vectores de aislamiento (como el codo atrás del torso para el tríceps/bíceps) para aplicar tensión en el punto de máximo estiramiento anatómico, un detonante biológico supremo para la sarcomerogénesis. Aquí el RIR debe ser empujado al límite (RIR 1 o 0) según dicte tu semana de mesociclo.",
+    clinicaRule: null
+  },
+  {
+    num: 4,
+    title: "Bloque 4: Barrido Metabólico y Transición (Enfriamiento)",
+    color: "border-fuchsia-500 text-fuchsia-400 bg-fuchsia-950/40",
+    badgeColor: "bg-fuchsia-950 text-fuchsia-300 border-fuchsia-800",
+    bioState: "Entorno de hipoxia localizada, alta acidez intramuscular.",
+    fisiologia: "Retorno venoso, clearance (limpieza) de metabolitos de desecho y transición hacia el sistema nervioso parasimpático (recuperación).",
+    practica: "5 minutos de cardio (soga, remo o bici) y trabajo de movilidad activa (como el Skin the Cat para extender hombros). Este bloque acelera la llegada de sangre oxigenada a los tejidos castigados, mitigando las agujetas extremas y preparando el terreno para la síntesis de proteínas.",
+    clinicaRule: null
+  }
+];
 
 export default function TimelineModule() {
   const [selectedWeek, setSelectedWeek] = useState(1);
 
   const activeWeekObj = macrocycleWeeks.find(w => w.number === selectedWeek) || macrocycleWeeks[0];
 
-  // Helper for week tag styling
   const getWeekColorClass = (w) => {
     if (w.number === selectedWeek) {
       return 'border-indigo-500 bg-indigo-600 text-white';
@@ -64,31 +152,35 @@ export default function TimelineModule() {
     if (w.isDeload) {
       return 'border-amber-600/70 bg-amber-950/40 text-amber-400 hover:bg-amber-900/40';
     }
-    if (w.number === 12) {
+    if (w.number === 11) {
       return 'border-blue-500 bg-blue-950/60 text-blue-300 hover:bg-blue-900/40';
     }
-    if (w.number === 4 || w.number === 8) {
+    if (w.number === 3 || w.number === 7) {
       return 'border-fuchsia-600/70 bg-fuchsia-950/40 text-fuchsia-400 hover:bg-fuchsia-900/40';
     }
     return 'border-slate-800 bg-slate-950 hover:bg-slate-900 text-slate-300';
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8 max-w-7xl mx-auto w-full">
 
-      {/* 1. Interactive 12-Week Timeline Grid */}
+      {/* 1. Línea de Tiempo Estratégica del Macrociclo (12 Semanas Grid) */}
       <div className="glass-panel p-6 rounded-2xl glow-indigo space-y-4">
         <div>
-          <h2 className="text-lg font-bold font-outfit text-white">Línea de Tiempo Estratégica del Macrociclo</h2>
-          <p className="text-xs text-slate-400">12 Semanas: 8 Semanas de Carga + 3 de Descarga + 1 de Peaking (Fuerza Máxima)</p>
+          <h2 className="text-xl md:text-2xl font-bold font-outfit text-white">
+            Línea de Tiempo Estratégica del Macrociclo
+          </h2>
+          <p className="text-xs text-slate-400">
+            12 Semanas: Sincronización Endocrina y Biomecánica (3 Descargas + 1 Peaking Test)
+          </p>
         </div>
 
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-12 gap-2.5">
           {macrocycleWeeks.map((w) => {
             const isSelected = w.number === selectedWeek;
             const isDeload = w.isDeload;
-            const isTest = w.number === 12;
-            const isClimax = w.number === 4 || w.number === 8;
+            const isTest = w.number === 11;
+            const isClimax = w.number === 3 || w.number === 7;
 
             return (
               <button
@@ -113,34 +205,34 @@ export default function TimelineModule() {
               <span className="text-[10px] bg-slate-900 text-slate-400 px-2 py-0.5 rounded border border-slate-800 font-bold uppercase tracking-wider">
                 Mesociclo {activeWeekObj.mesocycle}
               </span>
-              <h3 className="font-bold text-white text-base mt-1">
+              <h3 className="font-bold text-white text-base mt-1 font-outfit">
                 Semana {activeWeekObj.number}: {activeWeekObj.intensityLabel}
               </h3>
             </div>
-            <div className="text-xs text-slate-400">
+            <div className="text-xs text-slate-400 font-mono">
               RIR General: <span className="text-indigo-400 font-bold">{activeWeekObj.rirGeneral}</span> | RIR Accesorios: <span className="text-indigo-400 font-bold">{activeWeekObj.rirAccessories}</span>
             </div>
           </div>
 
           {/* Mesocycle Global Focus */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-indigo-400 flex items-center gap-1.5">
-              <Trophy className="w-3.5 h-3.5" />
+            <h4 className="text-xs font-bold uppercase tracking-wider text-indigo-400 flex items-center gap-1.5 font-outfit">
+              <Trophy className="w-4 h-4 text-indigo-400" />
               Objetivos Globales del Mesociclo {activeWeekObj.mesocycle}
             </h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-slate-900/40 border border-slate-850 p-3.5 rounded-xl space-y-1">
-                <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">Gimnasio</span>
-                <p className="text-xs font-semibold text-slate-200">{gymMesoData[activeWeekObj.mesocycle].title}</p>
+              <div className="bg-slate-900/40 border border-slate-850 p-4 rounded-xl space-y-1.5">
+                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wide font-mono block">Gimnasio</span>
+                <p className="text-xs font-bold text-slate-200 font-outfit">{gymMesoData[activeWeekObj.mesocycle].title}</p>
                 <p className="text-[11px] text-slate-400 leading-relaxed mt-1">
                   {gymMesoData[activeWeekObj.mesocycle].desc}
                 </p>
               </div>
-              <div className="bg-slate-900/40 border border-slate-850 p-3.5 rounded-xl space-y-1">
-                <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">Calistenia</span>
-                <p className="text-xs font-semibold text-slate-200">{calisthenicsMesoData[activeWeekObj.mesocycle].title}</p>
+              <div className="bg-slate-900/40 border border-slate-850 p-4 rounded-xl space-y-1.5">
+                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wide font-mono block">Calistenia</span>
+                <p className="text-xs font-bold text-slate-200 font-outfit">{calisthenicsMesoData[activeWeekObj.mesocycle].title}</p>
                 <p className="text-[11px] text-slate-400 leading-relaxed mt-1">
-                  {calisthenicsMesoData[activeWeekObj.mesocycle].global}
+                  {calisthenicsMesoData[activeWeekObj.mesocycle].target}
                 </p>
               </div>
             </div>
@@ -148,173 +240,144 @@ export default function TimelineModule() {
 
           {/* Weekly Detail Focus */}
           <div className="space-y-3 border-t border-slate-900 pt-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-indigo-400 flex items-center gap-1.5">
-              <Zap className="w-3.5 h-3.5 text-indigo-400" />
+            <h4 className="text-xs font-bold uppercase tracking-wider text-indigo-400 flex items-center gap-1.5 font-outfit">
+              <Zap className="w-4 h-4 text-indigo-400" />
               Plan de Trabajo Semanal (Semana {activeWeekObj.number})
             </h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-slate-900/20 border border-slate-900 p-3.5 rounded-xl space-y-1">
-                <span className="text-[10px] font-bold text-indigo-500 uppercase tracking-wide block">Gimnasio (Foco Semanal)</span>
+              <div className="bg-slate-900/20 border border-slate-900 p-4 rounded-xl space-y-1.5">
+                <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-wide block font-mono">Gimnasio (Foco Semanal)</span>
                 <p className="text-xs text-slate-300 leading-relaxed">
                   {activeWeekObj.focus}
                 </p>
               </div>
-              <div className="bg-slate-900/20 border border-slate-900 p-3.5 rounded-xl space-y-1">
-                <span className="text-[10px] font-bold text-indigo-500 uppercase tracking-wide block">Calistenia (Foco Semanal)</span>
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  {calisthenicsWeeksData[activeWeekObj.number]}
-                </p>
+              <div className="bg-slate-900/20 border border-slate-900 p-4 rounded-xl space-y-1.5">
+                <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-wide block font-mono">Calistenia (Foco Semanal)</span>
+                <p className="text-xs font-bold text-slate-200">{calisthenicsWeeksData[activeWeekObj.number].title}</p>
+                <p className="text-xs text-slate-400 leading-relaxed">{calisthenicsWeeksData[activeWeekObj.number].desc}</p>
+                <p className="text-xs text-emerald-400 font-medium border-t border-slate-900 pt-1 mt-1">{calisthenicsWeeksData[activeWeekObj.number].methodology}</p>
               </div>
             </div>
           </div>
 
-          {/* Color-Coded Phase Alerts */}
-          {activeWeekObj.number === 4 && (
-            <div className="bg-amber-950/20 border border-amber-900/50 text-amber-300 p-3.5 rounded-xl text-xs">
-              <strong>Alerta de Descarga (Semana 4):</strong> Disipación de fatiga sistémica. Regresión de palancas y reducción del 20% de volumen/cargas. El colágeno en los codos se remodela tras 3 semanas de carga.
-            </div>
-          )}
-          {activeWeekObj.number === 8 && (
-            <div className="bg-amber-950/20 border border-amber-900/50 text-amber-300 p-3.5 rounded-xl text-xs">
-              <strong>Alerta de Descarga (Semana 8):</strong> Deload del segundo bloque. Reducción de series a la mitad y tonelaje para recuperar articulaciones y tendones antes del bloque de fuerza máxima.
+          {/* Phase Alerts */}
+          {(activeWeekObj.number === 1 || activeWeekObj.number === 5 || activeWeekObj.number === 9) && (
+            <div className="bg-amber-950/30 border border-amber-900/50 text-amber-300 p-4 rounded-xl text-xs space-y-1">
+              <strong>Semana de Descarga Estratégica ({activeWeekObj.number}):</strong> Disipación de fatiga sistémica acumulada durante la menstruación. Se cortan las series totales a la mitad, se reduce la carga entre 20% y 30%, y se mantiene un RIR 3 general innegociable para regenerar el tejido conectivo y reponer depósitos de glucógeno.
             </div>
           )}
           {activeWeekObj.number === 11 && (
-            <div className="bg-fuchsia-950/20 border border-fuchsia-900/50 text-fuchsia-300 p-3.5 rounded-xl text-xs">
-              <strong>Alerta de Peaking (Semana 11):</strong> Clímax de rendimiento absoluto. Lleva los ejercicios principales al RIR 0. Evaluamos records personales en empujes y calistenia.
+            <div className="bg-fuchsia-950/30 border border-fuchsia-900/50 text-fuchsia-300 p-4 rounded-xl text-xs space-y-1">
+              <strong>Semana de PEAKING / EL GRAN TEST (Semana 11):</strong> Aprovechamos la ventana biológica de oro (fase ovulatoria). Llevas los ejercicios principales al RIR 0 absoluto (3 a 5 repeticiones). El día sábado se realiza el AMRAP Oficial de calistenia para registrar récords personales (PR).
             </div>
           )}
           {activeWeekObj.number === 12 && (
-            <div className="bg-blue-950/20 border border-blue-900/50 text-blue-300 p-3.5 rounded-xl text-xs">
-              <strong>Alerta de Descarga Definitiva / Test Oficial (Semana 12):</strong> Tapering final. Después del límite en la semana 11, cortas el volumen a la mitad y bajas el peso un 30%. Sábado de TEST OFICIAL (entrenamiento fuerte un solo día).
+            <div className="bg-blue-950/30 border border-blue-900/50 text-blue-300 p-4 rounded-xl text-xs space-y-1">
+              <strong>Semana de Consolidación Post-Peaking (Semana 12):</strong> Tras haber roto tus marcas en la semana 11, mantenemos la carga altísima (4 a 5 repeticiones) a un RIR 1 innegociable (sin llegar al fallo técnico) para consolidar la fuerza ganada y blindar el sistema nervioso.
             </div>
           )}
         </div>
       </div>
 
-      {/* Estructura Semanal y Pirámide de la Hipertrofia Pura */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Estructura Semanal */}
-        <div className="glass-panel p-6 rounded-2xl glow-indigo space-y-5">
+      {/* BANNER CALISTENIA: OBJETIVOS Y REGLA METODOLÓGICA */}
+      <div className="glass-panel p-6 rounded-2xl border border-indigo-500/30 glow-indigo space-y-4">
+        <div className="flex items-center gap-3 border-b border-slate-800 pb-3">
+          <div className="p-2 bg-indigo-500/10 border border-indigo-500/20 rounded-xl">
+            <Trophy className="w-5 h-5 text-indigo-400" />
+          </div>
           <div>
-            <h3 className="font-bold text-sm text-slate-200 uppercase tracking-wider flex items-center gap-1.5">
-              <Calendar className="w-4.5 h-4.5 text-indigo-400" />
-              Estructura Semanal y Horarios
+            <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-widest font-mono">ESTRUCTURA FISIOLÓGICA DE CALISTENIA</span>
+            <h3 className="font-bold text-base md:text-lg text-white font-outfit">
+              Objetivos Finales y Regla Metodológica Ondulante
             </h3>
-            <p className="text-xs text-slate-500 mt-0.5">Distribución diaria del doble turno e intensidades híbridas</p>
-          </div>
-
-          <div className="space-y-2.5 lg:max-h-[360px] lg:overflow-y-auto pr-1">
-            {[
-              { day: "LUNES", am: "8:00 AM — Fuerza Push (Empuje)", pm: "Cardio + HS (Verticales) PM" },
-              { day: "MARTES", am: "10:00 AM — Cardio + HS (Verticales)", pm: "17:00 PM — Fuerza Pull (Tracción)" },
-              { day: "MIÉRCOLES", am: "7:00 AM — Cardio LISS", pm: "18:00 PM — Legs Quads (Foco Cuádriceps)" },
-              { day: "JUEVES", am: "10:00 AM — Cardio + HS (Verticales)", pm: "17:00 PM — Tren Superior Híbrido" },
-              { day: "VIERNES", am: "7:00 AM — Cardio + HS (Verticales)", pm: "18:00 PM — Legs Isquios (Cadena Posterior)" },
-              { day: "SÁBADO", am: "9:00 AM — Brazos", pm: "17:00 PM — Cardio LISS" },
-              { day: "DOMINGO", am: "9:00 AM — Cardio LISS + HS (Verticales)", pm: "Descanso Activo" }
-            ].map((d, idx) => (
-              <div key={idx} className="p-3 bg-slate-950/80 border border-slate-900 rounded-xl flex items-center justify-between gap-3 hover:border-slate-800 transition-colors">
-                <div className="space-y-0.5">
-                  <span className="text-xs font-bold text-indigo-400 block">{d.day}</span>
-                  <span className="text-[11px] text-slate-300 block">{d.am}</span>
-                  <span className="text-[11px] text-slate-400 block">{d.pm}</span>
-                </div>
-                <div className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse shrink-0" />
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-slate-950 border border-slate-900 rounded-xl p-3.5 space-y-2 text-[11px]">
-            <div className="flex items-center gap-1.5 text-indigo-300 font-semibold uppercase tracking-wider text-[10px]">
-              <Video className="w-3.5 h-3.5 text-indigo-400" />
-              Auditoría Biomecánica
-            </div>
-            <p className="text-slate-400 leading-normal">
-              <strong>Importante:</strong> Se debe grabar cada serie principal para autoevaluar técnica y detectar fugas de tensión.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-2 pt-1.5 border-t border-slate-900 text-indigo-400">
-              <a href="https://www.youtube.com/watch?v=pgCGm6-q2G8" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-1">
-                <PlayCircle className="w-3.5 h-3.5" /> Rutina Mañanera 1
-              </a>
-              <span className="hidden sm:inline text-slate-600">|</span>
-              <a href="https://www.youtube.com/watch?v=XrhCzu1oufA" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-1">
-                <PlayCircle className="w-3.5 h-3.5" /> Rutina Mañanera 2
-              </a>
-            </div>
           </div>
         </div>
 
-        {/* Pirámide de la Hipertrofia Pura */}
-        <div className="glass-panel p-6 rounded-2xl glow-fuchsia space-y-5">
-          <div>
-            <h3 className="font-bold text-sm text-slate-200 uppercase tracking-wider flex items-center gap-1.5">
-              <Award className="w-4.5 h-4.5 text-fuchsia-400" />
-              La Pirámide de la Hipertrofia Pura
-            </h3>
-            <p className="text-xs text-slate-500 mt-0.5">Los 5 pilares ordenados por prioridad de ejecución en tu entrenamiento</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div className="p-4 bg-slate-950/80 rounded-xl border border-slate-850 space-y-1.5">
+            <strong className="text-xs font-bold text-amber-400 uppercase font-mono block">
+              🏆 Objetivo Final del Macrociclo (Calistenia):
+            </strong>
+            <p className="text-slate-300 leading-relaxed font-medium">
+              10 dominadas estrictas, 12 fondos, 15 flexiones, 5 pike push-ups y sostén de handstand libre.
+            </p>
           </div>
 
-          <div className="space-y-2.5 lg:max-h-[480px] lg:overflow-y-auto pr-1">
-            {/* Level 5 */}
-            <div className="bg-amber-950/20 border border-amber-900/30 p-3.5 rounded-xl space-y-1 hover:border-amber-500/20 transition-colors">
-              <div className="flex items-center justify-between">
-                <span className="text-[9px] bg-amber-900/40 text-amber-300 px-1.5 py-0.5 rounded border border-amber-800 font-bold uppercase tracking-wider">5. Cúspide</span>
-                <strong className="text-xs font-bold text-amber-200">Peso (Carga Mecánica)</strong>
-              </div>
-              <p className="text-[11px] text-slate-400 leading-normal">
-                Subir la carga es la consecuencia lógica de haber conquistado los niveles anteriores. Si dominas las repeticiones máximas de un rango, subes el peso.
-              </p>
-            </div>
-
-            {/* Level 4 */}
-            <div className="bg-rose-950/20 border border-rose-900/30 p-3.5 rounded-xl space-y-1 hover:border-rose-500/20 transition-colors">
-              <div className="flex items-center justify-between">
-                <span className="text-[9px] bg-rose-900/40 text-rose-300 px-1.5 py-0.5 rounded border border-rose-800 font-bold uppercase tracking-wider">4. Progresión</span>
-                <strong className="text-xs font-bold text-rose-200">Rango de Repeticiones</strong>
-              </div>
-              <p className="text-[11px] text-slate-400 leading-normal">
-                Lucha por conquistar el extremo superior del rango de repeticiones de tu rutina (ej. llegar a 14 repeticiones a RIR exigido) antes de agregar más peso.
-              </p>
-            </div>
-
-            {/* Level 3 */}
-            <div className="bg-pink-950/20 border border-pink-900/30 p-3.5 rounded-xl space-y-1 hover:border-pink-500/20 transition-colors">
-              <div className="flex items-center justify-between">
-                <span className="text-[9px] bg-pink-900/40 text-pink-300 px-1.5 py-0.5 rounded border border-pink-800 font-bold uppercase tracking-wider">3. Control</span>
-                <strong className="text-xs font-bold text-pink-200">Tempo Bajo Tensión (TUT)</strong>
-              </div>
-              <p className="text-[11px] text-slate-400 leading-normal">
-                Frenar la fase excéntrica durante 3 o 4 segundos y realizar una pausa isométrica de 1 segundo en el estiramiento máximo para disipar inercias y rebotes.
-              </p>
-            </div>
-
-            {/* Level 2 */}
-            <div className="bg-fuchsia-950/20 border border-fuchsia-900/30 p-3.5 rounded-xl space-y-1 hover:border-fuchsia-500/20 transition-colors">
-              <div className="flex items-center justify-between">
-                <span className="text-[9px] bg-fuchsia-900/40 text-fuchsia-300 px-1.5 py-0.5 rounded border border-fuchsia-800 font-bold uppercase tracking-wider">2. Rango</span>
-                <strong className="text-xs font-bold text-fuchsia-200">ROM (Estiramiento Máximo)</strong>
-              </div>
-              <p className="text-[11px] text-slate-400 leading-normal">
-                Tensión mecánica profunda en longitudes musculares largas (LML). Si acortas el rango de movimiento para meter más repeticiones, la repetición es nula.
-              </p>
-            </div>
-
-            {/* Level 1 */}
-            <div className="bg-indigo-950/30 border border-indigo-900/40 p-3.5 rounded-xl space-y-1 hover:border-indigo-500/20 transition-colors">
-              <div className="flex items-center justify-between">
-                <span className="text-[9px] bg-indigo-900/40 text-indigo-300 px-1.5 py-0.5 rounded border border-indigo-800 font-bold uppercase tracking-wider">1. Base</span>
-                <strong className="text-xs font-bold text-indigo-200">Ejecución (Limpieza Técnica)</strong>
-              </div>
-              <p className="text-[11px] text-slate-400 leading-normal">
-                Cero inercias, cero balanceos y cero compensación muscular. La repetición número 1 y la número 10 deben verse visualmente idénticas en biomecánica.
-              </p>
-            </div>
+          <div className="p-4 bg-slate-950/80 rounded-xl border border-slate-850 space-y-1.5">
+            <strong className="text-xs font-bold text-indigo-300 uppercase font-mono block">
+              ⚙️ Regla Metodológica Ondulante:
+            </strong>
+            <p className="text-slate-300 leading-relaxed">
+              La rotación del estímulo es semanal (ondulante). Jamás se ejecuta la misma metodología durante todo un mes. Las técnicas de intensidad se sincronizan con las fluctuaciones del ciclo menstrual para proteger el SNC y maximizar la hipertrofia.
+            </p>
           </div>
         </div>
       </div>
 
+      {/* 2. LA FISIOLOGÍA DE TU SESIÓN HÍBRIDA: DESGLOSE POR BLOQUES */}
+      <div className="glass-panel p-6 rounded-2xl glow-indigo space-y-6">
+        <div className="border-b border-slate-800 pb-4 flex items-center gap-3">
+          <div className="p-2.5 bg-indigo-600/10 border border-indigo-500/20 rounded-xl">
+            <Layers className="w-6 h-6 text-indigo-400" />
+          </div>
+          <div>
+            <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-widest font-mono">ARQUITECTURA BIOLÓGICA</span>
+            <h3 className="font-bold text-lg md:text-2xl text-white font-outfit mt-0.5">
+              La Fisiología de tu Sesión Híbrida: Desglose por Bloques
+            </h3>
+            <p className="text-xs text-slate-400 mt-0.5">
+              Principios neuromuscular/miofibrilar, focos biológicos y reglas clínicas de cada fase del entrenamiento.
+            </p>
+          </div>
+        </div>
 
+        {/* Grid de Bloques Fisiológicos */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {blocksFisiologia.map((block) => (
+            <div
+              key={block.num}
+              className={`p-5 rounded-2xl border ${block.color} flex flex-col justify-between space-y-4 bg-slate-950/80 shadow-xl`}
+            >
+              <div className="space-y-3">
+                <div className="flex items-center justify-between border-b border-slate-800/80 pb-2.5">
+                  <span className={`text-[9.5px] font-bold px-2.5 py-0.5 rounded border uppercase font-mono ${block.badgeColor}`}>
+                    BLOQUE {block.num}
+                  </span>
+                  <span className="text-[10px] text-slate-400 font-mono">Desglose Fisiológico</span>
+                </div>
+
+                <h4 className="font-bold text-white text-sm md:text-base font-outfit leading-snug">
+                  {block.title}
+                </h4>
+
+                <div className="space-y-2 text-xs">
+                  <div className="p-3 bg-slate-900/90 rounded-xl border border-slate-850 space-y-1">
+                    <span className="text-[10px] font-bold text-indigo-300 uppercase tracking-wider block font-mono">Estado Biológico:</span>
+                    <p className="text-slate-300 leading-relaxed text-[11px]">{block.bioState}</p>
+                  </div>
+
+                  <div className="p-3 bg-slate-900/90 rounded-xl border border-slate-850 space-y-1">
+                    <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block font-mono">Foco Fisiológico:</span>
+                    <p className="text-slate-300 leading-relaxed text-[11px]">{block.fisiologia}</p>
+                  </div>
+
+                  <div className="p-3 bg-slate-900/90 rounded-xl border border-slate-850 space-y-1">
+                    <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider block font-mono">Ejecución Práctica:</span>
+                    <p className="text-slate-300 leading-relaxed text-[11px]">{block.practica}</p>
+                  </div>
+
+                  {block.clinicaRule && (
+                    <div className="p-3 bg-red-950/30 rounded-xl border border-red-900/50 space-y-1">
+                      <span className="text-[10px] font-bold text-red-400 uppercase tracking-wider block font-mono">Regla Clínica:</span>
+                      <p className="text-red-200/90 leading-relaxed text-[11px]">{block.clinicaRule}</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
 
     </div>
   );

@@ -1,11 +1,22 @@
-// Structured data representing the training and nutrition macrocycle based exclusively on "Entrenamiento_Completo.pdf"
+// Structured data representing the training and nutrition macrocycle based exclusively on "Rutina_Diana.pdf"
 
 export const macrocycleWeeks = [
   {
     number: 1,
     mesocycle: 1,
-    mesocycleName: "Rango Base de Hipertrofia (Neuromuscular y Mielinización)",
-    focus: "Fase de adaptación (Microciclo 1). Las series de los ejercicios principales se trabajan en un rango de 8 a 10 repeticiones dejando un RIR 2. Las series de los accesorios se manejan a 12-14 repeticiones con RIR 2. Volumen moderado, lejos del fallo muscular. Mapeo del patrón motor.",
+    mesocycleName: "Mesociclo 1: Rango Base de Hipertrofia (Semanas 1 a 4)",
+    focus: "Semana 1 (Descarga - Menstruación): Disipación de fatiga inicial. Al estar con estrógenos bajos y alta inflamación, arrancas el mesociclo cuidando las articulaciones. Se cortan las series totales a la mitad, se reduce la carga un 20% y se establece un RIR 3 general.",
+    rirGeneral: 3,
+    rirAccessories: 3,
+    intensityLabel: "Descarga y Resíntesis (RIR 3, -20% peso)",
+    isDeload: true,
+    isPeaking: false
+  },
+  {
+    number: 2,
+    mesocycle: 1,
+    mesocycleName: "Mesociclo 1: Rango Base de Hipertrofia (Semanas 1 a 4)",
+    focus: "Semana 2 (Fase Folicular - Adaptación): Sube el estrógeno, vuelve la energía. Las series de los ejercicios principales se trabajan en un rango de 8 a 10 repeticiones dejando un RIR 2. Las series de los accesorios se manejan a 12-14 repeticiones con RIR 2. Acumulas volumen de forma segura.",
     rirGeneral: 2,
     rirAccessories: 2,
     intensityLabel: "Adaptación Base (RIR 2)",
@@ -13,136 +24,125 @@ export const macrocycleWeeks = [
     isPeaking: false
   },
   {
-    number: 2,
-    mesocycle: 1,
-    mesocycleName: "Rango Base de Hipertrofia (Neuromuscular y Mielinización)",
-    focus: "Fase de intensificación (Microciclo 2). Mantienes el mismo rango de 8 a 10 repeticiones en los principales y 12-14 en accesorios, pero ajustas el peso para que todo el entrenamiento se ejecute a un RIR 1. Aumentamos el tonelaje y la palanca.",
-    rirGeneral: 1,
-    rirAccessories: 1,
-    intensityLabel: "Intensificación (RIR 1)",
-    isDeload: false,
-    isPeaking: false
-  },
-  {
     number: 3,
     mesocycle: 1,
-    mesocycleName: "Rango Base de Hipertrofia (Neuromuscular y Mielinización)",
-    focus: "Descarga 1 - Menstruación: Disipación de fatiga sistémica. Se cortan las series totales a la mitad, se reduce la carga un 20% en el gimnasio (RIR 3 general) y regresión de palancas en calistenia. GTG de flexiones y dominadas estrictamente suspendido.",
-    rirGeneral: 3,
-    rirAccessories: 3,
-    intensityLabel: "Descarga y Remodelación Tisular (RIR 3, -20% peso)",
-    isDeload: true,
+    mesocycleName: "Mesociclo 1: Rango Base de Hipertrofia (Semanas 1 a 4)",
+    focus: "Semana 3 (Fase Ovulatoria - Clímax del Bloque): Tu ventana biológica de oro (Pico de estrógeno y testosterona). Las series principales combinan esfuerzos de RIR 1 y RIR 0 (fallo) manteniéndose en las 8-10 repeticiones. El trabajo accesorio llega al RIR 0 absoluto. Utilización de metodologías de intensidad en accesorios.",
+    rirGeneral: "1 - 0",
+    rirAccessories: 0,
+    intensityLabel: "Clímax del Bloque (RIR 1-0 / RIR 0)",
+    isDeload: false,
     isPeaking: false
   },
   {
     number: 4,
     mesocycle: 1,
-    mesocycleName: "Rango Base de Hipertrofia (Neuromuscular y Mielinización)",
-    focus: "Clímax del bloque (Microciclo 3): Semana de impacto máximo. Las series principales combinan esfuerzos de RIR 1 y RIR 0 (fallo técnico en calistenia) manteniéndose en 8-10 repeticiones. El trabajo accesorio llega al RIR 0 absoluto con Rest-Pause o DropSet en serie final.",
-    rirGeneral: "1 - 0",
-    rirAccessories: 0,
-    intensityLabel: "Clímax Neural y Estructural (RIR 1-0 / RIR 0)",
+    mesocycleName: "Mesociclo 1: Rango Base de Hipertrofia (Semanas 1 a 4)",
+    focus: "Semana 4 (Fase Lútea - Intensificación Controlada): Sube la progesterona, mayor fatiga del SNC. Mantienes los pesos pesados que lograste en la ovulación (8 a 10 reps en principales y 12-14 en accesorios), pero bajas un cambio para no freír el sistema. Todo el entrenamiento se ejecuta a un RIR 1 innegociable (prohibido el fallo absoluto).",
+    rirGeneral: 1,
+    rirAccessories: 1,
+    intensityLabel: "Intensificación Controlada (RIR 1 innegociable)",
     isDeload: false,
     isPeaking: false
   },
   {
     number: 5,
     mesocycle: 2,
-    mesocycleName: "Rango de Hipertrofia Pesada y Densidad Contráctil",
-    focus: "Fase de adaptación pesada (Semana 5). Esfuerzo neurológico a RIR 2. Principales bajan al bloque de 6 a 8 reps. Accesorios bajan a 10 a 12 reps a RIR 2. Introducción de Tiempos Bajo Tensión (TUT), Flexiones Pica con déficit y Fondos LML.",
-    rirGeneral: 2,
-    rirAccessories: 2,
-    intensityLabel: "Choque Excéntrico y Estiramiento (RIR 2)",
-    isDeload: false,
+    mesocycleName: "Mesociclo 2: Rango de Hipertrofia Pesada (Semanas 5 a 8)",
+    focus: "Semana 5 (Descarga 2 - Menstruación): Idéntica a la Semana 1. Reducción de series a la mitad, reducción de tonelaje y RIR 3 para recuperar el tejido conectivo antes de pasar al hardware pesado.",
+    rirGeneral: 3,
+    rirAccessories: 3,
+    intensityLabel: "Descarga 2 (RIR 3, -20% peso)",
+    isDeload: true,
     isPeaking: false
   },
   {
     number: 6,
     mesocycle: 2,
-    mesocycleName: "Rango de Hipertrofia Pesada y Densidad Contráctil",
-    focus: "Fase de intensificación pesada (Semana 6). Las series principales (6 a 8 repeticiones) y los accesorios (10 a 12 repeticiones) se empujan a un RIR 1. Mecanotransducción profunda: explotar la rigidez de la titina como mecanosensor. Trabajo en LML.",
-    rirGeneral: 1,
-    rirAccessories: 1,
-    intensityLabel: "Mecanotransducción Profunda (RIR 1)",
+    mesocycleName: "Mesociclo 2: Rango de Hipertrofia Pesada (Semanas 5 a 8)",
+    focus: "Semana 6 (Fase Folicular - Adaptación Pesada): El sistema nervioso se adapta a cargas mayores. Los principales bajan al bloque de 6 a 8 reps. Accesorios bajan a 10 a 12 reps. Todo se ejecuta a un RIR 2.",
+    rirGeneral: 2,
+    rirAccessories: 2,
+    intensityLabel: "Adaptación Pesada (RIR 2)",
     isDeload: false,
     isPeaking: false
   },
   {
     number: 7,
     mesocycle: 2,
-    mesocycleName: "Rango de Hipertrofia Pesada y Densidad Contráctil",
-    focus: "Descarga 2: Idéntica a la Semana 3. Reducción de series a la mitad, reducción de tonelaje (20% menos) y RIR 3 general para recuperar articulaciones y tendones antes de las cargas máximas. GTG suspendido.",
-    rirGeneral: 3,
-    rirAccessories: 3,
-    intensityLabel: "Descarga y Supercompensación Tisular (RIR 3, -20% peso)",
-    isDeload: true,
+    mesocycleName: "Mesociclo 2: Rango de Hipertrofia Pesada (Semanas 5 a 8)",
+    focus: "Semana 7 (Fase Ovulatoria - Clímax Pesado): El momento de mayor tolerancia al daño muscular del mesociclo. Tanto los movimientos principales como los accesorios alcanzan el RIR 0 absoluto en sus respectivos rangos (6-8 y 10-12 reps). Explotas la hipertrofia pura.",
+    rirGeneral: 0,
+    rirAccessories: 0,
+    intensityLabel: "Clímax Pesado (RIR 0 absoluto)",
+    isDeload: false,
     isPeaking: false
   },
   {
     number: 8,
     mesocycle: 2,
-    mesocycleName: "Rango de Hipertrofia Pesada y Densidad Contráctil",
-    focus: "Clímax pesado (Microciclo 6): Tanto los movimientos principales como los accesorios alcanzan el RIR 0 de forma constante. Máximo miotrauma tolerable. OBLIGATORIO: Drop Set o Rest-Pause SÓLO en la última serie de 2 o 3 ejercicios del Bloque 3.",
-    rirGeneral: 0,
-    rirAccessories: 0,
-    intensityLabel: "Clímax Pesado (RIR 0 + DropSet/RestPause)",
+    mesocycleName: "Mesociclo 2: Rango de Hipertrofia Pesada (Semanas 5 a 8)",
+    focus: "Semana 8 (Fase Lútea - Intensificación Pesada Controlada): Soportas la hinchazón celular del síndrome premenstrual. Las series principales (6 a 8 repeticiones) y los accesorios (10 a 12 repeticiones) se empujan a un RIR 1 estricto. Mantienes la tensión, pero proteges la columna y los tendones.",
+    rirGeneral: 1,
+    rirAccessories: 1,
+    intensityLabel: "Intensificación Pesada Controlada (RIR 1 estricto)",
     isDeload: false,
     isPeaking: false
   },
   {
     number: 9,
     mesocycle: 3,
-    mesocycleName: "El Bloque de Fuerza Máxima",
-    focus: "Adaptación a la Fuerza (Microciclo 7): Ejercicios principales bajan drásticamente (4 a 6 repeticiones o Método Cluster: micro-pausas de 15s) dejando RIR 2. Accesorios en 8-10 reps a RIR 1. Acostumbras al SNC a cargas muy pesadas sin fallo.",
-    rirGeneral: 2,
-    rirAccessories: 1,
-    intensityLabel: "Adaptación a la Fuerza - Método Cluster (RIR 2/1)",
-    isDeload: false,
+    mesocycleName: "Mesociclo 3: El Bloque de Fuerza Máxima y Peaking (Semanas 9 a 12)",
+    focus: "Semana 9 (Descarga 3 - Menstruación): El descanso estratégico antes de la fuerza máxima. Cortás el volumen a la mitad y bajás los pesos un 20-30% a RIR 3, guardando cada onza de ATP para las semanas venideras.",
+    rirGeneral: 3,
+    rirAccessories: 3,
+    intensityLabel: "Descarga 3 (RIR 3, -20-30% peso)",
+    isDeload: true,
     isPeaking: false
   },
   {
     number: 10,
     mesocycle: 3,
-    mesocycleName: "El Bloque de Fuerza Máxima",
-    focus: "Intensificación de Fuerza (Microciclo 8): Carga sube. En los principales te manejas en rangos de 5 reps a RIR 1 (o Clusters intensos) y algunos de 6 a 8 reps a RIR 0. Los accesorios llegan al fallo (RIR 0) en el rango de 8-10 reps.",
-    rirGeneral: 1,
-    rirAccessories: 0,
-    intensityLabel: "Intensificación de Fuerza - Clusters (RIR 1/0)",
+    mesocycleName: "Mesociclo 3: El Bloque de Fuerza Máxima y Peaking (Semanas 9 a 12)",
+    focus: "Semana 10 (Fase Folicular - Adaptación a la Fuerza): Los ejercicios principales bajan drásticamente de repeticiones (4 a 6 repeticiones) dejando un RIR 2. Acostumbras al sistema nervioso a mover cargas casi máximas sin llegar al fallo. Los accesorios se mantienen en 8-10 repeticiones a RIR 2.",
+    rirGeneral: 2,
+    rirAccessories: 2,
+    intensityLabel: "Adaptación a la Fuerza (RIR 2)",
     isDeload: false,
     isPeaking: false
   },
   {
     number: 11,
     mesocycle: 3,
-    mesocycleName: "El Bloque de Fuerza Máxima",
-    focus: "Descarga 3 - Menstruación: Descanso estratégico antes del gran final. Cortás el volumen a la mitad y bajás los pesos un 30% a RIR 3 o 4, guardando toda la energía para la semana que viene. GTG suspendido.",
-    rirGeneral: "3 - 4",
-    rirAccessories: "3 - 4",
-    intensityLabel: "Descarga 3 - Menstruación (RIR 3-4, -30% peso)",
-    isDeload: true,
-    isPeaking: false
+    mesocycleName: "Mesociclo 3: El Bloque de Fuerza Máxima y Peaking (Semanas 9 a 12)",
+    focus: "Semana 11 (Fase Ovulatoria - El GRAN TEST / Peaking): Cambio estratégico brutal. Aprovechamos tu pico biológico de fuerza máxima para hacer el testeo oficial aquí. Llevas los ejercicios principales al RIR 0 en rangos de 3 a 5 repeticiones. Es la semana para probar tus récords personales (PR) en gimnasio y hacer tus AMRAPs en calistenia, capitalizando toda la fuerza construida.",
+    rirGeneral: 0,
+    rirAccessories: 0,
+    intensityLabel: "El GRAN TEST / Peaking (RIR 0 / PRs & AMRAP)",
+    isDeload: false,
+    isPeaking: true
   },
   {
     number: 12,
     mesocycle: 3,
-    mesocycleName: "El Bloque de Fuerza Máxima",
-    focus: "Clímax No Escrito - Peaking / EL EXAMEN: Disipación total de fatiga de Lunes a Viernes. El Sábado ejecutas el TEST OFICIAL (AMRAP): Test 1 Dominadas, Test 2 Fondos, Test 3 Flexiones Estándar, Test 4 Flexiones Pica.",
-    rirGeneral: 0,
-    rirAccessories: 0,
-    intensityLabel: "Peaking -> SÁBADO: EL EXAMEN (TEST AMRAP)",
+    mesocycleName: "Mesociclo 3: El Bloque de Fuerza Máxima y Peaking (Semanas 9 a 12)",
+    focus: "Semana 12 (Fase Lútea - Consolidación Post-Peaking): Tu cuerpo entra en fase de retención y fatiga, y acabas de destrozar tus récords la semana anterior. La carga se mantiene altísima (4 a 5 repeticiones en principales, 8-10 en accesorios), pero con un RIR 1 innegociable. Consolidamos la fuerza ganada y blindamos el sistema nervioso para no lesionarte justo antes de terminar el trimestre.",
+    rirGeneral: 1,
+    rirAccessories: 1,
+    intensityLabel: "Consolidación Post-Peaking (RIR 1 innegociable)",
     isDeload: false,
-    isPeaking: true
+    isPeaking: false
   }
 ];
 
 export const weeklySchedule = [
-  { day: "Lunes", label: "Fuerza Push (8:00 AM) / Cardio + HS (PM)", target: "Push" },
-  { day: "Martes", label: "Cardio + HS (10:00 AM) / Pull (17:00 PM)", target: "Pull" },
-  { day: "Miércoles", label: "Cardio (7:00 AM) / Legs Quads (18:00 PM)", target: "Legs1" },
-  { day: "Jueves", label: "Cardio + HS (10:00 AM) / Tren Superior (17:00 PM)", target: "Upper" },
-  { day: "Viernes", label: "Cardio + HS (7:00 AM) / Legs Isquios (18:00 PM)", target: "Legs2" },
-  { day: "Sábado", label: "Brazos (9:00 AM) / Cardio (17:00 PM)", target: "Arms" },
-  { day: "Domingo", label: "Cardio LISS + HS (9:00 AM)", target: "Recovery" }
+  { day: "Lunes", label: "PUSH: 10 min HS + 60 min Fuerza + 20 min Cardio LISS", target: "Push" },
+  { day: "Martes", label: "PULL: 10 min HS + 60 min Fuerza + 20 min Cardio LISS", target: "Pull" },
+  { day: "Miércoles", label: "LEGS 1 (Quads): 5 min Calentamiento + 60 min Fuerza + 20 min Movilidad Pesada", target: "Legs1" },
+  { day: "Jueves", label: "TREN SUPERIOR HÍBRIDO: 10 min HS + 60 min Fuerza + 20 min Cardio LISS", target: "Upper" },
+  { day: "Viernes", label: "LEGS 2 (Isquios/Glúteo): 5 min Calentamiento + 60 min Fuerza + 20 min Movilidad Pesada", target: "Legs2" },
+  { day: "Sábado", label: "BRAZOS Y CORE (Comodín): 10 min HS + 45 min Fuerza + 30 min Cardio LISS", target: "Arms" },
+  { day: "Domingo", label: "DESCANSO ACTIVO: 20 min Movilidad Pesada + Caminata Ligera (NEAT)", target: "Recovery" }
 ];
 
 export const cardioSchedule = {
@@ -204,8 +204,8 @@ export const routinesByWeek = {
     const isDeload = currentWeekObj?.isDeload ?? false;
     const isPeaking = currentWeekObj?.isPeaking ?? false;
 
-    // Helper for generating standard workouts
-    switch (dayName) {
+    const getRawWorkout = () => {
+      switch (dayName) {
       case "Lunes":
         if (isMeso1) {
           return {
@@ -625,37 +625,58 @@ export const routinesByWeek = {
             ]
           };
         }
+        if (weekNumber === 11) {
+          return {
+            title: "Legs 2 - Peaking / Tapering (Isquios y Glúteo - Pre-Test)",
+            blocks: [
+              {
+                name: "Bloque 0: Activación Articular (5 Minutos)",
+                exercises: [
+                  { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+                ]
+              },
+              {
+                name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (TEST Y TAPERING)",
+                exercises: [
+                  { name: "Peso Muerto Rumano (RDL)", sets: "3", reps: "3-5", rir: "1-2", note: "Carga récord, pero mantienes RIR 1-2 por seguridad de columna antes del sábado." },
+                  { name: "Hip Thrust o Glute Bridge", sets: "3", reps: "3-5", rir: "1", note: "TEST OFICIAL. Carga máxima." }
+                ]
+              },
+              {
+                name: "Bloque 2: Gimnasio - Aislamiento (Tapering / RIR 2 - Sin Metodologías)",
+                exercises: [
+                  { name: "Curl Femoral (Sentado preferentemente)", sets: "2", reps: "8-10", rir: "2", note: "Sin Drop Set hoy." },
+                  { name: "Abductores", sets: "2", reps: "8-10", rir: "2", note: "RIR 2." },
+                  { name: "Elevaciones de Talón Sentado", sets: "2", reps: "8-10", rir: "2", note: "RIR 2." }
+                ]
+              }
+            ]
+          };
+        }
         return {
-          title: isDeload ? `Legs 2 - Descarga ${weekNumber === 3 ? '1 (Menstruación)' : weekNumber === 7 ? '2' : '3 (Menstruación)'}` : "Legs 2 - Foco Isquiosurales con Pre-Fatiga",
+          title: isDeload ? `Legs 2 - Descarga ${weekNumber === 1 ? '1' : weekNumber === 5 ? '2' : '3'} (Menstruación)` : "Legs 2 - Foco Isquiosurales y Glúteo",
           blocks: [
             {
-              name: "Bloque 1: Calistenia (Fuerza Relativa)",
+              name: "Bloque 0: Activación Articular (5 Minutos)",
               exercises: [
-                { name: "Descanso / Sin estímulo neural en barras", sets: "0", reps: "0", rir: "0", note: "El SNC se preserva para el peso muerto rumano (RDL)." }
+                { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
               ]
             },
             {
-              name: "Bloque 1 (Inicial): Gimnasio (Aislamiento / Pre-Fatiga)",
+              name: `Bloque 1: Gimnasio - Tensión Mecánica Pura (${isDeload ? '-20% Peso / RIR 3' : 'RIR 1-2'})`,
               exercises: [
-                { name: "Curl Femoral (Sentado o Tumbado)", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3 (-20% kg)" : rirAccVal, note: "Flexión de rodilla para aislar cabeza corta." },
-                { name: "Pistol Squat (Asistida con anillas/TRX)", sets: isDeload ? "2" : "2-3", reps: isDeload ? "4-5 (fáciles)" : "5-6", rir: isDeload ? "3" : rirAccVal, note: "Único quad del día. Sissy o Reverse Nordic como opción." }
+                { name: "Peso Muerto Rumano (RDL)", sets: isDeload ? "2" : "4", reps: isMeso3 ? "4-5" : isMeso2 ? "6-8" : "8-10", rir: isDeload ? "3" : "1", note: "Bisagra de cadera pura, máxima tensión en estiramiento. Prohibido el fallo absoluto en RDL para no freír la lumbar." },
+                { name: "Hip Thrust o Glute Bridge", sets: isDeload ? "1-2" : "3", reps: isMeso3 ? "4-5" : isMeso2 ? "6-8" : "8-10", rir: isDeload ? "3" : weekNumber === 3 || weekNumber === 7 ? "0 (en última)" : rirVal, note: "Empuje horizontal para glúteos." }
               ]
             },
             {
-              name: "Bloque 2: Gimnasio (Hipertrofia Miofibrilar - Compuestos)",
+              name: `Bloque 2: Gimnasio - Aislamiento y Rehabilitación (${isDeload ? '-20% Peso / RIR 3' : weekNumber === 3 || weekNumber === 7 || weekNumber === 12 ? 'RIR 0 + Metodologías' : 'RIR 1-2'})`,
               exercises: [
-                { name: "Peso Muerto Rumano (RDL)", sets: isDeload ? "1-2" : "3", reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10", rir: isDeload ? "3 (-20% kg)" : rirVal, note: "Bisagra de cadera. Al estar pre-fatigada, requieres menos peso externo, blindando tus lumbares." },
-                { name: "Hip Thrust o Glute Bridge", sets: isDeload ? "1-2" : "3", reps: isMeso3 ? "4-6" : isMeso2 ? "6-8" : "8-10", rir: isDeload ? "3 (-20% kg)" : rirVal, note: "Empuje horizontal para glúteos." }
-              ]
-            },
-            {
-              name: "Bloque 3 (Continuación): Gimnasio (Hipertrofia Regional y Core)",
-              exercises: [
-                { name: "SUPERSET: Máquina Abductora + Máquina Aductora", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Estabilidad pélvica." },
-                { name: "Elevaciones de Talón (Sóleo)", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Rodilla flexionada." },
-                { name: "Extensión Lumbar", sets: isDeload ? "1-2" : "2-3", reps: isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : rirAccVal, note: "Salud lumbar." }
+                { name: "Curl Femoral (Sentado preferentemente)", sets: isDeload ? "1" : "2", reps: isMeso3 ? "8-10" : isMeso2 ? "10-12" : "12-15", rir: isDeload ? "3" : weekNumber === 3 || weekNumber === 7 || weekNumber === 12 ? "0" : rirAccVal, note: "Subida controlada, pausa 1s arriba, bajada 3-4s." },
+                { name: "Abductores en máquina", sets: isDeload ? "1" : "2", reps: isMeso3 ? "8-10" : isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : weekNumber === 3 || weekNumber === 7 || weekNumber === 12 ? "0" : rirAccVal, note: "Trabajo de glúteo medio." },
+                { name: "Elevaciones de Talón Sentado", sets: isDeload ? "1-2" : "3", reps: isMeso3 ? "8-10" : isMeso2 ? "10-12" : "12-14", rir: isDeload ? "3" : weekNumber === 3 || weekNumber === 7 || weekNumber === 12 ? "0" : rirAccVal, note: "Aislamiento del sóleo (rodilla doblada)." }
               ],
-              intensityTechnique: weekNumber === 4 || weekNumber === 8 ? "Curl Femoral ideal para Rest-Pause o Drop Set" : null
+              intensityTechnique: (weekNumber === 3 || weekNumber === 7 || weekNumber === 12) ? "Drop Set en Curl Femoral y Talón Sentado; Rest-Pause en Abductores" : null
             }
           ]
         };
@@ -729,7 +750,74 @@ export const routinesByWeek = {
             }
           ]
         };
+      }
+    };
+
+    const workout = getRawWorkout();
+
+    const getBlock0 = (day) => {
+      switch (day) {
+        case "Lunes":
+          return {
+            name: "Bloque 0: Activación Articular y Handstand (10 Minutos)",
+            exercises: [
+              { name: "Práctica de Handstand (Cues de Oro: Acelerador/Freno, Hollow Body, Mirada) + Lubricación de Muñecas y Hombros", sets: "1", reps: "10 min", rir: "N/A", note: "Sin llegar a la fatiga. Trabajo neuromuscular puro de frescura." }
+            ]
+          };
+        case "Martes":
+          return {
+            name: "Bloque 0: Activación Articular y Handstand (10 Minutos)",
+            exercises: [
+              { name: "Práctica de Handstand (Cues de Oro) + Calentamiento de Muñecas y Retracción Escapular", sets: "1", reps: "10 min", rir: "N/A", note: "Foco en la depresión escapular y activación de core." }
+            ]
+          };
+        case "Miércoles":
+          return {
+            name: "Bloque 0: Activación Articular (5 Minutos)",
+            exercises: [
+              { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión de Tobillo", sets: "1", reps: "5 min", rir: "N/A", note: "Preparación de cadera y tobillo para sentadilla profunda." }
+            ]
+          };
+        case "Jueves":
+          return {
+            name: "Bloque 0: Activación Articular y Handstand (10 Minutos)",
+            exercises: [
+              { name: "Práctica de Handstand (Cues de Oro) + Movilidad Torácica y Hombros", sets: "1", reps: "10 min", rir: "N/A", note: "Activación escapular y apertura pectoral." }
+            ]
+          };
+        case "Viernes":
+          return {
+            name: "Bloque 0: Activación Articular (5 Minutos)",
+            exercises: [
+              { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC antes del Peso Muerto Rumano (RDL)." }
+            ]
+          };
+        case "Sábado":
+          return {
+            name: "Bloque 0: Activación Articular y Handstand (10 Minutos)",
+            exercises: [
+              { name: "Práctica de Handstand (Cues de Oro) + Movilidad de Muñecas y Codos", sets: "1", reps: "10 min", rir: "N/A", note: "Calentamiento minucioso de flexores de muñeca." }
+            ]
+          };
+        case "Domingo":
+        default:
+          return {
+            name: "Bloque 0: Movilidad y Descompresión (20 Minutos)",
+            exercises: [
+              { name: "Rutina de Movilidad y Elongación Pasiva General", sets: "1", reps: "20 min", rir: "N/A", note: "Recuperación de tejido conectivo y caminata ligera (NEAT)." }
+            ]
+          };
+      }
+    };
+
+    if (workout && workout.blocks) {
+      const hasBlock0 = workout.blocks.some(b => b.name.toLowerCase().includes("bloque 0"));
+      if (!hasBlock0) {
+        workout.blocks.unshift(getBlock0(dayName));
+      }
     }
+
+    return workout;
   }
 };
 
@@ -999,76 +1087,19 @@ export const nutritionData = {
         macros: "Calorías: ~445 kcal | Proteínas: 51g | Carbohidratos: 4g | Grasas: 23g"
       }
     ]
+  },
+  bloquePostres: {
+    title: "Bloque 4: Postres Anabólicos Tácticos",
+    rule: "Disfrute Micro-Calórico para Control de Ansiedad y Antojo Dulce"
+  },
+  bloquePreworkout: {
+    title: "Bloque 5: Pre-Entrenamiento",
+    rule: "Opciones de Rápida Asimilación Glucídica Pre-Sesión"
+  },
+  bloqueColaciones: {
+    title: "Bloque 6: Colaciones Micro-Calóricas",
+    rule: "Para Engañar al Estómago sin Perforar el Déficit Calórico"
   }
-};
-
-export const gtgSchedule = {
-  Lunes: {
-    gymFocus: "Gym: Pull Pesado",
-    movA: { name: "Ranita / Handstand", pauses: 4, desc: "4 pausas Pomodoro dedicadas a práctica de Ranita o Handstand." },
-    movB: { name: "Flexiones", pauses: 4, desc: "4 pausas Pomodoro de 3 flexiones por serie (50% de máx evaluado)." },
-    restriction: "Restricción respetada: Cero dominadas (día de Pull pesado en gym).",
-    pullupsSuspended: true,
-    pushupsSuspended: false
-  },
-  Martes: {
-    gymFocus: "Gym: Push Pesado",
-    movA: { name: "Ranita / Handstand", pauses: 4, desc: "4 pausas Pomodoro dedicadas a Ranita o Handstand." },
-    movB: { name: "Dominadas", pauses: 4, desc: "4 pausas Pomodoro de 2 dominadas por serie (50% de máx evaluado)." },
-    restriction: "Restricción respetada: Cero flexiones (día de Push pesado en gym).",
-    pullupsSuspended: false,
-    pushupsSuspended: true
-  },
-  Miércoles: {
-    gymFocus: "Gym: Cuádriceps",
-    movA: { name: "Descanso GtG", pauses: 0, desc: "Cero exigencia a las muñecas. Pura recuperación del sistema nervioso." },
-    movB: { name: "Descanso GtG", pauses: 0, desc: "Descanso total de pausas Pomodoro de fuerza." },
-    restriction: "Descanso total de GTG para recuperación articular y neural.",
-    pullupsSuspended: true,
-    pushupsSuspended: true
-  },
-  Jueves: {
-    gymFocus: "Gym: Tren Superior Híbrido",
-    movA: { name: "Ranita / Handstand", pauses: 4, desc: "4 pausas Pomodoro dedicadas a Ranita o Handstand." },
-    movB: { name: "Compresiones de Flexores (Día 1 de 3)", pauses: 4, desc: "4 pausas Pomodoro de trabajo de pica/compresión de core." },
-    restriction: "Restricción respetada: Cero dominadas y cero flexiones.",
-    pullupsSuspended: true,
-    pushupsSuspended: true
-  },
-  Viernes: {
-    gymFocus: "Gym: Cadena Posterior (Isquios)",
-    movA: { name: "Descanso GtG", pauses: 0, desc: "Recuperación total del SNC y articulaciones." },
-    movB: { name: "Descanso GtG", pauses: 0, desc: "Sin estímulo de fuerza en pausas Pomodoro." },
-    restriction: "Descanso total de GTG para recuperar cadera y muñecas.",
-    pullupsSuspended: true,
-    pushupsSuspended: true
-  },
-  Sábado: {
-    gymFocus: "Gym: Brazos y Core",
-    movA: { name: "Ranita / Handstand", pauses: 4, desc: "4 pausas Pomodoro de Ranita / Handstand." },
-    movB: { name: "Compresiones de Flexores (Día 2 de 3)", pauses: 4, desc: "4 pausas de compresiones. (Opción: 2 pausas compresiones + 2 flexiones)." },
-    restriction: "Volumen opcional de empuje si los hombros están frescos.",
-    pullupsSuspended: true,
-    pushupsSuspended: false
-  },
-  Domingo: {
-    gymFocus: "Descanso total del Gym",
-    movA: { name: "Ranita / Handstand", pauses: 4, desc: "4 pausas Pomodoro de Ranita / Handstand." },
-    movB: { name: "Compresiones de Flexores (Día 3 de 3)", pauses: 4, desc: "4 pausas de compresiones. (Opción: reemplazar por dominadas si la espalda está fresca)." },
-    restriction: "Acondicionamiento ligero y práctica de equilibrio.",
-    pullupsSuspended: false,
-    pushupsSuspended: true
-  }
-};
-
-export const gtgRules = {
-  definition: "El Método Grease the Groove (GTG) está diseñado para optimizar la coordinación del sistema neuromuscular mediante ejecuciones repetidas bajo frescura neurológica total (40%-60% de tu máximo).",
-  rules: [
-    { title: "Intensidad Estricta", desc: "2 dominadas y 3 flexiones por serie (50% de tu capacidad máxima evaluada). Cero fallo muscular." },
-    { title: "Frecuencia Máxima", desc: "Máximo 8 series dispersas a lo largo de la jornada laboral de Pomodoro." },
-    { title: "Suspensión en Descarga", desc: "Durante las semanas de descarga (Semanas 3, 7 y 11), el GTG de flexiones y dominadas queda ESTRICTAMENTE PROHIBIDO para disipar fatiga del SNC." },
-    { title: "Restricción por Días Pesados", desc: "Días de Pull pesado en gym: dominadas suspendidas. Días de Push pesado en gym: flexiones suspendidas." }
-  ]
 };
 
 export const wikiBiomechanics = [

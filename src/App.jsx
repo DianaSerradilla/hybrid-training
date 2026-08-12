@@ -1,32 +1,34 @@
 import { useState } from 'react';
 import { 
-  Home, Apple, CalendarRange, BookOpen, 
-  Dumbbell, Menu, X, ShieldAlert, Activity, Zap, Scale
+  Home, Apple, Footprints, CalendarRange, ShieldAlert,
+  Activity, Target, BookOpen, Dumbbell, Menu, X, Trophy 
 } from 'lucide-react';
 import DailyDashboard from './components/DailyDashboard';
 import NutritionModule from './components/NutritionModule';
+import NeatModule from './components/NeatModule';
+import WeeklyStructureModule from './components/WeeklyStructureModule';
 import TimelineModule from './components/TimelineModule';
 import WikiModule from './components/WikiModule';
 import MobilityModule from './components/MobilityModule';
 import HandstandDashboard from './components/HandstandDashboard';
-import BodyComposition from './components/BodyComposition';
-import GtgModule from './components/GtgModule';
+import SkillsCalisthenicsModule from './components/SkillsCalisthenicsModule';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('dashboard'); // dashboard, nutrition, timeline, wiki
+  const [activeTab, setActiveTab] = useState('dashboard'); // Default to Dashboard Principal
   const [currentWeek, setCurrentWeek] = useState(1);
   const [currentDay, setCurrentDay] = useState('Lunes');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navigationItems = [
-    { id: 'dashboard', name: 'Dashboard Diario', icon: Home, desc: 'Tus tareas para hoy' },
-    { id: 'gtg', name: 'Grease the Groove (GTG)', icon: Zap, desc: 'Micro-dosis Pomodoro diarias' },
-    { id: 'nutrition', name: 'Nutrición Visual', icon: Apple, desc: 'Déficit de 1700 kcal' },
-    { id: 'composition', name: 'Composición Corporal', icon: Scale, desc: 'Antropometría y evolución' },
-    { id: 'mobility', name: 'Flexibilidad y Movilidad', icon: Activity, desc: 'Preparación y recuperación' },
-    { id: 'handstand', name: 'Handstand (Vertical)', icon: Activity, desc: 'Práctica y progresión' },
-    { id: 'timeline', name: 'Timeline Estratégico', icon: CalendarRange, desc: 'Plan de 12 semanas' },
-    { id: 'wiki', name: 'Biblioteca y Skills', icon: BookOpen, desc: 'Biomecánica y calistenia' }
+    { id: 'dashboard', name: 'Dashboard Principal', icon: Home, desc: 'Tus tareas y rutina de hoy' },
+    { id: 'mobility', name: 'Movilidad', icon: Activity, desc: 'Flexibilidad, Big 5 y rutinas 1-9' },
+    { id: 'handstand', name: 'HandStand', icon: Target, desc: 'Cues, progresiones y plan 12 sem' },
+    { id: 'skills', name: 'Skills & Calistenia', icon: Trophy, desc: 'Vectores de fuerza y anclajes' },
+    { id: 'neat', name: 'NEAT', icon: Footprints, desc: 'Protocolo 10k-15k pasos' },
+    { id: 'nutrition', name: 'Alimentacion', icon: Apple, desc: '1700 kcal, bloques y recetas' },
+    { id: 'structure', name: 'Estructura Semanal', icon: CalendarRange, desc: 'Rutinas diarias PPL + Híbrido' },
+    { id: 'mesocycles', name: 'Desglose Mesociclos', icon: BookOpen, desc: 'Mesociclo 1, 2 y 3 (12 Semanas)' },
+    { id: 'info', name: 'WIKI', icon: BookOpen, desc: 'Manual definitivo de entrenamiento' }
   ];
 
   const handleNavClick = (tabId) => {
@@ -44,18 +46,18 @@ export default function App() {
             <Dumbbell className="w-5 h-5 text-indigo-400" />
           </div>
           <div>
-            <span className="text-[10px] text-indigo-400 uppercase tracking-widest font-bold">Información de Lectura</span>
-            <h1 className="text-base font-bold font-outfit text-white leading-none mt-0.5">VISUAL CONTROL HUB</h1>
+            <span className="text-[10px] text-indigo-400 uppercase tracking-widest font-bold font-outfit">Documento Oficial</span>
+            <h1 className="text-base font-bold font-outfit text-white leading-none mt-0.5">RUTINA DIANA - HUB</h1>
           </div>
         </div>
 
         {/* User profile & status banner */}
         <div className="hidden md:flex items-center gap-4">
           <div className="text-right">
-            <span className="text-xs text-slate-400 block">Diana - Macrociclo</span>
+            <span className="text-xs text-slate-400 block font-outfit font-semibold">Diana Serradilla</span>
             <span className="inline-flex items-center gap-1.5 text-[10px] text-emerald-400 font-semibold bg-emerald-950/30 px-2 py-0.5 rounded-full border border-emerald-900/50">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              En Progreso
+              Macrociclo Activo
             </span>
           </div>
         </div>
@@ -76,7 +78,7 @@ export default function App() {
         <aside className="hidden lg:flex flex-col w-72 bg-[#050b18] border-r border-slate-900/80 p-4 shrink-0 justify-between">
           <div className="space-y-6">
             <div className="space-y-1">
-              <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest px-3">Menú Principal</span>
+              <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest px-3 font-outfit">Índice del Documento</span>
               <nav className="space-y-1">
                 {navigationItems.map((item) => {
                   const Icon = item.icon;
@@ -89,7 +91,7 @@ export default function App() {
                     >
                       <Icon className={`w-5 h-5 shrink-0 ${isActive ? 'text-indigo-400' : 'text-slate-400'}`} />
                       <div>
-                        <span className="text-sm block leading-none">{item.name}</span>
+                        <span className="text-sm block leading-none font-outfit">{item.name}</span>
                         <span className="text-[10px] text-slate-500 font-normal mt-1 block">{item.desc}</span>
                       </div>
                     </button>
@@ -101,12 +103,12 @@ export default function App() {
 
           {/* Footer Sidebar Info */}
           <div className="bg-slate-950 p-3.5 rounded-xl border border-slate-900 text-xs text-slate-500 space-y-2 leading-relaxed">
-            <span className="flex items-center gap-1 font-bold text-slate-400 uppercase tracking-wider text-[10px]">
+            <span className="flex items-center gap-1 font-bold text-slate-400 uppercase tracking-wider text-[10px] font-outfit">
               <ShieldAlert className="w-4 h-4 text-amber-500" />
-              Regla Inquebrantable
+              Rutina_Diana.pdf
             </span>
             <p className="text-[10px]">
-              Todos los datos, ejercicios, repeticiones y porciones provienen exactamente de su ficha personal.
+              Estructura oficial extraída directamente del índice del PDF.
             </p>
           </div>
         </aside>
@@ -125,7 +127,7 @@ export default function App() {
                     className={`w-full flex items-center gap-4 px-4 py-3 rounded-xl text-left transition-colors ${isActive ? 'bg-indigo-600/20 text-white font-semibold' : 'text-slate-400 hover:bg-slate-900'}`}
                   >
                     <Icon className="w-5 h-5 text-indigo-400 shrink-0" />
-                    <span className="text-sm">{item.name}</span>
+                    <span className="text-sm font-outfit">{item.name}</span>
                   </button>
                 );
               })}
@@ -146,24 +148,21 @@ export default function App() {
             />
           )}
 
-          {activeTab === 'gtg' && (
-            <GtgModule 
-              currentWeek={currentWeek} 
-              currentDay={currentDay} 
-            />
-          )}
-
           {activeTab === 'nutrition' && <NutritionModule />}
 
-          {activeTab === 'composition' && <BodyComposition />}
+          {activeTab === 'neat' && <NeatModule />}
+
+          {activeTab === 'structure' && <WeeklyStructureModule />}
+
+          {activeTab === 'info' && <WikiModule />}
 
           {activeTab === 'mobility' && <MobilityModule />}
 
           {activeTab === 'handstand' && <HandstandDashboard />}
 
-          {activeTab === 'timeline' && <TimelineModule />}
+          {activeTab === 'skills' && <SkillsCalisthenicsModule />}
 
-          {activeTab === 'wiki' && <WikiModule />}
+          {activeTab === 'mesocycles' && <TimelineModule />}
 
         </main>
 

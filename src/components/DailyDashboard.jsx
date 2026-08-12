@@ -54,19 +54,19 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
   const carouselSlides = useMemo(() => {
     return [
       {
-        quote: "Solo triunfa quien soporta el proceso.",
-        tag: "Motivación",
-        image: `${import.meta.env.BASE_URL}1.webp`
+        quote: "La repetición 1 y la repetición 10 deben verse biomecánicamente idénticas.",
+        tag: "Ley Biomecánica",
+        image: ""
       },
       {
-        quote: "En la incomodidad está el crecimiento.",
-        tag: "Motivación",
-        image: `${import.meta.env.BASE_URL}4.webp`
+        quote: "Tensión mecánica en el máximo estiramiento posible: el detonante biológico más potente.",
+        tag: "Hipertrofia Pura",
+        image: ""
       },
       {
-        quote: "No hay otra vida para intentarlo.",
-        tag: "Motivación",
-        image: `${import.meta.env.BASE_URL}3.jpg`
+        quote: "Durante la semana de descarga, el sistema nervioso se apaga para consolidar adaptaciones neurales.",
+        tag: "Recuperación del SNC",
+        image: ""
       }
     ];
   }, []);
@@ -80,36 +80,12 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
     return () => clearInterval(timer);
   }, [carouselSlides.length]);
 
-  // GTG restrictions check
-  const gtgState = useMemo(() => {
-    const isDeload = activeWeekObj.isDeload;
-    const isPushDay = currentDay === "Lunes" || currentDay === "Jueves";
-    const isPullDay = currentDay === "Martes";
-
-    return {
-      allForbidden: isDeload,
-      pullupsSuspended: isPullDay,
-      pushupsSuspended: isPushDay,
-      reason: isDeload
-        ? "Semana de descarga: Grease the Groove está estrictamente prohibido para permitir la resíntesis del SNC."
-        : isPullDay
-          ? "Día de Pull pesado: el GTG de dominadas queda suspendido para proteger la articulación."
-          : isPushDay
-            ? "Día de Push pesado: el GTG de flexiones queda suspendido para evitar sobrecarga neural."
-            : null
-    };
-  }, [activeWeekObj, currentDay]);
-
   return (
     <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
 
       {/* 1. Tarjeta de Motivación Diaria - Carrusel Vertical (Rectángulo Parado) */}
       <div
-        className="lg:col-span-3 lg:col-start-8 lg:row-start-1 relative overflow-hidden rounded-2xl h-[400px] flex flex-col justify-between p-6 bg-cover bg-center border border-slate-800 shadow-xl transition-all duration-500"
-        style={{
-          backgroundImage: `linear-gradient(to top, rgba(3, 7, 18, 0.95) 15%, rgba(3, 7, 18, 0.3) 100%), url('${carouselSlides[activeSlide].image}')`,
-          backgroundColor: '#111827'
-        }}
+        className="lg:col-span-3 lg:col-start-8 lg:row-start-1 relative overflow-hidden rounded-2xl h-[400px] flex flex-col justify-between p-6 border border-indigo-500/20 bg-slate-950 shadow-xl transition-all duration-500 glow-indigo"
       >
         {/* Header / Top Info */}
         <div className="flex items-center justify-between z-10 w-full">
@@ -223,8 +199,8 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
         </div>
       </div>
 
-      {/* 3. Módulo de Entrenamiento del Día (Left Column) */}
-      <div className="lg:col-span-7 lg:col-start-1 lg:row-start-2 space-y-4">
+      {/* 3. Módulo de Entrenamiento del Día (Full Width Column) */}
+      <div className="lg:col-span-10 lg:col-start-1 lg:row-start-2 space-y-4">
         <div className="glass-panel p-6 rounded-2xl glow-indigo space-y-5">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
             <div>
@@ -310,62 +286,6 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
             <span className="text-indigo-400 font-medium">Solo Lectura / Hub</span>
           </div>
         </div>
-      </div>
-
-
-
-      {/* 4. Panel de Hábitos Recomendados (Right Column) - Solo Informativo */}
-      <div className="lg:col-span-3 lg:col-start-8 lg:row-start-2 space-y-6">
-        <div className="glass-panel p-6 rounded-2xl glow-fuchsia space-y-6">
-          <div className="border-b border-slate-800 pb-3">
-            <h2 className="text-lg font-bold font-outfit text-white">Hábitos Recomendados</h2>
-            <p className="text-xs text-slate-400">Guía de hábitos diarios requeridos</p>
-          </div>
-
-          {/* Normal Habits Information */}
-          <div className="space-y-3">
-            {/* Habit 1 */}
-            <div className="flex items-center justify-between p-3.5 rounded-xl border border-slate-800 bg-slate-950/30">
-              <div className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-indigo-950/60 border border-indigo-900 flex items-center justify-center">
-                  <span className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
-                </div>
-                <div>
-                  <span className="text-sm font-semibold text-slate-200 block">Cardio LISS (30 min)</span>
-                  <span className="text-xs text-slate-500">Realizado en caminadora para sumar pasos base</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Habit 2 */}
-            <div className="flex items-center justify-between p-3.5 rounded-xl border border-slate-800 bg-slate-950/30">
-              <div className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-indigo-950/60 border border-indigo-900 flex items-center justify-center">
-                  <span className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
-                </div>
-                <div>
-                  <span className="text-sm font-semibold text-slate-200 block">Práctica de GTG</span>
-                  <span className="text-xs text-slate-500">4 a 8 series diarias</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Habit 3 */}
-            <div className="flex items-center justify-between p-3.5 rounded-xl border border-slate-800 bg-slate-950/30">
-              <div className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-indigo-950/60 border border-indigo-900 flex items-center justify-center">
-                  <span className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
-                </div>
-                <div>
-                  <span className="text-sm font-semibold text-slate-200 block">Objetivo NEAT Diario</span>
-                  <span className="text-xs text-slate-500">Rango ideal de 10k - 15k pasos totales</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
       </div>
 
     </div>
