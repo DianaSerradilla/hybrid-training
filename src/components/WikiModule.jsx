@@ -40,54 +40,74 @@ export default function WikiModule() {
   ];
 
   return (
-    <div className="space-y-8 max-w-7xl mx-auto w-full text-slate-100 font-sans">
+    <div className="space-y-10 max-w-7xl mx-auto w-full text-slate-100 font-sans pb-12">
 
-      {/* CABECERA ESTILO BLOG / REVISTA TÉCNICA */}
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-indigo-950/80 via-slate-950/90 to-slate-950 border border-indigo-500/30 p-6 md:p-10 shadow-2xl backdrop-blur-md glow-indigo">
-        <div className="max-w-4xl space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-mono">
-            <BookOpen className="w-4 h-4" />
-            WIKI BLOG DE ENTRENAMIENTO — EL MANUAL DEFINITIVO
+      {/* ========================================================================= */}
+      {/* CABECERA ESTILO BLOG (METADATA + TÍTULO + HERO COVER) */}
+      {/* ========================================================================= */}
+      <header className="space-y-3 pt-2 border-b border-slate-900 pb-6">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-mono">
+          <BookOpen className="w-4 h-4" />
+          WIKI BLOG DE ENTRENAMIENTO — EL MANUAL DEFINITIVO
+        </div>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-outfit text-white tracking-tight leading-tight">
+          {modulesList.find(m => m.id === selectedModule)?.label || "Wiki de Entrenamiento Híbrido"}
+        </h1>
+        <p className="text-slate-300 text-sm md:text-base leading-relaxed font-sans max-w-3xl">
+          Manual técnico oficial de entrenamiento y fisiología aplicada: adaptaciones neuromusculares, hipertrofia muscular, entorno anabólico, calistenia de rendimiento y periodización femenina.
+        </p>
+      </header>
+
+      {/* ========================================================================= */}
+      {/* GRID PRINCIPAL: SIDEBAR FLOTANTE + CUERPO DEL ARTÍCULO */}
+      {/* ========================================================================= */}
+      <div id="blog-article-start" className="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-4">
+
+        {/* COLUMNA IZQUIERDA: SIDEBAR / ÍNDICE DEL BLOG */}
+        <aside className="lg:col-span-3 space-y-6 lg:sticky lg:top-4 h-fit">
+          <div className="glass-panel p-4 rounded-2xl border border-slate-900 space-y-3">
+            <div className="flex items-center justify-between border-b border-slate-900 pb-2">
+              <span className="text-[10px] font-bold font-mono text-indigo-400 uppercase tracking-widest flex items-center gap-1.5">
+                <Bookmark className="w-3.5 h-3.5" />
+                ÍNDICE DEL BLOG
+              </span>
+              <span className="text-[10px] font-mono text-slate-500">10 Cap.</span>
+            </div>
+
+            <div className="space-y-1 max-h-[460px] overflow-y-auto no-scrollbar">
+              {modulesList.map((m) => (
+                <button
+                  key={m.id}
+                  onClick={() => {
+                    setSelectedModule(m.id);
+                    document.getElementById('blog-article-start')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className={`w-full text-left px-3 py-2 rounded-xl text-xs transition-all duration-200 flex items-center justify-between ${
+                    selectedModule === m.id
+                      ? 'bg-indigo-600/20 text-white font-bold border-l-2 border-indigo-500'
+                      : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900/60'
+                  }`}
+                >
+                  <span className="truncate pr-1 font-outfit">{m.title}: {m.label}</span>
+                  {selectedModule === m.id && <ChevronRight className="w-3.5 h-3.5 text-indigo-400 shrink-0" />}
+                </button>
+              ))}
+            </div>
           </div>
-          <h1 className="text-3xl md:text-5xl font-extrabold font-outfit text-white tracking-tight leading-tight">
-            📚 WIKI DE ENTRENAMIENTO: EL MANUAL DEFINITIVO
-          </h1>
-          <p className="text-sm md:text-base text-slate-300 leading-relaxed font-sans">
-            Guía maestra de fisiología humana, biomecánica avanzada, nutrición anabólica, calistenia de rendimiento y periodización femenina. Lee el compendio completo en formato blog paso a paso.
-          </p>
-        </div>
-      </div>
 
-      {/* TABLA DE CONTENIDOS (BLOG SIDEBAR / TOP NAVIGATION) */}
-      <div className="glass-panel p-5 rounded-2xl glow-indigo space-y-3">
-        <div className="flex items-center justify-between border-b border-slate-800 pb-2.5">
-          <div className="flex items-center gap-2 text-indigo-400 font-bold text-xs font-mono uppercase tracking-wider">
-            <Bookmark className="w-4 h-4" />
-            Tabla de Contenidos del Blog (Navegación Rápida)
+          <div className="bg-slate-950 p-4 rounded-2xl border border-slate-900 space-y-2 text-xs text-slate-400">
+            <div className="flex items-center gap-2 text-slate-300 font-semibold font-outfit">
+              <ShieldAlert className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span>Contenido Oficial PDF</span>
+            </div>
+            <p className="text-[11px] text-slate-500">
+              Estructura técnica organizada en formato editorial de blog para lectura cómoda en cualquier pantalla.
+            </p>
           </div>
-          <span className="text-[11px] text-slate-400 font-mono">10 Capítulos Disponibles</span>
-        </div>
+        </aside>
 
-        <div className="grid grid-cols-2 sm:grid-cols-5 lg:grid-cols-10 gap-2 pt-1">
-          {modulesList.map((m) => (
-            <button
-              key={m.id}
-              onClick={() => setSelectedModule(m.id)}
-              className={`p-2.5 rounded-xl border text-center transition-all duration-200 flex flex-col items-center justify-center gap-1 ${
-                selectedModule === m.id
-                  ? 'border-indigo-500 bg-indigo-600 text-white font-bold shadow-lg shadow-indigo-950/50 scale-105'
-                  : 'border-slate-850 bg-slate-950/60 hover:bg-slate-900 text-slate-400 hover:text-slate-200'
-              }`}
-            >
-              <span className="text-[9px] uppercase font-mono tracking-wider opacity-80">{m.title}</span>
-              <span className="text-[10px] font-semibold leading-tight font-outfit line-clamp-1">{m.label}</span>
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* CUERPO PRINCIPAL DEL ARTÍCULO / BLOG */}
-      <div className="space-y-8">
+        {/* COLUMNA DERECHA: CUERPO DEL ARTÍCULO */}
+        <main className="lg:col-span-9 space-y-8">
 
         {/* ========================================================================= */}
         {/* MÓDULO 1: FISIOLOGÍA BÁSICA (EL MOTOR) */}
@@ -1280,6 +1300,52 @@ export default function WikiModule() {
           </article>
         )}
 
+        {/* ========================================================================= */}
+        {/* NAVEGACIÓN Y PAGINACIÓN DEL BLOG DE ARTÍCULOS (ANTERIOR / SIGUIENTE) */}
+        {/* ========================================================================= */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-900 pt-6 mt-10">
+            <button
+              disabled={selectedModule === 1}
+              onClick={() => {
+                if (selectedModule > 1) {
+                  setSelectedModule(selectedModule - 1);
+                  document.getElementById('blog-article-start')?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className={`w-full sm:w-auto px-5 py-2.5 rounded-xl border text-xs font-bold font-mono uppercase tracking-wider transition-all flex items-center justify-center gap-2 ${
+                selectedModule === 1
+                  ? 'opacity-40 cursor-not-allowed border-slate-900 text-slate-600 bg-slate-950'
+                  : 'border-slate-800 bg-slate-900 hover:bg-slate-850 text-slate-200 hover:text-white'
+              }`}
+            >
+              <span>←</span>
+              <span>Capítulo Anterior</span>
+            </button>
+
+            <span className="text-xs font-mono text-slate-400 font-bold uppercase tracking-widest">
+              CAPÍTULO {selectedModule} DE 10
+            </span>
+
+            <button
+              disabled={selectedModule === 10}
+              onClick={() => {
+                if (selectedModule < 10) {
+                  setSelectedModule(selectedModule + 1);
+                  document.getElementById('blog-article-start')?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className={`w-full sm:w-auto px-5 py-2.5 rounded-xl border text-xs font-bold font-mono uppercase tracking-wider transition-all flex items-center justify-center gap-2 ${
+                selectedModule === 10
+                  ? 'opacity-40 cursor-not-allowed border-slate-900 text-slate-600 bg-slate-950'
+                  : 'border-indigo-500/30 bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300'
+              }`}
+            >
+              <span>Siguiente Capítulo</span>
+              <span>→</span>
+            </button>
+          </div>
+
+        </main>
       </div>
 
     </div>

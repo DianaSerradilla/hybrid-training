@@ -85,7 +85,7 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
 
       {/* 1. Tarjeta de Motivación Diaria - Carrusel Vertical (Rectángulo Parado) */}
       <div
-        className="lg:col-span-3 lg:col-start-8 lg:row-start-1 relative overflow-hidden rounded-2xl h-[400px] flex flex-col justify-between p-6 border border-indigo-500/20 bg-slate-950 shadow-xl transition-all duration-500 glow-indigo"
+        className="lg:col-span-3 lg:col-start-8 lg:row-start-1 relative overflow-hidden rounded-2xl h-[400px] flex flex-col justify-between p-6 border border-slate-900 bg-slate-950 transition-all duration-500"
       >
         {/* Header / Top Info */}
         <div className="flex items-center justify-between z-10 w-full">
@@ -144,7 +144,7 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
       </div>
 
       {/* 2. Header de Progreso & Selectores Interactivos */}
-      <div className="lg:col-span-7 lg:col-start-1 lg:row-start-1 glass-panel p-6 rounded-2xl flex flex-col justify-between gap-5 glow-indigo lg:h-[400px]">
+      <div className="lg:col-span-7 lg:col-start-1 lg:row-start-1 glass-panel p-6 rounded-2xl flex flex-col justify-between gap-5 lg:h-[400px]">
         <div>
           <div className="flex items-center gap-2 text-indigo-400 font-semibold mb-2 text-xs tracking-wider uppercase">
             <Calendar className="w-4.5 h-4.5" />
@@ -201,7 +201,7 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
 
       {/* 3. Módulo de Entrenamiento del Día (Full Width Column) */}
       <div className="lg:col-span-10 lg:col-start-1 lg:row-start-2 space-y-4">
-        <div className="glass-panel p-6 rounded-2xl glow-indigo space-y-5">
+        <div className="glass-panel p-6 rounded-2xl space-y-5">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
             <div>
               <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest">Entrenamiento de Hoy</span>

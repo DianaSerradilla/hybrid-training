@@ -40,7 +40,7 @@ export default function HandstandDashboard() {
     <div className="space-y-8 animate-fade-in text-slate-100 max-w-7xl mx-auto px-1">
 
       {/* BANNER CABECERA MAESTRA */}
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-violet-950/60 via-indigo-950/60 to-slate-950/80 border border-indigo-500/30 p-6 md:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-2xl backdrop-blur-md glow-indigo">
+      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-violet-950/60 via-indigo-950/60 to-slate-950/80 border border-slate-900 p-6 md:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 backdrop-blur-md">
         <div className="space-y-3 max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-mono">
             <Sparkles className="w-3.5 h-3.5" />
