@@ -101,8 +101,8 @@ const blocksFisiologia = [
   {
     num: 1,
     title: "Bloque 1: Fuerza Relativa y Condicionamiento Neural (Calistenia Básica)",
-    color: "border-indigo-500 text-indigo-400 bg-indigo-950/40",
-    badgeColor: "bg-indigo-950 text-indigo-300 border-indigo-800",
+    color: "border-[#253745] text-[#CCD0CF] bg-[#06141B]",
+    badgeColor: "bg-[#253745] text-[#CCD0CF] border-[#4A5C6A]",
     bioState: "Tu SNC está intacto y fresco. Los depósitos de ATP intracelular están al 100%.",
     fisiologia: "Adaptación neural, sincronización de unidades motoras y mielinización axónica. Aquí no buscamos \"bombear\" el músculo, buscamos que tu cerebro aprenda a reclutar la mayor cantidad de fibras musculares en una fracción de segundo para vencer tu peso corporal (fuerza relativa).",
     practica: "Realizarás progresiones de dominadas, flexiones y fondos. Es un trabajo de pura tensión mecánica en desventaja anatómica, donde los estabilizadores del core (retroversión pélvica) y las escápulas (depresión/retracción) están trabajando al máximo. Si hay fatiga previa, la técnica colapsa y el riesgo de lesión se dispara.",
@@ -111,8 +111,8 @@ const blocksFisiologia = [
   {
     num: 2,
     title: "Bloque 2: Hipertrofia Miofibrilar Pesada (Gimnasio - Compuestos Grandes)",
-    color: "border-emerald-500 text-emerald-400 bg-emerald-950/40",
-    badgeColor: "bg-emerald-950 text-emerald-300 border-emerald-800",
+    color: "border-[#253745] text-[#CCD0CF] bg-[#06141B]",
+    badgeColor: "bg-[#253745] text-emerald-300 border-[#4A5C6A]",
     bioState: "El SNC tiene una ligera fatiga residual, pero el SNP (el músculo en sí) está pre-activado y listo para absorber toneladas de carga.",
     fisiologia: "Daño muscular localizado (miotrauma) a través de altos niveles de tensión mecánica y sobrecarga progresiva lineal.",
     practica: "Pasamos a las máquinas de palancas, jalones pesados y presses. Al utilizar respaldos o rieles guiados (como la máquina de palancas convergentes o el remo con apoyo al pecho), \"apagamos\" la necesidad de estabilizar el cuerpo. Esto permite que el músculo objetivo (pectoral o dorsal ancho) reciba un estímulo de hipertrofia absoluto y seguro, permitiéndote empujar pesos masivos incluso con la fatiga nerviosa arrastrada del Bloque 1.",
@@ -121,8 +121,8 @@ const blocksFisiologia = [
   {
     num: 3,
     title: "Bloque 3: Hipertrofia Regional, Estrés Metabólico y Aislamiento (Gimnasio)",
-    color: "border-amber-500 text-amber-400 bg-amber-950/40",
-    badgeColor: "bg-amber-950 text-amber-300 border-amber-800",
+    color: "border-[#253745] text-[#CCD0CF] bg-[#06141B]",
+    badgeColor: "bg-[#253745] text-amber-300 border-[#4A5C6A]",
     bioState: "Las fibras de contracción rápida (Tipo II) están fatigadas. Se inicia la acumulación de metabolitos (lactato, iones de hidrógeno).",
     fisiologia: "Hipertrofia regional mediante entrenamiento a longitudes musculares largas (LML) y estrés metabólico (hinchazón celular o cell swelling).",
     practica: "Ejercicios analíticos obligatorios (sillón de cuádriceps, extensiones de tríceps, elevaciones laterales, curl de bíceps). Aquí manipulamos los vectores de aislamiento (como el codo atrás del torso para el tríceps/bíceps) para aplicar tensión en el punto de máximo estiramiento anatómico, un detonante biológico supremo para la sarcomerogénesis. Aquí el RIR debe ser empujado al límite (RIR 1 o 0) según dicte tu semana de mesociclo.",
@@ -131,8 +131,8 @@ const blocksFisiologia = [
   {
     num: 4,
     title: "Bloque 4: Barrido Metabólico y Transición (Enfriamiento)",
-    color: "border-fuchsia-500 text-fuchsia-400 bg-fuchsia-950/40",
-    badgeColor: "bg-fuchsia-950 text-fuchsia-300 border-fuchsia-800",
+    color: "border-[#253745] text-[#CCD0CF] bg-[#06141B]",
+    badgeColor: "bg-[#253745] text-[#CCD0CF] border-[#4A5C6A]",
     bioState: "Entorno de hipoxia localizada, alta acidez intramuscular.",
     fisiologia: "Retorno venoso, clearance (limpieza) de metabolitos de desecho y transición hacia el sistema nervioso parasimpático (recuperación).",
     practica: "5 minutos de cardio (soga, remo o bici) y trabajo de movilidad activa (como el Skin the Cat para extender hombros). Este bloque acelera la llegada de sangre oxigenada a los tejidos castigados, mitigando las agujetas extremas y preparando el terreno para la síntesis de proteínas.",
@@ -147,25 +147,25 @@ export default function TimelineModule() {
 
   const getWeekColorClass = (w) => {
     if (w.number === selectedWeek) {
-      return 'border-indigo-500 bg-indigo-600 text-white';
+      return 'border-[#4A5C6A] bg-[#253745] text-white';
     }
     if (w.isDeload) {
-      return 'border-amber-600/70 bg-amber-950/40 text-amber-400 hover:bg-amber-900/40';
+      return 'border-[#253745] bg-[#06141B] text-amber-400 hover:bg-[#253745]/40';
     }
     if (w.number === 11) {
-      return 'border-blue-500 bg-blue-950/60 text-blue-300 hover:bg-blue-900/40';
+      return 'border-[#253745] bg-[#06141B] text-emerald-400 hover:bg-[#253745]/40';
     }
     if (w.number === 3 || w.number === 7) {
-      return 'border-fuchsia-600/70 bg-fuchsia-950/40 text-fuchsia-400 hover:bg-fuchsia-900/40';
+      return 'border-[#253745] bg-[#06141B] text-[#CCD0CF] hover:bg-[#253745]/40';
     }
-    return 'border-slate-800 bg-slate-950 hover:bg-slate-900 text-slate-300';
+    return 'border-[#253745] bg-[#06141B] hover:bg-[#253745]/40 text-[#9BA8AB]';
   };
 
   return (
     <div className="space-y-8 max-w-7xl mx-auto w-full">
 
       {/* 1. Línea de Tiempo Estratégica del Macrociclo (12 Semanas Grid) */}
-      <div className="glass-panel p-6 rounded-2xl glow-indigo space-y-4">
+      <div className="glass-panel p-6 rounded-2xl border border-[#253745] space-y-4">
         <div>
           <h2 className="text-xl md:text-2xl font-bold font-outfit text-white">
             Línea de Tiempo Estratégica del Macrociclo
@@ -186,11 +186,11 @@ export default function TimelineModule() {
               <button
                 key={w.number}
                 onClick={() => setSelectedWeek(w.number)}
-                className={`py-3 px-2 rounded-xl text-center border font-semibold text-xs tracking-wider transition-all duration-200 flex flex-col items-center justify-between gap-1.5 ${getWeekColorClass(w)} ${isSelected ? 'scale-105 shadow-md shadow-indigo-950/50' : ''}`}
+                className={`py-3 px-2 rounded-xl text-center border font-semibold text-xs tracking-wider transition-all duration-200 flex flex-col items-center justify-between gap-1.5 ${getWeekColorClass(w)} ${isSelected ? 'scale-105 shadow-md' : ''}`}
               >
                 <span>Semana</span>
                 <span className="text-lg font-bold leading-none">{w.number}</span>
-                <span className="text-[9px] uppercase font-bold tracking-normal opacity-80">
+                <span className="text-[9px] uppercase font-bold tracking-normal opacity-80 font-mono">
                   {isTest ? 'Examen' : isDeload ? 'Descarga' : isClimax ? 'Clímax' : 'Carga'}
                 </span>
               </button>
@@ -199,10 +199,10 @@ export default function TimelineModule() {
         </div>
 
         {/* Selected Week Detail Panel */}
-        <div className="bg-slate-950/60 border border-slate-800 rounded-xl p-5 mt-4 space-y-5">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-900 pb-3">
+        <div className="bg-[#06141B] border border-[#253745] rounded-xl p-5 mt-4 space-y-5">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#253745] pb-3">
             <div>
-              <span className="text-[10px] bg-slate-900 text-slate-400 px-2 py-0.5 rounded border border-slate-800 font-bold uppercase tracking-wider">
+              <span className="text-[10px] bg-[#11212D] text-[#CCD0CF] px-2 py-0.5 rounded border border-[#253745] font-bold uppercase tracking-wider font-mono">
                 Mesociclo {activeWeekObj.mesocycle}
               </span>
               <h3 className="font-bold text-white text-base mt-1 font-outfit">
@@ -210,26 +210,26 @@ export default function TimelineModule() {
               </h3>
             </div>
             <div className="text-xs text-slate-400 font-mono">
-              RIR General: <span className="text-indigo-400 font-bold">{activeWeekObj.rirGeneral}</span> | RIR Accesorios: <span className="text-indigo-400 font-bold">{activeWeekObj.rirAccessories}</span>
+              RIR General: <span className="text-[#CCD0CF] font-bold">{activeWeekObj.rirGeneral}</span> | RIR Accesorios: <span className="text-[#CCD0CF] font-bold">{activeWeekObj.rirAccessories}</span>
             </div>
           </div>
 
           {/* Mesocycle Global Focus */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-indigo-400 flex items-center gap-1.5 font-outfit">
-              <Trophy className="w-4 h-4 text-indigo-400" />
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#9BA8AB] flex items-center gap-1.5 font-outfit">
+              <Trophy className="w-4 h-4 text-[#9BA8AB]" />
               Objetivos Globales del Mesociclo {activeWeekObj.mesocycle}
             </h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-slate-900/40 border border-slate-850 p-4 rounded-xl space-y-1.5">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wide font-mono block">Gimnasio</span>
+              <div className="bg-[#11212D] border border-[#253745] p-4 rounded-xl space-y-1.5">
+                <span className="text-[10px] font-bold text-[#4A5C6A] uppercase tracking-wide font-mono block">Gimnasio</span>
                 <p className="text-xs font-bold text-slate-200 font-outfit">{gymMesoData[activeWeekObj.mesocycle].title}</p>
                 <p className="text-[11px] text-slate-400 leading-relaxed mt-1">
                   {gymMesoData[activeWeekObj.mesocycle].desc}
                 </p>
               </div>
-              <div className="bg-slate-900/40 border border-slate-850 p-4 rounded-xl space-y-1.5">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wide font-mono block">Calistenia</span>
+              <div className="bg-[#11212D] border border-[#253745] p-4 rounded-xl space-y-1.5">
+                <span className="text-[10px] font-bold text-[#4A5C6A] uppercase tracking-wide font-mono block">Calistenia</span>
                 <p className="text-xs font-bold text-slate-200 font-outfit">{calisthenicsMesoData[activeWeekObj.mesocycle].title}</p>
                 <p className="text-[11px] text-slate-400 leading-relaxed mt-1">
                   {calisthenicsMesoData[activeWeekObj.mesocycle].target}
@@ -239,40 +239,40 @@ export default function TimelineModule() {
           </div>
 
           {/* Weekly Detail Focus */}
-          <div className="space-y-3 border-t border-slate-900 pt-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-indigo-400 flex items-center gap-1.5 font-outfit">
-              <Zap className="w-4 h-4 text-indigo-400" />
+          <div className="space-y-3 border-t border-[#253745] pt-4">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#9BA8AB] flex items-center gap-1.5 font-outfit">
+              <Zap className="w-4 h-4 text-[#9BA8AB]" />
               Plan de Trabajo Semanal (Semana {activeWeekObj.number})
             </h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-slate-900/20 border border-slate-900 p-4 rounded-xl space-y-1.5">
-                <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-wide block font-mono">Gimnasio (Foco Semanal)</span>
+              <div className="bg-[#11212D] border border-[#253745] p-4 rounded-xl space-y-1.5">
+                <span className="text-[10px] font-bold text-[#9BA8AB] uppercase tracking-wide block font-mono">Gimnasio (Foco Semanal)</span>
                 <p className="text-xs text-slate-300 leading-relaxed">
                   {activeWeekObj.focus}
                 </p>
               </div>
-              <div className="bg-slate-900/20 border border-slate-900 p-4 rounded-xl space-y-1.5">
-                <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-wide block font-mono">Calistenia (Foco Semanal)</span>
+              <div className="bg-[#11212D] border border-[#253745] p-4 rounded-xl space-y-1.5">
+                <span className="text-[10px] font-bold text-[#9BA8AB] uppercase tracking-wide block font-mono">Calistenia (Foco Semanal)</span>
                 <p className="text-xs font-bold text-slate-200">{calisthenicsWeeksData[activeWeekObj.number].title}</p>
                 <p className="text-xs text-slate-400 leading-relaxed">{calisthenicsWeeksData[activeWeekObj.number].desc}</p>
-                <p className="text-xs text-emerald-400 font-medium border-t border-slate-900 pt-1 mt-1">{calisthenicsWeeksData[activeWeekObj.number].methodology}</p>
+                <p className="text-xs text-emerald-400 font-medium border-t border-[#253745] pt-1 mt-1">{calisthenicsWeeksData[activeWeekObj.number].methodology}</p>
               </div>
             </div>
           </div>
 
           {/* Phase Alerts */}
           {(activeWeekObj.number === 1 || activeWeekObj.number === 5 || activeWeekObj.number === 9) && (
-            <div className="bg-amber-950/30 border border-amber-900/50 text-amber-300 p-4 rounded-xl text-xs space-y-1">
+            <div className="bg-[#11212D] border border-amber-500/40 text-amber-300 p-4 rounded-xl text-xs space-y-1">
               <strong>Semana de Descarga Estratégica ({activeWeekObj.number}):</strong> Disipación de fatiga sistémica acumulada durante la menstruación. Se cortan las series totales a la mitad, se reduce la carga entre 20% y 30%, y se mantiene un RIR 3 general innegociable para regenerar el tejido conectivo y reponer depósitos de glucógeno.
             </div>
           )}
           {activeWeekObj.number === 11 && (
-            <div className="bg-fuchsia-950/30 border border-fuchsia-900/50 text-fuchsia-300 p-4 rounded-xl text-xs space-y-1">
+            <div className="bg-[#11212D] border border-[#4A5C6A] text-[#CCD0CF] p-4 rounded-xl text-xs space-y-1">
               <strong>Semana de PEAKING / EL GRAN TEST (Semana 11):</strong> Aprovechamos la ventana biológica de oro (fase ovulatoria). Llevas los ejercicios principales al RIR 0 absoluto (3 a 5 repeticiones). El día sábado se realiza el AMRAP Oficial de calistenia para registrar récords personales (PR).
             </div>
           )}
           {activeWeekObj.number === 12 && (
-            <div className="bg-blue-950/30 border border-blue-900/50 text-blue-300 p-4 rounded-xl text-xs space-y-1">
+            <div className="bg-[#11212D] border border-[#253745] text-slate-300 p-4 rounded-xl text-xs space-y-1">
               <strong>Semana de Consolidación Post-Peaking (Semana 12):</strong> Tras haber roto tus marcas en la semana 11, mantenemos la carga altísima (4 a 5 repeticiones) a un RIR 1 innegociable (sin llegar al fallo técnico) para consolidar la fuerza ganada y blindar el sistema nervioso.
             </div>
           )}
@@ -280,13 +280,13 @@ export default function TimelineModule() {
       </div>
 
       {/* BANNER CALISTENIA: OBJETIVOS Y REGLA METODOLÓGICA */}
-      <div className="glass-panel p-6 rounded-2xl border border-indigo-500/30 glow-indigo space-y-4">
-        <div className="flex items-center gap-3 border-b border-slate-800 pb-3">
-          <div className="p-2 bg-indigo-500/10 border border-indigo-500/20 rounded-xl">
-            <Trophy className="w-5 h-5 text-indigo-400" />
+      <div className="glass-panel p-6 rounded-2xl border border-[#253745] space-y-4">
+        <div className="flex items-center gap-3 border-b border-[#253745] pb-3">
+          <div className="p-2 bg-[#06141B] border border-[#253745] rounded-xl">
+            <Trophy className="w-5 h-5 text-[#9BA8AB]" />
           </div>
           <div>
-            <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-widest font-mono">ESTRUCTURA FISIOLÓGICA DE CALISTENIA</span>
+            <span className="text-[10px] font-bold text-[#9BA8AB] uppercase tracking-widest font-mono">ESTRUCTURA FISIOLÓGICA DE CALISTENIA</span>
             <h3 className="font-bold text-base md:text-lg text-white font-outfit">
               Objetivos Finales y Regla Metodológica Ondulante
             </h3>
@@ -294,17 +294,17 @@ export default function TimelineModule() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-          <div className="p-4 bg-slate-950/80 rounded-xl border border-slate-850 space-y-1.5">
+          <div className="p-4 bg-[#06141B] rounded-xl border border-[#253745] space-y-1.5">
             <strong className="text-xs font-bold text-amber-400 uppercase font-mono block">
               🏆 Objetivo Final del Macrociclo (Calistenia):
             </strong>
             <p className="text-slate-300 leading-relaxed font-medium">
-              10 dominadas estrictas, 12 fondos, 15 flexiones, 5 pike push-ups y sostén de handstand libre.
+              10 dominadas strictly, 12 fondos, 15 flexiones, 5 pike push-ups y sostén de handstand libre.
             </p>
           </div>
 
-          <div className="p-4 bg-slate-950/80 rounded-xl border border-slate-850 space-y-1.5">
-            <strong className="text-xs font-bold text-indigo-300 uppercase font-mono block">
+          <div className="p-4 bg-[#06141B] rounded-xl border border-[#253745] space-y-1.5">
+            <strong className="text-xs font-bold text-[#CCD0CF] uppercase font-mono block">
               ⚙️ Regla Metodológica Ondulante:
             </strong>
             <p className="text-slate-300 leading-relaxed">
@@ -315,13 +315,13 @@ export default function TimelineModule() {
       </div>
 
       {/* 2. LA FISIOLOGÍA DE TU SESIÓN HÍBRIDA: DESGLOSE POR BLOQUES */}
-      <div className="glass-panel p-6 rounded-2xl glow-indigo space-y-6">
-        <div className="border-b border-slate-800 pb-4 flex items-center gap-3">
-          <div className="p-2.5 bg-indigo-600/10 border border-indigo-500/20 rounded-xl">
-            <Layers className="w-6 h-6 text-indigo-400" />
+      <div className="glass-panel p-6 rounded-2xl space-y-6 border border-[#253745]">
+        <div className="border-b border-[#253745] pb-4 flex items-center gap-3">
+          <div className="p-2.5 bg-[#06141B] border border-[#253745] rounded-xl">
+            <Layers className="w-6 h-6 text-[#9BA8AB]" />
           </div>
           <div>
-            <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-widest font-mono">ARQUITECTURA BIOLÓGICA</span>
+            <span className="text-[10px] font-bold text-[#9BA8AB] uppercase tracking-widest font-mono">ARQUITECTURA BIOLÓGICA</span>
             <h3 className="font-bold text-lg md:text-2xl text-white font-outfit mt-0.5">
               La Fisiología de tu Sesión Híbrida: Desglose por Bloques
             </h3>
@@ -336,14 +336,14 @@ export default function TimelineModule() {
           {blocksFisiologia.map((block) => (
             <div
               key={block.num}
-              className={`p-5 rounded-2xl border ${block.color} flex flex-col justify-between space-y-4 bg-slate-950/80 shadow-xl`}
+              className={`p-5 rounded-2xl border ${block.color} flex flex-col justify-between space-y-4 bg-[#06141B] shadow-xl`}
             >
               <div className="space-y-3">
-                <div className="flex items-center justify-between border-b border-slate-800/80 pb-2.5">
+                <div className="flex items-center justify-between border-b border-[#253745] pb-2.5">
                   <span className={`text-[9.5px] font-bold px-2.5 py-0.5 rounded border uppercase font-mono ${block.badgeColor}`}>
                     BLOQUE {block.num}
                   </span>
-                  <span className="text-[10px] text-slate-400 font-mono">Desglose Fisiológico</span>
+                  <span className="text-[10px] text-[#4A5C6A] font-mono">Desglose Fisiológico</span>
                 </div>
 
                 <h4 className="font-bold text-white text-sm md:text-base font-outfit leading-snug">
@@ -351,17 +351,17 @@ export default function TimelineModule() {
                 </h4>
 
                 <div className="space-y-2 text-xs">
-                  <div className="p-3 bg-slate-900/90 rounded-xl border border-slate-850 space-y-1">
-                    <span className="text-[10px] font-bold text-indigo-300 uppercase tracking-wider block font-mono">Estado Biológico:</span>
+                  <div className="p-3 bg-[#11212D] rounded-xl border border-[#253745] space-y-1">
+                    <span className="text-[10px] font-bold text-[#9BA8AB] uppercase tracking-wider block font-mono">Estado Biológico:</span>
                     <p className="text-slate-300 leading-relaxed text-[11px]">{block.bioState}</p>
                   </div>
 
-                  <div className="p-3 bg-slate-900/90 rounded-xl border border-slate-850 space-y-1">
+                  <div className="p-3 bg-[#11212D] rounded-xl border border-[#253745] space-y-1">
                     <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block font-mono">Foco Fisiológico:</span>
                     <p className="text-slate-300 leading-relaxed text-[11px]">{block.fisiologia}</p>
                   </div>
 
-                  <div className="p-3 bg-slate-900/90 rounded-xl border border-slate-850 space-y-1">
+                  <div className="p-3 bg-[#11212D] rounded-xl border border-[#253745] space-y-1">
                     <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider block font-mono">Ejecución Práctica:</span>
                     <p className="text-slate-300 leading-relaxed text-[11px]">{block.practica}</p>
                   </div>

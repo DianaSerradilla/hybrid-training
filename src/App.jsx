@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { 
+import { useState, useEffect } from 'react';
+import {
   Home, Apple, Footprints, CalendarRange, ShieldAlert,
   Activity, Target, BookOpen, Dumbbell, Menu, X, Trophy, Scale
 } from 'lucide-react';
@@ -15,10 +15,15 @@ import SkillsCalisthenicsModule from './components/SkillsCalisthenicsModule';
 import BodyRecompositionModule from './components/BodyRecompositionModule';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('dashboard'); // Default to Dashboard Principal
+  const [activeTab, setActiveTab] = useState('dashboard');
   const [currentWeek, setCurrentWeek] = useState(1);
   const [currentDay, setCurrentDay] = useState('Lunes');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Set dark class on html element
+  useEffect(() => {
+    document.documentElement.classList.add('dark');
+  }, []);
 
   const navigationItems = [
     { id: 'dashboard', name: 'Dashboard Principal', icon: Home, desc: 'Tus tareas y rutina de hoy' },
@@ -39,48 +44,51 @@ export default function App() {
   };
 
   return (
-    <div className="h-screen w-screen bg-[#030712] text-slate-200 flex flex-col font-sans overflow-hidden">
-      
-      {/* 1. Header Superior para todas las resoluciones */}
-      <header className="glass-panel border-b border-slate-900 shrink-0 z-40 px-4 py-3 flex items-center justify-between">
+    <div className="h-screen w-screen flex flex-col font-sans overflow-hidden bg-[#06141B] text-[#CCD0CF] dark">
+
+      {/* 1. Header Superior */}
+      <header className="shrink-0 z-40 px-4 py-3 flex items-center justify-between border-b bg-[#11212D] border-[#253745]">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-indigo-600/10 border border-indigo-500/20 rounded-xl">
-            <Dumbbell className="w-5 h-5 text-indigo-400" />
+          <div className="p-2 rounded-xl border bg-[#253745]/60 border-[#4A5C6A] text-[#9BA8AB]">
+            <Dumbbell className="w-5 h-5" />
           </div>
           <div>
-            <span className="text-[10px] text-indigo-400 uppercase tracking-widest font-bold font-outfit">Documento Oficial</span>
-            <h1 className="text-base font-bold font-outfit text-white leading-none mt-0.5">RUTINA DIANA - HUB</h1>
+            <span className="text-[10px] uppercase tracking-widest font-bold font-outfit text-[#9BA8AB]">Documento Oficial</span>
+            <h1 className="text-base font-bold font-outfit leading-none mt-0.5 text-[#CCD0CF]">RUTINA DIANA - HUB</h1>
           </div>
         </div>
 
         {/* User profile & status banner */}
-        <div className="hidden md:flex items-center gap-4">
-          <div className="text-right">
-            <span className="text-xs text-slate-400 block font-outfit font-semibold">Diana Serradilla</span>
-            <span className="inline-flex items-center gap-1.5 text-[10px] text-emerald-400 font-semibold bg-emerald-950/30 px-2 py-0.5 rounded-full border border-emerald-900/50">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              Macrociclo Activo
-            </span>
+        <div className="flex items-center gap-3 md:gap-5">
+          <div className="hidden md:flex items-center gap-3">
+            <div className="text-right">
+              <span className="text-xs block font-outfit font-semibold text-[#CCD0CF]">Diana Serradilla</span>
+              <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold px-2 py-0.5 rounded-full border bg-[#11212D] text-[#9BA8AB] border-[#253745]">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                Macrociclo Activo
+              </span>
+            </div>
           </div>
-        </div>
 
-        {/* Mobile menu trigger */}
-        <button 
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 text-slate-400 hover:text-white hover:bg-slate-900 rounded-lg transition-colors"
-        >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+          {/* Mobile menu trigger */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-2 rounded-lg transition-colors text-[#9BA8AB] hover:text-white hover:bg-[#253745]"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </header>
 
       {/* Main Layout Area */}
       <div className="flex-grow flex flex-col lg:flex-row overflow-hidden min-h-0">
-        
-        {/* 2. Sidebar de Navegación (Desktop) - Fijo y sin scroll */}
-        <aside className="hidden lg:flex flex-col w-72 bg-[#050b18] border-r border-slate-900 p-3.5 shrink-0 justify-between h-full overflow-hidden">
+
+        {/* 2. Sidebar de Navegación (Desktop) */}
+        <aside className="hidden lg:flex flex-col w-72 p-3.5 shrink-0 justify-between h-full overflow-hidden border-r bg-[#11212D] border-[#253745]">
           <div className="space-y-3 flex flex-col h-full justify-between min-h-0">
             <div className="space-y-2 min-h-0 flex flex-col flex-grow">
-              <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest px-2 font-outfit shrink-0">Índice del Documento</span>
+              <span className="text-[10px] font-bold uppercase tracking-widest px-2 font-outfit shrink-0 text-[#4A5C6A]">Índice del Documento</span>
+
               <nav className="space-y-1 flex-grow overflow-hidden">
                 {navigationItems.map((item) => {
                   const Icon = item.icon;
@@ -89,12 +97,17 @@ export default function App() {
                     <button
                       key={item.id}
                       onClick={() => handleNavClick(item.id)}
-                      className={`w-full flex items-center gap-3 px-2.5 py-1.5 lg:py-2 rounded-xl text-left transition-all duration-200 ${isActive ? 'bg-indigo-600/10 border-l-4 border-indigo-500 text-white font-semibold' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900/40'}`}
+                      className={`w-full flex items-center gap-3 px-2.5 py-1.5 lg:py-2 rounded-xl text-left transition-all duration-200 ${isActive
+                          ? 'bg-[#253745] border-l-4 border-[#9BA8AB] text-[#CCD0CF] font-bold shadow-sm'
+                          : 'text-[#9BA8AB] hover:text-white hover:bg-[#253745]/40'
+                        }`}
                     >
-                      <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-indigo-400' : 'text-slate-400'}`} />
+                      <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-[#9BA8AB]' : 'text-[#4A5C6A]'
+                        }`} />
                       <div className="min-w-0">
                         <span className="text-xs block leading-tight font-outfit truncate">{item.name}</span>
-                        <span className="text-[10px] text-slate-500 font-normal block truncate">{item.desc}</span>
+                        <span className={`text-[10px] font-normal block truncate ${isActive ? 'text-[#9BA8AB]' : 'text-[#4A5C6A]'
+                          }`}>{item.desc}</span>
                       </div>
                     </button>
                   );
@@ -102,23 +115,14 @@ export default function App() {
               </nav>
             </div>
 
-            {/* Footer Sidebar Info */}
-            <div className="bg-slate-950 p-3 rounded-xl border border-slate-900 text-xs text-slate-500 space-y-1 shrink-0">
-              <span className="flex items-center gap-1 font-bold text-slate-400 uppercase tracking-wider text-[10px] font-outfit">
-                <ShieldAlert className="w-3.5 h-3.5 text-amber-500" />
-                Rutina_Diana.pdf
-              </span>
-              <p className="text-[10px] text-slate-500">
-                Estructura oficial extraída directamente del índice del PDF.
-              </p>
-            </div>
+
           </div>
         </aside>
 
-        {/* 3. Mobile Menu Overlay (Drawer) */}
+        {/* 3. Mobile Menu Overlay */}
         {mobileMenuOpen && (
-          <div className="lg:hidden fixed inset-0 z-30 bg-slate-950/80 backdrop-blur-sm pt-16 px-4">
-            <nav className="glass-panel p-4 rounded-2xl space-y-2 border border-slate-900 no-scrollbar mt-4">
+          <div className="lg:hidden fixed inset-0 z-30 bg-black/60 backdrop-blur-sm pt-16 px-4">
+            <nav className="p-4 rounded-2xl space-y-2 border no-scrollbar mt-4 bg-[#11212D] border-[#253745] text-[#CCD0CF]">
               {navigationItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = activeTab === item.id;
@@ -126,9 +130,12 @@ export default function App() {
                   <button
                     key={item.id}
                     onClick={() => handleNavClick(item.id)}
-                    className={`w-full flex items-center gap-4 px-4 py-3 rounded-xl text-left transition-colors ${isActive ? 'bg-indigo-600/20 text-white font-semibold' : 'text-slate-400 hover:bg-slate-900'}`}
+                    className={`w-full flex items-center gap-4 px-4 py-3 rounded-xl text-left transition-colors ${isActive
+                        ? 'bg-[#253745] text-white font-semibold'
+                        : 'text-[#9BA8AB] hover:bg-[#253745]/40'
+                      }`}
                   >
-                    <Icon className="w-5 h-5 text-indigo-400 shrink-0" />
+                    <Icon className="w-5 h-5 shrink-0 text-[#9BA8AB]" />
                     <span className="text-sm font-outfit">{item.name}</span>
                   </button>
                 );
@@ -137,16 +144,15 @@ export default function App() {
           </div>
         )}
 
-        {/* 4. Contenido Principal - ÚNICO PANEL CON SCROLL VERTICAL */}
+        {/* 4. Contenido Principal */}
         <main className="flex-grow p-4 md:p-6 lg:p-8 max-w-7xl mx-auto w-full overflow-y-auto h-full min-h-0">
-          
-          {/* Tab Render Switch */}
+
           {activeTab === 'dashboard' && (
-            <DailyDashboard 
-              currentWeek={currentWeek} 
-              setCurrentWeek={setCurrentWeek} 
-              currentDay={currentDay} 
-              setCurrentDay={setCurrentDay} 
+            <DailyDashboard
+              currentWeek={currentWeek}
+              setCurrentWeek={setCurrentWeek}
+              currentDay={currentDay}
+              setCurrentDay={setCurrentDay}
             />
           )}
 

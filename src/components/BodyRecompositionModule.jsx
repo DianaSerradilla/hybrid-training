@@ -22,7 +22,6 @@ export default function BodyRecompositionModule() {
   const sum6DiffMm = (latestEval.skinfolds.sum6 - baselineEval.skinfolds.sum6).toFixed(1);
 
   // Goal progress calculation
-  // Total fat % reduction needed: baseline (31.16%) -> target (20.0%) = 11.16%
   const totalDropNeeded = baselineEval.masses.adiposa.pct - profile.targetBodyFatPct;
   const currentDropAchieved = baselineEval.masses.adiposa.pct - latestEval.masses.adiposa.pct;
   const progressPct = Math.min(100, Math.max(0, (currentDropAchieved / totalDropNeeded) * 100)).toFixed(1);
@@ -31,16 +30,16 @@ export default function BodyRecompositionModule() {
     <div className="space-y-6 max-w-7xl mx-auto w-full">
 
       {/* 1. Header Banner & Goal Progress Bar */}
-      <div className="glass-panel p-6 rounded-2xl glow-indigo border border-indigo-500/30 space-y-5">
+      <div className="glass-panel p-6 rounded-2xl border border-[#253745] space-y-5">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div className="space-y-1">
-            <div className="flex items-center gap-2 text-indigo-400 font-bold text-xs uppercase tracking-widest">
-              <Award className="w-4 h-4" />
+            <div className="flex items-center gap-2 text-[#9BA8AB] font-bold text-xs uppercase tracking-widest font-mono">
+              <Award className="w-4 h-4 text-[#9BA8AB]" />
               Devolución de Nutrición & Antropometría ISAK
             </div>
             <h2 className="text-2xl font-bold font-outfit text-white flex items-center gap-2">
               Recomposición Corporal
-              <span className="text-xs bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 px-2.5 py-0.5 rounded-full font-sans font-medium">
+              <span className="text-xs bg-[#06141B] text-[#CCD0CF] border border-[#253745] px-2.5 py-0.5 rounded-full font-mono font-medium">
                 {evaluations.length} Mediciones Registradas
               </span>
             </h2>
@@ -49,23 +48,23 @@ export default function BodyRecompositionModule() {
             </p>
           </div>
 
-          <div className="flex items-center gap-3 bg-slate-900/90 border border-slate-800 p-3 rounded-xl shrink-0">
-            <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center">
+          <div className="flex items-center gap-3 bg-[#06141B] border border-[#253745] p-3 rounded-xl shrink-0">
+            <div className="w-10 h-10 rounded-lg bg-[#253745] border border-[#4A5C6A] flex items-center justify-center">
               <Target className="w-5 h-5 text-emerald-400" />
             </div>
             <div>
-              <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider block">Meta Principal</span>
+              <span className="text-[10px] text-[#4A5C6A] uppercase font-bold tracking-wider block font-mono">Meta Principal</span>
               <span className="text-lg font-bold text-emerald-400 font-outfit">20.0% Grasa</span>
-              <span className="text-[10px] text-slate-400 block">Actual: {latestEval.masses.adiposa.pct}%</span>
+              <span className="text-[10px] text-[#9BA8AB] block">Actual: {latestEval.masses.adiposa.pct}%</span>
             </div>
           </div>
         </div>
 
         {/* Progress Bar Container */}
-        <div className="bg-slate-950/80 p-4 rounded-xl border border-slate-800/80 space-y-2">
+        <div className="bg-[#06141B] p-4 rounded-xl border border-[#253745] space-y-2">
           <div className="flex justify-between items-center text-xs">
-            <span className="text-slate-400 font-semibold flex items-center gap-1.5">
-              <Activity className="w-3.5 h-3.5 text-indigo-400" />
+            <span className="text-[#9BA8AB] font-semibold flex items-center gap-1.5 font-mono">
+              <Activity className="w-3.5 h-3.5 text-[#9BA8AB]" />
               Progreso de Reducción Adiposa
             </span>
             <span className="text-emerald-400 font-bold font-outfit">
@@ -73,16 +72,16 @@ export default function BodyRecompositionModule() {
             </span>
           </div>
 
-          <div className="relative w-full h-3.5 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+          <div className="relative w-full h-3.5 bg-[#11212D] rounded-full overflow-hidden border border-[#253745]">
             <div 
-              className="h-full bg-gradient-to-r from-indigo-500 via-emerald-400 to-emerald-500 rounded-full transition-all duration-1000 shadow-[0_0_12px_rgba(16,185,129,0.4)]"
+              className="h-full bg-gradient-to-r from-[#253745] via-[#4A5C6A] to-[#9BA8AB] rounded-full transition-all duration-1000"
               style={{ width: `${Math.max(4, progressPct)}%` }}
             />
           </div>
 
-          <div className="flex justify-between text-[11px] text-slate-400 font-mono pt-1">
+          <div className="flex justify-between text-[11px] text-[#9BA8AB] font-mono pt-1">
             <span>Línea Base: <strong>{baselineEval.masses.adiposa.pct}%</strong> (28/05)</span>
-            <span className="text-indigo-300 font-bold">Actual: {latestEval.masses.adiposa.pct}% (21/07)</span>
+            <span className="text-[#CCD0CF] font-bold">Actual: {latestEval.masses.adiposa.pct}% (21/07)</span>
             <span className="text-emerald-400 font-bold">Objetivo: 20.0%</span>
           </div>
         </div>
@@ -92,11 +91,11 @@ export default function BodyRecompositionModule() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         
         {/* KPI 1: Masa Adiposa % */}
-        <div className="glass-panel p-4 rounded-xl border border-slate-800 relative overflow-hidden group hover:border-indigo-500/50 transition-all">
+        <div className="glass-panel p-4 rounded-xl border border-[#253745] relative overflow-hidden group hover:border-[#4A5C6A] transition-all">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider font-outfit">Masa Adiposa</span>
-            <div className="p-2 rounded-lg bg-indigo-500/10 text-indigo-400">
-              <PieChart className="w-4 h-4" />
+            <span className="text-xs font-bold text-[#9BA8AB] uppercase tracking-wider font-outfit">Masa Adiposa</span>
+            <div className="p-2 rounded-lg bg-[#06141B] border border-[#253745] text-[#CCD0CF]">
+              <PieChart className="w-4 h-4 text-[#9BA8AB]" />
             </div>
           </div>
           <div className="mt-2 flex items-baseline gap-2">
@@ -106,15 +105,15 @@ export default function BodyRecompositionModule() {
           <div className="mt-2 flex items-center gap-1.5 text-xs text-emerald-400 font-semibold">
             <TrendingDown className="w-3.5 h-3.5" />
             <span>{fatDiffPct}% acumulado</span>
-            <span className="text-[10px] text-slate-500 ml-auto">Medición 3 vs 1</span>
+            <span className="text-[10px] text-[#4A5C6A] ml-auto font-mono">Medición 3 vs 1</span>
           </div>
         </div>
 
         {/* KPI 2: Masa Muscular Magra */}
-        <div className="glass-panel p-4 rounded-xl border border-slate-800 relative overflow-hidden group hover:border-emerald-500/50 transition-all">
+        <div className="glass-panel p-4 rounded-xl border border-[#253745] relative overflow-hidden group hover:border-[#4A5C6A] transition-all">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider font-outfit">Masa Muscular</span>
-            <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
+            <span className="text-xs font-bold text-[#9BA8AB] uppercase tracking-wider font-outfit">Masa Muscular</span>
+            <div className="p-2 rounded-lg bg-[#06141B] border border-[#253745] text-emerald-400">
               <Zap className="w-4 h-4" />
             </div>
           </div>
@@ -125,15 +124,15 @@ export default function BodyRecompositionModule() {
           <div className="mt-2 flex items-center gap-1.5 text-xs text-emerald-400 font-semibold">
             <TrendingUp className="w-3.5 h-3.5" />
             <span>+{muscleDiffKg} kg magros</span>
-            <span className="text-[10px] text-emerald-400/80 bg-emerald-950/60 px-1.5 py-0.5 rounded ml-auto">¡Ganancia pura!</span>
+            <span className="text-[10px] text-emerald-400/80 bg-[#06141B] border border-[#253745] px-1.5 py-0.5 rounded ml-auto">¡Ganancia pura!</span>
           </div>
         </div>
 
         {/* KPI 3: Suma de 6 Pliegues */}
-        <div className="glass-panel p-4 rounded-xl border border-slate-800 relative overflow-hidden group hover:border-amber-500/50 transition-all">
+        <div className="glass-panel p-4 rounded-xl border border-[#253745] relative overflow-hidden group hover:border-[#4A5C6A] transition-all">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider font-outfit">Suma 6 Pliegues</span>
-            <div className="p-2 rounded-lg bg-amber-500/10 text-amber-400">
+            <span className="text-xs font-bold text-[#9BA8AB] uppercase tracking-wider font-outfit">Suma 6 Pliegues</span>
+            <div className="p-2 rounded-lg bg-[#06141B] border border-[#253745] text-amber-400">
               <Flame className="w-4 h-4" />
             </div>
           </div>
@@ -144,16 +143,16 @@ export default function BodyRecompositionModule() {
           <div className="mt-2 flex items-center gap-1.5 text-xs text-emerald-400 font-semibold">
             <TrendingDown className="w-3.5 h-3.5" />
             <span>{sum6DiffMm} mm reducidos</span>
-            <span className="text-[10px] text-slate-500 ml-auto">De 108.5 mm</span>
+            <span className="text-[10px] text-[#4A5C6A] ml-auto font-mono">De 108.5 mm</span>
           </div>
         </div>
 
         {/* KPI 4: Índice Adiposo / Muscular */}
-        <div className="glass-panel p-4 rounded-xl border border-slate-800 relative overflow-hidden group hover:border-blue-500/50 transition-all">
+        <div className="glass-panel p-4 rounded-xl border border-[#253745] relative overflow-hidden group hover:border-[#4A5C6A] transition-all">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider font-outfit">Índice Adiposo/Músculo</span>
-            <div className="p-2 rounded-lg bg-blue-500/10 text-blue-400">
-              <Scale className="w-4 h-4" />
+            <span className="text-xs font-bold text-[#9BA8AB] uppercase tracking-wider font-outfit">Índice Adiposo/Músculo</span>
+            <div className="p-2 rounded-lg bg-[#06141B] border border-[#253745] text-[#CCD0CF]">
+              <Scale className="w-4 h-4 text-[#9BA8AB]" />
             </div>
           </div>
           <div className="mt-2 flex items-baseline gap-2">
@@ -163,7 +162,7 @@ export default function BodyRecompositionModule() {
           <div className="mt-2 flex items-center gap-1.5 text-xs text-emerald-400 font-semibold">
             <CheckCircle2 className="w-3.5 h-3.5" />
             <span>Mejora eficiente</span>
-            <span className="text-[10px] text-slate-500 ml-auto">De 0.695 a 0.658</span>
+            <span className="text-[10px] text-[#4A5C6A] ml-auto font-mono">De 0.695 a 0.658</span>
           </div>
         </div>
 
@@ -171,34 +170,34 @@ export default function BodyRecompositionModule() {
 
       {/* 3. Evolución Histórica Comparativa entre Mediciones */}
       <div className="glass-panel p-6 rounded-2xl space-y-6">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#253745] pb-4">
           <div>
-            <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-widest block">Comparativa Evolutiva</span>
+            <span className="text-[10px] font-bold text-[#9BA8AB] uppercase tracking-widest block font-mono">Comparativa Evolutiva</span>
             <h3 className="text-lg font-bold font-outfit text-white">Evolución de las 3 Mediciones Antropométricas</h3>
           </div>
 
-          <div className="flex flex-wrap gap-1.5 bg-slate-950 p-1 rounded-xl border border-slate-800 text-xs">
+          <div className="flex flex-wrap gap-1.5 bg-[#06141B] p-1 rounded-xl border border-[#253745] text-xs">
             <button
               onClick={() => setActiveTab('masses')}
-              className={`px-3 py-1.5 rounded-lg font-outfit transition-all ${activeTab === 'masses' ? 'bg-indigo-600 text-white font-semibold shadow-inner' : 'text-slate-400 hover:text-white'}`}
+              className={`px-3 py-1.5 rounded-lg font-outfit transition-all ${activeTab === 'masses' ? 'bg-[#253745] text-white font-semibold shadow-inner' : 'text-[#9BA8AB] hover:text-white'}`}
             >
               5 Componentes (kg)
             </button>
             <button
               onClick={() => setActiveTab('skinfolds')}
-              className={`px-3 py-1.5 rounded-lg font-outfit transition-all ${activeTab === 'skinfolds' ? 'bg-indigo-600 text-white font-semibold shadow-inner' : 'text-slate-400 hover:text-white'}`}
+              className={`px-3 py-1.5 rounded-lg font-outfit transition-all ${activeTab === 'skinfolds' ? 'bg-[#253745] text-white font-semibold shadow-inner' : 'text-[#9BA8AB] hover:text-white'}`}
             >
               Pliegues (mm)
             </button>
             <button
               onClick={() => setActiveTab('perimeters')}
-              className={`px-3 py-1.5 rounded-lg font-outfit transition-all ${activeTab === 'perimeters' ? 'bg-indigo-600 text-white font-semibold shadow-inner' : 'text-slate-400 hover:text-white'}`}
+              className={`px-3 py-1.5 rounded-lg font-outfit transition-all ${activeTab === 'perimeters' ? 'bg-[#253745] text-white font-semibold shadow-inner' : 'text-[#9BA8AB] hover:text-white'}`}
             >
               Perímetros (cm)
             </button>
             <button
               onClick={() => setActiveTab('indices')}
-              className={`px-3 py-1.5 rounded-lg font-outfit transition-all ${activeTab === 'indices' ? 'bg-indigo-600 text-white font-semibold shadow-inner' : 'text-slate-400 hover:text-white'}`}
+              className={`px-3 py-1.5 rounded-lg font-outfit transition-all ${activeTab === 'indices' ? 'bg-[#253745] text-white font-semibold shadow-inner' : 'text-[#9BA8AB] hover:text-white'}`}
             >
               Somatotipo e Índices
             </button>
@@ -208,7 +207,7 @@ export default function BodyRecompositionModule() {
         {/* Tab 1: 5 Componentes Corporal */}
         {activeTab === 'masses' && (
           <div className="space-y-4">
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-slate-300">
               Fraccionamiento anatómico en 5 masas según el modelo de <strong>D. Kerr (1988)</strong>. Destaca la recomposición con incremento muscular (+0.528 kg total) y descenso de masa grasa (-0.747 kg total).
             </p>
 
@@ -216,15 +215,15 @@ export default function BodyRecompositionModule() {
               {evaluations.map((ev) => (
                 <div 
                   key={ev.measurementNumber}
-                  className={`p-4 rounded-xl border transition-all ${ev.measurementNumber === latestEval.measurementNumber ? 'bg-indigo-950/20 border-indigo-500/40 glow-indigo' : 'bg-slate-900/60 border-slate-800'}`}
+                  className={`p-4 rounded-xl border transition-all ${ev.measurementNumber === latestEval.measurementNumber ? 'bg-[#06141B] border-[#4A5C6A]' : 'bg-[#06141B]/60 border-[#253745]'}`}
                 >
-                  <div className="flex justify-between items-center border-b border-slate-800 pb-2.5 mb-3">
+                  <div className="flex justify-between items-center border-b border-[#253745] pb-2.5 mb-3">
                     <div>
-                      <span className="text-xs font-bold text-indigo-400 block font-outfit">Medición N° {ev.measurementNumber}</span>
+                      <span className="text-xs font-bold text-[#9BA8AB] block font-outfit">Medición N° {ev.measurementNumber}</span>
                       <span className="text-[11px] text-slate-400">{ev.dateDisplay} ({ev.basic.weightKg} kg)</span>
                     </div>
                     {ev.measurementNumber === latestEval.measurementNumber && (
-                      <span className="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-2 py-0.5 rounded-full font-bold">
+                      <span className="text-[10px] bg-[#253745] text-emerald-300 border border-emerald-500/40 px-2 py-0.5 rounded-full font-bold">
                         Última
                       </span>
                     )}
@@ -236,7 +235,7 @@ export default function BodyRecompositionModule() {
                         <span>Masa Adiposa:</span>
                         <strong className="text-amber-300">{ev.masses.adiposa.kg} kg ({ev.masses.adiposa.pct}%)</strong>
                       </div>
-                      <div className="w-full h-2 bg-slate-950 rounded-full overflow-hidden border border-slate-800">
+                      <div className="w-full h-2 bg-[#11212D] rounded-full overflow-hidden border border-[#253745]">
                         <div className="h-full bg-amber-400 rounded-full" style={{ width: `${ev.masses.adiposa.pct}%` }} />
                       </div>
                     </div>
@@ -246,12 +245,12 @@ export default function BodyRecompositionModule() {
                         <span>Masa Muscular:</span>
                         <strong className="text-emerald-400">{ev.masses.muscular.kg} kg ({ev.masses.muscular.pct}%)</strong>
                       </div>
-                      <div className="w-full h-2 bg-slate-950 rounded-full overflow-hidden border border-slate-800">
+                      <div className="w-full h-2 bg-[#11212D] rounded-full overflow-hidden border border-[#253745]">
                         <div className="h-full bg-emerald-400 rounded-full" style={{ width: `${ev.masses.muscular.pct}%` }} />
                       </div>
                     </div>
 
-                    <div className="pt-2 border-t border-slate-800/80 grid grid-cols-3 text-[11px] text-slate-400">
+                    <div className="pt-2 border-t border-[#253745] grid grid-cols-3 text-[11px] text-slate-400 font-mono">
                       <div>Ósea: <strong className="text-slate-200">{ev.masses.osea.kg} kg</strong></div>
                       <div>Residual: <strong className="text-slate-200">{ev.masses.residual.kg} kg</strong></div>
                       <div>Piel: <strong className="text-slate-200">{ev.masses.piel.kg} kg</strong></div>
@@ -266,14 +265,14 @@ export default function BodyRecompositionModule() {
         {/* Tab 2: Pliegues Cutáneos */}
         {activeTab === 'skinfolds' && (
           <div className="space-y-4">
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-slate-300">
               Seguimiento de espesor de pliegues cutáneos (mm). Todos los pliegues muestran una tendencia decreciente o de estabilización en zonas clave.
             </p>
 
             <div className="overflow-x-auto">
               <table className="w-full text-xs text-left border-collapse">
                 <thead>
-                  <tr className="border-b border-slate-800 text-slate-400 bg-slate-950/60 font-outfit">
+                  <tr className="border-b border-[#253745] text-[#9BA8AB] bg-[#06141B] font-outfit">
                     <th className="p-3">Pliegue (mm)</th>
                     <th className="p-3">Medición 1 (28/05)</th>
                     <th className="p-3">Medición 2 (25/06)</th>
@@ -281,55 +280,55 @@ export default function BodyRecompositionModule() {
                     <th className="p-3 text-right">Variación Total</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-800/60 text-slate-300">
+                <tbody className="divide-y divide-[#253745]/60 text-slate-300 font-mono">
                   <tr>
-                    <td className="p-3 font-semibold text-white">Tríceps</td>
-                    <td className="p-3 font-mono">{baselineEval.skinfolds.triceps} mm</td>
-                    <td className="p-3 font-mono">{evaluations[1].skinfolds.triceps} mm</td>
-                    <td className="p-3 font-mono font-bold text-emerald-400">{latestEval.skinfolds.triceps} mm</td>
-                    <td className="p-3 text-right font-mono text-emerald-400 font-bold">-1.5 mm</td>
+                    <td className="p-3 font-semibold text-white font-sans">Tríceps</td>
+                    <td className="p-3">{baselineEval.skinfolds.triceps} mm</td>
+                    <td className="p-3">{evaluations[1].skinfolds.triceps} mm</td>
+                    <td className="p-3 font-bold text-emerald-400">{latestEval.skinfolds.triceps} mm</td>
+                    <td className="p-3 text-right text-emerald-400 font-bold">-1.5 mm</td>
                   </tr>
                   <tr>
-                    <td className="p-3 font-semibold text-white">Subescapular</td>
-                    <td className="p-3 font-mono">{baselineEval.skinfolds.subescapular} mm</td>
-                    <td className="p-3 font-mono">{evaluations[1].skinfolds.subescapular} mm</td>
-                    <td className="p-3 font-mono font-bold text-emerald-400">{latestEval.skinfolds.subescapular} mm</td>
-                    <td className="p-3 text-right font-mono text-emerald-400 font-bold">-2.0 mm</td>
+                    <td className="p-3 font-semibold text-white font-sans">Subescapular</td>
+                    <td className="p-3">{baselineEval.skinfolds.subescapular} mm</td>
+                    <td className="p-3">{evaluations[1].skinfolds.subescapular} mm</td>
+                    <td className="p-3 font-bold text-emerald-400">{latestEval.skinfolds.subescapular} mm</td>
+                    <td className="p-3 text-right text-emerald-400 font-bold">-2.0 mm</td>
                   </tr>
                   <tr>
-                    <td className="p-3 font-semibold text-white">Supraespinal</td>
-                    <td className="p-3 font-mono">{baselineEval.skinfolds.supraespinal} mm</td>
-                    <td className="p-3 font-mono">{evaluations[1].skinfolds.supraespinal} mm</td>
-                    <td className="p-3 font-mono font-bold text-emerald-400">{latestEval.skinfolds.supraespinal} mm</td>
-                    <td className="p-3 text-right font-mono text-emerald-400 font-bold">-0.5 mm</td>
+                    <td className="p-3 font-semibold text-white font-sans">Supraespinal</td>
+                    <td className="p-3">{baselineEval.skinfolds.supraespinal} mm</td>
+                    <td className="p-3">{evaluations[1].skinfolds.supraespinal} mm</td>
+                    <td className="p-3 font-bold text-emerald-400">{latestEval.skinfolds.supraespinal} mm</td>
+                    <td className="p-3 text-right text-emerald-400 font-bold">-0.5 mm</td>
                   </tr>
                   <tr>
-                    <td className="p-3 font-semibold text-white">Abdominal</td>
-                    <td className="p-3 font-mono">{baselineEval.skinfolds.abdominal} mm</td>
-                    <td className="p-3 font-mono">{evaluations[1].skinfolds.abdominal} mm</td>
-                    <td className="p-3 font-mono font-bold text-amber-400">{latestEval.skinfolds.abdominal} mm</td>
-                    <td className="p-3 text-right font-mono text-slate-400">0.0 mm</td>
+                    <td className="p-3 font-semibold text-white font-sans">Abdominal</td>
+                    <td className="p-3">{baselineEval.skinfolds.abdominal} mm</td>
+                    <td className="p-3">{evaluations[1].skinfolds.abdominal} mm</td>
+                    <td className="p-3 font-bold text-amber-400">{latestEval.skinfolds.abdominal} mm</td>
+                    <td className="p-3 text-right text-slate-400">0.0 mm</td>
                   </tr>
                   <tr>
-                    <td className="p-3 font-semibold text-white">Muslo (Medial)</td>
-                    <td className="p-3 font-mono">{baselineEval.skinfolds.musloMedial} mm</td>
-                    <td className="p-3 font-mono">{evaluations[1].skinfolds.musloMedial} mm</td>
-                    <td className="p-3 font-mono font-bold text-emerald-400">{latestEval.skinfolds.musloMedial} mm</td>
-                    <td className="p-3 text-right font-mono text-emerald-400 font-bold">-2.0 mm</td>
+                    <td className="p-3 font-semibold text-white font-sans">Muslo (Medial)</td>
+                    <td className="p-3">{baselineEval.skinfolds.musloMedial} mm</td>
+                    <td className="p-3">{evaluations[1].skinfolds.musloMedial} mm</td>
+                    <td className="p-3 font-bold text-emerald-400">{latestEval.skinfolds.musloMedial} mm</td>
+                    <td className="p-3 text-right text-emerald-400 font-bold">-2.0 mm</td>
                   </tr>
                   <tr>
-                    <td className="p-3 font-semibold text-white">Pantorrilla</td>
-                    <td className="p-3 font-mono">{baselineEval.skinfolds.pantorrilla} mm</td>
-                    <td className="p-3 font-mono">{evaluations[1].skinfolds.pantorrilla} mm</td>
-                    <td className="p-3 font-mono font-bold text-emerald-400">{latestEval.skinfolds.pantorrilla} mm</td>
-                    <td className="p-3 text-right font-mono text-emerald-400 font-bold">-0.5 mm</td>
+                    <td className="p-3 font-semibold text-white font-sans">Pantorrilla</td>
+                    <td className="p-3">{baselineEval.skinfolds.pantorrilla} mm</td>
+                    <td className="p-3">{evaluations[1].skinfolds.pantorrilla} mm</td>
+                    <td className="p-3 font-bold text-emerald-400">{latestEval.skinfolds.pantorrilla} mm</td>
+                    <td className="p-3 text-right text-emerald-400 font-bold">-0.5 mm</td>
                   </tr>
-                  <tr className="bg-indigo-950/30 font-bold">
-                    <td className="p-3 text-indigo-300">SUMA DE 6 PLIEGUES</td>
-                    <td className="p-3 font-mono text-slate-300">{baselineEval.skinfolds.sum6} mm</td>
-                    <td className="p-3 font-mono text-slate-300">{evaluations[1].skinfolds.sum6} mm</td>
-                    <td className="p-3 font-mono text-emerald-400">{latestEval.skinfolds.sum6} mm</td>
-                    <td className="p-3 text-right font-mono text-emerald-400">-6.5 mm</td>
+                  <tr className="bg-[#06141B] font-bold">
+                    <td className="p-3 text-[#CCD0CF] font-sans">SUMA DE 6 PLIEGUES</td>
+                    <td className="p-3 text-slate-300">{baselineEval.skinfolds.sum6} mm</td>
+                    <td className="p-3 text-slate-300">{evaluations[1].skinfolds.sum6} mm</td>
+                    <td className="p-3 text-emerald-400">{latestEval.skinfolds.sum6} mm</td>
+                    <td className="p-3 text-right text-emerald-400">-6.5 mm</td>
                   </tr>
                 </tbody>
               </table>
@@ -340,63 +339,63 @@ export default function BodyRecompositionModule() {
         {/* Tab 3: Perímetros Corporales */}
         {activeTab === 'perimeters' && (
           <div className="space-y-4">
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-slate-300">
               Evolución de perímetros en cm. Se destaca la afinación de la cintura mínima (-1.1 cm) y la meso-esternal (-2.0 cm), junto con la hipertrofia muscular en extremidades.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 text-xs">
-              <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1">
-                <span className="text-slate-400 font-semibold block">Cintura (mínima)</span>
+              <div className="p-3.5 rounded-xl bg-[#06141B] border border-[#253745] space-y-1">
+                <span className="text-[#9BA8AB] font-semibold block">Cintura (mínima)</span>
                 <div className="flex items-baseline justify-between">
                   <span className="text-xl font-bold font-outfit text-emerald-400">{latestEval.perimeters.cinturaMinima} cm</span>
                   <span className="text-emerald-400 font-mono font-bold">-1.1 cm</span>
                 </div>
-                <span className="text-[10px] text-slate-500 block">Med 1: 73.9 cm → Med 3: 72.8 cm</span>
+                <span className="text-[10px] text-[#4A5C6A] block font-mono">Med 1: 73.9 cm → Med 3: 72.8 cm</span>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1">
-                <span className="text-slate-400 font-semibold block">Tórax Mesoesternal</span>
+              <div className="p-3.5 rounded-xl bg-[#06141B] border border-[#253745] space-y-1">
+                <span className="text-[#9BA8AB] font-semibold block">Tórax Mesoesternal</span>
                 <div className="flex items-baseline justify-between">
                   <span className="text-xl font-bold font-outfit text-emerald-400">{latestEval.perimeters.toraxMesoesternal} cm</span>
                   <span className="text-emerald-400 font-mono font-bold">-2.0 cm</span>
                 </div>
-                <span className="text-[10px] text-slate-500 block">Med 1: 94.4 cm → Med 3: 92.4 cm</span>
+                <span className="text-[10px] text-[#4A5C6A] block font-mono">Med 1: 94.4 cm → Med 3: 92.4 cm</span>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1">
-                <span className="text-slate-400 font-semibold block">Brazo Flexionado (Tensión)</span>
+              <div className="p-3.5 rounded-xl bg-[#06141B] border border-[#253745] space-y-1">
+                <span className="text-[#9BA8AB] font-semibold block">Brazo Flexionado (Tensión)</span>
                 <div className="flex items-baseline justify-between">
-                  <span className="text-xl font-bold font-outfit text-indigo-400">{latestEval.perimeters.brazoFlexionado} cm</span>
-                  <span className="text-indigo-400 font-mono font-bold">Excelente tono</span>
+                  <span className="text-xl font-bold font-outfit text-[#CCD0CF]">{latestEval.perimeters.brazoFlexionado} cm</span>
+                  <span className="text-[#9BA8AB] font-mono font-bold">Excelente tono</span>
                 </div>
-                <span className="text-[10px] text-slate-500 block">Med 1: 33.6 cm → Med 3: 33.4 cm</span>
+                <span className="text-[10px] text-[#4A5C6A] block font-mono">Med 1: 33.6 cm → Med 3: 33.4 cm</span>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1">
-                <span className="text-slate-400 font-semibold block">Caderas (máxima)</span>
+              <div className="p-3.5 rounded-xl bg-[#06141B] border border-[#253745] space-y-1">
+                <span className="text-[#9BA8AB] font-semibold block">Caderas (máxima)</span>
                 <div className="flex items-baseline justify-between">
                   <span className="text-xl font-bold font-outfit text-white">{latestEval.perimeters.caderasMaxima} cm</span>
                   <span className="text-slate-400 font-mono">+1.0 cm</span>
                 </div>
-                <span className="text-[10px] text-slate-500 block">Med 1: 103.0 cm → Med 3: 104.0 cm</span>
+                <span className="text-[10px] text-[#4A5C6A] block font-mono">Med 1: 103.0 cm → Med 3: 104.0 cm</span>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1">
-                <span className="text-slate-400 font-semibold block">Muslo Medial</span>
+              <div className="p-3.5 rounded-xl bg-[#06141B] border border-[#253745] space-y-1">
+                <span className="text-[#9BA8AB] font-semibold block">Muslo Medial</span>
                 <div className="flex items-baseline justify-between">
                   <span className="text-xl font-bold font-outfit text-white">{latestEval.perimeters.musloMedial} cm</span>
                   <span className="text-emerald-400 font-mono font-bold">Estable</span>
                 </div>
-                <span className="text-[10px] text-slate-500 block">Med 1: 55.1 cm → Med 3: 55.1 cm</span>
+                <span className="text-[10px] text-[#4A5C6A] block font-mono">Med 1: 55.1 cm → Med 3: 55.1 cm</span>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1">
-                <span className="text-slate-400 font-semibold block">Pantorrilla (máxima)</span>
+              <div className="p-3.5 rounded-xl bg-[#06141B] border border-[#253745] space-y-1">
+                <span className="text-[#9BA8AB] font-semibold block">Pantorrilla (máxima)</span>
                 <div className="flex items-baseline justify-between">
-                  <span className="text-xl font-bold font-outfit text-indigo-400">{latestEval.perimeters.pantorrillaMaxima} cm</span>
-                  <span className="text-indigo-400 font-mono font-bold">+0.6 cm</span>
+                  <span className="text-xl font-bold font-outfit text-[#CCD0CF]">{latestEval.perimeters.pantorrillaMaxima} cm</span>
+                  <span className="text-[#9BA8AB] font-mono font-bold">+0.6 cm</span>
                 </div>
-                <span className="text-[10px] text-slate-500 block">Med 1: 38.9 cm → Med 3: 39.5 cm</span>
+                <span className="text-[10px] text-[#4A5C6A] block font-mono">Med 1: 38.9 cm → Med 3: 39.5 cm</span>
               </div>
             </div>
           </div>
@@ -405,64 +404,64 @@ export default function BodyRecompositionModule() {
         {/* Tab 4: Somatotipo e Índices */}
         {activeTab === 'indices' && (
           <div className="space-y-4">
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-slate-300">
               Evaluación del somatotipo de <strong>Heath & Carter (1990)</strong> y los coeficientes anatómicos de la antropometrista Lic. Maggi Carolina.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               
               {/* Somatotipo Card */}
-              <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-3">
-                <div className="flex justify-between items-center border-b border-slate-800 pb-2">
+              <div className="p-4 rounded-xl bg-[#06141B] border border-[#253745] space-y-3">
+                <div className="flex justify-between items-center border-b border-[#253745] pb-2">
                   <h4 className="text-xs font-bold text-white font-outfit uppercase tracking-wider">Somatotipo Actual (Heath-Carter)</h4>
-                  <span className="text-[10px] text-indigo-400 font-mono font-bold">Mesomórfico Dominante</span>
+                  <span className="text-[10px] text-[#9BA8AB] font-mono font-bold">Mesomórfico Dominante</span>
                 </div>
                 
                 <div className="grid grid-cols-3 gap-2 text-center">
-                  <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800">
-                    <span className="text-[10px] text-slate-400 block uppercase">Endomorfia</span>
+                  <div className="p-2.5 rounded-lg bg-[#11212D] border border-[#253745]">
+                    <span className="text-[10px] text-[#9BA8AB] block uppercase font-mono">Endomorfia</span>
                     <strong className="text-lg font-outfit text-amber-400">{latestEval.somatotype.endo}</strong>
-                    <span className="text-[9px] text-slate-500 block">Grasa / Adiposidad</span>
+                    <span className="text-[9px] text-[#4A5C6A] block">Grasa / Adiposidad</span>
                   </div>
-                  <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800">
-                    <span className="text-[10px] text-slate-400 block uppercase">Mesomorfia</span>
+                  <div className="p-2.5 rounded-lg bg-[#11212D] border border-[#253745]">
+                    <span className="text-[10px] text-[#9BA8AB] block uppercase font-mono">Mesomorfia</span>
                     <strong className="text-lg font-outfit text-emerald-400">{latestEval.somatotype.meso}</strong>
-                    <span className="text-[9px] text-slate-500 block">Robustez Muscular</span>
+                    <span className="text-[9px] text-[#4A5C6A] block">Robustez Muscular</span>
                   </div>
-                  <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800">
-                    <span className="text-[10px] text-slate-400 block uppercase">Ectomorfia</span>
-                    <strong className="text-lg font-outfit text-indigo-400">{latestEval.somatotype.ecto}</strong>
-                    <span className="text-[9px] text-slate-500 block">Linearidad / Altura</span>
+                  <div className="p-2.5 rounded-lg bg-[#11212D] border border-[#253745]">
+                    <span className="text-[10px] text-[#9BA8AB] block uppercase font-mono">Ectomorfia</span>
+                    <strong className="text-lg font-outfit text-[#CCD0CF]">{latestEval.somatotype.ecto}</strong>
+                    <span className="text-[9px] text-[#4A5C6A] block">Linearidad / Altura</span>
                   </div>
                 </div>
 
-                <p className="text-[11px] text-slate-400 leading-relaxed pt-1">
+                <p className="text-[11px] text-slate-300 leading-relaxed pt-1">
                   Coordenadas en Somatocarta: X = <strong>{latestEval.somatotype.x}</strong>, Y = <strong>{latestEval.somatotype.y}</strong>. Muestra excelente desarrollo muscular con baja fragilidad ósea.
                 </p>
               </div>
 
               {/* Coeficientes e Índices */}
-              <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-3">
-                <div className="flex justify-between items-center border-b border-slate-800 pb-2">
+              <div className="p-4 rounded-xl bg-[#06141B] border border-[#253745] space-y-3">
+                <div className="flex justify-between items-center border-b border-[#253745] pb-2">
                   <h4 className="text-xs font-bold text-white font-outfit uppercase tracking-wider">Índices Anatómicos & Salud</h4>
                   <span className="text-[10px] text-emerald-400 font-mono font-bold">Riesgo Bajo</span>
                 </div>
 
                 <div className="space-y-2 text-xs">
-                  <div className="flex justify-between p-2 rounded-lg bg-slate-950">
-                    <span className="text-slate-400">Índice Cintura / Cadera:</span>
+                  <div className="flex justify-between p-2 rounded-lg bg-[#11212D]">
+                    <span className="text-[#9BA8AB]">Índice Cintura / Cadera:</span>
                     <strong className="text-emerald-400 font-mono">{latestEval.indices.waistToHipRatio} (Bajo Riesgo Intra-abdominal)</strong>
                   </div>
-                  <div className="flex justify-between p-2 rounded-lg bg-slate-950">
-                    <span className="text-slate-400">Índice Músculo / Óseo:</span>
+                  <div className="flex justify-between p-2 rounded-lg bg-[#11212D]">
+                    <span className="text-[#9BA8AB]">Índice Músculo / Óseo:</span>
                     <strong className="text-white font-mono">{latestEval.indices.muscleToBoneRatio} kg músculo/kg hueso</strong>
                   </div>
-                  <div className="flex justify-between p-2 rounded-lg bg-slate-950">
-                    <span className="text-slate-400">Metabolismo Basal (Harris-Benedict):</span>
-                    <strong className="text-indigo-400 font-mono">{latestEval.indices.basalMetabolismKcal} kcal/día</strong>
+                  <div className="flex justify-between p-2 rounded-lg bg-[#11212D]">
+                    <span className="text-[#9BA8AB]">Metabolismo Basal (Harris-Benedict):</span>
+                    <strong className="text-[#CCD0CF] font-mono">{latestEval.indices.basalMetabolismKcal} kcal/día</strong>
                   </div>
-                  <div className="flex justify-between p-2 rounded-lg bg-slate-950">
-                    <span className="text-slate-400">IMC (Índice Masa Corporal):</span>
+                  <div className="flex justify-between p-2 rounded-lg bg-[#11212D]">
+                    <span className="text-[#9BA8AB]">IMC (Índice Masa Corporal):</span>
                     <strong className="text-slate-300 font-mono">{latestEval.indices.bmi} kg/m²</strong>
                   </div>
                 </div>
@@ -474,22 +473,22 @@ export default function BodyRecompositionModule() {
       </div>
 
       {/* 4. Visor Detallado por Medición (Informe Nutricionista) */}
-      <div className="glass-panel p-6 rounded-2xl space-y-5 border border-slate-800">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+      <div className="glass-panel p-6 rounded-2xl space-y-5 border border-[#253745]">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#253745] pb-4">
           <div className="flex items-center gap-2">
-            <FileText className="w-5 h-5 text-indigo-400" />
+            <FileText className="w-5 h-5 text-[#9BA8AB]" />
             <div>
               <h3 className="text-lg font-bold font-outfit text-white">Devolución de la Nutricionista por Medición</h3>
               <p className="text-xs text-slate-400">Selecciona el número de informe para revisar la ficha completa y observaciones de Lic. Maggi Carolina.</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-2 bg-slate-950 p-1 rounded-xl border border-slate-800 shrink-0">
+          <div className="flex items-center gap-2 bg-[#06141B] p-1 rounded-xl border border-[#253745] shrink-0">
             {evaluations.map((ev, idx) => (
               <button
                 key={ev.measurementNumber}
                 onClick={() => setSelectedEvalIndex(idx)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-outfit transition-all ${selectedEvalIndex === idx ? 'bg-indigo-600 text-white font-bold shadow-inner' : 'text-slate-400 hover:text-white'}`}
+                className={`px-3 py-1.5 rounded-lg text-xs font-outfit transition-all ${selectedEvalIndex === idx ? 'bg-[#253745] text-white font-bold shadow-inner' : 'text-[#9BA8AB] hover:text-white'}`}
               >
                 Informe N° {ev.measurementNumber} ({ev.dateDisplay})
               </button>
@@ -498,23 +497,23 @@ export default function BodyRecompositionModule() {
         </div>
 
         {/* Card of Selected Evaluation Notes */}
-        <div className="p-4 rounded-xl bg-indigo-950/20 border border-indigo-500/30 flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div className="p-4 rounded-xl bg-[#06141B] border border-[#253745] flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="space-y-1">
-            <span className="text-[10px] text-indigo-400 font-bold uppercase tracking-wider block font-outfit">
+            <span className="text-[10px] text-[#9BA8AB] font-bold uppercase tracking-wider block font-outfit">
               Conclusión Técnica - Medición N° {selectedEval.measurementNumber} ({selectedEval.dateDisplay})
             </span>
             <p className="text-xs text-slate-200 leading-relaxed font-sans">
               "{selectedEval.notes}"
             </p>
           </div>
-          <div className="shrink-0 flex items-center gap-3 bg-slate-900/90 border border-slate-800 p-3 rounded-xl">
+          <div className="shrink-0 flex items-center gap-3 bg-[#11212D] border border-[#253745] p-3 rounded-xl">
             <div className="text-right">
-              <span className="text-[10px] text-slate-400 block uppercase">Peso Medido</span>
+              <span className="text-[10px] text-[#4A5C6A] block uppercase font-mono">Peso Medido</span>
               <span className="text-base font-bold text-white font-outfit">{selectedEval.basic.weightKg} kg</span>
             </div>
-            <div className="h-7 w-[1px] bg-slate-800" />
+            <div className="h-7 w-[1px] bg-[#253745]" />
             <div className="text-right">
-              <span className="text-[10px] text-slate-400 block uppercase">% Adiposa</span>
+              <span className="text-[10px] text-[#4A5C6A] block uppercase font-mono">% Adiposa</span>
               <span className="text-base font-bold text-amber-400 font-outfit">{selectedEval.masses.adiposa.pct}%</span>
             </div>
           </div>
@@ -524,7 +523,7 @@ export default function BodyRecompositionModule() {
         <div className="overflow-x-auto">
           <table className="w-full text-xs text-left border-collapse">
             <thead>
-              <tr className="border-b border-slate-800 text-slate-400 bg-slate-950/80 font-outfit">
+              <tr className="border-b border-[#253745] text-[#9BA8AB] bg-[#06141B] font-outfit">
                 <th className="p-3">Tejido / Componente (D. Kerr 1988)</th>
                 <th className="p-3">Porcentaje (%)</th>
                 <th className="p-3">Masa (kg)</th>
@@ -532,7 +531,7 @@ export default function BodyRecompositionModule() {
                 <th className="p-3 text-right">Diferencia con Anterior (kg)</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-800/60 text-slate-300 font-mono">
+            <tbody className="divide-y divide-[#253745]/60 text-slate-300 font-mono">
               <tr>
                 <td className="p-3 font-sans font-semibold text-amber-400">1- Masa Adiposa ("grasa subcutánea")</td>
                 <td className="p-3">{selectedEval.masses.adiposa.pct}%</td>
@@ -576,12 +575,12 @@ export default function BodyRecompositionModule() {
                   {selectedEval.masses.piel.diffKg !== 0 ? `${selectedEval.masses.piel.diffKg} kg` : '-'}
                 </td>
               </tr>
-              <tr className="bg-indigo-950/40 font-bold font-sans">
+              <tr className="bg-[#06141B] font-bold font-sans">
                 <td className="p-3 text-white">MASA TOTAL ESTRUCTURADA</td>
                 <td className="p-3 text-white font-mono">100.00%</td>
                 <td className="p-3 text-white font-mono">{selectedEval.basic.weightKg} kg</td>
                 <td className="p-3 text-white font-mono">{selectedEval.masses.total.scoreZ}</td>
-                <td className="p-3 text-right text-indigo-300 font-mono">
+                <td className="p-3 text-right text-[#CCD0CF] font-mono">
                   {selectedEval.masses.total.diffKg !== 0 ? `${selectedEval.masses.total.diffKg} kg` : '-'}
                 </td>
               </tr>

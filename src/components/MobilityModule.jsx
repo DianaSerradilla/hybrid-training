@@ -394,11 +394,11 @@ export default function MobilityModule() {
   ];
 
   return (
-    <div className="space-y-8 max-w-7xl mx-auto w-full">
+    <div className="space-y-8 max-w-7xl mx-auto w-full text-[#CCD0CF]">
 
       {/* HEADER SUPERIOR DEL MÓDULO */}
-      <div className="glass-panel p-6 rounded-2xl glow-indigo space-y-2">
-        <div className="flex items-center gap-2 text-violet-400 font-bold text-xs uppercase tracking-widest font-outfit">
+      <div className="glass-panel p-6 rounded-2xl border border-[#253745] space-y-2">
+        <div className="flex items-center gap-2 text-[#9BA8AB] font-bold text-xs uppercase tracking-widest font-mono">
           <Sun className="w-5 h-5 text-amber-400" />
           <span>Sección Oficial del PDF</span>
         </div>
@@ -413,10 +413,10 @@ export default function MobilityModule() {
       {/* ========================================================================= */}
       {/* SECCIÓN 1: PROTOCOLOS DE MOVILIDAD Y FLEXIBILIDAD (EXACT DATA PDF) */}
       {/* ========================================================================= */}
-      <div className="glass-panel p-6 rounded-2xl glow-indigo space-y-6">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+      <div className="glass-panel p-6 rounded-2xl border border-[#253745] space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#253745] pb-4">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 bg-amber-500/10 border border-amber-500/20 rounded-xl">
+            <div className="p-2.5 bg-[#06141B] border border-[#253745] rounded-xl">
               <Sun className="w-6 h-6 text-amber-400" />
             </div>
             <div>
@@ -431,7 +431,7 @@ export default function MobilityModule() {
           </div>
 
           {/* Selector de Protocolos */}
-          <div className="flex bg-slate-950 p-1.5 rounded-xl border border-slate-850 self-start sm:self-center shrink-0">
+          <div className="flex bg-[#06141B] p-1.5 rounded-xl border border-[#253745] self-start sm:self-center shrink-0">
             {[
               { id: 'empuje', label: 'Empuje (L-J)' },
               { id: 'traccion', label: 'Tracción (M-S)' },
@@ -440,7 +440,7 @@ export default function MobilityModule() {
               <button
                 key={tab.id}
                 onClick={() => setSelectedWarmup(tab.id)}
-                className={`px-4 py-2 text-xs font-bold rounded-lg uppercase transition-all font-outfit ${selectedWarmup === tab.id ? 'bg-violet-600 text-white shadow-lg shadow-violet-950/50' : 'text-slate-400 hover:text-slate-200'}`}
+                className={`px-4 py-2 text-xs font-bold rounded-lg uppercase transition-all font-outfit ${selectedWarmup === tab.id ? 'bg-[#253745] text-white shadow' : 'text-[#9BA8AB] hover:text-white'}`}
               >
                 {tab.label}
               </button>
@@ -449,7 +449,7 @@ export default function MobilityModule() {
         </div>
 
         <div className="flex items-center justify-between">
-          <h4 className="text-base font-bold text-violet-400 font-outfit uppercase tracking-wider">
+          <h4 className="text-base font-bold text-[#9BA8AB] font-outfit uppercase tracking-wider">
             {sessionProtocols[selectedWarmup].title}
           </h4>
         </div>
@@ -458,16 +458,16 @@ export default function MobilityModule() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
           {/* BLOQUE PRE-ENTRENAMIENTO (RANGO ACTIVO CON FASES 1, 2 Y 3) */}
-          <div className="p-5 rounded-2xl border border-slate-800 bg-slate-950/40 flex flex-col justify-between space-y-4">
+          <div className="p-5 rounded-2xl border border-[#253745] bg-[#06141B] flex flex-col justify-between space-y-4">
             <div className="space-y-4">
-              <div className="border-b border-slate-800 pb-2.5">
+              <div className="border-b border-[#253745] pb-2.5">
                 <div className="flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
                   <span className="text-xs font-bold text-white uppercase tracking-wider font-outfit">
                     PRE-ENTRENAMIENTO (Calentamiento)
                   </span>
                 </div>
-                <p className="text-xs text-amber-300/90 mt-1 font-medium leading-relaxed">
+                <p className="text-xs text-amber-300/90 mt-1 font-medium leading-relaxed font-sans">
                   {sessionProtocols[selectedWarmup].focusPre}
                 </p>
               </div>
@@ -476,15 +476,15 @@ export default function MobilityModule() {
               <div className="space-y-4">
                 {sessionProtocols[selectedWarmup].preFases.map((fase, fIdx) => (
                   <div key={fIdx} className="space-y-2">
-                    <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider block font-mono border-b border-slate-850/60 pb-1">
+                    <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider block font-mono border-b border-[#253745]/60 pb-1">
                       {fase.faseName}
                     </span>
                     <div className="space-y-2">
                       {fase.items.map((item, idx) => (
-                        <div key={idx} className="p-3 bg-slate-950/90 rounded-xl border border-slate-850 flex flex-col justify-between gap-1.5 text-xs">
+                        <div key={idx} className="p-3 bg-[#11212D] rounded-xl border border-[#253745] flex flex-col justify-between gap-1.5 text-xs">
                           <div className="flex items-center justify-between gap-2">
                             <strong className="text-slate-200 text-xs">{item.name}</strong>
-                            <span className="text-[10px] bg-slate-900 text-indigo-300 border border-slate-800 px-2 py-0.5 rounded font-mono font-bold shrink-0">
+                            <span className="text-[10px] bg-[#06141B] text-[#CCD0CF] border border-[#253745] px-2 py-0.5 rounded font-mono font-bold shrink-0">
                               {item.sets}
                             </span>
                           </div>
@@ -493,11 +493,11 @@ export default function MobilityModule() {
                               href={item.video}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 text-[10.5px] text-violet-400 hover:text-violet-300 font-semibold font-outfit mt-0.5 self-start"
+                              className="inline-flex items-center gap-1.5 text-[10.5px] text-[#9BA8AB] hover:text-white font-semibold font-outfit mt-0.5 self-start"
                             >
-                              <InstagramIcon className="w-3.5 h-3.5 text-fuchsia-400" />
+                              <InstagramIcon className="w-3.5 h-3.5 text-[#CCD0CF]" />
                               <span>Ver Video Reel</span>
-                              <ExternalLink className="w-3 h-3 text-violet-400" />
+                              <ExternalLink className="w-3 h-3 text-[#9BA8AB]" />
                             </a>
                           )}
                         </div>
@@ -510,26 +510,26 @@ export default function MobilityModule() {
           </div>
 
           {/* BLOQUE POST-ENTRENAMIENTO (VUELTA A LA CALMA DETALLADA) */}
-          <div className="p-5 rounded-2xl border border-slate-800 bg-slate-950/40 flex flex-col justify-between space-y-4">
+          <div className="p-5 rounded-2xl border border-[#253745] bg-[#06141B] flex flex-col justify-between space-y-4">
             <div className="space-y-4">
-              <div className="border-b border-slate-800 pb-2.5">
+              <div className="border-b border-[#253745] pb-2.5">
                 <div className="flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
                   <span className="text-xs font-bold text-white uppercase tracking-wider font-outfit">
                     POST-ENTRENAMIENTO (Vuelta a la calma)
                   </span>
                 </div>
-                <p className="text-xs text-emerald-300/90 mt-1 font-medium leading-relaxed">
+                <p className="text-xs text-emerald-300/90 mt-1 font-medium leading-relaxed font-sans">
                   {sessionProtocols[selectedWarmup].focusPost}
                 </p>
               </div>
 
               <div className="space-y-3">
                 {sessionProtocols[selectedWarmup].post.map((item, idx) => (
-                  <div key={idx} className="p-3.5 bg-slate-950/90 rounded-xl border border-slate-850 space-y-1.5">
+                  <div key={idx} className="p-3.5 bg-[#11212D] rounded-xl border border-[#253745] space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
                       <strong className="text-xs font-bold text-slate-200 font-outfit">{item.name}</strong>
-                      <span className="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800/80 px-2 py-0.5 rounded font-mono font-bold shrink-0">
+                      <span className="text-[10px] bg-[#06141B] text-emerald-300 border border-[#253745] px-2 py-0.5 rounded font-mono font-bold shrink-0">
                         {item.sets}
                       </span>
                     </div>
@@ -544,15 +544,15 @@ export default function MobilityModule() {
       </div>
 
       {/* ========================================================================= */}
-      {/* SECCIÓN 2: LAS RUTINAS DE FLEX (PROGRAMACIÓN - DOS BLOQUES POR RUTINA Y CADA EJERCICIO CON VIDEO) */}
+      {/* SECCIÓN 2: LAS RUTINAS DE FLEX (PROGRAMACIÓN) */}
       {/* ========================================================================= */}
-      <div className="glass-panel p-6 rounded-2xl glow-emerald space-y-6">
-        <div className="flex items-center gap-3 border-b border-slate-800 pb-4">
-          <div className="p-2.5 bg-violet-600/10 border border-violet-500/20 rounded-xl">
-            <Layers className="w-6 h-6 text-violet-400" />
+      <div className="glass-panel p-6 rounded-2xl border border-[#253745] space-y-6">
+        <div className="flex items-center gap-3 border-b border-[#253745] pb-4">
+          <div className="p-2.5 bg-[#06141B] border border-[#253745] rounded-xl">
+            <Layers className="w-6 h-6 text-[#9BA8AB]" />
           </div>
           <div>
-            <span className="text-[10px] font-bold text-violet-400 uppercase tracking-widest font-mono">SECCIÓN 2</span>
+            <span className="text-[10px] font-bold text-[#9BA8AB] uppercase tracking-widest font-mono">SECCIÓN 2</span>
             <h3 className="font-bold text-lg md:text-xl text-white font-outfit">
               LAS RUTINAS DE FLEX (PROGRAMACIÓN)
             </h3>
@@ -567,34 +567,34 @@ export default function MobilityModule() {
           {rutinasFlex.map((rutina) => (
             <div
               key={rutina.id}
-              className="glass-card p-5 rounded-2xl border border-slate-800 flex flex-col justify-between hover:border-violet-500/40 transition-all duration-200 space-y-5"
+              className="glass-card p-5 rounded-2xl border border-[#253745] flex flex-col justify-between hover:border-[#4A5C6A] transition-all duration-200 space-y-5 bg-[#06141B]"
             >
               <div className="space-y-4">
                 {/* Rutina Header */}
-                <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div className="flex items-center justify-between border-b border-[#253745] pb-3">
                   <div>
-                    <span className="text-[10px] font-bold text-violet-400 uppercase font-mono">RUTINA #{rutina.id}</span>
+                    <span className="text-[10px] font-bold text-[#9BA8AB] uppercase font-mono">RUTINA #{rutina.id}</span>
                     <h4 className="font-bold text-white text-base font-outfit mt-0.5">{rutina.title}</h4>
                   </div>
                 </div>
 
-                <div className="bg-slate-950/80 p-3 rounded-xl border border-slate-850 text-xs space-y-1">
-                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block font-mono">Enfoque & Frecuencia:</span>
+                <div className="bg-[#11212D] p-3 rounded-xl border border-[#253745] text-xs space-y-1">
+                  <span className="text-[10px] font-bold text-[#4A5C6A] uppercase tracking-wider block font-mono">Enfoque & Frecuencia:</span>
                   <p className="text-slate-200 font-semibold">{rutina.focus}</p>
                   <p className="text-[11px] text-slate-400 mt-0.5 font-mono">{rutina.freq}</p>
                 </div>
 
                 {/* BLOQUE 1 */}
                 <div className="space-y-2">
-                  <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider block font-mono border-b border-slate-850 pb-1">
+                  <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider block font-mono border-b border-[#253745] pb-1">
                     {rutina.bloque1.name}
                   </span>
                   <div className="space-y-2">
                     {rutina.bloque1.exercises.map((ex, idx) => (
-                      <div key={idx} className="p-2.5 bg-slate-950/90 rounded-xl border border-slate-850 flex flex-col justify-between gap-2 text-xs">
+                      <div key={idx} className="p-2.5 bg-[#11212D] rounded-xl border border-[#253745] flex flex-col justify-between gap-2 text-xs">
                         <div className="flex items-center justify-between gap-2">
                           <strong className="text-slate-200 text-xs leading-snug">{ex.name}</strong>
-                          <span className="text-[9.5px] bg-slate-900 text-amber-300 px-2 py-0.5 rounded font-mono font-bold shrink-0">
+                          <span className="text-[9.5px] bg-[#06141B] text-amber-300 px-2 py-0.5 rounded font-mono font-bold shrink-0 border border-[#253745]">
                             {ex.sets}
                           </span>
                         </div>
@@ -602,12 +602,12 @@ export default function MobilityModule() {
                           href={ex.video}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-[10.5px] text-violet-400 hover:text-violet-300 font-semibold font-outfit mt-1 self-start"
+                          className="inline-flex items-center gap-1.5 text-[10.5px] text-[#9BA8AB] hover:text-white font-semibold font-outfit mt-1 self-start"
                         >
-                          {ex.source === 'instagram' && <InstagramIcon className="w-3.5 h-3.5 text-fuchsia-400" />}
-                          {ex.source === 'youtube' && <YoutubeIcon className="w-3.5 h-3.5 text-red-500" />}
+                          {ex.source === 'instagram' && <InstagramIcon className="w-3.5 h-3.5 text-[#CCD0CF]" />}
+                          {ex.source === 'youtube' && <YoutubeIcon className="w-3.5 h-3.5 text-red-400" />}
                           <span>Ver Video del Ejercicio</span>
-                          <ExternalLink className="w-3 h-3 text-violet-400" />
+                          <ExternalLink className="w-3 h-3 text-[#9BA8AB]" />
                         </a>
                       </div>
                     ))}
@@ -616,15 +616,15 @@ export default function MobilityModule() {
 
                 {/* BLOQUE 2 */}
                 <div className="space-y-2">
-                  <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block font-mono border-b border-slate-850 pb-1">
+                  <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block font-mono border-b border-[#253745] pb-1">
                     {rutina.bloque2.name}
                   </span>
                   <div className="space-y-2">
                     {rutina.bloque2.exercises.map((ex, idx) => (
-                      <div key={idx} className="p-2.5 bg-slate-950/90 rounded-xl border border-slate-850 flex flex-col justify-between gap-2 text-xs">
+                      <div key={idx} className="p-2.5 bg-[#11212D] rounded-xl border border-[#253745] flex flex-col justify-between gap-2 text-xs">
                         <div className="flex items-center justify-between gap-2">
                           <strong className="text-slate-200 text-xs leading-snug">{ex.name}</strong>
-                          <span className="text-[9.5px] bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded font-mono font-bold shrink-0">
+                          <span className="text-[9.5px] bg-[#06141B] text-emerald-300 px-2 py-0.5 rounded font-mono font-bold shrink-0 border border-[#253745]">
                             {ex.sets}
                           </span>
                         </div>
@@ -632,12 +632,12 @@ export default function MobilityModule() {
                           href={ex.video}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-[10.5px] text-violet-400 hover:text-violet-300 font-semibold font-outfit mt-1 self-start"
+                          className="inline-flex items-center gap-1.5 text-[10.5px] text-[#9BA8AB] hover:text-white font-semibold font-outfit mt-1 self-start"
                         >
-                          {ex.source === 'instagram' && <InstagramIcon className="w-3.5 h-3.5 text-fuchsia-400" />}
-                          {ex.source === 'youtube' && <YoutubeIcon className="w-3.5 h-3.5 text-red-500" />}
+                          {ex.source === 'instagram' && <InstagramIcon className="w-3.5 h-3.5 text-[#CCD0CF]" />}
+                          {ex.source === 'youtube' && <YoutubeIcon className="w-3.5 h-3.5 text-red-400" />}
                           <span>Ver Video del Ejercicio</span>
-                          <ExternalLink className="w-3 h-3 text-violet-400" />
+                          <ExternalLink className="w-3 h-3 text-[#9BA8AB]" />
                         </a>
                       </div>
                     ))}

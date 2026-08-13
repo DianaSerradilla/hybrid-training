@@ -4,31 +4,62 @@
 
 @layer base {
   *, ::before, ::after {
-    border-color: #1e293b;
+    border-color: #253745;
   }
-  body {
-    @apply bg-[#030712] text-slate-200 antialiased;
+
+  html, body {
+    background-color: #06141B;
+    color: #CCD0CF;
     font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
   }
 }
 
-/* Premium micro-scrollbar styling */
+/* Scrollbars - Invisible by default, appears ONLY when interacting / hovering */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+*:hover {
+  scrollbar-color: #253745 transparent;
+}
+
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #030712;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1f2937;
+  background: transparent;
   border-radius: 9999px;
+  transition: background-color 0.2s ease;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background: rgba(37, 55, 69, 0.85);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #374151;
+  background: #4A5C6A !important;
+}
+
+/* Glassmorphism panel styling (Dark Mode Only) */
+.glass-panel {
+  background: rgba(17, 33, 45, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #253745;
+}
+
+.glass-card {
+  background: rgba(37, 55, 69, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid #253745;
 }
 
 /* Hide scrollbar utility */
@@ -40,42 +71,11 @@
   scrollbar-width: none;
 }
 
-/* Glassmorphism custom classes - dark subtle borders, no white edges */
-.glass-panel {
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(30, 41, 59, 0.6);
-}
-
-.glass-card {
-  background: rgba(30, 41, 59, 0.3);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(30, 41, 59, 0.4);
-}
-
-/* Shadows removed for clean flat UI */
-.glow-indigo,
-.glow-fuchsia,
-.glow-emerald {
-  box-shadow: none !important;
-}
-
-/* Ensure all navigation containers have no visible scrollbar */
+/* Navigation containers without scrollbars */
 nav, .nav-container {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 nav::-webkit-scrollbar, .nav-container::-webkit-scrollbar {
   display: none;
-}
-
-@keyframes pulse-slow {
-  0%, 100% { opacity: 0.15; }
-  50% { opacity: 0.3; }
-}
-
-.animate-pulse-slow {
-  animation: pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

@@ -83,17 +83,17 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
   return (
     <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
 
-      {/* 1. Tarjeta de Motivación Diaria - Carrusel Vertical (Rectángulo Parado) */}
+      {/* 1. Tarjeta de Motivación Diaria - Carrusel Vertical */}
       <div
-        className="lg:col-span-3 lg:col-start-8 lg:row-start-1 relative overflow-hidden rounded-2xl h-[400px] flex flex-col justify-between p-6 border border-slate-900 bg-slate-950 transition-all duration-500"
+        className="lg:col-span-3 lg:col-start-8 lg:row-start-1 relative overflow-hidden rounded-2xl h-[400px] flex flex-col justify-between p-6 border border-[#253745] bg-[#11212D] transition-all duration-500"
       >
         {/* Header / Top Info */}
         <div className="flex items-center justify-between z-10 w-full">
-          <span className="bg-indigo-600/95 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1 backdrop-blur-sm">
-            <Trophy className="w-3 h-3" />
+          <span className="bg-[#253745] border border-[#4A5C6A] text-[#CCD0CF] text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1">
+            <Trophy className="w-3 h-3 text-[#9BA8AB]" />
             {carouselSlides[activeSlide].tag}
           </span>
-          <span className="text-[10px] text-slate-400 font-bold bg-slate-900/60 px-2 py-0.5 rounded backdrop-blur-sm font-sans">
+          <span className="text-[10px] text-[#9BA8AB] font-bold bg-[#06141B] px-2 py-0.5 rounded border border-[#253745] font-mono">
             {activeSlide + 1} / {carouselSlides.length}
           </span>
         </div>
@@ -101,25 +101,24 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
         {/* Bottom Quote & Navigation Controls */}
         <div className="space-y-4 z-10 w-full">
           <div className="space-y-2">
-            <div className="text-[10px] text-indigo-400 font-bold uppercase tracking-widest flex items-center gap-1">
-              <Flame className="w-3.5 h-3.5 text-orange-500 fill-orange-500" />
+            <div className="text-[10px] text-[#9BA8AB] font-bold uppercase tracking-widest flex items-center gap-1">
+              <Flame className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
               No lo olvides
             </div>
-            <blockquote className="text-base font-semibold text-slate-100 font-outfit italic leading-snug">
+            <blockquote className="text-base font-semibold text-[#CCD0CF] font-outfit italic leading-snug">
               "{carouselSlides[activeSlide].quote}"
             </blockquote>
-
           </div>
 
           {/* Navigation Arrows and Dots */}
-          <div className="flex items-center justify-between pt-2 border-t border-slate-800/40">
+          <div className="flex items-center justify-between pt-2 border-t border-[#253745]">
             {/* Dots indicators */}
             <div className="flex gap-1.5">
               {carouselSlides.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={(e) => { e.stopPropagation(); setActiveSlide(idx); }}
-                  className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${idx === activeSlide ? 'bg-indigo-500 w-3' : 'bg-slate-600'}`}
+                  className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${idx === activeSlide ? 'bg-[#9BA8AB] w-3' : 'bg-[#4A5C6A]'}`}
                 />
               ))}
             </div>
@@ -128,13 +127,13 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
             <div className="flex gap-1">
               <button
                 onClick={(e) => { e.stopPropagation(); setActiveSlide(prev => (prev === 0 ? carouselSlides.length - 1 : prev - 1)); }}
-                className="p-1.5 bg-slate-900/80 hover:bg-slate-800 text-slate-300 rounded-lg border border-slate-850 hover:text-white transition-colors"
+                className="p-1.5 bg-[#06141B] hover:bg-[#253745] text-[#9BA8AB] hover:text-white rounded-lg border border-[#253745] transition-colors"
               >
                 ←
               </button>
               <button
                 onClick={(e) => { e.stopPropagation(); setActiveSlide(prev => (prev === carouselSlides.length - 1 ? 0 : prev + 1)); }}
-                className="p-1.5 bg-slate-900/80 hover:bg-slate-800 text-slate-300 rounded-lg border border-slate-850 hover:text-white transition-colors"
+                className="p-1.5 bg-[#06141B] hover:bg-[#253745] text-[#9BA8AB] hover:text-white rounded-lg border border-[#253745] transition-colors"
               >
                 →
               </button>
@@ -146,8 +145,8 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
       {/* 2. Header de Progreso & Selectores Interactivos */}
       <div className="lg:col-span-7 lg:col-start-1 lg:row-start-1 glass-panel p-6 rounded-2xl flex flex-col justify-between gap-5 lg:h-[400px]">
         <div>
-          <div className="flex items-center gap-2 text-indigo-400 font-semibold mb-2 text-xs tracking-wider uppercase">
-            <Calendar className="w-4.5 h-4.5" />
+          <div className="flex items-center gap-2 text-[#9BA8AB] font-semibold mb-2 text-xs tracking-wider uppercase font-mono">
+            <Calendar className="w-4 h-4 text-[#9BA8AB]" />
             <span>Fase y Enfoque Actual</span>
           </div>
           <h2 className="text-lg md:text-xl font-bold font-outfit text-white leading-snug">
@@ -155,24 +154,24 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
           </h2>
           <div className="space-y-3 mt-3 text-xs md:text-sm leading-relaxed lg:max-h-[170px] lg:overflow-y-auto pr-1">
             <div>
-              <strong className="font-semibold text-indigo-400">Gimnasio: </strong>
+              <strong className="font-semibold text-[#9BA8AB]">Gimnasio: </strong>
               <span className="text-slate-300">{activeWeekObj.focus}</span>
             </div>
             <div>
-              <strong className="font-semibold text-indigo-400">Calistenia: </strong>
+              <strong className="font-semibold text-[#9BA8AB]">Calistenia: </strong>
               <span className="text-slate-300">{calisthenicsData.focus}</span>
             </div>
           </div>
         </div>
 
-        {/* Dynamic Selector Panels (Placed below the text for height alignment) */}
-        <div className="flex flex-col sm:flex-row gap-4 border-t border-slate-800/80 pt-4 w-full justify-start">
+        {/* Dynamic Selector Panels */}
+        <div className="flex flex-col sm:flex-row gap-4 border-t border-[#253745] pt-4 w-full justify-start">
           <div className="w-full sm:w-44">
-            <label className="block text-[10px] font-bold text-slate-500 mb-1.5 uppercase tracking-wider">Semana</label>
+            <label className="block text-[10px] font-bold text-[#4A5C6A] mb-1.5 uppercase tracking-wider">Semana</label>
             <select
               value={currentWeek}
               onChange={(e) => setCurrentWeek(Number(e.target.value))}
-              className="bg-slate-900 border border-slate-700 text-white text-xs rounded-xl py-2 px-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 font-medium w-full transition-all"
+              className="bg-[#06141B] border border-[#253745] text-white text-xs rounded-xl py-2 px-3 focus:outline-none focus:ring-2 focus:ring-[#4A5C6A] font-medium w-full transition-all"
             >
               {macrocycleWeeks.map((w) => (
                 <option key={w.number} value={w.number}>
@@ -183,11 +182,11 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
           </div>
 
           <div className="w-full sm:w-48">
-            <label className="block text-[10px] font-bold text-slate-500 mb-1.5 uppercase tracking-wider">Día de la semana</label>
+            <label className="block text-[10px] font-bold text-[#4A5C6A] mb-1.5 uppercase tracking-wider">Día de la semana</label>
             <select
               value={currentDay}
               onChange={(e) => setCurrentDay(e.target.value)}
-              className="bg-slate-900 border border-slate-700 text-white text-xs rounded-xl py-2 px-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 font-medium w-full transition-all"
+              className="bg-[#06141B] border border-[#253745] text-white text-xs rounded-xl py-2 px-3 focus:outline-none focus:ring-2 focus:ring-[#4A5C6A] font-medium w-full transition-all"
             >
               {weeklySchedule.map((s) => (
                 <option key={s.day} value={s.day}>
@@ -199,18 +198,18 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
         </div>
       </div>
 
-      {/* 3. Módulo de Entrenamiento del Día (Full Width Column) */}
+      {/* 3. Módulo de Entrenamiento del Día */}
       <div className="lg:col-span-10 lg:col-start-1 lg:row-start-2 space-y-4">
         <div className="glass-panel p-6 rounded-2xl space-y-5">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#253745] pb-4">
             <div>
-              <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest">Entrenamiento de Hoy</span>
+              <span className="text-xs font-bold text-[#9BA8AB] uppercase tracking-widest font-mono">Entrenamiento de Hoy</span>
               <h2 className="text-2xl font-bold font-outfit text-white mt-1">
                 {activeWorkout.title}
               </h2>
             </div>
-            <div className="flex items-center gap-2 bg-slate-900/80 px-3.5 py-1.5 rounded-xl border border-slate-800 text-xs font-semibold text-slate-300 self-start sm:self-center">
-              <Clock className="w-4 h-4 text-indigo-400" />
+            <div className="flex items-center gap-2 bg-[#06141B] px-3.5 py-1.5 rounded-xl border border-[#253745] text-xs font-semibold text-slate-300 self-start sm:self-center">
+              <Clock className="w-4 h-4 text-[#9BA8AB]" />
               <span>{activeDaySchedule.label}</span>
             </div>
           </div>
@@ -230,13 +229,13 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
           <div className="space-y-6">
             {activeWorkout.blocks.map((block, bIdx) => (
               <div key={bIdx} className="space-y-3">
-                <h3 className="text-sm font-bold text-slate-300 bg-slate-900/40 px-3 py-1.5 rounded-lg border-l-4 border-indigo-500 uppercase tracking-wider">
+                <h3 className="text-sm font-bold text-slate-200 bg-[#06141B]/60 px-3 py-1.5 rounded-lg border-l-4 border-[#4A5C6A] uppercase tracking-wider font-outfit">
                   {block.name}
                 </h3>
 
-                <div className="divide-y divide-slate-800/60">
+                <div className="divide-y divide-[#253745]/60">
                   {block.exercises.map((ex, eIdx) => (
-                    <div key={eIdx} className="py-3.5 first:pt-1 last:pb-1 flex flex-col md:flex-row md:items-start justify-between gap-3 hover:bg-slate-900/10 px-2 rounded-lg transition-colors">
+                    <div key={eIdx} className="py-3.5 first:pt-1 last:pb-1 flex flex-col md:flex-row md:items-start justify-between gap-3 hover:bg-[#253745]/20 px-2 rounded-lg transition-colors">
                       <div className="space-y-1">
                         <span className="font-semibold text-slate-100 block">{ex.name}</span>
                         <span className="text-xs text-slate-400 block max-w-md">{ex.note}</span>
@@ -244,19 +243,19 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
 
                       {/* Exercise Metrics */}
                       <div className="flex items-center gap-3 shrink-0 self-start md:self-center">
-                        <div className="bg-slate-950 border border-slate-800 px-3 py-1.5 rounded-xl text-center min-w-16">
-                          <span className="block text-[10px] text-slate-500 uppercase font-bold">Series</span>
-                          <span className="text-sm font-bold text-white">{ex.sets}</span>
+                        <div className="bg-[#06141B] border border-[#253745] px-3 py-1.5 rounded-xl text-center min-w-16">
+                          <span className="block text-[10px] text-[#4A5C6A] uppercase font-bold font-mono">Series</span>
+                          <span className="text-sm font-bold text-white font-outfit">{ex.sets}</span>
                         </div>
 
-                        <div className="bg-slate-950 border border-slate-800 px-3 py-1.5 rounded-xl text-center min-w-20">
-                          <span className="block text-[10px] text-slate-500 uppercase font-bold">Reps</span>
-                          <span className="text-sm font-bold text-white">{ex.reps}</span>
+                        <div className="bg-[#06141B] border border-[#253745] px-3 py-1.5 rounded-xl text-center min-w-20">
+                          <span className="block text-[10px] text-[#4A5C6A] uppercase font-bold font-mono">Reps</span>
+                          <span className="text-sm font-bold text-white font-outfit">{ex.reps}</span>
                         </div>
 
-                        <div className="bg-slate-950 border border-slate-800 px-3 py-1.5 rounded-xl text-center min-w-16">
-                          <span className="block text-[10px] text-slate-500 uppercase font-bold">RIR</span>
-                          <span className={`text-sm font-bold ${ex.rir === '0' ? 'text-red-400' : 'text-indigo-400'}`}>
+                        <div className="bg-[#06141B] border border-[#253745] px-3 py-1.5 rounded-xl text-center min-w-16">
+                          <span className="block text-[10px] text-[#4A5C6A] uppercase font-bold font-mono">RIR</span>
+                          <span className={`text-sm font-bold font-outfit ${ex.rir === '0' ? 'text-red-400' : 'text-[#9BA8AB]'}`}>
                             {ex.rir}
                           </span>
                         </div>
@@ -266,8 +265,8 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
                 </div>
 
                 {block.intensityTechnique && (
-                  <div className="bg-indigo-950/20 border border-indigo-900/50 text-indigo-300 px-4 py-2.5 rounded-xl flex gap-2.5 text-xs mt-2">
-                    <Zap className="w-4 h-4 text-indigo-400 shrink-0" />
+                  <div className="bg-[#253745]/40 border border-[#4A5C6A] text-[#CCD0CF] px-4 py-2.5 rounded-xl flex gap-2.5 text-xs mt-2">
+                    <Zap className="w-4 h-4 text-[#9BA8AB] shrink-0" />
                     <div>
                       <strong>Método de Intensidad Aplicado:</strong> {block.intensityTechnique}
                     </div>
@@ -278,12 +277,12 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
           </div>
 
           {/* General Biomechanical Tips Link */}
-          <div className="border-t border-slate-800 pt-4 flex items-center justify-between text-xs text-slate-400">
+          <div className="border-t border-[#253745] pt-4 flex items-center justify-between text-xs text-slate-400">
             <span className="flex items-center gap-1.5">
-              <Info className="w-4 h-4 text-slate-500" />
+              <Info className="w-4 h-4 text-[#4A5C6A]" />
               Consulta reglas de ejecución detalladas en la Biblioteca (Wiki).
             </span>
-            <span className="text-indigo-400 font-medium">Solo Lectura / Hub</span>
+            <span className="text-[#9BA8AB] font-mono">Solo Lectura / Hub</span>
           </div>
         </div>
       </div>
