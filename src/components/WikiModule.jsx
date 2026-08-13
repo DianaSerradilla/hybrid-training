@@ -557,110 +557,439 @@ export default function WikiModule() {
             </header>
 
             <div className="space-y-6 text-sm text-slate-300 leading-relaxed">
+              
+              {/* 1. Metodologías de Progreso */}
               <section className="space-y-3 bg-slate-900/50 p-5 rounded-2xl border border-slate-850">
-                <h3 className="text-lg font-bold text-white font-outfit">1. Metodologías de Progreso</h3>
+                <h3 className="text-lg font-bold text-white font-outfit flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-indigo-500"></span>
+                  1. Metodologías de Progreso
+                </h3>
                 <div className="space-y-2 text-xs pl-2">
-                  <p>• <strong>Manipulación Biomecánica (Torque):</strong> Modificar la palanca (ej. Tuck a Straddle) aleja el centro de masa de la articulación (fulcro), multiplicando la intensidad sin añadir kilos extra (τ = F · d · sin(θ)).</p>
-                  <p>• <strong>Trabajo Excéntrico (Negativas):</strong> Bajar resistiendo la gravedad (4-5s) para reclutar unidades de alto umbral cuando aún no se tiene la fuerza concéntrica.</p>
-                  <p>• <strong>Isometrías Estratégicas:</strong> Sostener contracciones (al final o en medio del recorrido) para sanar tendones (&quot;stress shielding&quot;).</p>
-                  <p>• <strong>Parciales Alargadas (LML):</strong> Trabajar el tercio inferior del rango en estiramiento máximo.</p>
-                  <p>• <strong>Series Cluster:</strong> Micro-series de 1-2 reps con pausas de 10-15s para máximo tonelaje sin degradación técnica.</p>
-                  <p>• <strong>Acomodación con Bandas:</strong> Alteran la curva de resistencia, ayudando más donde hay mayor desventaja mecánica (estiramiento).</p>
-                  <p>• <strong>Método Piramidal:</strong> Acumulación de repeticiones ascendentes/descendentes manejando la fatiga.</p>
+                  <p>• <strong className="text-indigo-300">Manipulación Biomecánica (Torque):</strong> Modificar la palanca (ej. Tuck a Straddle) aleja el centro de masa de la articulación (fulcro), multiplicando la intensidad sin añadir kilos extra (<span className="font-mono text-indigo-200">τ = F · d · sin(θ)</span>).</p>
+                  <p>• <strong className="text-emerald-400">Trabajo Excéntrico (Negativas):</strong> Bajar resistiendo la gravedad (4-5s) para reclutar unidades de alto umbral cuando aún no se tiene la fuerza concéntrica.</p>
+                  <p>• <strong className="text-amber-400">Isometrías Estratégicas:</strong> Sostener contracciones (al final o en medio del recorrido) para sanar tendones (&quot;stress shielding&quot;).</p>
+                  <p>• <strong className="text-fuchsia-400">Parciales Alargadas (LML):</strong> Trabajar el tercio inferior del rango en estiramiento máximo.</p>
+                  <p>• <strong className="text-blue-400">Series Cluster:</strong> Micro-series de 1-2 reps con pausas de 10-15s para máximo tonelaje sin degradación técnica.</p>
+                  <p>• <strong className="text-teal-400">Acomodación con Bandas:</strong> Alteran la curva de resistencia, ayudando más donde hay mayor desventaja mecánica (estiramiento).</p>
+                  <p>• <strong className="text-rose-400">Método Piramidal:</strong> Acumulación de repeticiones ascendentes/descendentes manejando la fatiga.</p>
                 </div>
               </section>
 
+              {/* 2. Ejes Fisiológicos de Estabilización (El Puente) */}
               <section className="space-y-3 bg-slate-900/50 p-5 rounded-2xl border border-slate-850">
-                <h3 className="text-lg font-bold text-white font-outfit">2. Ejes Fisiológicos de Estabilización (El Puente)</h3>
+                <h3 className="text-lg font-bold text-white font-outfit flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+                  2. Ejes Fisiológicos de Estabilización (El Puente)
+                </h3>
                 <div className="space-y-3 text-xs pl-2">
-                  <p>• <strong>Inclinación Pélvica Posterior (Retroversión):</strong> Esconder el coxis, aplanando la lordosis lumbar (Glúteo + Abdomen). Innegociable en Hollow Body, Planche y Handstand para no partir la lumbar.</p>
-                  <div>
+                  <p>• <strong className="text-emerald-300">Inclinación Pélvica Posterior (Retroversión):</strong> Esconder el coxis, aplanando la lordosis lumbar (Glúteo + Abdomen). Innegociable en Hollow Body, Planche y Handstand para no partir la lumbar.</p>
+                  <div className="space-y-1">
                     <p className="font-bold text-slate-200">• Retracción vs. Protracción Escapular:</p>
-                    <p className="pl-3 text-slate-400"><strong>Retracción:</strong> Juntar omóplatos. Usado en Front Lever y Remos. Fija el hombro.</p>
-                    <p className="pl-3 text-slate-400"><strong>Protracción:</strong> Separar omóplatos (Serrato). Usado en Planche y Push-ups. Empuja el suelo lejos.</p>
+                    <p className="pl-3 text-slate-400"><strong className="text-indigo-300">Retracción:</strong> Juntar omóplatos. Usado en Front Lever y Remos. Fija el hombro.</p>
+                    <p className="pl-3 text-slate-400"><strong className="text-indigo-300">Protracción:</strong> Separar omóplatos (Serrato). Usado en Planche y Push-ups. Empuja el suelo lejos.</p>
                   </div>
-                  <div>
+                  <div className="space-y-1">
                     <p className="font-bold text-slate-200">• Depresión vs. Elevación Escapular:</p>
-                    <p className="pl-3 text-slate-400"><strong>Depresión:</strong> Hombros lejos de las orejas. Usado en Fondos y L-Sit. Evita el pinzamiento subacromial.</p>
-                    <p className="pl-3 text-slate-400"><strong>Elevación:</strong> Encoger hombros. Usado en Handstand para bloquear la estructura ósea invertida.</p>
+                    <p className="pl-3 text-slate-400"><strong className="text-amber-300">Depresión:</strong> Hombros lejos de las orejas. Usado en Fondos y L-Sit. Evita el pinzamiento subacromial.</p>
+                    <p className="pl-3 text-slate-400"><strong className="text-amber-300">Elevación:</strong> Encoger hombros. Usado en Handstand para bloquear la estructura ósea invertida.</p>
                   </div>
                 </div>
               </section>
 
-              <section className="space-y-3 bg-slate-900/50 p-5 rounded-2xl border border-slate-850">
-                <h3 className="text-lg font-bold text-white font-outfit">3. Patrón de Movimiento vs. Vector de Fuerza</h3>
+              {/* 3. Patrón de Movimiento vs. Vector de Fuerza */}
+              <section className="space-y-4 bg-slate-900/50 p-5 rounded-2xl border border-slate-850">
+                <h3 className="text-lg font-bold text-white font-outfit flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-amber-500"></span>
+                  3. Patrón de Movimiento vs. Vector de Fuerza
+                </h3>
+                
                 <div className="space-y-3 text-xs pl-2">
-                  <div>
-                    <strong className="text-indigo-300 font-bold block text-sm">Patrón de Movimiento (El &quot;Qué&quot; estás haciendo)</strong>
-                    <p className="text-slate-300 mt-1">Un patrón de movimiento es una categoría fundamental de movimiento humano. Se define por cómo se coordinan tus articulaciones y músculos para realizar una acción global. Es la forma en la que tu sistema nervioso organiza el movimiento.</p>
-                    <p className="text-slate-400 mt-1">• Empuje (Push), Tracción (Pull), Dominante de Rodilla (Squat), Bisagra de Cadera (Hinge), Rotación / Anti-rotación.</p>
+                  <div className="p-4 bg-slate-950/60 rounded-xl border border-slate-800 space-y-2">
+                    <strong className="text-indigo-300 font-bold block text-sm font-outfit">Patrón de Movimiento (El &quot;Qué&quot; estás haciendo)</strong>
+                    <p className="text-slate-300">Un patrón de movimiento es una categoría fundamental de movimiento humano. Se define por cómo se coordinan tus articulaciones y músculos para realizar una acción global. Es la forma en la que tu sistema nervioso organiza el movimiento.</p>
+                    <p className="text-slate-400">La kinesiología clasifica casi todo lo que hacemos en unos pocos patrones básicos:</p>
+                    <ul className="list-disc pl-5 space-y-1 text-slate-300">
+                      <li><strong>Empuje (Push):</strong> Alejar un objeto de ti o alejarte tú del suelo (ej. Flexiones, Press de banca).</li>
+                      <li><strong>Tracción (Pull):</strong> Acercar un objeto hacia ti o acercarte tú a un objeto (ej. Dominadas, Remos).</li>
+                      <li><strong>Dominante de Rodilla (Squat):</strong> Doblar las rodillas y caderas simultáneamente (ej. Sentadillas, Prensa).</li>
+                      <li><strong>Bisagra de Cadera (Hinge):</strong> Doblar el torso hacia adelante manteniendo las tibias casi verticales (ej. Peso Muerto).</li>
+                      <li><strong>Rotación / Anti-rotación:</strong> Girar el torso o resistir un giro (ej. Planchas, giros).</li>
+                    </ul>
+                    <p className="text-slate-400 italic pt-1">En resumen: El patrón agrupa los ejercicios por la familia de movimiento y las articulaciones involucradas.</p>
                   </div>
-                  <div>
-                    <strong className="text-emerald-400 font-bold block text-sm">Vector de Fuerza (El &quot;Hacia Dónde&quot; va la resistencia)</strong>
-                    <p className="text-slate-300 mt-1">El vector es un concepto de física pura. Se refiere a la línea direccional exacta en la que se aplica la resistencia en relación con tu cuerpo. Determina qué porción del músculo se lleva la tensión.</p>
-                    <p className="text-slate-400 mt-1">• Vector Vertical (en línea con la gravedad), Vector Horizontal (perpendicular al cuerpo), Vector Diagonal (ángulo intermedio).</p>
-                  </div>
-                </div>
-              </section>
 
-              <section className="space-y-4 bg-slate-900/50 p-5 rounded-2xl border border-slate-850">
-                <h3 className="text-lg font-bold text-white font-outfit">4. Categorización Jerárquica de Habilidades (Skills) en Calistenia</h3>
-                
-                {/* PUSH */}
-                <div className="space-y-2 text-xs">
-                  <strong className="text-indigo-400 font-bold block text-sm">1. Vector de Empuje (PUSH)</strong>
-                  <p className="text-slate-400">Movimientos donde las articulaciones de los hombros actúan como fulcro y el vector de fuerza aleja el centro de masa del punto de apoyo:</p>
-                  <div className="space-y-2 pl-2 pt-1">
-                    <p>• <strong>Pike Push-ups:</strong> Básico | Prerrequisito: 15 flexiones estándar | Ruta: Flexión inclinada → Flexión estándar → Pike Push-ups.</p>
-                    <p>• <strong>Ring Support Hold:</strong> Básico-Intermedio | Prerrequisito: 15 fondos en paralelas fijos | Ruta: Sostén en paralelas → Sostén en anillas con rotación externa.</p>
-                    <p>• <strong>Ranita (Frog Stand) / Shoulder Stand:</strong> Intermedio | Prerrequisito: 5 Pike Push-ups estrictas | Ruta: Isometría de tríceps → Ranita (20s) → Shoulder stand.</p>
-                    <p>• <strong>Pseudo Planche Push-ups:</strong> Intermedio | Prerrequisito: Ranita (20s) y protracción escapular | Ruta: Planche lean (30s) → Pseudo planche push-ups (8 reps).</p>
-                    <p>• <strong>Elbow Lever:</strong> Intermedio-Avanzado | Prerrequisito: Ranita y core posterior | Ruta: Isometría apoyando codos en abdomen → Elbow lever (15s).</p>
-                    <p>• <strong>Handstand Push-Up (HSPU):</strong> Avanzado | Prerrequisito: Ranita a Handstand | Ruta: Pike hold en cajón → Pino asistido pared → Pino libre → Excéntricas HSPU → HSPU.</p>
-                    <p>• <strong>Tuck Planche:</strong> Élite | Prerrequisito: Pseudo Planche Lean | Ruta: Planche lean → Tuck Planche asistida con banda → Tuck Planche estricta.</p>
-                  </div>
-                </div>
-
-                {/* PULL */}
-                <div className="space-y-2 text-xs pt-2">
-                  <strong className="text-red-400 font-bold block text-sm">2. Vector de Tracción (PULL)</strong>
-                  <p className="text-slate-400">Patrones donde el dorsal ancho, redondo mayor, deltoides posterior y flexores del codo actúan sinérgicamente:</p>
-                  <div className="space-y-2 pl-2 pt-1">
-                    <p>• <strong>Skin the Cat / German Hang:</strong> Básico | Prerrequisito: Colgado activo | Ruta: Colgado activo → Elevación rodillas → Skin the cat → German Hang (15s).</p>
-                    <p>• <strong>Pull Over en barra:</strong> Intermedio | Prerrequisito: Skin the cat; 8 dominadas | Ruta: Elevación rodillas → Pies a la barra → Remo a la barra → Pull Over.</p>
-                    <p>• <strong>Back Lever:</strong> Intermedio-Avanzado | Prerrequisito: German Hang (15s) | Ruta: German Hang → Tuck Back Lever → Advanced Tuck → Back Lever.</p>
-                    <p>• <strong>Front Lever:</strong> Avanzado | Prerrequisito: 15 Dominadas al pecho | Ruta: Tuck Front Lever → Advanced Tuck → Straddle → Front Lever Raise → Front Lever.</p>
-                    <p>• <strong>Muscle-Up Estricto:</strong> Élite | Prerrequisito: Dominadas explosivas | Ruta: Dominadas explosivas → Diagonales → Salto asistido → Muscle-up banda → Estricto.</p>
-                  </div>
-                </div>
-
-                {/* CORE */}
-                <div className="space-y-2 text-xs pt-2">
-                  <strong className="text-amber-400 font-bold block text-sm">3. Acondicionamiento de Estabilización / Core (El Puente Transmisor)</strong>
-                  <div className="space-y-1.5 pl-2 pt-1">
-                    <p>• <strong>Hollow Body Hold:</strong> Base de toda la tensión corporal en calistenia (Prerrequisito para plancha/palanca).</p>
-                    <p>• <strong>L-Sit / L-Sit Colgado:</strong> Meta 20s. Ruta: Rodillas al pecho en barra → Rodillas extendidas en barra → Dominadas en L → L-Sit.</p>
-                    <p>• <strong>Dragon Fly (Dragon Flag):</strong> Cúspide de fuerza del core anterior. Prerrequisito: Elevación de piernas extendidas en barra.</p>
+                  <div className="p-4 bg-slate-950/60 rounded-xl border border-slate-800 space-y-2">
+                    <strong className="text-emerald-400 font-bold block text-sm font-outfit">Vector de Fuerza (El &quot;Hacia Dónde&quot; va la resistencia)</strong>
+                    <p className="text-slate-300">El vector es un concepto de física pura. Se refiere a la línea direccional exacta en la que se aplica la resistencia (ya sea la gravedad o el cable de una polea) en relación con tu cuerpo.</p>
+                    <p className="text-slate-300">El vector es lo que determina qué porción exacta de un músculo se va a llevar la mayor tensión mecánica.</p>
+                    <ul className="list-disc pl-5 space-y-1 text-slate-300">
+                      <li><strong>Vector Vertical (de arriba a abajo / abajo a arriba):</strong> Mover el peso en línea con la gravedad estando de pie o sentado (ej. Press militar, Dominadas).</li>
+                      <li><strong>Vector Horizontal (de adelante hacia atrás / atrás hacia adelante):</strong> Mover el peso perpendicular a tu cuerpo (ej. Press de banca, Remo Gironda).</li>
+                      <li><strong>Vector Diagonal:</strong> Mover el peso en un ángulo intermedio (ej. Press inclinado a 45 grados).</li>
+                    </ul>
                   </div>
                 </div>
               </section>
 
-              {/* Desglose Integral de Ejercicios Dinámicos */}
-              <section className="space-y-4 bg-slate-900/50 p-5 rounded-2xl border border-slate-850">
-                <h3 className="text-lg font-bold text-white font-outfit">Desglose Integral de Ejercicios Dinámicos en Calistenia</h3>
-                
-                <div className="space-y-3 text-xs">
-                  <strong className="text-indigo-300 font-bold block text-sm">1. PATRÓN DE EMPUJE (PUSH) — Flexiones y Fondos</strong>
-                  <p className="text-slate-400">Flexión Inclinada, Flexión con Rodillas, Flexión Estándar, Flexión Diamante, Flexión Declinada, Flexión Arquera, Flexiones en Anillas, Aperturas en Anillas. Fondos en Banco, Fondos en Paralelas, Fondos en Anillas, Flexión en Pica, Flexiones Pica en Anillas, Extensiones de Tríceps, Extensiones de Hombros Frontales.</p>
+              {/* 4. Categorización Jerárquica de Habilidades (Skills) en Calistenia */}
+              <section className="space-y-5 bg-slate-900/50 p-5 rounded-2xl border border-slate-850">
+                <h3 className="text-lg font-bold text-white font-outfit flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-fuchsia-500"></span>
+                  4. Categorización Jerárquica de Habilidades (Skills) en Calistenia
+                </h3>
 
-                  <strong className="text-emerald-400 font-bold block text-sm pt-2">2. PATRÓN DE TRACCIÓN (PULL) — Remos y Dominadas</strong>
-                  <p className="text-slate-400">Remo Invertido, Dominada Australiana, Dominada Australiana Invertida, Remo en Anillas, Extensiones de Hombros. Dominada Negativa, Dominada Supina, Dominada Prona Estricta, Dominadas al Pecho, Curl de Bíceps en Anillas. Skin the Cat, Pull Over, Upside Down Deadlift.</p>
-
-                  <div className="p-3.5 bg-red-950/30 rounded-xl border border-red-900/50 text-xs text-red-200 mt-2 space-y-1">
-                    <strong className="text-red-300 font-bold block">Recordatorio Fisiológico Innegociable:</strong>
-                    <p>• <strong>El Límite de 15 (Fuerza vs. Resistencia):</strong> Superar las 15 repeticiones o 15 segundos estáticos elimina el estímulo hipertrófico y de fuerza para convertirse en resistencia pura. Al llegar a 15, debes cambiar a una variación más difícil.</p>
-                    <p>• <strong>Ranita y Handstand (Tu Seguro Articular):</strong> Dominarlos desde el inicio es obligatorio para engrosar los tendones de tus muñecas y automatizar la estabilización escapular.</p>
+                {/* 1. Vector de Empuje (PUSH) */}
+                <div className="space-y-3">
+                  <div className="border-b border-indigo-900/50 pb-2">
+                    <strong className="text-indigo-400 font-bold block text-sm font-outfit">1. Vector de Empuje (PUSH)</strong>
+                    <p className="text-xs text-slate-400">Movimientos donde las articulaciones de los hombros actúan como fulcro y el vector de fuerza aleja el centro de masa del punto de apoyo.</p>
                   </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                    <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                      <div className="flex justify-between items-center"><strong className="text-indigo-300">Pike Push-ups</strong><span className="text-[10px] bg-slate-800 px-2 py-0.5 rounded text-slate-300">Básico</span></div>
+                      <p className="text-slate-400"><strong>Prerrequisito:</strong> Dominio de 15 flexiones estándar.</p>
+                      <p className="text-slate-400"><strong>Progresiones:</strong> Flexión inclinada → Flexión estándar → Pike Push-ups.</p>
+                    </div>
+
+                    <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                      <div className="flex justify-between items-center"><strong className="text-indigo-300">Ring Support Hold</strong><span className="text-[10px] bg-slate-800 px-2 py-0.5 rounded text-slate-300">Básico-Intermedio</span></div>
+                      <p className="text-slate-400"><strong>Prerrequisito:</strong> Dominio de 15 fondos en paralelas fijos.</p>
+                      <p className="text-slate-400"><strong>Progresiones:</strong> Sostén isométrico en paralelas → Sostén en anillas con rotación externa.</p>
+                    </div>
+
+                    <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                      <div className="flex justify-between items-center"><strong className="text-indigo-300">Ranita (Frog Stand) / Shoulder Stand</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Intermedio</span></div>
+                      <p className="text-slate-400"><strong>Prerrequisito:</strong> 5 Pike Push-ups estrictas; adaptación tendinosa de muñecas.</p>
+                      <p className="text-slate-400"><strong>Progresiones:</strong> Isometría de tríceps → Ranita (Meta: 20 seg) → Shoulder stand.</p>
+                    </div>
+
+                    <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                      <div className="flex justify-between items-center"><strong className="text-indigo-300">Pseudo Planche Push-ups</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Intermedio</span></div>
+                      <p className="text-slate-400"><strong>Prerrequisito:</strong> Ranita (20 seg) y protracción escapular activa.</p>
+                      <p className="text-slate-400"><strong>Progresiones:</strong> Planche lean (Meta: 30 seg) → Pseudo planche push-ups (Meta: 8 reps).</p>
+                    </div>
+
+                    <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                      <div className="flex justify-between items-center"><strong className="text-indigo-300">Elbow Lever</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Intermedio-Avanzado</span></div>
+                      <p className="text-slate-400"><strong>Prerrequisito:</strong> Ranita y fuerza base en core posterior.</p>
+                      <p className="text-slate-400"><strong>Progresiones:</strong> Isometría parcial apoyando codos en abdomen → Elbow lever (Meta: 15 seg).</p>
+                    </div>
+
+                    <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                      <div className="flex justify-between items-center"><strong className="text-indigo-300">Handstand Push-Up (HSPU)</strong><span className="text-[10px] bg-rose-950/60 text-rose-300 border border-rose-900/50 px-2 py-0.5 rounded">Avanzado</span></div>
+                      <p className="text-slate-400"><strong>Prerrequisito:</strong> Ranita a Handstand; elevación máxima de la cintura escapular.</p>
+                      <p className="text-slate-400"><strong>Progresiones:</strong> Pike hold en cajón → Pino asistido en pared → Pino libre → Excéntricas HSPU → HSPU.</p>
+                    </div>
+
+                    <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1 col-span-1 md:col-span-2">
+                      <div className="flex justify-between items-center"><strong className="text-fuchsia-300">Tuck Planche</strong><span className="text-[10px] bg-purple-950/80 text-purple-300 border border-purple-800 px-2 py-0.5 rounded font-bold">Élite</span></div>
+                      <p className="text-slate-400"><strong>Prerrequisito:</strong> Pseudo Planche Lean; fuerza extrema en deltoides anterior y bíceps braquial.</p>
+                      <p className="text-slate-400"><strong>Progresiones:</strong> Planche lean → Tuck Planche asistida con banda → Tuck Planche estricta.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 2. Vector de Tracción (PULL) */}
+                <div className="space-y-3 pt-2">
+                  <div className="border-b border-red-900/50 pb-2">
+                    <strong className="text-red-400 font-bold block text-sm font-outfit">2. Vector de Tracción (PULL)</strong>
+                    <p className="text-xs text-slate-400">Patrones donde el dorsal ancho, redondo mayor, deltoides posterior y flexores del codo actúan sinérgicamente para vencer la gravedad.</p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                    <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                      <div className="flex justify-between items-center"><strong className="text-red-300">Skin the Cat / German Hang</strong><span className="text-[10px] bg-slate-800 px-2 py-0.5 rounded text-slate-300">Básico</span></div>
+                      <p className="text-slate-400"><strong>Prerrequisito:</strong> Dominio de colgado activo (retracción) y movilidad de hombro.</p>
+                      <p className="text-slate-400"><strong>Progresiones:</strong> Colgado activo → Elevación de rodillas → Skin the cat → German Hang (Meta: 15 seg).</p>
+                    </div>
+
+                    <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                      <div className="flex justify-between items-center"><strong className="text-red-300">Pull Over en barra</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Intermedio</span></div>
+                      <p className="text-slate-400"><strong>Prerrequisito:</strong> Skin the cat; 8 dominadas estrictas.</p>
+                      <p className="text-slate-400"><strong>Progresiones:</strong> Elevación de rodillas → Pies a la barra → Remo a la barra → Pull Over.</p>
+                    </div>
+
+                    <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                      <div className="flex justify-between items-center"><strong className="text-red-300">Back Lever</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Intermedio-Avanzado</span></div>
+                      <p className="text-slate-400"><strong>Prerrequisito:</strong> German Hang (15 seg); adaptación de la cabeza larga del bíceps.</p>
+                      <p className="text-slate-400"><strong>Progresiones:</strong> German Hang → Tuck Back Lever → Advanced Tuck Back Lever → Back Lever.</p>
+                    </div>
+
+                    <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                      <div className="flex justify-between items-center"><strong className="text-red-300">Front Lever</strong><span className="text-[10px] bg-rose-950/60 text-rose-300 border border-rose-900/50 px-2 py-0.5 rounded">Avanzado</span></div>
+                      <p className="text-slate-400"><strong>Prerrequisito:</strong> 15 Dominadas al pecho; retracción y depresión escapular estricta.</p>
+                      <p className="text-slate-400"><strong>Progresiones:</strong> Tuck Front Lever → Advanced Tuck → Straddle → Front Lever Raise → Front Lever.</p>
+                    </div>
+
+                    <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1 col-span-1 md:col-span-2">
+                      <div className="flex justify-between items-center"><strong className="text-fuchsia-300">Muscle-Up Estricto</strong><span className="text-[10px] bg-purple-950/80 text-purple-300 border border-purple-800 px-2 py-0.5 rounded font-bold">Élite</span></div>
+                      <p className="text-slate-400"><strong>Prerrequisito:</strong> Dominadas explosivas al pecho/abdomen; transición de retracción a depresión rápida.</p>
+                      <p className="text-slate-400"><strong>Progresiones:</strong> Dominadas explosivas → Dominadas diagonales → Entrada asistida con salto → Muscle-up con banda → Estricto.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 3. Acondicionamiento de Estabilización / Core */}
+                <div className="space-y-3 pt-2">
+                  <div className="border-b border-amber-900/50 pb-2">
+                    <strong className="text-amber-400 font-bold block text-sm font-outfit">3. Acondicionamiento de Estabilización / Core (El Puente Transmisor)</strong>
+                    <p className="text-xs text-slate-400">El core actúa como el puente de transferencia de fuerza. Sin estas bases, las palancas colapsan, transfiriendo cizallamiento a las lumbares.</p>
+                  </div>
+
+                  <div className="space-y-2 text-xs">
+                    <div className="p-3 bg-slate-950 rounded-xl border border-slate-800">
+                      <strong className="text-amber-300 block mb-1">Hollow Body Hold</strong>
+                      <p className="text-slate-400">La base de toda la tensión corporal en calistenia (Prerrequisito para cualquier plancha o palanca).</p>
+                    </div>
+                    <div className="p-3 bg-slate-950 rounded-xl border border-slate-800">
+                      <strong className="text-amber-300 block mb-1">L-Sit / L-Sit Colgado (Objetivo: 20 seg)</strong>
+                      <p className="text-slate-400"><strong>Progresiones:</strong> Rodillas al pecho en barra → Rodillas extendidas en barra → Dominadas en L → L-Sit / L-Sit colgado.</p>
+                    </div>
+                    <div className="p-3 bg-slate-950 rounded-xl border border-slate-800">
+                      <strong className="text-amber-300 block mb-1">Dragon Fly (Dragon Flag)</strong>
+                      <p className="text-slate-400">La cúspide de la fuerza del core anterior. <strong>Prerrequisito:</strong> Elevación de piernas extendidas en barra (Hanging leg raises).</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              {/* Desglose Integral de Ejercicios Dinámicos en Calistenia */}
+              <section className="space-y-5 bg-slate-900/50 p-5 rounded-2xl border border-slate-850">
+                <h3 className="text-lg font-bold text-white font-outfit flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-cyan-500"></span>
+                  Desglose Integral de Ejercicios Dinámicos en Calistenia
+                </h3>
+
+                {/* 1. PATRÓN DE EMPUJE (PUSH) */}
+                <div className="space-y-4">
+                  <div className="border-b border-indigo-900/50 pb-2">
+                    <strong className="text-indigo-400 font-bold block text-sm font-outfit">1. PATRÓN DE EMPUJE (PUSH)</strong>
+                    <p className="text-xs text-slate-400">Trabajo de la cadena anterior: Pectoral mayor, deltoides anterior y tríceps braquial.</p>
+                  </div>
+
+                  {/* A. Empuje Horizontal */}
+                  <div className="space-y-3">
+                    <h4 className="text-xs font-bold text-indigo-300 uppercase tracking-wider font-mono">A. Empuje Horizontal (Familia de las Flexiones / Push-ups)</h4>
+                    <p className="text-xs text-slate-400 italic">El vector empuja el centro de gravedad alejándolo del suelo o soporte.</p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-indigo-200">Flexión Inclinada (Manos en cajón)</strong><span className="text-[10px] bg-slate-800 px-2 py-0.5 rounded text-slate-300">Principiante</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> Estabilidad de core (Plancha tradicional).</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Bajar la altura del soporte progresivamente.</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-indigo-200">Flexión con Rodillas</strong><span className="text-[10px] bg-slate-800 px-2 py-0.5 rounded text-slate-300">Principiante</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> Control del core anterior sin quebrar lumbares.</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Flexión Inclinada a nivel bajo.</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-indigo-200">Flexión Estándar (Suelo)</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Intermedio</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> Depresión y protracción escapular al empujar.</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Flexión declinada o diamante.</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-indigo-200">Flexión Diamante</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Intermedio</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> 15 Flexiones estándar (Alta tensión en tríceps).</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Flexión Arquera (Archer push-up).</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-indigo-200">Flexión Declinada (Pies elevados)</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Intermedio</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> 15 Flexiones estándar (Enfatiza haz clavicular).</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Pike Push-ups.</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-indigo-200">Flexión Arquera (Archer)</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Int-Avanzado</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> 20 Flexiones estándar (Sobrecarga unilateral).</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Flexiones a una mano asistidas.</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-indigo-200">Flexiones en Anillas</strong><span className="text-[10px] bg-rose-950/60 text-rose-300 border border-rose-900/50 px-2 py-0.5 rounded">Avanzado</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> 20 Flexiones estándar; Ring Support Hold estabilizado.</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Rotación externa máxima en el punto alto (RTO).</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-indigo-200">Aperturas en Anillas (Flies)</strong><span className="text-[10px] bg-rose-950/60 text-rose-300 border border-rose-900/50 px-2 py-0.5 rounded">Avanzado</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> Flexiones en anillas dominadas (Tensión extrema en pectoral y bíceps).</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Aumentar el rango de apertura / Bajar altura de anillas.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* B. Empuje Vertical y Aislamiento */}
+                  <div className="space-y-3 pt-2">
+                    <h4 className="text-xs font-bold text-indigo-300 uppercase tracking-wider font-mono">B. Empuje Vertical y Aislamiento</h4>
+                    <p className="text-xs text-slate-400 italic">El vector desplaza el cuerpo hacia arriba o hacia abajo en relación al eje longitudinal.</p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-indigo-200">Fondos en Banco (Pies en suelo)</strong><span className="text-[10px] bg-slate-800 px-2 py-0.5 rounded text-slate-300">Principiante</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> Movilidad de extensión de hombro.</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Fondos con pies elevados.</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-indigo-200">Fondos en Paralelas (Dips)</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Int-Avanzado</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> 15 Flexiones; Depresión escapular máxima.</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Fondos lastrados / Fondos en anillas.</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-indigo-200">Fondos en Anillas (Ring Dips)</strong><span className="text-[10px] bg-rose-950/60 text-rose-300 border border-rose-900/50 px-2 py-0.5 rounded">Avanzado</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> 15 Fondos en paralelas; Soporte en anillas (RTO) estable.</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Ring Dips búlgaros (mayor amplitud).</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-indigo-200">Flexión en Pica (Pike Push-up)</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Intermedio</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> 15 Flexiones declinadas; Elevación escapular.</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Pike Push-up con pies elevados en cajón.</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-indigo-200">Flexiones Pica en Anillas</strong><span className="text-[10px] bg-rose-950/60 text-rose-300 border border-rose-900/50 px-2 py-0.5 rounded">Avanzado</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> 10 Pike Push-ups en suelo; Estabilidad extrema de muñeca.</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Handstand Push-up asistido.</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-indigo-200">Extensiones de Tríceps (Anillas/Barra)</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Intermedio</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> Fuerza tendinosa en el codo (Aísla cabeza larga).</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Alejar los pies del anclaje (mayor desventaja mecánica).</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1 col-span-1 md:col-span-2">
+                        <div className="flex justify-between items-center"><strong className="text-indigo-200">Ext. de Hombros Frontales (Anillas)</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Int-Avanzado</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> Acondicionamiento del deltoides anterior (similar a elevación frontal).</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Mayor inclinación del cuerpo hacia el suelo.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 2. PATRÓN DE TRACCIÓN (PULL) */}
+                <div className="space-y-4 pt-4">
+                  <div className="border-b border-red-900/50 pb-2">
+                    <strong className="text-red-400 font-bold block text-sm font-outfit">2. PATRÓN DE TRACCIÓN (PULL)</strong>
+                    <p className="text-xs text-slate-400">Trabajo de la cadena posterior: Dorsal ancho, redondo mayor, romboides, trapecio y bíceps braquial.</p>
+                  </div>
+
+                  {/* A. Tracción Horizontal */}
+                  <div className="space-y-3">
+                    <h4 className="text-xs font-bold text-red-300 uppercase tracking-wider font-mono">A. Tracción Horizontal (Familia de los Remos)</h4>
+                    <p className="text-xs text-slate-400 italic">El vector tira del cuerpo hacia un punto de anclaje frontal. Imprescindible para el grosor de la espalda y la salud del manguito rotador.</p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-red-200">Remo Invertido (Rodillas dobladas)</strong><span className="text-[10px] bg-slate-800 px-2 py-0.5 rounded text-slate-300">Principiante</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> Retracción escapular básica.</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Extender las piernas por completo.</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-red-200">Dominada Australiana (Remo Extendido)</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Intermedio</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> Piernas extendidas; tracción al esternón.</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Bajar la altura de la barra/anillas.</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-red-200">Dominada Australiana Invertida (Supina)</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Intermedio</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> Dominada australiana prona (Enfatiza bíceps).</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Elevar los pies a la altura de las manos.</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-red-200">Remo en Anillas</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Intermedio</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> Permite rotación natural de muñeca (Prono a Supino).</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Remo Arquero en anillas (unilateral).</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1 col-span-1 md:col-span-2">
+                        <div className="flex justify-between items-center"><strong className="text-red-200">Extensiones de Hombros (Anillas)</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Int-Avanzado</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> Tensión de estiramiento en haz posterior/dorsal.</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Transición hacia el Cristo de hierro (Iron Cross).</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* B. Tracción Vertical y Aislamiento */}
+                  <div className="space-y-3 pt-2">
+                    <h4 className="text-xs font-bold text-red-300 uppercase tracking-wider font-mono">B. Tracción Vertical y Aislamiento</h4>
+                    <p className="text-xs text-slate-400 italic">El vector desplaza el cuerpo hacia arriba venciendo la gravedad pura. Construye la amplitud de la espalda (dorsal ancho).</p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-red-200">Dominada Negativa (Excéntrica)</strong><span className="text-[10px] bg-slate-800 px-2 py-0.5 rounded text-slate-300">Principiante</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> Soportar el peso corporal colgado.</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Control de bajada de 5 segundos → Dominada estricta.</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-red-200">Dominada Supina (Chin-up)</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Intermedio</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> 5 Dominadas negativas (Ventaja mecánica del bíceps).</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Dominada Prona (Pull-up).</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-red-200">Dominada Prona Estricta</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Intermedio</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> Retracción escapular inicial inquebrantable.</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Dominadas al pecho.</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-red-200">Dominadas al Pecho / Explosivas</strong><span className="text-[10px] bg-rose-950/60 text-rose-300 border border-rose-900/50 px-2 py-0.5 rounded">Avanzado</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> 10 Dominadas estrictas.</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Muscle-Up estricto.</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1 col-span-1 md:col-span-2">
+                        <div className="flex justify-between items-center"><strong className="text-red-200">Curl de Bíceps en Anillas</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Intermedio</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> Dominadas supinas (Aislamiento puro del bíceps tirando del cuerpo).</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Mayor inclinación (pies más adelante).</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* C. Tracción de Cadena Completa y Eje Rotacional */}
+                  <div className="space-y-3 pt-2">
+                    <h4 className="text-xs font-bold text-red-300 uppercase tracking-wider font-mono">C. Tracción de Cadena Completa y Eje Rotacional (Gimnásticos)</h4>
+                    <p className="text-xs text-slate-400 italic">Movimientos complejos que integran tracción extrema, movilidad de hombros y core.</p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-red-200">Skin the Cat (Anillas / Barra)</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Intermedio</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> Elevación de rodillas colgado; flexión de hombros.</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> German Hang (sostén isométrico al final).</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <div className="flex justify-between items-center"><strong className="text-red-200">Pull Over (Barra / Anillas)</strong><span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-900/50 px-2 py-0.5 rounded">Int-Avanzado</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> Skin the cat dominado; tracción abdominal.</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Muscle Up.</p>
+                      </div>
+
+                      <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1 col-span-1 md:col-span-2">
+                        <div className="flex justify-between items-center"><strong className="text-red-200">Upside Down Deadlift (Anillas)</strong><span className="text-[10px] bg-rose-950/60 text-rose-300 border border-rose-900/50 px-2 py-0.5 rounded">Avanzado</span></div>
+                        <p className="text-slate-400"><strong>Prerrequisito Fisiológico:</strong> Control de la inversión (Inverted Hang); fuerza de espalda baja e isquios.</p>
+                        <p className="text-slate-400"><strong>Progresión Lógica:</strong> Transiciones a Back Lever / Front Lever.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Recordatorio Fisiológico Innegociable */}
+                <div className="p-4 bg-red-950/40 rounded-2xl border border-red-900/60 text-xs text-red-200 space-y-2 mt-4 font-sans">
+                  <strong className="text-red-300 font-bold block text-sm font-outfit">Recordatorio Fisiológico Innegociable:</strong>
+                  <p>• <strong>El Límite de 15 (Fuerza vs. Resistencia):</strong> Superar las 15 repeticiones o 15 segundos estáticos elimina el estímulo hipertrófico y de fuerza para convertirse en resistencia pura. Al llegar a 15, el peso ya no te desafía; debes cambiar a una variación más difícil para someter al músculo a nueva tensión mecánica extrema.</p>
+                  <p>• <strong>Ranita y Handstand (Tu Seguro Articular):</strong> Dominarlos desde el inicio es obligatorio para engrosar los tendones de tus muñecas y automatizar la estabilización escapular. Sin este blindaje estructural temprano, tu manguito rotador colapsará y se desgarrará al intentar palancas avanzadas en el futuro.</p>
                 </div>
               </section>
             </div>
