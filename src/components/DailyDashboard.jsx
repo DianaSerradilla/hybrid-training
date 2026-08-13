@@ -143,16 +143,16 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
       </div>
 
       {/* 2. Header de Progreso & Selectores Interactivos */}
-      <div className="lg:col-span-7 lg:col-start-1 lg:row-start-1 glass-panel p-6 rounded-2xl flex flex-col justify-between gap-5 lg:h-[400px]">
-        <div>
-          <div className="flex items-center gap-2 text-[#9BA8AB] font-semibold mb-2 text-xs tracking-wider uppercase font-mono">
+      <div className="lg:col-span-7 lg:col-start-1 lg:row-start-1 glass-panel p-6 rounded-2xl flex flex-col justify-between gap-4 lg:h-[400px] overflow-hidden">
+        <div className="flex-1 min-h-0 flex flex-col">
+          <div className="flex items-center gap-2 text-[#9BA8AB] font-semibold mb-2 text-xs tracking-wider uppercase font-mono shrink-0">
             <Calendar className="w-4 h-4 text-[#9BA8AB]" />
             <span>Fase y Enfoque Actual</span>
           </div>
-          <h2 className="text-lg md:text-xl font-bold font-outfit text-white leading-snug">
-            Mesociclo {activeWeekObj.mesocycle}: {activeWeekObj.mesocycleName} / {calisthenicsData.title}
+          <h2 className="text-lg md:text-xl font-bold font-outfit text-white leading-snug shrink-0">
+            {activeWeekObj.mesocycleName}
           </h2>
-          <div className="space-y-3 mt-3 text-xs md:text-sm leading-relaxed lg:max-h-[170px] lg:overflow-y-auto pr-1">
+          <div className="space-y-3 mt-3 text-xs md:text-sm leading-relaxed max-h-[140px] sm:max-h-[170px] overflow-y-auto pr-2 flex-1">
             <div>
               <strong className="font-semibold text-[#9BA8AB]">Gimnasio: </strong>
               <span className="text-slate-300">{activeWeekObj.focus}</span>
@@ -165,31 +165,31 @@ export default function DailyDashboard({ currentWeek, setCurrentWeek, currentDay
         </div>
 
         {/* Dynamic Selector Panels */}
-        <div className="flex flex-col sm:flex-row gap-4 border-t border-[#253745] pt-4 w-full justify-start">
-          <div className="w-full sm:w-44">
+        <div className="flex flex-col sm:flex-row gap-4 border-t border-[#253745] pt-4 w-full justify-start shrink-0">
+          <div className="w-full sm:w-52">
             <label className="block text-[10px] font-bold text-[#4A5C6A] mb-1.5 uppercase tracking-wider">Semana</label>
             <select
               value={currentWeek}
               onChange={(e) => setCurrentWeek(Number(e.target.value))}
-              className="bg-[#06141B] border border-[#253745] text-white text-xs rounded-xl py-2 px-3 focus:outline-none focus:ring-2 focus:ring-[#4A5C6A] font-medium w-full transition-all"
+              className="bg-[#06141B] border border-[#253745] text-white text-xs rounded-xl py-2 px-3 focus:outline-none focus:ring-2 focus:ring-[#4A5C6A] font-medium w-full transition-all cursor-pointer"
             >
               {macrocycleWeeks.map((w) => (
-                <option key={w.number} value={w.number}>
+                <option key={w.number} value={w.number} className="bg-[#06141B] text-white">
                   Semana {w.number} {w.isDeload ? '(Descarga)' : ''}
                 </option>
               ))}
             </select>
           </div>
 
-          <div className="w-full sm:w-48">
+          <div className="w-full sm:w-56">
             <label className="block text-[10px] font-bold text-[#4A5C6A] mb-1.5 uppercase tracking-wider">Día de la semana</label>
             <select
               value={currentDay}
               onChange={(e) => setCurrentDay(e.target.value)}
-              className="bg-[#06141B] border border-[#253745] text-white text-xs rounded-xl py-2 px-3 focus:outline-none focus:ring-2 focus:ring-[#4A5C6A] font-medium w-full transition-all"
+              className="bg-[#06141B] border border-[#253745] text-white text-xs rounded-xl py-2 px-3 focus:outline-none focus:ring-2 focus:ring-[#4A5C6A] font-medium w-full transition-all cursor-pointer"
             >
               {weeklySchedule.map((s) => (
-                <option key={s.day} value={s.day}>
+                <option key={s.day} value={s.day} className="bg-[#06141B] text-white">
                   {s.day} ({s.target})
                 </option>
               ))}
