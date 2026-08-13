@@ -1,0 +1,217 @@
+{
+  "profile": {
+    "patientName": "Diana Serradilla",
+    "nutritionist": "Lic. Maggi Carolina",
+    "nutritionistEmail": "maggicarolina7@gmail.com",
+    "targetBodyFatPct": 20.0,
+    "baselineBodyFatPct": 31.16,
+    "baselineMuscleKg": 29.925,
+    "baselineWeightKg": 66.70
+  },
+  "evaluations": [
+    {
+      "measurementNumber": 1,
+      "date": "2026-05-28",
+      "dateDisplay": "28/5/2026",
+      "age": 27.24,
+      "basic": {
+        "weightKg": 66.70,
+        "adjustedWeightKg": 71.87,
+        "heightCm": 166.00,
+        "sittingHeightCm": 87.00,
+        "adjustedSittingHeightCm": 89.19
+      },
+      "masses": {
+        "adiposa": { "kg": 20.784, "pct": 31.16, "scoreZ": -0.15, "diffKg": 0 },
+        "muscular": { "kg": 29.925, "pct": 44.87, "scoreZ": 2.06, "diffKg": 0 },
+        "residual": { "kg": 5.996, "pct": 8.99, "scoreZ": 0.98, "diffKg": 0 },
+        "osea": { "kg": 6.691, "pct": 10.03, "scoreZ": 0.07, "diffKg": 0 },
+        "piel": { "kg": 3.303, "pct": 4.95, "diffKg": 0 },
+        "total": { "kg": 66.700, "pct": 100.00, "scoreZ": 0.85, "diffKg": 0 }
+      },
+      "skinfolds": {
+        "triceps": 19.0,
+        "subescapular": 15.5,
+        "supraespinal": 11.0,
+        "abdominal": 22.0,
+        "musloMedial": 24.0,
+        "pantorrilla": 17.0,
+        "sum6": 108.5
+      },
+      "perimeters": {
+        "cabeza": 55.10,
+        "brazoRelajado": 31.90,
+        "brazoFlexionado": 33.60,
+        "antebrazo": 26.60,
+        "toraxMesoesternal": 94.40,
+        "cinturaMinima": 73.90,
+        "caderasMaxima": 103.00,
+        "musloSuperior": 61.60,
+        "musloMedial": 55.10,
+        "pantorrillaMaxima": 38.90
+      },
+      "diameters": {
+        "biacromial": 38.50,
+        "toraxTransverso": 26.20,
+        "toraxAnteroposterior": 19.30,
+        "biIliocrestideo": 25.10,
+        "humeral": 6.40,
+        "femoral": 10.20
+      },
+      "indices": {
+        "waistToHipRatio": 0.717,
+        "muscleToBoneRatio": 4.472,
+        "fatToMuscleRatio": 0.695,
+        "bmi": 24.205,
+        "bsa": 1.744,
+        "bsaOverBm": 261.441,
+        "basalMetabolismKcal": 1395.82,
+        "idealWeightKg": 59.245
+      },
+      "somatotype": {
+        "endo": 4.7,
+        "meso": 6.3,
+        "ecto": 1.4,
+        "x": -3.33,
+        "y": 6.55
+      },
+      "notes": "Medición inicial (Línea base). Muestra un 31.16% de masa adiposa y 29.93 kg de masa muscular con somatotipo mesomórfico dominante."
+    },
+    {
+      "measurementNumber": 2,
+      "date": "2026-06-25",
+      "dateDisplay": "25/6/2026",
+      "age": 27.32,
+      "basic": {
+        "weightKg": 65.80,
+        "adjustedWeightKg": 70.90,
+        "heightCm": 166.00,
+        "sittingHeightCm": 87.00,
+        "adjustedSittingHeightCm": 89.19
+      },
+      "masses": {
+        "adiposa": { "kg": 20.203, "pct": 30.70, "scoreZ": -0.27, "diffKg": -0.580 },
+        "muscular": { "kg": 29.774, "pct": 45.25, "scoreZ": 2.02, "diffKg": -0.152 },
+        "residual": { "kg": 5.848, "pct": 8.89, "scoreZ": 0.83, "diffKg": -0.149 },
+        "osea": { "kg": 6.691, "pct": 10.17, "scoreZ": 0.07, "diffKg": 0.000 },
+        "piel": { "kg": 3.284, "pct": 4.99, "diffKg": -0.019 },
+        "total": { "kg": 65.800, "pct": 100.00, "scoreZ": 0.73, "diffKg": -0.900 }
+      },
+      "skinfolds": {
+        "triceps": 18.5,
+        "subescapular": 14.5,
+        "supraespinal": 11.0,
+        "abdominal": 22.0,
+        "musloMedial": 22.0,
+        "pantorrilla": 16.5,
+        "sum6": 104.5
+      },
+      "perimeters": {
+        "cabeza": 55.10,
+        "brazoRelajado": 32.00,
+        "brazoFlexionado": 33.30,
+        "antebrazo": 26.30,
+        "toraxMesoesternal": 93.40,
+        "cinturaMinima": 72.90,
+        "caderasMaxima": 102.40,
+        "musloSuperior": 60.90,
+        "musloMedial": 53.90,
+        "pantorrillaMaxima": 39.10
+      },
+      "diameters": {
+        "biacromial": 38.50,
+        "toraxTransverso": 26.20,
+        "toraxAnteroposterior": 19.30,
+        "biIliocrestideo": 25.10,
+        "humeral": 6.40,
+        "femoral": 10.20
+      },
+      "indices": {
+        "waistToHipRatio": 0.712,
+        "muscleToBoneRatio": 4.450,
+        "fatToMuscleRatio": 0.679,
+        "bmi": 23.879,
+        "bsa": 1.734,
+        "bsaOverBm": 263.492,
+        "basalMetabolismKcal": 1393.30,
+        "idealWeightKg": 59.245
+      },
+      "somatotype": {
+        "endo": 4.6,
+        "meso": 6.3,
+        "ecto": 1.5,
+        "x": -3.05,
+        "y": 6.54
+      },
+      "notes": "Segunda medición: Descenso de -0.9 kg de peso corporal. Reducción de 4.0 mm en la suma de 6 pliegues (108.5 a 104.5 mm) y leve caída en % graso a 30.70%."
+    },
+    {
+      "measurementNumber": 3,
+      "date": "2026-07-21",
+      "dateDisplay": "21/7/2026",
+      "age": 27.39,
+      "basic": {
+        "weightKg": 66.40,
+        "adjustedWeightKg": 71.54,
+        "heightCm": 166.00,
+        "sittingHeightCm": 87.00,
+        "adjustedSittingHeightCm": 89.19
+      },
+      "masses": {
+        "adiposa": { "kg": 20.037, "pct": 30.15, "scoreZ": -0.34, "diffKg": -0.167 },
+        "muscular": { "kg": 30.453, "pct": 45.82, "scoreZ": 2.11, "diffKg": 0.679 },
+        "residual": { "kg": 5.890, "pct": 8.86, "scoreZ": 0.82, "diffKg": 0.043 },
+        "osea": { "kg": 6.691, "pct": 10.17, "scoreZ": 0.07, "diffKg": 0.000 },
+        "piel": { "kg": 3.329, "pct": 5.01, "diffKg": 0.045 },
+        "total": { "kg": 66.400, "pct": 100.00, "scoreZ": 0.81, "diffKg": 0.600 }
+      },
+      "skinfolds": {
+        "triceps": 17.5,
+        "subescapular": 13.5,
+        "supraespinal": 10.5,
+        "abdominal": 22.0,
+        "musloMedial": 22.0,
+        "pantorrilla": 16.5,
+        "sum6": 102.0
+      },
+      "perimeters": {
+        "cabeza": 55.10,
+        "brazoRelajado": 32.10,
+        "brazoFlexionado": 33.40,
+        "antebrazo": 26.80,
+        "toraxMesoesternal": 92.40,
+        "cinturaMinima": 72.80,
+        "caderasMaxima": 104.00,
+        "musloSuperior": 61.40,
+        "musloMedial": 55.10,
+        "pantorrillaMaxima": 39.50
+      },
+      "diameters": {
+        "biacromial": 38.50,
+        "toraxTransverso": 26.20,
+        "toraxAnteroposterior": 19.30,
+        "biIliocrestideo": 25.10,
+        "humeral": 6.40,
+        "femoral": 10.20
+      },
+      "indices": {
+        "waistToHipRatio": 0.700,
+        "muscleToBoneRatio": 4.507,
+        "fatToMuscleRatio": 0.658,
+        "bmi": 24.096,
+        "bsa": 1.740,
+        "bsaOverBm": 262.120,
+        "basalMetabolismKcal": 1394.41,
+        "idealWeightKg": 59.245
+      },
+      "somatotype": {
+        "endo": 4.3,
+        "meso": 6.4,
+        "ecto": 1.4,
+        "x": -2.90,
+        "y": 7.08
+      },
+      "notes": "¡Recomposición corporal estelar! Ganancia magra de +0.68 kg de masa muscular respecto al mes anterior (30.45 kg totales) mientras la grasa adiposa bajó a 30.15% (20.04 kg). La suma de pliegues disminuyó a 102.0 mm y el índice adiposo/muscular mejoró a 0.658."
+    }
+  ]
+}

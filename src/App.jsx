@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { 
   Home, Apple, Footprints, CalendarRange, ShieldAlert,
-  Activity, Target, BookOpen, Dumbbell, Menu, X, Trophy 
+  Activity, Target, BookOpen, Dumbbell, Menu, X, Trophy, Scale
 } from 'lucide-react';
 import DailyDashboard from './components/DailyDashboard';
 import NutritionModule from './components/NutritionModule';
@@ -12,6 +12,7 @@ import WikiModule from './components/WikiModule';
 import MobilityModule from './components/MobilityModule';
 import HandstandDashboard from './components/HandstandDashboard';
 import SkillsCalisthenicsModule from './components/SkillsCalisthenicsModule';
+import BodyRecompositionModule from './components/BodyRecompositionModule';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard'); // Default to Dashboard Principal
@@ -21,6 +22,7 @@ export default function App() {
 
   const navigationItems = [
     { id: 'dashboard', name: 'Dashboard Principal', icon: Home, desc: 'Tus tareas y rutina de hoy' },
+    { id: 'recomposition', name: 'Recomposición Corporal', icon: Scale, desc: 'Evolución nutricionista y meta 20% grasa' },
     { id: 'mobility', name: 'Movilidad', icon: Activity, desc: 'Flexibilidad, Big 5 y rutinas 1-9' },
     { id: 'handstand', name: 'HandStand', icon: Target, desc: 'Cues, progresiones y plan 12 sem' },
     { id: 'skills', name: 'Skills & Calistenia', icon: Trophy, desc: 'Vectores de fuerza y anclajes' },
@@ -149,6 +151,8 @@ export default function App() {
           )}
 
           {activeTab === 'nutrition' && <NutritionModule />}
+
+          {activeTab === 'recomposition' && <BodyRecompositionModule />}
 
           {activeTab === 'neat' && <NeatModule />}
 
