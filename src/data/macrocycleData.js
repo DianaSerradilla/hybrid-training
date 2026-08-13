@@ -4,44 +4,44 @@ export const macrocycleWeeks = [
   {
     number: 1,
     mesocycle: 1,
-    mesocycleName: "Mesociclo 1: Rango Base de Hipertrofia (Semanas 1 a 4)",
-    focus: "Semana 1 (Descarga - Menstruación): Disipación de fatiga inicial. Al estar con estrógenos bajos y alta inflamación, arrancas el mesociclo cuidando las articulaciones. Se cortan las series totales a la mitad, se reduce la carga un 20% y se establece un RIR 3 general.",
+    mesocycleName: "Mesociclo 1: Acondicionamiento Neuromuscular y Mielinización (Semanas 1 a 4)",
+    focus: "Semana 1: Descarga y Resíntesis (Menstruación)\nRegla Biomecánica y Metodología de la Semana: Entramos en la fase crítica de disipación de fatiga. Tu cuerpo está lidiando con la caída de estrógenos, por lo que la recuperación y la protección articular son la prioridad absoluta.\nCalistenia: Metodología de Rango Completo Asistido (Bandas Pesadas). El objetivo es oxigenar los tejidos; ejecución fluida usando la máxima asistencia elástica para no generar lactato.\nGimnasio: Se cortan las series totales a la mitad (si tenías 3, haces 1 o 2; si tenías 2, haces 1), se reduce la carga un 20% respecto a lo que venías usando en la Semana 2, y se establece un RIR 3 general innegociable.",
     rirGeneral: 3,
     rirAccessories: 3,
-    intensityLabel: "Descarga y Resíntesis (RIR 3, -20% peso)",
+    intensityLabel: "Descarga y Resíntesis (Menstruación) - RIR 3, -20% peso",
     isDeload: true,
     isPeaking: false
   },
   {
     number: 2,
     mesocycle: 1,
-    mesocycleName: "Mesociclo 1: Rango Base de Hipertrofia (Semanas 1 a 4)",
-    focus: "Semana 2 (Fase Folicular - Adaptación): Sube el estrógeno, vuelve la energía. Las series de los ejercicios principales se trabajan en un rango de 8 a 10 repeticiones dejando un RIR 2. Las series de los accesorios se manejan a 12-14 repeticiones con RIR 2. Acumulas volumen de forma segura.",
+    mesocycleName: "Mesociclo 1: Acondicionamiento Neuromuscular y Mielinización (Semanas 1 a 4)",
+    focus: "Semana 2: Fase de Adaptación Estructural y Neural\nRegla Biomecánica de la Semana: Ejecución robótica. Todo el trabajo de calistenia se hace con banda elástica para asegurar el rango completo. En el gimnasio, cortas la serie sabiendo que podías hacer 2 repeticiones más con postura perfecta (RIR 2 general). (Nota clínica: Si esta semana coincide con la menstruación, aplicar reglas de descarga: series a la mitad, -20% de peso, RIR 3).",
     rirGeneral: 2,
     rirAccessories: 2,
-    intensityLabel: "Adaptación Base (RIR 2)",
+    intensityLabel: "Fase de Adaptación Estructural y Neural (RIR 2)",
     isDeload: false,
     isPeaking: false
   },
   {
     number: 3,
     mesocycle: 1,
-    mesocycleName: "Mesociclo 1: Rango Base de Hipertrofia (Semanas 1 a 4)",
-    focus: "Semana 3 (Fase Ovulatoria - Clímax del Bloque): Tu ventana biológica de oro (Pico de estrógeno y testosterona). Las series principales combinan esfuerzos de RIR 1 y RIR 0 (fallo) manteniéndose en las 8-10 repeticiones. El trabajo accesorio llega al RIR 0 absoluto. Utilización de metodologías de intensidad en accesorios.",
+    mesocycleName: "Mesociclo 1: Acondicionamiento Neuromuscular y Mielinización (Semanas 1 a 4)",
+    focus: "Semana 3: Clímax Neural y Estructural\nRegla Biomecánica y Fisiológica de la Semana: Máximo estrés neurológico y muscular para forzar la supercompensación antes de cambiar de mesociclo.\nCalistenia: Metodología de Entrenamiento Excéntrico (Negativas Lentas). Ejecutas tus repeticiones normales y, en la última o dos últimas repeticiones de la serie, resistes la fase excéntrica (bajada) durante 4 a 5 segundos. Llegas a un RIR 0-1.\nGimnasio: Las series principales combinan esfuerzos de RIR 1 y RIR 0 (fallo) manteniéndose en 8-10 repeticiones. Los ejercicios accesorios llegan al fallo absoluto (RIR 0).\nMetodologías de Intensidad: Única y exclusivamente en la última serie de los ejercicios accesorios de gimnasio, aplicarás un Drop Set (bajar el peso un 20% y seguir hasta el fallo) o un Rest-Pause (descansar 10 segundos y sacar 2-3 reps extra).",
     rirGeneral: "1 - 0",
     rirAccessories: 0,
-    intensityLabel: "Clímax del Bloque (RIR 1-0 / RIR 0)",
+    intensityLabel: "Clímax Neural y Estructural (RIR 1-0 / RIR 0)",
     isDeload: false,
     isPeaking: false
   },
   {
     number: 4,
     mesocycle: 1,
-    mesocycleName: "Mesociclo 1: Rango Base de Hipertrofia (Semanas 1 a 4)",
-    focus: "Semana 4 (Fase Lútea - Intensificación Controlada): Sube la progesterona, mayor fatiga del SNC. Mantienes los pesos pesados que lograste en la ovulación (8 a 10 reps en principales y 12-14 en accesorios), pero bajas un cambio para no freír el sistema. Todo el entrenamiento se ejecuta a un RIR 1 innegociable (prohibido el fallo absoluto).",
+    mesocycleName: "Mesociclo 1: Acondicionamiento Neuromuscular y Mielinización (Semanas 1 a 4)",
+    focus: "Semana 4: Fase de intensificación.\nRegla Biomecánica: Mantienes el mismo rango de 8 a 10 repeticiones en los ejercicios principales y de 12 a 14 repeticiones en los accesorios, pero ajustas el peso de forma milimétrica para que todo el entrenamiento se ejecute a un RIR 1 estricto. El sistema nervioso central transita hacia una mayor densidad de carga, obligándote a reclutar unidades motoras de alto umbral bajo fatiga controlada, pero sin tocar el fallo absoluto (RIR 0).",
     rirGeneral: 1,
     rirAccessories: 1,
-    intensityLabel: "Intensificación Controlada (RIR 1 innegociable)",
+    intensityLabel: "Fase de intensificación (RIR 1 estricto)",
     isDeload: false,
     isPeaking: false
   },
@@ -49,10 +49,10 @@ export const macrocycleWeeks = [
     number: 5,
     mesocycle: 2,
     mesocycleName: "Mesociclo 2: Rango de Hipertrofia Pesada (Semanas 5 a 8)",
-    focus: "Semana 5 (Descarga 2 - Menstruación): Idéntica a la Semana 1. Reducción de series a la mitad, reducción de tonelaje y RIR 3 para recuperar el tejido conectivo antes de pasar al hardware pesado.",
+    focus: "Semana 5 : Descarga y Resíntesis (Menstruación)\nRegla Biomecánica y Metodología de la Semana: Entramos en la fase crítica de disipación de fatiga. Tu cuerpo está lidiando con la caída de estrógenos, por lo que la recuperación y la protección articular son la prioridad absoluta.\n\nCalistenia: Metodología de Rango Completo Asistido (Bandas Pesadas). El objetivo es oxigenar los tejidos; ejecución fluida usando la máxima asistencia elástica para no generar lactato.\nGimnasio: Se cortan las series totales a la mitad (si tenías 3, haces 1 o 2; si tenías 2, haces 1), se reduce la carga un 20% respecto a lo que venías usando en la Semana 2, y se establece un RIR 3 general innegociable.",
     rirGeneral: 3,
     rirAccessories: 3,
-    intensityLabel: "Descarga 2 (RIR 3, -20% peso)",
+    intensityLabel: "Descarga y Resíntesis (Menstruación) - RIR 3, -20% peso",
     isDeload: true,
     isPeaking: false
   },
@@ -60,10 +60,10 @@ export const macrocycleWeeks = [
     number: 6,
     mesocycle: 2,
     mesocycleName: "Mesociclo 2: Rango de Hipertrofia Pesada (Semanas 5 a 8)",
-    focus: "Semana 6 (Fase Folicular - Adaptación Pesada): El sistema nervioso se adapta a cargas mayores. Los principales bajan al bloque de 6 a 8 reps. Accesorios bajan a 10 a 12 reps. Todo se ejecuta a un RIR 2.",
+    focus: "Semana 6: Reinicio y Choque Isométrico (Adaptación Pesada)\nRegla Biomecánica y Fisiológica de la Semana: Vienes de masacrar tu sistema en la semana de clímax anterior, por lo que reseteamos la fatiga del Sistema Nervioso Central volviendo strictly a un RIR 2 general.\n\nCalistenia: Metodología de Isometrías Estratégicas. Introducimos Tiempos Bajo Tensión (TUT) prolongados. Harás una pausa estricta de 2 segundos en el punto de máxima contracción concéntrica de cada repetición. Esto regenera el tejido conectivo, vence el stress shielding y consolida la fuerza pura.\nGimnasio: Fase de Adaptación Pesada. Aumentamos los kilos en la barra/máquina. Los ejercicios principales bajan al rango de 6 a 8 repeticiones. Los ejercicios accesorios bajan al rango de 10 a 12 repeticiones.",
     rirGeneral: 2,
     rirAccessories: 2,
-    intensityLabel: "Adaptación Pesada (RIR 2)",
+    intensityLabel: "Reinicio y Choque Isométrico (Adaptación Pesada - RIR 2)",
     isDeload: false,
     isPeaking: false
   },
@@ -71,10 +71,10 @@ export const macrocycleWeeks = [
     number: 7,
     mesocycle: 2,
     mesocycleName: "Mesociclo 2: Rango de Hipertrofia Pesada (Semanas 5 a 8)",
-    focus: "Semana 7 (Fase Ovulatoria - Clímax Pesado): El momento de mayor tolerancia al daño muscular del mesociclo. Tanto los movimientos principales como los accesorios alcanzan el RIR 0 absoluto en sus respectivos rangos (6-8 y 10-12 reps). Explotas la hipertrofia pura.",
+    focus: "Semana 7: Clímax Estructural y Miotrauma Controlado\nRegla Biomecánica y Fisiológica de la Semana: El máximo daño tisular y estrés neurológico tolerable del mesociclo 2.\n\nCalistenia: Metodología de Negativas Puras Lastradas. Omites la fase de subida (saltas o te asistes) y te enfocas exclusivamente en resistir la bajada durante 4-5 segundos exactos, utilizando chaleco o lastre para asegurar que alcanzas el fallo excéntrico absoluto (RIR 0).\nGimnasio: Clímax Pesado. Mantienes los pesos altos (6 a 8 repeticiones en principales, 10 a 12 en accesorios), pero empujas cada serie hasta un RIR 0 innegociable.\nMetodologías de Intensidad: Única y exclusivamente en la última serie de los accesorios de gimnasio aplicarás un Drop Set (bajar peso y seguir al fallo) o un Rest-Pause (descansar 10 seg y sacar reps extra).",
     rirGeneral: 0,
     rirAccessories: 0,
-    intensityLabel: "Clímax Pesado (RIR 0 absoluto)",
+    intensityLabel: "Clímax Estructural y Miotrauma Controlado (RIR 0)",
     isDeload: false,
     isPeaking: false
   },
@@ -82,54 +82,54 @@ export const macrocycleWeeks = [
     number: 8,
     mesocycle: 2,
     mesocycleName: "Mesociclo 2: Rango de Hipertrofia Pesada (Semanas 5 a 8)",
-    focus: "Semana 8 (Fase Lútea - Intensificación Pesada Controlada): Soportas la hinchazón celular del síndrome premenstrual. Las series principales (6 a 8 repeticiones) y los accesorios (10 a 12 repeticiones) se empujan a un RIR 1 estricto. Mantienes la tensión, pero proteges la columna y los tendones.",
+    focus: "Semana 8: Mecanotransducción Profunda e Intensificación Pesada\nRegla Biomecánica y Fisiológica de la Semana: El sistema nervioso ya asimiló las cargas pesadas en la Semana 5; ahora empujamos esa carga hacia la fatiga controlada.\n\nCalistenia: Metodología de Parciales Alargadas (LML - Long Muscle Length). Todo el trabajo se ejecuta exclusivamente en el tercio inferior del movimiento (el punto de máximo estiramiento). No hay bloqueo ni extensión completa. Esto explota la rigidez de la titina (proteína muscular) como mecanosensor, induciendo sarcomerogénesis (crecimiento de nuevas fibras en serie). RIR 1 estricto.\nGimnasio: Fase de Intensificación Pesada. Mantienes los pesos altos y los rangos de la semana anterior (6-8 repeticiones principales, 10-12 accesorios), pero empujas cada serie hasta un RIR 1 innegociable.",
     rirGeneral: 1,
     rirAccessories: 1,
-    intensityLabel: "Intensificación Pesada Controlada (RIR 1 estricto)",
+    intensityLabel: "Mecanotransducción Profunda e Intensificación Pesada (RIR 1)",
     isDeload: false,
     isPeaking: false
   },
   {
     number: 9,
     mesocycle: 3,
-    mesocycleName: "Mesociclo 3: El Bloque de Fuerza Máxima y Peaking (Semanas 9 a 12)",
-    focus: "Semana 9 (Descarga 3 - Menstruación): El descanso estratégico antes de la fuerza máxima. Cortás el volumen a la mitad y bajás los pesos un 20-30% a RIR 3, guardando cada onza de ATP para las semanas venideras.",
+    mesocycleName: "Mesociclo 3: El Bloque de Fuerza Máxima (Semanas 9 a 12)",
+    focus: "Semana 9: Descarga y Resíntesis (Menstruación)\nRegla Biomecánica y Metodología de la Semana: Entramos en la fase crítica de disipación de fatiga. Tu cuerpo está lidiando con la caída de estrógenos, por lo que la recuperación y la protección articular son la prioridad absoluta.\n\nCalistenia: Metodología de Rango Completo Asistido (Bandas Pesadas). El objetivo es oxigenar los tejidos; ejecución fluida usando la máxima asistencia elástica para no generar lactato.\nGimnasio: Se cortan las series totales a la mitad (si tenías 3, haces 1 o 2; si tenías 2, haces 1), se reduce la carga un 20% respecto a lo que venías usando en la Semana 2, y se establece un RIR 3 general innegociable.",
     rirGeneral: 3,
     rirAccessories: 3,
-    intensityLabel: "Descarga 3 (RIR 3, -20-30% peso)",
+    intensityLabel: "Descarga y Resíntesis (Menstruación) - RIR 3, -20% peso",
     isDeload: true,
     isPeaking: false
   },
   {
     number: 10,
     mesocycle: 3,
-    mesocycleName: "Mesociclo 3: El Bloque de Fuerza Máxima y Peaking (Semanas 9 a 12)",
-    focus: "Semana 10 (Fase Folicular - Adaptación a la Fuerza): Los ejercicios principales bajan drásticamente de repeticiones (4 a 6 repeticiones) dejando un RIR 2. Acostumbras al sistema nervioso a mover cargas casi máximas sin llegar al fallo. Los accesorios se mantienen en 8-10 repeticiones a RIR 2.",
+    mesocycleName: "Mesociclo 3: El Bloque de Fuerza Máxima (Semanas 9 a 12)",
+    focus: "Semana 10: Adaptación a la Densidad y Fuerza Máxima\nRegla Biomecánica y Fisiológica de la Semana: Entrenar la vía anaeróbica láctica y acostumbrar al sistema nervioso a mover cargas casi máximas sin llegar al fallo, protegiendo el patrón motor.\n\nCalistenia: Metodología de Series Cluster Lastrado (Conglomerados). En lugar de hacer una serie continua de 6 repeticiones, harás micro-series de 1 o 2 repeticiones intercaladas con descansos de 15 segundos (Ejemplo: 2 reps + 15 seg pausa + 2 reps + 15 seg pausa + 2 reps = 1 Serie Cluster completa). Esto repone el ATP, evade la acidez extrema y permite usar lastre manteniendo una técnica inmaculada. RIR 2 estricto.\nGimnasio: Adaptación a la Fuerza. Los ejercicios principales (grandes empujes y tracciones) bajan drásticamente al rango de 4 a 6 repeticiones, dejando un RIR 2. Los ejercicios accesorios cambian al rango de 8 a 10 repeticiones a un RIR 1.",
     rirGeneral: 2,
-    rirAccessories: 2,
-    intensityLabel: "Adaptación a la Fuerza (RIR 2)",
+    rirAccessories: 1,
+    intensityLabel: "Adaptación a la Densidad y Fuerza Máxima (RIR 2 / RIR 1)",
     isDeload: false,
     isPeaking: false
   },
   {
     number: 11,
     mesocycle: 3,
-    mesocycleName: "Mesociclo 3: El Bloque de Fuerza Máxima y Peaking (Semanas 9 a 12)",
-    focus: "Semana 11 (Fase Ovulatoria - El GRAN TEST / Peaking): Cambio estratégico brutal. Aprovechamos tu pico biológico de fuerza máxima para hacer el testeo oficial aquí. Llevas los ejercicios principales al RIR 0 en rangos de 3 a 5 repeticiones. Es la semana para probar tus récords personales (PR) en gimnasio y hacer tus AMRAPs en calistenia, capitalizando toda la fuerza construida.",
+    mesocycleName: "Mesociclo 3: El Bloque de Fuerza Máxima (Semanas 9 a 12)",
+    focus: "Semana 11: TEST y Rendimiento Absoluto (Tapering Agresivo)\nRegla Biomecánica y Fisiológica de la Semana: El sistema se prepara para su pico de rendimiento (Peaking).\n\nCalistenia (Lunes a Jueves): Activación Neural. Solo 2 series explosivas de 2-3 repeticiones, RIR 3-4. Cero fatiga.\nGimnasio (Principales Lunes a Viernes): Prueba de fuerza. Manejas el rango pesado de 3 a 5 repeticiones. Buscas levantar la carga máxima de tu ciclo.\nGimnasio (Accesorios Lunes a Viernes): Castración de Volumen. Todos los accesorios se reducen a 2 series estrictas. Quedan prohibidos los Drop Sets, Rest-Pause y el RIR 0. Todo el aislamiento se ejecuta a un RIR 2 para no generar inflamación periférica.\n\nSÁBADO (EL GRAN TEST): AMRAP puro en Calistenia a RIR 0, seguido de la destrucción metabólica total de los brazos en el gimnasio.",
     rirGeneral: 0,
-    rirAccessories: 0,
-    intensityLabel: "El GRAN TEST / Peaking (RIR 0 / PRs & AMRAP)",
+    rirAccessories: 2,
+    intensityLabel: "TEST y Rendimiento Absoluto / PEAKING (RIR 0 en Test)",
     isDeload: false,
     isPeaking: true
   },
   {
     number: 12,
     mesocycle: 3,
-    mesocycleName: "Mesociclo 3: El Bloque de Fuerza Máxima y Peaking (Semanas 9 a 12)",
-    focus: "Semana 12 (Fase Lútea - Consolidación Post-Peaking): Tu cuerpo entra en fase de retención y fatiga, y acabas de destrozar tus récords la semana anterior. La carga se mantiene altísima (4 a 5 repeticiones en principales, 8-10 en accesorios), pero con un RIR 1 innegociable. Consolidamos la fuerza ganada y blindamos el sistema nervioso para no lesionarte justo antes de terminar el trimestre.",
+    mesocycleName: "Mesociclo 3: El Bloque de Fuerza Máxima (Semanas 9 a 12)",
+    focus: "Semana 12: Expansión del Umbral Láctico e Intensificación de Fuerza\nRegla Biomecánica y Fisiológica de la Semana (Fase Lútea Tardía): Soportar la hinchazón celular (cell swelling) sin colapsar el sistema nervioso.\n\nCalistenia: Metodología de Clusters Densos. Aumentamos las repeticiones dentro de cada micro-serie del cluster. El SNC se expone a una alta demanda de resistencia, pero queda terminantemente prohibido llegar al fallo en los movimientos en barra/suelo. RIR 1 estricto.\nGimnasio (Principales): La carga sube a su punto máximo. Te manejas estrictamente en 4 a 5 repeticiones dejando un RIR 1 innegociable; queda prohibido el RIR 0 en grandes empujes y tracciones para proteger tu columna y sistema nervioso.\nGimnasio (Accesorios): Destrucción metabólica. Todos los accesorios van al RIR 0 (fallo absoluto) en el rango de 8 a 10 repeticiones. Utilización obligatoria de metodologías de intensidad (Rest-Pause o Drop Sets) única y exclusivamente en la última serie de los accesorios.",
     rirGeneral: 1,
-    rirAccessories: 1,
-    intensityLabel: "Consolidación Post-Peaking (RIR 1 innegociable)",
+    rirAccessories: 0,
+    intensityLabel: "Expansión del Umbral Láctico e Intensificación (RIR 1 / RIR 0 Acc)",
     isDeload: false,
     isPeaking: false
   }
@@ -190,55 +190,2764 @@ export const cardioSchedule = {
   }
 };
 
+const meso1Routines = {
+  1: {
+    Lunes: {
+      title: "LUNES: Día 1 - PUSH (Enfoque Empujes) - Descarga y Resíntesis",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Pike Holds", sets: "3", reps: "30 seg", rir: "N/A", note: "3 series x 30’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Rango Completo Asistido / RIR 3)",
+          exercises: [
+            { name: "Flexiones en Pica (Pike Push-ups)", sets: "1-2", reps: "5-6", rir: "3", note: "Ejecución terapéutica. Si sientes pesadez, apoyas las rodillas en un cajón." },
+            { name: "Fondos en Paralelas (Dips) con Banda Pesada", sets: "1-2", reps: "6-8", rir: "3", note: "Bajas controlando y subes fluido, sin forzar el esternón." },
+            { name: "Hollow Body Hold (Suelo)", sets: "1-2", reps: "15-20 seg", rir: "3", note: "Retroversión pélvica, cortas antes de sentir ardor." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Press en Banca (Máquina)", sets: "1-2", reps: "8-10", rir: "3", note: "-20% Peso" },
+            { name: "Press Militar con Mancuernas", sets: "1", reps: "8-10", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Aperturas Pec-Dec", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Elevaciones Laterales", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Pushdown Clásico (Soga)", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Martes: {
+      title: "MARTES: Día 2 - PULL (Enfoque Tracción) - Descarga y Resíntesis",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Pike Holds", sets: "3", reps: "30 seg", rir: "N/A", note: "3 series x 30’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Rango Completo Asistido / RIR 3)",
+          exercises: [
+            { name: "Dominadas Pronas (Pull-ups) con Banda Pesada", sets: "1-2", reps: "6-8", rir: "3", note: "La banda debe hacer el trabajo pesado; concéntrate 100% en la retracción escapular." },
+            { name: "Dominadas Australianas (Remos barra baja)", sets: "1-2", reps: "8-10", rir: "3", note: "RIR 3" },
+            { name: "Dragon Flag Asistido con Banda", sets: "1-2", reps: "4-6", rir: "3", note: "Rotación Semanal 3: La banda asiste en la fase de máximo estiramiento para proteger la lumbar. https://www.instagram.com/reel/DbH3l7FI3Vj/?igsh=OWFkeHVieGQydjhz" }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Remo con Pecho Apoyado (Palancas/Barra T)", sets: "1", reps: "8-10", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Pullover en Polea o Máquina", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Facepull", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Curl Inclinado con Mancuernas", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Curl Martillo", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Fuerza de Agarre: Dead Hang (Colgado pasivo en barra)", sets: "1", reps: "Moderado", rir: "3", note: "1 serie x tiempo tolerable moderado. (Solo para descomprimir columna)." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Miércoles: {
+      title: "MIÉRCOLES: Día 3 - LEGS 1 (Foco Cuádriceps Aislado) - Descarga y Resíntesis",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Sillón de Cuádriceps (Extensiones)", sets: "1-2", reps: "10-12", rir: "3", note: "-20% Peso" },
+            { name: "Prensa Inclinada / Sentadilla Hack", sets: "1-2", reps: "8-10", rir: "3", note: "-20% Peso" },
+            { name: "Sentadillas Búlgaras en Smith", sets: "1", reps: "8-10", rir: "3", note: "Torso erguido, sin forzar la profundidad máxima. -20% Peso" },
+            { name: "Aductores", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Elevaciones de Talón de Pie", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Spagat / Pancake)." }
+          ]
+        }
+      ]
+    },
+    Jueves: {
+      title: "JUEVES: Día 4 - TREN SUPERIOR HÍBRIDO - Descarga y Resíntesis",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Pike Holds", sets: "3", reps: "30 seg", rir: "N/A", note: "3 series x 30’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Rango Completo Asistido / RIR 3)",
+          exercises: [
+            { name: "Flexiones Estándar (Push-ups) Asistidas con Banda", sets: "1-2", reps: "8-10", rir: "3", note: "RIR 3" },
+            { name: "Dominadas Supinas (Chin-ups) con Banda Pesada", sets: "1-2", reps: "6-8", rir: "3", note: "RIR 3" },
+            { name: "L-sit (Isometría asistida o en Tuck)", sets: "1-2", reps: "5-10 seg", rir: "3", note: "Versión agrupada o apoyando talones levemente, RIR 3. https://www.instagram.com/reel/DX9rBbjRvLB/?igsh=aGlxdGN6dGxmNDBn" }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Press Inclinado (Máquina Convergente)", sets: "1-2", reps: "8-10", rir: "3", note: "-20% Peso" },
+            { name: "Remo Cable Polea con agarre abierto", sets: "1-2", reps: "8-10", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Pájaros en banco (Haz posterior)", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Elevaciones Laterales", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Curl Scott o Predicador", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Fuerza de Agarre: Plate Pinch", sets: "1", reps: "Moderado", rir: "3", note: "1 serie x tiempo moderado." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Viernes: {
+      title: "VIERNES: Día 5 - LEGS 2 (Foco Isquiosurales y Glúteo) - Descarga y Resíntesis",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Peso Muerto Rumano (RDL)", sets: "2", reps: "8-10", rir: "3", note: "Movimiento terapéutico para oxigenar la cadena posterior." },
+            { name: "Hip Thrust o Glute Bridge", sets: "1-2", reps: "8-10", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Aislamiento y Rehabilitación (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Curl Femoral (Sentado preferentemente)", sets: "1", reps: "12-15", rir: "3", note: "-20% Peso" },
+            { name: "Abductores", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Elevaciones de Talón Sentado", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Isquiotibiales)." }
+          ]
+        }
+      ]
+    },
+    Sábado: {
+      title: "SÁBADO: Día 6 - BRAZOS (Comodín Analítico) - Descarga y Resíntesis",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Este día es puramente periférico. Si fallas, el macrociclo no sufre daños." },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Pike Holds", sets: "3", reps: "30 seg", rir: "N/A", note: "3 series x 30’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Aislamiento Total (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Extensiones Tras Nuca (Polea)", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Pushdown Clásico (Soga)", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Extensión Unilateral", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Curl Inclinado con Mancuernas", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Curl Predicador", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Curl Martillo", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Y-raises (Higiene Articular)", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "30 min", rir: "N/A", note: "30 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    }
+  },
+  2: {
+    Lunes: {
+      title: "LUNES: Día 1 - PUSH (Enfoque Empujes) - Adaptación Estructural y Neural",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Pike Holds", sets: "3", reps: "30 seg", rir: "N/A", note: "3 series x 30’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Acomodación de Resistencia)",
+          exercises: [
+            { name: "Flexiones en Pica (Pike Push-ups)", sets: "2", reps: "5-6", rir: "2", note: "Ejecución estricta, elevación escapular máxima. Si no llegas con buena técnica, apoya rodillas en un cajón." },
+            { name: "Fondos en Paralelas (Dips) con Banda Elástica", sets: "3", reps: "6-8", rir: "2", note: "La banda te asiste en la parte más profunda para cuidar el esternón. Depresión escapular inquebrantable." },
+            { name: "Hollow Body Hold (Suelo)", sets: "3", reps: "20-30 seg", rir: "2", note: "Retroversión pélvica absoluta." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (RIR 2)",
+          exercises: [
+            { name: "Press en Banca (Máquina)", sets: "3", reps: "8-10", rir: "2", note: "Cortas la serie sabiendo que podías hacer 2 repeticiones más con postura perfecta." },
+            { name: "Press Militar con Mancuernas", sets: "2", reps: "8-10", rir: "2", note: "RIR 2" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento (RIR 2)",
+          exercises: [
+            { name: "Aperturas Pec-Dec", sets: "2", reps: "12-14", rir: "2", note: "Aducción pura." },
+            { name: "Elevaciones Laterales", sets: "3", reps: "12-14", rir: "2", note: "RIR 2" },
+            { name: "Pushdown Clásico (Soga)", sets: "2", reps: "12-14", rir: "2", note: "Tríceps: Codo abajo." },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "2", reps: "12-14", rir: "2", note: "Tríceps: Codo arriba." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Martes: {
+      title: "MARTES: Día 2 - PULL (Enfoque Tracción) - Adaptación Estructural y Neural",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Pike Holds", sets: "3", reps: "30 seg", rir: "N/A", note: "3 series x 30’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Acomodación de Resistencia)",
+          exercises: [
+            { name: "Dominadas Pronas (Pull-ups) con Banda Elástica", sets: "2", reps: "6-8", rir: "2", note: "Garantiza que la barbilla pase la barra y la retracción escapular sea perfecta." },
+            { name: "Dominadas Australianas (Remos barra baja)", sets: "2", reps: "8-10", rir: "2", note: "RIR 2" },
+            { name: "Dragon Flag Negativas (Excentricas)", sets: "3", reps: "3-4", rir: "2", note: "Bajando en 4-5 segundos. Aprovechando que el dorsal ya está pre-activado para estabilizar el torso." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (RIR 2)",
+          exercises: [
+            { name: "Remo con Pecho Apoyado (Palancas/Barra T)", sets: "2", reps: "8-10", rir: "2", note: "RIR 2" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (RIR 2)",
+          exercises: [
+            { name: "Pullover en Polea o Máquina", sets: "2", reps: "12-14", rir: "2", note: "RIR 2" },
+            { name: "Facepull", sets: "2", reps: "12-14", rir: "2", note: "Polea alta hacia los ojos, rotación externa." },
+            { name: "Curl Inclinado con Mancuernas", sets: "2", reps: "12-14", rir: "2", note: "Bíceps: Estiramiento extremo." },
+            { name: "Curl Martillo", sets: "2", reps: "12-14", rir: "2", note: "Bíceps: Agarre neutro." },
+            { name: "Fuerza de Agarre: Dead Hang (Colgado pasivo en barra)", sets: "2", reps: "Max tiempo", rir: "2", note: "2 series x máximo tiempo tolerable. (Para descomprimir columna)." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS. (Auditoría de volumen: Espalda 8 series, Bíceps directo 4 series, Hombro posterior 2 series)." }
+          ]
+        }
+      ]
+    },
+    Miércoles: {
+      title: "MIÉRCOLES: Día 3 - LEGS 1 (Foco Cuádriceps Aislado) - Adaptación Estructural y Neural",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (RIR 2)",
+          exercises: [
+            { name: "Sillón de Cuádriceps (Extensiones)", sets: "3", reps: "10-12", rir: "2", note: "Aísla el recto femoral con ligera rotación externa." },
+            { name: "Prensa Inclinada / Sentadilla Hack", sets: "3", reps: "8-10", rir: "2", note: "Pies juntos y en la parte inferior de la plataforma para anular el glúteo y mutar la carga hacia los vastos." },
+            { name: "Sentadillas Búlgaras en Smith", sets: "2", reps: "8-10", rir: "2", note: "Para que la Sentadilla Búlgara no active el glúteo, tu torso debe permanecer 100% erguido como una tabla y la rodilla debe viajar lo más adelante posible por encima de la punta del pie." },
+            { name: "Aductores", sets: "2", reps: "12-14", rir: "2", note: "RIR 2" },
+            { name: "Elevaciones de Talón de Pie", sets: "3", reps: "12-14", rir: "2", note: "Gastrocnemio." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Spagat / Pancake). (Auditoría de volumen: Cuádriceps 8 series, Aductores 2 series, Gemelos 3 series)." }
+          ]
+        }
+      ]
+    },
+    Jueves: {
+      title: "JUEVES: Día 4 - TREN SUPERIOR HÍBRIDO - Adaptación Estructural y Neural",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Pike Holds", sets: "3", reps: "30 seg", rir: "N/A", note: "3 series x 30’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Acomodación de Resistencia)",
+          exercises: [
+            { name: "Flexiones Estándar (Push-ups) Asistidas con Banda", sets: "3", reps: "8-10", rir: "2", note: "Banda anclada arriba cruzando tu cadera para aligerar el peso y asegurar protracción máxima." },
+            { name: "Dominadas Supinas (Chin-ups) con Banda Elástica", sets: "3", reps: "6-8", rir: "2", note: "RIR 2" },
+            { name: "L-sit", sets: "3", reps: "Max tiempo", rir: "2", note: "Progresiones primero rodillas al pecho, luego l-sit de a una pierna y luego negativas." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (RIR 2)",
+          exercises: [
+            { name: "Press Inclinado (Máquina Convergente)", sets: "3", reps: "8-10", rir: "2", note: "RIR 2" },
+            { name: "Remo Cable Polea con agarre abierto", sets: "3", reps: "8-10", rir: "2", note: "RIR 2" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (RIR 2)",
+          exercises: [
+            { name: "Pájaros en banco (Haz posterior)", sets: "2", reps: "12-14", rir: "2", note: "RIR 2" },
+            { name: "Elevaciones Laterales", sets: "2", reps: "12-14", rir: "2", note: "RIR 2" },
+            { name: "Triceps sentado", sets: "2", reps: "12-14", rir: "2", note: "RIR 2" },
+            { name: "Curl Scott o Predicador", sets: "2", reps: "12-14", rir: "2", note: "RIR 2" },
+            { name: "Fuerza de Agarre: Plate Pinch", sets: "2", reps: "Max tiempo", rir: "2", note: "Sostener discos por el borde con los dedos. 2 series x máximo tiempo tolerable." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS. (Auditoría de volumen: Pecho 6 series, Espalda 6 series, Hombros 4 series, Brazos 4 series directas)." }
+          ]
+        }
+      ]
+    },
+    Viernes: {
+      title: "VIERNES: Día 5 - LEGS 2 (Foco Isquiosurales y Glúteo) - Adaptación Estructural y Neural",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (RIR 2)",
+          exercises: [
+            { name: "Peso Muerto Rumano (RDL)", sets: "4", reps: "8-10", rir: "2", note: "Tu constructor principal de masa. Bisagra de cadera pura, máxima tensión en estiramiento." },
+            { name: "Hip Thrust o Glute Bridge", sets: "3", reps: "8-10", rir: "2", note: "Empuje horizontal." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Aislamiento y Rehabilitación (RIR 2)",
+          exercises: [
+            { name: "Curl Femoral (Sentado preferentemente)", sets: "2", reps: "12-15", rir: "2", note: "Peso ligero. El objetivo es irrigar sangre a la fosa poplítea. Subida controlada, pausa de 1 segundo arriba, bajada de 3 a 4 segundos." },
+            { name: "Abductores", sets: "2", reps: "12-14", rir: "2", note: "RIR 2" },
+            { name: "Elevaciones de Talón Sentado", sets: "3", reps: "12-14", rir: "2", note: "Aislamiento de sóleo." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Isquiotibiales). (Auditoría de volumen: Isquiosurales 6 series, Glúteos 3 series, Abductores 2 series, Gemelos 3 series)." }
+          ]
+        }
+      ]
+    },
+    Sábado: {
+      title: "SÁBADO: Día 6 - BRAZOS (Comodín Analítico) - Adaptación Estructural y Neural",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Este día es puramente periférico. Si fallas, el macrociclo no sufre daños." },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Pike Holds", sets: "3", reps: "30 seg", rir: "N/A", note: "3 series x 30’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Aislamiento Total (RIR 2)",
+          exercises: [
+            { name: "Extensiones Tras Nuca (Polea)", sets: "3", reps: "12-14", rir: "2", note: "RIR 2" },
+            { name: "Pushdown Clásico (Soga)", sets: "3", reps: "12-14", rir: "2", note: "RIR 2" },
+            { name: "Extensión Unilateral", sets: "2", reps: "12-14", rir: "2", note: "Probar hacer de costado https://www.instagram.com/reel/DY5lI0YOKrO/?igsh=NXB1b3lidXloZWk5" },
+            { name: "Curl Inclinado con Mancuernas", sets: "3", reps: "12-14", rir: "2", note: "RIR 2" },
+            { name: "Curl Predicador", sets: "3", reps: "12-14", rir: "2", note: "RIR 2" },
+            { name: "Curl Martillo", sets: "2", reps: "12-14", rir: "2", note: "RIR 2" },
+            { name: "Y-raises (Higiene Articular)", sets: "3", reps: "12-14", rir: "2", note: "RIR 2" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "30 min", rir: "N/A", note: "30 minutos de Cardio LISS. (Auditoría de volumen: Tríceps 8 series, Bíceps 8 series)." }
+          ]
+        }
+      ]
+    }
+  },
+  3: {
+    Lunes: {
+      title: "LUNES: Día 1 - PUSH (Enfoque Empujes) - Clímax Neural y Estructural",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Pike Holds", sets: "3", reps: "30 seg", rir: "N/A", note: "3 series x 30’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Sobrecarga Excéntrica / RIR 0-1)",
+          exercises: [
+            { name: "Flexiones en Pica (Pike Push-ups) Excéntricas", sets: "3", reps: "4-5", rir: "0-1", note: "Te asistes con las rodillas para volver a subir. Bajas en 5 segundos con elevación escapular máxima. Añade chaleco de lastre si es necesario." },
+            { name: "Fondos en Paralelas (Dips) - Negativas Lastradas", sets: "3", reps: "4-5", rir: "0-1", note: "Saltas a la posición de bloqueo superior. Resistes la bajada en 5 segundos controlando el esternón. Lastre obligatorio si tu peso corporal no te lleva al fallo excéntrico." },
+            { name: "Hollow Body Hold (Suelo)", sets: "3", reps: "Max tiempo", rir: "0", note: "Tiemblas hasta que literalmente no puedas sostener la retroversión." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (RIR 1 a RIR 0)",
+          exercises: [
+            { name: "Press en Banca (Máquina)", sets: "3", reps: "8-10", rir: "1-0", note: "La última serie debe ser RIR 0." },
+            { name: "Press Militar con Mancuernas", sets: "2", reps: "8-10", rir: "1-0", note: "RIR 0 en la última." }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento (RIR 0 + Metodologías)",
+          exercises: [
+            { name: "Aperturas Pec-Dec", sets: "2", reps: "12-14", rir: "0", note: "Última serie: Drop Set al fallo." },
+            { name: "Elevaciones Laterales", sets: "3", reps: "12-14", rir: "0", note: "Última serie: Drop Set al fallo." },
+            { name: "Pushdown Clásico (Soga)", sets: "2", reps: "12-14", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "2", reps: "12-14", rir: "0", note: "Última serie: Rest-Pause." }
+          ],
+          intensityTechnique: "Drop Set en Aperturas Pec-Dec y Elevaciones Laterales; Rest-Pause en Pushdown Clásico y Extensiones Tras Nuca."
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Martes: {
+      title: "MARTES: Día 2 - PULL (Enfoque Tracción) - Clímax Neural y Estructural",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Pike Holds", sets: "3", reps: "30 seg", rir: "N/A", note: "3 series x 30’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Sobrecarga Excéntrica / RIR 0-1)",
+          exercises: [
+            { name: "Dominadas Pronas (Pull-ups) - Negativas Lastradas", sets: "3", reps: "4-5", rir: "0-1", note: "Usas un cajón para posicionar la barbilla sobre la barra. Bajas en 5 segundos con retracción escapular perfecta. Añades lastre al cinturón o chaleco para garantizar el RIR 0-1." },
+            { name: "Dominadas Australianas (Remos barra baja) Excéntricas", sets: "3", reps: "6-8", rir: "0-1", note: "Te impulsas con las piernas para subir al pecho, bajas en 5 segundos estrictos. Usa chaleco de lastre si resulta fácil." },
+            { name: "Dragon Flag a Una Pierna (Excéntricas)", sets: "3", reps: "4-6", rir: "0-1", note: "Rotación Semanal 4: Extiendes una pierna, subes agrupada y resistes la bajada controlando la gravedad hasta el fallo técnico." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (RIR 1 a RIR 0)",
+          exercises: [
+            { name: "Remo con Pecho Apoyado (Palancas/Barra T)", sets: "2", reps: "8-10", rir: "1-0", note: "RIR 0 en la última serie." }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (RIR 0 + Metodologías)",
+          exercises: [
+            { name: "Pullover en Polea o Máquina", sets: "2", reps: "12-14", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Facepull", sets: "2", reps: "12-14", rir: "0", note: "Fallo técnico, sin deformar la rotación externa." },
+            { name: "Curl Inclinado con Mancuernas", sets: "2", reps: "12-14", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Curl Martillo", sets: "2", reps: "12-14", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Fuerza de Agarre: Dead Hang (Colgado pasivo en barra)", sets: "2", reps: "Max tiempo", rir: "0", note: "2 series x Máximo tiempo posible hasta que se abran las manos." }
+          ],
+          intensityTechnique: "Drop Set en Pullover; Rest-Pause en Curl Inclinado y Curl Martillo."
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Miércoles: {
+      title: "MIÉRCOLES: Día 3 - LEGS 1 (Foco Cuádriceps Aislado) - Clímax Neural y Estructural",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (RIR 1 a RIR 0)",
+          exercises: [
+            { name: "Sillón de Cuádriceps (Extensiones)", sets: "3", reps: "10-12", rir: "1-0", note: "Última serie: Drop Set brutal." },
+            { name: "Prensa Inclinada / Sentadilla Hack", sets: "3", reps: "8-10", rir: "1-0", note: "RIR 0 en la última serie." },
+            { name: "Sentadillas Búlgaras en Smith o Mancuernas", sets: "2", reps: "8-10", rir: "1", note: "RIR 1 estricto, no vayas al fallo absoluto aquí para proteger rodilla." },
+            { name: "Aductores", sets: "2", reps: "12-14", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Elevaciones de Talón de Pie", sets: "3", reps: "12-14", rir: "0", note: "Última serie: Drop Set." }
+          ],
+          intensityTechnique: "Drop Set en Sillón de Cuádriceps y Elevaciones de Talón; Rest-Pause en Aductores."
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Spagat / Pancake)." }
+          ]
+        }
+      ]
+    },
+    Jueves: {
+      title: "JUEVES: Día 4 - TREN SUPERIOR HÍBRIDO - Clímax Neural y Estructural",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Pike Holds", sets: "3", reps: "30 seg", rir: "N/A", note: "3 series x 30’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Sobrecarga Excéntrica / RIR 0-1)",
+          exercises: [
+            { name: "Flexiones Estándar (Push-ups) Excéntricas", sets: "3", reps: "5-6", rir: "0-1", note: "Omites la subida apoyando rodillas. Bajas en 5 segundos como una tabla. Chaleco o disco en la espalda si no llegas al fallo." },
+            { name: "Dominadas Supinas (Chin-ups) - Negativas Lastradas", sets: "3", reps: "4-5", rir: "0-1", note: "Salto al bloqueo superior y bajada hiper-lenta de 5 segundos resistiendo con el bíceps y el dorsal." },
+            { name: "L-sit (Isometría)", sets: "3", reps: "Max tiempo", rir: "0", note: "Sostienes hasta que los cuádriceps o el psoas colapsen." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (RIR 1 a RIR 0)",
+          exercises: [
+            { name: "Press Inclinado (Máquina Convergente)", sets: "3", reps: "8-10", rir: "1-0", note: "RIR 0 en la última." },
+            { name: "Remo Cable Polea con agarre abierto", sets: "3", reps: "8-10", rir: "1-0", note: "RIR 0 en la última." }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (RIR 0 + Metodologías)",
+          exercises: [
+            { name: "Pájaros en banco (Haz posterior)", sets: "2", reps: "12-14", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Elevaciones Laterales", sets: "2", reps: "12-14", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "2", reps: "12-14", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Curl Scott o Predicador", sets: "2", reps: "12-14", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Fuerza de Agarre: Plate Pinch", sets: "2", reps: "Max tiempo", rir: "0", note: "2 series x Máximo tiempo hasta que el disco caiga." }
+          ],
+          intensityTechnique: "Drop Set en Pájaros y Elevaciones Laterales; Rest-Pause en Extensiones Tras Nuca y Curl Scott."
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Viernes: {
+      title: "VIERNES: Día 5 - LEGS 2 (Foco Isquiosurales y Glúteo) - Clímax Neural y Estructural",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (RIR 1 a RIR 0)",
+          exercises: [
+            { name: "Peso Muerto Rumano (RDL)", sets: "4", reps: "8-10", rir: "1", note: "RIR 1 máximo. Prohibido el fallo absoluto en RDL para no freír la lumbar." },
+            { name: "Hip Thrust o Glute Bridge", sets: "3", reps: "8-10", rir: "1-0", note: "RIR 0 en la última, máxima contracción." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Aislamiento y Rehabilitación (RIR 0 + Metodologías)",
+          exercises: [
+            { name: "Curl Femoral (Sentado preferentemente)", sets: "2", reps: "12-15", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Abductores", sets: "2", reps: "12-14", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Elevaciones de Talón Sentado", sets: "3", reps: "12-14", rir: "0", note: "Última serie: Drop Set." }
+          ],
+          intensityTechnique: "Drop Set en Curl Femoral y Elevaciones de Talón Sentado; Rest-Pause en Abductores."
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Isquiotibiales)." }
+          ]
+        }
+      ]
+    },
+    Sábado: {
+      title: "SÁBADO: Día 6 - BRAZOS (Comodín Analítico) - Clímax Neural y Estructural",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Este día es puramente periférico. Se masacra el tejido sin riesgo sistémico." },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Pike Holds", sets: "3", reps: "30 seg", rir: "N/A", note: "3 series x 30’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Aislamiento Total (RIR 0 + Metodologías)",
+          exercises: [
+            { name: "Extensiones Tras Nuca (Polea)", sets: "3", reps: "12-14", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Pushdown Clásico (Soga)", sets: "3", reps: "12-14", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Extensión Unilateral", sets: "2", reps: "12-14", rir: "0", note: "Fallo absoluto." },
+            { name: "Curl Inclinado con Mancuernas", sets: "3", reps: "12-14", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Curl Predicador", sets: "3", reps: "12-14", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Curl Martillo", sets: "2", reps: "12-14", rir: "0", note: "Fallo absoluto." },
+            { name: "Y-raises (Higiene Articular)", sets: "3", reps: "12-14", rir: "0", note: "RIR 0 técnico." }
+          ],
+          intensityTechnique: "Drop Set en Extensiones Tras Nuca, Pushdown Clásico y Curl Predicador; Rest-Pause en Curl Inclinado."
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "30 min", rir: "N/A", note: "30 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    }
+  },
+  4: {
+    Lunes: {
+      title: "LUNES: Día 1 - PUSH (Enfoque Empujes) - Fase de intensificación",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Pike Holds", sets: "3", reps: "30 seg", rir: "N/A", note: "3 series x 30’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Acomodación de Resistencia)",
+          exercises: [
+            { name: "Flexiones en Pica (Pike Push-ups)", sets: "1 Pirámide", reps: "1-2-3-4-3-2-1", rir: "1", note: "Descansos cortos de 15 a 20 segundos entre cada escalón. Elevación escapular máxima innegociable." },
+            { name: "Fondos en Paralelas (Dips)", sets: "1 Pirámide", reps: "1-2-3-4-5-4-3-2-1", rir: "1", note: "Si aún no tienes la fuerza para hacer la pirámide estricta sin banda, utilizas la banda elástica para completar toda la pirámide." },
+            { name: "Hollow Body Hold (Suelo)", sets: "3", reps: "Max tiempo", rir: "1", note: "Dejando un RIR 1 (cortas 1 o 2 segundos antes de perder la retroversión pélvica)." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (RIR 1)",
+          exercises: [
+            { name: "Press en Banca (Máquina)", sets: "3", reps: "8-10", rir: "1", note: "RIR 1 estricto" },
+            { name: "Press Militar con Mancuernas", sets: "2", reps: "8-10", rir: "1", note: "RIR 1 estricto" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento (RIR 1)",
+          exercises: [
+            { name: "Aperturas Pec-Dec", sets: "2", reps: "12-14", rir: "1", note: "Aducción pura." },
+            { name: "Elevaciones Laterales", sets: "3", reps: "12-14", rir: "1", note: "RIR 1 estricto" },
+            { name: "Pushdown Clásico (Soga)", sets: "2", reps: "12-14", rir: "1", note: "Tríceps: Codo abajo." },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "2", reps: "12-14", rir: "1", note: "Tríceps: Codo arriba." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Martes: {
+      title: "MARTES: Día 2 - PULL (Enfoque Tracción) - Fase de intensificación",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Pike Holds", sets: "3", reps: "30 seg", rir: "N/A", note: "3 series x 30’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Acomodación de Resistencia)",
+          exercises: [
+            { name: "Dominadas Pronas (Pull-ups)", sets: "1 Pirámide", reps: "1-2-3-2-1", rir: "1", note: "Asistidas con banda si es necesario para mantener la retracción escapular perfecta en el pico de la pirámide." },
+            { name: "Dominadas Australianas (Remos barra baja)", sets: "1 Pirámide", reps: "2-4-6-8-6-4-2", rir: "1", note: "Descansos de 20 segundos entre escalones." },
+            { name: "Dragon Flag Elevaciones Bottom-Up con Isometría", sets: "3", reps: "4-5", rir: "1", note: "Sosteniendo 1 segundo en isometria. Bajada controlada en 4 segundos, frenando exactamente en RIR 1 antes de que la técnica colapse. https://www.instagram.com/p/DWjKvTGDG5O/?igsh=aXZrbnhiMHRqd3U3" }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (RIR 1)",
+          exercises: [
+            { name: "Remo con Pecho Apoyado (Palancas/Barra T)", sets: "2", reps: "8-10", rir: "1", note: "RIR 1 estricto" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (RIR 1)",
+          exercises: [
+            { name: "Pullover en Polea o Máquina", sets: "2", reps: "12-14", rir: "1", note: "RIR 1 estricto" },
+            { name: "Facepull", sets: "2", reps: "12-14", rir: "1", note: "Polea alta hacia los ojos, rotación externa." },
+            { name: "Curl Inclinado con Mancuernas", sets: "2", reps: "12-14", rir: "1", note: "Bíceps: Estiramiento extremo." },
+            { name: "Curl Martillo", sets: "2", reps: "12-14", rir: "1", note: "Bíceps: Agarre neutro." },
+            { name: "Fuerza de Agarre: Dead Hang (Colgado pasivo en barra)", sets: "2", reps: "Max tiempo", rir: "1", note: "2 series x máximo tiempo tolerable. (Para descomprimir columna)." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS. (Auditoría de volumen: Espalda 8 series, Bíceps directo 4 series, Hombro posterior 2 series)." }
+          ]
+        }
+      ]
+    },
+    Miércoles: {
+      title: "MIÉRCOLES: Día 3 - LEGS 1 (Foco Cuádriceps Aislado) - Fase de intensificación",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (RIR 1)",
+          exercises: [
+            { name: "Sillón de Cuádriceps (Extensiones)", sets: "3", reps: "10-12", rir: "1", note: "Aísla el recto femoral con ligera rotación externa." },
+            { name: "Prensa Inclinada / Sentadilla Hack", sets: "3", reps: "8-10", rir: "1", note: "Pies juntos y en la parte inferior de la plataforma para anular el glúteo y mutar la carga hacia los vastos." },
+            { name: "Sentadillas Búlgaras en Smith", sets: "2", reps: "8-10", rir: "1", note: "Para que la Sentadilla Búlgara no active el glúteo, tu torso debe permanecer 100% erguido como una tabla y la rodilla debe viajar lo más adelante posible por encima de la punta del pie." },
+            { name: "Aductores", sets: "2", reps: "12-14", rir: "1", note: "RIR 1 estricto" },
+            { name: "Elevaciones de Talón de Pie", sets: "3", reps: "12-14", rir: "1", note: "Gastrocnemio." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Spagat / Pancake). (Auditoría de volumen: Cuádriceps 8 series, Aductores 2 series, Gemelos 3 series)." }
+          ]
+        }
+      ]
+    },
+    Jueves: {
+      title: "JUEVES: Día 4 - TREN SUPERIOR HÍBRIDO - Fase de intensificación",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Pike Holds", sets: "3", reps: "30 seg", rir: "N/A", note: "3 series x 30’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Acomodación de Resistencia)",
+          exercises: [
+            { name: "Flexiones Estándar (Push-ups)", sets: "1 Pirámide", reps: "2-4-6-8-6-4-2", rir: "1", note: "Protracción escapular máxima al bloquear los codos." },
+            { name: "Dominadas Supinas (Chin-ups)", sets: "1 Pirámide", reps: "1-2-3-4-3-2-1", rir: "1", note: "RIR 1 estricto" },
+            { name: "L-sit (Isometría en Suelo o Paralelas)", sets: "3", reps: "Tiempo Sub-máximo", rir: "1", note: "Frena la serie justo antes de que tus piernas caigan por fatiga del psoas o pierdas la depresión escapular (progresiones primero rodillas al pecho, luego l-sit de a una pierna y luego negativas)." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (RIR 1)",
+          exercises: [
+            { name: "Press Inclinado (Máquina Convergente)", sets: "3", reps: "8-10", rir: "1", note: "RIR 1 estricto" },
+            { name: "Remo Cable Polea con agarre abierto", sets: "3", reps: "8-10", rir: "1", note: "RIR 1 estricto" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (RIR 1)",
+          exercises: [
+            { name: "Pájaros en banco (Haz posterior)", sets: "2", reps: "12-14", rir: "1", note: "RIR 1 estricto" },
+            { name: "Elevaciones Laterales", sets: "2", reps: "12-14", rir: "1", note: "RIR 1 estricto" },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "2", reps: "12-14", rir: "1", note: "RIR 1 estricto" },
+            { name: "Curl Scott o Predicador", sets: "2", reps: "12-14", rir: "1", note: "RIR 1 estricto" },
+            { name: "Fuerza de Agarre: Plate Pinch", sets: "2", reps: "Max tiempo", rir: "1", note: "Sostener discos por el borde con los dedos. 2 series x máximo tiempo tolerable." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS. (Auditoría de volumen: Pecho 6 series, Espalda 6 series, Hombros 4 series, Brazos 4 series directas)." }
+          ]
+        }
+      ]
+    },
+    Viernes: {
+      title: "VIERNES: Día 5 - LEGS 2 (Foco Isquiosurales y Glúteo) - Fase de intensificación",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (RIR 1)",
+          exercises: [
+            { name: "Peso Muerto Rumano (RDL)", sets: "4", reps: "8-10", rir: "1", note: "Tu constructor principal de masa. Bisagra de cadera pura, máxima tensión en estiramiento." },
+            { name: "Hip Thrust o Glute Bridge", sets: "3", reps: "8-10", rir: "1", note: "Empuje horizontal." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Aislamiento y Rehabilitación (RIR 1)",
+          exercises: [
+            { name: "Curl Femoral (Sentado preferentemente)", sets: "2", reps: "12-15", rir: "1", note: "Peso ligero. El objetivo es irrigar sangre a la fosa poplítea. Subida controlada, pausa de 1 segundo arriba, bajada de 3 a 4 segundos." },
+            { name: "Abductores", sets: "2", reps: "12-14", rir: "1", note: "RIR 1 estricto" },
+            { name: "Elevaciones de Talón Sentado", sets: "3", reps: "12-14", rir: "1", note: "Aislamiento de sóleo." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Isquiotibiales). (Auditoría de volumen: Isquiosurales 6 series, Glúteos 3 series, Abductores 2 series, Gemelos 3 series)." }
+          ]
+        }
+      ]
+    },
+    Sábado: {
+      title: "SÁBADO: Día 6 - BRAZOS (Comodín Analítico) - Fase de intensificación",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Este día es puramente periférico. Si fallas, el macrociclo no sufre daños." },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Pike Holds", sets: "3", reps: "30 seg", rir: "N/A", note: "3 series x 30’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Aislamiento Total (RIR 1)",
+          exercises: [
+            { name: "Extensiones Tras Nuca (Polea)", sets: "3", reps: "12-14", rir: "1", note: "RIR 1 estricto" },
+            { name: "Pushdown Clásico (Soga)", sets: "3", reps: "12-14", rir: "1", note: "RIR 1 estricto" },
+            { name: "Extensión Unilateral", sets: "2", reps: "12-14", rir: "1", note: "RIR 1 estricto" },
+            { name: "Curl Inclinado con Mancuernas", sets: "3", reps: "12-14", rir: "1", note: "RIR 1 estricto" },
+            { name: "Curl Predicador", sets: "3", reps: "12-14", rir: "1", note: "RIR 1 estricto" },
+            { name: "Curl Martillo", sets: "2", reps: "12-14", rir: "1", note: "RIR 1 estricto" },
+            { name: "Y-raises (Higiene Articular)", sets: "3", reps: "12-14", rir: "1", note: "RIR 1 estricto" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "30 min", rir: "N/A", note: "30 minutos de Cardio LISS. (Auditoría de volumen: Tríceps 8 series, Bíceps 8 series)." }
+          ]
+        }
+      ]
+    }
+  }
+};
+
+const meso2Routines = {
+  5: {
+    Lunes: {
+      title: "LUNES: Día 1 - PUSH (Enfoque Empujes) - Descarga y Resíntesis",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Chest to wall hold", sets: "3", reps: "60 seg", rir: "N/A", note: "3 series x 60’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Rango Completo Asistido / RIR 3)",
+          exercises: [
+            { name: "Flexiones en Pica (Pike Push-ups)", sets: "1-2", reps: "5-6", rir: "3", note: "Ejecución terapéutica. Si sientes pesadez, apoyas las rodillas en un cajón." },
+            { name: "Fondos en Paralelas (Dips) con Banda Pesada", sets: "1-2", reps: "6-8", rir: "3", note: "Bajas controlando y subes fluido, sin forzar el esternón." },
+            { name: "Hollow Body Hold (Suelo)", sets: "1-2", reps: "15-20 seg", rir: "3", note: "Retroversión pélvica, cortas antes de sentir ardor." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Press en Banca (Máquina)", sets: "1-2", reps: "8-10", rir: "3", note: "-20% Peso" },
+            { name: "Press Militar con Mancuernas", sets: "1", reps: "8-10", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Aperturas Pec-Dec", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Elevaciones Laterales", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Pushdown Clásico (Soga)", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Martes: {
+      title: "MARTES: Día 2 - PULL (Enfoque Tracción) - Descarga y Resíntesis",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Chest to wall hold", sets: "3", reps: "60 seg", rir: "N/A", note: "3 series x 60’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Rango Completo Asistido / RIR 3)",
+          exercises: [
+            { name: "Dominadas Pronas (Pull-ups) con Banda Pesada", sets: "1-2", reps: "6-8", rir: "3", note: "La banda debe hacer el trabajo pesado; concéntrate 100% en la retracción escapular." },
+            { name: "Dominadas Australianas (Remos barra baja)", sets: "1-2", reps: "8-10", rir: "3", note: "RIR 3" },
+            { name: "Dragon Flag Asistido con Banda", sets: "1-2", reps: "4-6", rir: "3", note: "Rotación Semanal 3: La banda asiste en la fase de máximo estiramiento para proteger la lumbar." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Remo con Pecho Apoyado (Palancas/Barra T)", sets: "1", reps: "8-10", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Pullover en Polea o Máquina", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Facepull", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Curl Inclinado con Mancuernas", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Curl Martillo", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Fuerza de Agarre: Dead Hang (Colgado pasivo en barra)", sets: "1", reps: "Tiempo tolerable", rir: "3", note: "1 serie x tiempo tolerable moderado. (Solo para descomprimir columna)." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Miércoles: {
+      title: "MIÉRCOLES: Día 3 - LEGS 1 (Foco Cuádriceps Aislado) - Descarga y Resíntesis",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Sillón de Cuádriceps (Extensiones)", sets: "1-2", reps: "10-12", rir: "3", note: "-20% Peso" },
+            { name: "Prensa Inclinada / Sentadilla Hack", sets: "1-2", reps: "8-10", rir: "3", note: "-20% Peso" },
+            { name: "Sentadillas Búlgaras en Smith", sets: "1", reps: "8-10", rir: "3", note: "Torso erguido, sin forzar la profundidad máxima." },
+            { name: "Aductores", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Elevaciones de Talón de Pie", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Spagat / Pancake)." }
+          ]
+        }
+      ]
+    },
+    Jueves: {
+      title: "JUEVES: Día 4 - TREN SUPERIOR HÍBRIDO - Descarga y Resíntesis",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Chest to wall hold", sets: "3", reps: "60 seg", rir: "N/A", note: "3 series x 60’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Rango Completo Asistido / RIR 3)",
+          exercises: [
+            { name: "Flexiones Estándar (Push-ups) Asistidas con Banda", sets: "1-2", reps: "8-10", rir: "3", note: "RIR 3" },
+            { name: "Dominadas Supinas (Chin-ups) con Banda Pesada", sets: "1-2", reps: "6-8", rir: "3", note: "RIR 3" },
+            { name: "L-sit (Isometría asistida o en Tuck)", sets: "1-2", reps: "5-10 seg", rir: "3", note: "Versión agrupada o apoyando talones levemente, RIR 3." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Press Inclinado (Máquina Convergente)", sets: "1-2", reps: "8-10", rir: "3", note: "-20% Peso" },
+            { name: "Remo Cable Polea con agarre abierto", sets: "1-2", reps: "8-10", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Pájaros en banco (Haz posterior)", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Elevaciones Laterales", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Curl Scott o Predicador", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Fuerza de Agarre: Plate Pinch", sets: "1", reps: "Tiempo moderado", rir: "3", note: "1 serie x tiempo moderado." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Viernes: {
+      title: "VIERNES: Día 5 - LEGS 2 (Foco Isquiosurales y Glúteo) - Descarga y Resíntesis",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Peso Muerto Rumano (RDL)", sets: "2", reps: "8-10", rir: "3", note: "Movimiento terapéutico para oxigenar la cadena posterior." },
+            { name: "Hip Thrust o Glute Bridge", sets: "1-2", reps: "8-10", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Aislamiento y Rehabilitación (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Curl Femoral (Sentado preferentemente)", sets: "1", reps: "12-15", rir: "3", note: "-20% Peso" },
+            { name: "Abductores", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Elevaciones de Talón Sentado", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Isquiotibiales)." }
+          ]
+        }
+      ]
+    },
+    Sábado: {
+      title: "SÁBADO: Día 6 - BRAZOS (Comodín Analítico) - Descarga y Resíntesis",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Este día es puramente periférico. Si fallas, el macrociclo no sufre daños." },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Chest to wall hold", sets: "3", reps: "60 seg", rir: "N/A", note: "3 series x 60’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Aislamiento Total (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Extensiones Tras Nuca (Polea)", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Pushdown Clásico (Soga)", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Extensión Unilateral", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Curl Inclinado con Mancuernas", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Curl Predicador", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Curl Martillo", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Y-raises (Higiene Articular)", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "30 min", rir: "N/A", note: "30 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    }
+  },
+  6: {
+    Lunes: {
+      title: "LUNES: Día 1 - PUSH (Enfoque Empujes) - Reinicio y Choque Isométrico",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Chest to wall hold", sets: "3", reps: "60 seg", rir: "N/A", note: "3 series x 60’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Isometrías Estratégicas / RIR 2)",
+          exercises: [
+            { name: "Flexiones en Pica (Pike Push-ups)", sets: "2", reps: "5-6", rir: "2", note: "Pausa de 2 segundos arriba, bloqueando los codos y empujando el suelo para máxima elevación escapular." },
+            { name: "Fondos en Paralelas (Dips)", sets: "3", reps: "6-8", rir: "2", note: "Pausa de 2 segundos arriba en el bloqueo, con depresión escapular inquebrantable." },
+            { name: "Hollow Body Hold (Suelo)", sets: "3", reps: "20-30 seg", rir: "2", note: "Retroversión pélvica absoluta." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (Pesado / RIR 2)",
+          exercises: [
+            { name: "Press en Banca (Máquina)", sets: "3", reps: "6-8", rir: "2", note: "Pesado / RIR 2" },
+            { name: "Press Militar con Mancuernas", sets: "2", reps: "6-8", rir: "2", note: "Pesado / RIR 2" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento (RIR 2)",
+          exercises: [
+            { name: "Aperturas Pec-Dec", sets: "2", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Elevaciones Laterales", sets: "3", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Pushdown Clásico (Soga)", sets: "2", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "2", reps: "10-12", rir: "2", note: "RIR 2" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Martes: {
+      title: "MARTES: Día 2 - PULL (Enfoque Tracción) - Reinicio y Choque Isométrico",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Chest to wall hold", sets: "3", reps: "60 seg", rir: "N/A", note: "3 series x 60’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Isometrías Estratégicas / RIR 2)",
+          exercises: [
+            { name: "Dominadas Pronas (Pull-ups)", sets: "2", reps: "5-6", rir: "2", note: "Pausa de 2 segundos arriba con la barbilla sobre la barra, retracción total." },
+            { name: "Dominadas Australianas (Remos barra baja)", sets: "2", reps: "8-10", rir: "2", note: "Pausa de 2 segundos tocando la barra con el pecho." },
+            { name: "Dragon Flag (Negativas Excéntricas)", sets: "3", reps: "3-4", rir: "2", note: "Reinicio del ciclo de rotación abdominal. Subes y resistes la bajada en 4-5 segundos, dejando 2 repeticiones en el tanque." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (Pesado / RIR 2)",
+          exercises: [
+            { name: "Remo con Pecho Apoyado (Palancas/Barra T)", sets: "2", reps: "6-8", rir: "2", note: "Pesado / RIR 2" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (RIR 2)",
+          exercises: [
+            { name: "Pullover en Polea o Máquina", sets: "2", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Facepull", sets: "2", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Curl Inclinado con Mancuernas", sets: "2", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Curl Martillo", sets: "2", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Fuerza de Agarre: Dead Hang (Colgado pasivo en barra)", sets: "2", reps: "Tiempo tolerable", rir: "2", note: "2 series x tiempo tolerable." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Miércoles: {
+      title: "MIÉRCOLES: Día 3 - LEGS 1 (Foco Cuádriceps Aislado) - Reinicio y Choque Isométrico",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (Pesado / RIR 2)",
+          exercises: [
+            { name: "Sillón de Cuádriceps (Extensiones)", sets: "3", reps: "10-12", rir: "2", note: "Aislamiento puro." },
+            { name: "Prensa Inclinada / Sentadilla Hack", sets: "3", reps: "6-8", rir: "2", note: "Carga mayor, controlando la excéntrica." },
+            { name: "Sentadillas Búlgaras en Smith o Mancuernas", sets: "2", reps: "6-8", rir: "2", note: "Torso erguido." },
+            { name: "Aductores", sets: "2", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Elevaciones de Talón de Pie", sets: "3", reps: "10-12", rir: "2", note: "RIR 2" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Spagat / Pancake)." }
+          ]
+        }
+      ]
+    },
+    Jueves: {
+      title: "JUEVES: Día 4 - TREN SUPERIOR HÍBRIDO - Reinicio y Choque Isométrico",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Chest to wall hold", sets: "3", reps: "60 seg", rir: "N/A", note: "3 series x 60’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Isometrías Estratégicas / RIR 2)",
+          exercises: [
+            { name: "Flexiones Estándar (Push-ups)", sets: "3", reps: "8-10", rir: "2", note: "Pausa de 2 segundos arriba, máxima protracción." },
+            { name: "Dominadas Supinas (Chin-ups)", sets: "3", reps: "5-6", rir: "2", note: "Pausa de 2 segundos arriba, máxima flexión de bíceps." },
+            { name: "L-sit (Isometría)", sets: "3", reps: "10-15 seg", rir: "2", note: "Compresión pura, RIR 2." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (Pesado / RIR 2)",
+          exercises: [
+            { name: "Press Inclinado (Máquina Convergente)", sets: "3", reps: "6-8", rir: "2", note: "Pesado / RIR 2" },
+            { name: "Remo Cable Polea con agarre abierto", sets: "3", reps: "6-8", rir: "2", note: "Pesado / RIR 2" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (RIR 2)",
+          exercises: [
+            { name: "Pájaros en banco (Haz posterior)", sets: "2", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Elevaciones Laterales", sets: "2", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "2", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Curl Scott o Predicador", sets: "2", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Fuerza de Agarre: Plate Pinch", sets: "2", reps: "Tiempo tolerable", rir: "2", note: "2 series x tiempo tolerable." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Viernes: {
+      title: "VIERNES: Día 5 - LEGS 2 (Foco Isquiosurales y Glúteo) - Reinicio y Choque Isométrico",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (Pesado / RIR 2)",
+          exercises: [
+            { name: "Peso Muerto Rumano (RDL)", sets: "4", reps: "6-8", rir: "2", note: "Tu motor de hipertrofia. Carga pesada, bisagra estricta." },
+            { name: "Hip Thrust o Glute Bridge", sets: "3", reps: "6-8", rir: "2", note: "Pesado / RIR 2" }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Aislamiento y Rehabilitación (RIR 2)",
+          exercises: [
+            { name: "Curl Femoral (Sentado preferentemente)", sets: "2", reps: "10-12", rir: "2", note: "Enfoque en bombeo de la fosa poplítea." },
+            { name: "Abductores", sets: "2", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Elevaciones de Talón Sentado", sets: "3", reps: "10-12", rir: "2", note: "RIR 2" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Isquiotibiales)." }
+          ]
+        }
+      ]
+    },
+    Sábado: {
+      title: "SÁBADO: Día 6 - BRAZOS (Comodín Analítico) - Reinicio y Choque Isométrico",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Día puramente periférico." },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Chest to wall hold", sets: "3", reps: "60 seg", rir: "N/A", note: "3 series x 60’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Aislamiento Total (RIR 2)",
+          exercises: [
+            { name: "Extensiones Tras Nuca (Polea)", sets: "3", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Pushdown Clásico (Soga)", sets: "3", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Extensión Unilateral", sets: "2", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Curl Inclinado con Mancuernas", sets: "3", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Curl Predicador", sets: "3", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Curl Martillo", sets: "2", reps: "10-12", rir: "2", note: "RIR 2" },
+            { name: "Y-raises (Higiene Articular)", sets: "3", reps: "10-12", rir: "2", note: "RIR 2" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "30 min", rir: "N/A", note: "30 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    }
+  },
+  7: {
+    Lunes: {
+      title: "LUNES: Día 1 - PUSH (Enfoque Empujes) - Clímax Estructural y Miotrauma Controlado",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Chest to wall hold", sets: "3", reps: "60 seg", rir: "N/A", note: "3 series x 60’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Negativas Puras Lastradas / RIR 0)",
+          exercises: [
+            { name: "Flexiones en Pica (Pike Push-ups) Excéntricas", sets: "2", reps: "4-5", rir: "0", note: "Te asistes para subir. Bajas en 5 segundos con elevación escapular máxima. Añade chaleco si es necesario." },
+            { name: "Fondos en Paralelas (Dips) - Negativas Lastradas", sets: "3", reps: "4-5", rir: "0", note: "Saltas al bloqueo superior. Resistes la bajada en 5 segundos. Lastre obligatorio si no alcanzas el fallo." },
+            { name: "Hollow Body Hold (Suelo)", sets: "3", reps: "Max tiempo", rir: "0", note: "Sostienes la retroversión hasta el colapso técnico." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (Pesado / RIR 0)",
+          exercises: [
+            { name: "Press en Banca (Máquina)", sets: "3", reps: "6-8", rir: "0", note: "Última serie RIR 0 absoluto." },
+            { name: "Press Militar con Mancuernas", sets: "2", reps: "6-8", rir: "0", note: "Fallo técnico en la última." }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento (RIR 0 + Metodologías)",
+          exercises: [
+            { name: "Aperturas Pec-Dec", sets: "2", reps: "10-12", rir: "0", note: "Última serie: Drop Set al fallo." },
+            { name: "Elevaciones Laterales", sets: "3", reps: "10-12", rir: "0", note: "Última serie: Drop Set al fallo." },
+            { name: "Pushdown Clásico (Soga)", sets: "2", reps: "10-12", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "2", reps: "10-12", rir: "0", note: "Última serie: Rest-Pause." }
+          ],
+          intensityTechnique: "Drop Set en Aperturas Pec-Dec y Elevaciones Laterales; Rest-Pause en Pushdown Clásico y Extensiones Tras Nuca."
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Martes: {
+      title: "MARTES: Día 2 - PULL (Enfoque Tracción) - Clímax Estructural y Miotrauma Controlado",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Chest to wall hold", sets: "3", reps: "60 seg", rir: "N/A", note: "3 series x 60’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Negativas Puras Lastradas / RIR 0)",
+          exercises: [
+            { name: "Dominadas Pronas (Pull-ups) - Negativas Lastradas", sets: "2", reps: "4-5", rir: "0", note: "Cajón para subir. Bajas en 5 segundos con lastre garantizando el fallo excéntrico." },
+            { name: "Dominadas Australianas (Remos barra baja) Excéntricas", sets: "2", reps: "6-8", rir: "0", note: "Te impulsas, bajas hiper-lento." },
+            { name: "Dragon Flag (Negativas a Una Pierna)", sets: "3", reps: "4-6", rir: "0", note: "Rotación Semanal 8: El máximo miotrauma. Extiendes una pierna, subes agrupada y bajas controlando la palanca máxima hasta el fallo. RIR 0." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (Pesado / RIR 0)",
+          exercises: [
+            { name: "Remo con Pecho Apoyado (Palancas/Barra T)", sets: "2", reps: "6-8", rir: "0", note: "Última serie RIR 0." }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (RIR 0 + Metodologías)",
+          exercises: [
+            { name: "Pullover en Polea o Máquina", sets: "2", reps: "10-12", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Facepull", sets: "2", reps: "10-12", rir: "0", note: "Fallo técnico sin perder rotación externa." },
+            { name: "Curl Inclinado con Mancuernas", sets: "2", reps: "10-12", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Curl Martillo", sets: "2", reps: "10-12", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Fuerza de Agarre: Dead Hang (Colgado pasivo en barra)", sets: "2", reps: "Max tiempo", rir: "0", note: "2 series x Máximo tiempo (hasta soltar la barra)." }
+          ],
+          intensityTechnique: "Drop Set en Pullover; Rest-Pause en Curl Inclinado y Curl Martillo."
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Miércoles: {
+      title: "MIÉRCOLES: Día 3 - LEGS 1 (Foco Cuádriceps Aislado) - Clímax Estructural y Miotrauma Controlado",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (Pesado / RIR 0)",
+          exercises: [
+            { name: "Sillón de Cuádriceps (Extensiones)", sets: "3", reps: "10-12", rir: "0", note: "Última serie: Drop Set brutal." },
+            { name: "Prensa Inclinada / Sentadilla Hack", sets: "3", reps: "6-8", rir: "0", note: "Última serie RIR 0." },
+            { name: "Sentadillas Búlgaras en Smith o Mancuernas", sets: "2", reps: "6-8", rir: "1", note: "RIR 1 estricto. Regla clínica: prohibido el fallo absoluto aquí para proteger rodilla." },
+            { name: "Aductores", sets: "2", reps: "10-12", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Elevaciones de Talón de Pie", sets: "3", reps: "10-12", rir: "0", note: "Última serie: Drop Set." }
+          ],
+          intensityTechnique: "Drop Set en Sillón de Cuádriceps y Elevaciones de Talón; Rest-Pause en Aductores."
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Spagat / Pancake)." }
+          ]
+        }
+      ]
+    },
+    Jueves: {
+      title: "JUEVES: Día 4 - TREN SUPERIOR HÍBRIDO - Clímax Estructural y Miotrauma Controlado",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Chest to wall hold", sets: "3", reps: "60 seg", rir: "N/A", note: "3 series x 60’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Negativas Puras Lastradas / RIR 0)",
+          exercises: [
+            { name: "Flexiones Estándar (Push-ups) Excéntricas", sets: "3", reps: "5-6", rir: "0", note: "Apoyas rodillas para subir, bajas en 5 segundos estrictos. Lastre en espalda si es necesario." },
+            { name: "Dominadas Supinas (Chin-ups) - Negativas Lastradas", sets: "3", reps: "4-5", rir: "0", note: "Salto al bloqueo y bajada hiper-lenta de 5 segundos." },
+            { name: "L-sit (Isometría)", sets: "3", reps: "Max tiempo", rir: "0", note: "Hasta colapsar cuádriceps/psoas." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (Pesado / RIR 0)",
+          exercises: [
+            { name: "Press Inclinado (Máquina Convergente)", sets: "3", reps: "6-8", rir: "0", note: "Última serie RIR 0." },
+            { name: "Remo Cable Polea con agarre abierto", sets: "3", reps: "6-8", rir: "0", note: "Última serie RIR 0." }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (RIR 0 + Metodologías)",
+          exercises: [
+            { name: "Pájaros en banco (Haz posterior)", sets: "2", reps: "10-12", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Elevaciones Laterales", sets: "2", reps: "10-12", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "2", reps: "10-12", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Curl Scott o Predicador", sets: "2", reps: "10-12", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Fuerza de Agarre: Plate Pinch", sets: "2", reps: "Max tiempo", rir: "0", note: "2 series x Máximo tiempo hasta que el disco caiga." }
+          ],
+          intensityTechnique: "Drop Set en Pájaros y Elevaciones Laterales; Rest-Pause en Extensiones Tras Nuca y Curl Scott."
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Viernes: {
+      title: "VIERNES: Día 5 - LEGS 2 (Foco Isquiosurales y Glúteo) - Clímax Estructural y Miotrauma Controlado",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (Pesado / RIR 0)",
+          exercises: [
+            { name: "Peso Muerto Rumano (RDL)", sets: "4", reps: "6-8", rir: "1", note: "RIR 1 máximo. Prohibido el fallo absoluto en RDL para no exponer los discos lumbares." },
+            { name: "Hip Thrust o Glute Bridge", sets: "3", reps: "6-8", rir: "0", note: "RIR 0 en la última." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Aislamiento y Rehabilitación (RIR 0 + Metodologías)",
+          exercises: [
+            { name: "Curl Femoral (Sentado preferentemente)", sets: "2", reps: "10-12", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Abductores", sets: "2", reps: "10-12", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Elevaciones de Talón Sentado", sets: "3", reps: "10-12", rir: "0", note: "Última serie: Drop Set." }
+          ],
+          intensityTechnique: "Drop Set en Curl Femoral y Elevaciones de Talón Sentado; Rest-Pause en Abductores."
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Isquiotibiales)." }
+          ]
+        }
+      ]
+    },
+    Sábado: {
+      title: "SÁBADO: Día 6 - BRAZOS (Comodín Analítico) - Clímax Estructural y Miotrauma Controlado",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Chest to wall hold", sets: "3", reps: "60 seg", rir: "N/A", note: "3 series x 60’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Aislamiento Total (RIR 0 + Metodologías)",
+          exercises: [
+            { name: "Extensiones Tras Nuca (Polea)", sets: "3", reps: "10-12", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Pushdown Clásico (Soga)", sets: "3", reps: "10-12", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Extensión Unilateral", sets: "2", reps: "10-12", rir: "0", note: "Fallo absoluto." },
+            { name: "Curl Inclinado con Mancuernas", sets: "3", reps: "10-12", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Curl Predicador", sets: "3", reps: "10-12", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Curl Martillo", sets: "2", reps: "10-12", rir: "0", note: "Fallo absoluto." },
+            { name: "Y-raises (Higiene Articular)", sets: "3", reps: "10-12", rir: "0", note: "RIR 0 técnico." }
+          ],
+          intensityTechnique: "Drop Set en Extensiones Tras Nuca, Pushdown Clásico y Curl Predicador; Rest-Pause en Curl Inclinado."
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "30 min", rir: "N/A", note: "30 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    }
+  },
+  8: {
+    Lunes: {
+      title: "LUNES: Día 1 - PUSH (Enfoque Empujes) - Mecanotransducción Profunda e Intensificación Pesada",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Chest to wall hold", sets: "3", reps: "60 seg", rir: "N/A", note: "3 series x 60’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Parciales Alargadas / RIR 1)",
+          exercises: [
+            { name: "Flexiones en Pica (Pike Push-ups)", sets: "2", reps: "6-8 medias reps", rir: "1", note: "Bajas hasta rozar el suelo con la cabeza y subes solo hasta la mitad del recorrido. No bloqueas los codos." },
+            { name: "Fondos en Paralelas (Dips)", sets: "3", reps: "8-10 medias reps", rir: "1", note: "Bajas al punto de máximo estiramiento del pectoral y subes solo hasta que los codos formen un ángulo de 90 grados." },
+            { name: "Hollow Body Hold (Suelo)", sets: "3", reps: "Max tiempo", rir: "1", note: "Máximo tiempo tolerable dejando 1-2 segundos en reserva (RIR 1)." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (Pesado / RIR 1)",
+          exercises: [
+            { name: "Press en Banca (Máquina)", sets: "3", reps: "6-8", rir: "1", note: "Pesado / RIR 1" },
+            { name: "Press Militar con Mancuernas", sets: "2", reps: "6-8", rir: "1", note: "Pesado / RIR 1" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento (RIR 1)",
+          exercises: [
+            { name: "Aperturas Pec-Dec", sets: "2", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Elevaciones Laterales", sets: "3", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Pushdown Clásico (Soga)", sets: "2", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "2", reps: "10-12", rir: "1", note: "RIR 1" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Martes: {
+      title: "MARTES: Día 2 - PULL (Enfoque Tracción) - Mecanotransducción Profunda e Intensificación Pesada",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Chest to wall hold", sets: "3", reps: "60 seg", rir: "N/A", note: "3 series x 60’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Parciales Alargadas / RIR 1)",
+          exercises: [
+            { name: "Dominadas Pronas (Pull-ups)", sets: "2", reps: "6-8 medias reps", rir: "1", note: "Arrancas desde colgado estirado, haces la retracción escapular, flexionas los brazos hasta la mitad y vuelves a bajar. La barbilla nunca pasa la barra hoy." },
+            { name: "Dominadas Australianas (Remos barra baja)", sets: "2", reps: "10-12 medias reps", rir: "1", note: "Desde brazos completamente estirados hasta la mitad del tirón." },
+            { name: "Dragon Flag Raise (Elevaciones Bottom-Up con Isometría)", sets: "3", reps: "4-6", rir: "1", note: "Rotación Semanal 6: Arrancas acostada plana en el suelo. Generas tensión pura para despegar la lumbar y la pelvis, sostienes la postura del Dragon Flag en el aire 2 segundos, y vuelves al suelo. RIR 1." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (Pesado / RIR 1)",
+          exercises: [
+            { name: "Remo con Pecho Apoyado (Palancas/Barra T)", sets: "2", reps: "6-8", rir: "1", note: "Pesado / RIR 1" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (RIR 1)",
+          exercises: [
+            { name: "Pullover en Polea o Máquina", sets: "2", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Facepull", sets: "2", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Curl Inclinado con Mancuernas", sets: "2", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Curl Martillo", sets: "2", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Fuerza de Agarre: Dead Hang (Colgado pasivo en barra)", sets: "2", reps: "Tiempo sub-máximo", rir: "1", note: "2 series x tiempo sub-máximo (hasta que los dedos empiecen a ceder levemente)." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Miércoles: {
+      title: "MIÉRCOLES: Día 3 - LEGS 1 (Foco Cuádriceps Aislado) - Mecanotransducción Profunda e Intensificación Pesada",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (Pesado / RIR 1)",
+          exercises: [
+            { name: "Sillón de Cuádriceps (Extensiones)", sets: "3", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Prensa Inclinada / Sentadilla Hack", sets: "3", reps: "6-8", rir: "1", note: "RIR 1" },
+            { name: "Sentadillas Búlgaras en Smith o Mancuernas", sets: "2", reps: "6-8", rir: "1", note: "Rodilla viajando al máximo hacia adelante, frenando a RIR 1." },
+            { name: "Aductores", sets: "2", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Elevaciones de Talón de Pie", sets: "3", reps: "10-12", rir: "1", note: "RIR 1" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Spagat / Pancake)." }
+          ]
+        }
+      ]
+    },
+    Jueves: {
+      title: "JUEVES: Día 4 - TREN SUPERIOR HÍBRIDO - Mecanotransducción Profunda e Intensificación Pesada",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Chest to wall hold", sets: "3", reps: "60 seg", rir: "N/A", note: "3 series x 60’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Parciales Alargadas / RIR 1)",
+          exercises: [
+            { name: "Flexiones Estándar (Push-ups)", sets: "3", reps: "8-10 medias reps", rir: "1", note: "Desde el pecho rozando el suelo hasta la mitad de la extensión. Mantienes tensión constante en el pectoral." },
+            { name: "Dominadas Supinas (Chin-ups)", sets: "3", reps: "6-8 medias reps", rir: "1", note: "Desde estiramiento total hasta que los codos formen 90 grados." },
+            { name: "L-sit (Isometría)", sets: "3", reps: "Tiempo Sub-máximo", rir: "1", note: "Cortas la serie 1-2 segundos antes de que tus piernas caigan por fatiga." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (Pesado / RIR 1)",
+          exercises: [
+            { name: "Press Inclinado (Máquina Convergente)", sets: "3", reps: "6-8", rir: "1", note: "Pesado / RIR 1" },
+            { name: "Remo Cable Polea con agarre abierto", sets: "3", reps: "6-8", rir: "1", note: "Pesado / RIR 1" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (RIR 1)",
+          exercises: [
+            { name: "Pájaros en banco (Haz posterior)", sets: "2", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Elevaciones Laterales", sets: "2", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "2", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Curl Scott o Predicador", sets: "2", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Fuerza de Agarre: Plate Pinch", sets: "2", reps: "Tiempo sub-máximo", rir: "1", note: "2 series x tiempo sub-máximo." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Viernes: {
+      title: "VIERNES: Día 5 - LEGS 2 (Foco Isquiosurales y Glúteo) - Mecanotransducción Profunda e Intensificación Pesada",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (Pesado / RIR 1)",
+          exercises: [
+            { name: "Peso Muerto Rumano (RDL)", sets: "4", reps: "6-8", rir: "1", note: "Exigencia absoluta de core. RIR 1 estricto." },
+            { name: "Hip Thrust o Glute Bridge", sets: "3", reps: "6-8", rir: "1", note: "Pesado / RIR 1" }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Aislamiento y Rehabilitación (RIR 1)",
+          exercises: [
+            { name: "Curl Femoral (Sentado preferentemente)", sets: "2", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Abductores", sets: "2", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Elevaciones de Talón Sentado", sets: "3", reps: "10-12", rir: "1", note: "RIR 1" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Isquiotibiales)." }
+          ]
+        }
+      ]
+    },
+    Sábado: {
+      title: "SÁBADO: Día 6 - BRAZOS (Comodín Analítico) - Mecanotransducción Profunda e Intensificación Pesada",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Día puramente periférico." },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Ranita", sets: "1", reps: "3 min", rir: "N/A", note: "Posición isometría" },
+            { name: "Chest to wall hold", sets: "3", reps: "60 seg", rir: "N/A", note: "3 series x 60’" }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Aislamiento Total (RIR 1)",
+          exercises: [
+            { name: "Extensiones Tras Nuca (Polea)", sets: "3", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Pushdown Clásico (Soga)", sets: "3", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Extensión Unilateral", sets: "2", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Curl Inclinado con Mancuernas", sets: "3", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Curl Predicador", sets: "3", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Curl Martillo", sets: "2", reps: "10-12", rir: "1", note: "RIR 1" },
+            { name: "Y-raises (Higiene Articular)", sets: "3", reps: "10-12", rir: "1", note: "RIR 1" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "30 min", rir: "N/A", note: "30 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    }
+  }
+};
+
+const meso3Routines = {
+  9: {
+    Lunes: {
+      title: "LUNES: Día 1 - PUSH (Enfoque Empujes) - Descarga y Resíntesis",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Toe Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Hell Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Kick ups to the wall", sets: "1", reps: "10/day", rir: "N/A", note: "10 por día" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Rango Completo Asistido / RIR 3)",
+          exercises: [
+            { name: "Flexiones en Pica (Pike Push-ups)", sets: "1-2", reps: "5-6", rir: "3", note: "Ejecución terapéutica. Si sientes pesadez, apoyas las rodillas en un cajón." },
+            { name: "Fondos en Paralelas (Dips) con Banda Pesada", sets: "1-2", reps: "6-8", rir: "3", note: "Bajas controlando y subes fluido, sin forzar el esternón." },
+            { name: "Hollow Body Hold (Suelo)", sets: "1-2", reps: "15-20 seg", rir: "3", note: "Retroversión pélvica, cortas antes de sentir ardor." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Press en Banca (Máquina)", sets: "1-2", reps: "8-10", rir: "3", note: "-20% Peso" },
+            { name: "Press Militar con Mancuernas", sets: "1", reps: "8-10", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Aperturas Pec-Dec", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Elevaciones Laterales", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Pushdown Clásico (Soga)", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Martes: {
+      title: "MARTES: Día 2 - PULL (Enfoque Tracción) - Descarga y Resíntesis",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Toe Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Hell Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Kick ups to the wall", sets: "1", reps: "10/day", rir: "N/A", note: "10 por día" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Rango Completo Asistido / RIR 3)",
+          exercises: [
+            { name: "Dominadas Pronas (Pull-ups) con Banda Pesada", sets: "1-2", reps: "6-8", rir: "3", note: "La banda debe hacer el trabajo pesado; concéntrate 100% en la retracción escapular." },
+            { name: "Dominadas Australianas (Remos barra baja)", sets: "1-2", reps: "8-10", rir: "3", note: "RIR 3" },
+            { name: "Dragon Flag Asistido con Banda", sets: "1-2", reps: "4-6", rir: "3", note: "Rotación Semanal 3: La banda asiste en la fase de máximo estiramiento para proteger la lumbar." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Remo con Pecho Apoyado (Palancas/Barra T)", sets: "1", reps: "8-10", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Pullover en Polea o Máquina", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Facepull", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Curl Inclinado con Mancuernas", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Curl Martillo", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Fuerza de Agarre: Dead Hang (Colgado pasivo en barra)", sets: "1", reps: "Tiempo tolerable", rir: "3", note: "1 serie x tiempo tolerable moderado. (Solo para descomprimir columna)." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Miércoles: {
+      title: "MIÉRCOLES: Día 3 - LEGS 1 (Foco Cuádriceps Aislado) - Descarga y Resíntesis",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Sillón de Cuádriceps (Extensiones)", sets: "1-2", reps: "10-12", rir: "3", note: "-20% Peso" },
+            { name: "Prensa Inclinada / Sentadilla Hack", sets: "1-2", reps: "8-10", rir: "3", note: "-20% Peso" },
+            { name: "Sentadillas Búlgaras en Smith", sets: "1", reps: "8-10", rir: "3", note: "Torso erguido, sin forzar la profundidad máxima." },
+            { name: "Aductores", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Elevaciones de Talón de Pie", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Spagat / Pancake)." }
+          ]
+        }
+      ]
+    },
+    Jueves: {
+      title: "JUEVES: Día 4 - TREN SUPERIOR HÍBRIDO - Descarga y Resíntesis",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Toe Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Hell Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Kick ups to the wall", sets: "1", reps: "10/day", rir: "N/A", note: "10 por día" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Rango Completo Asistido / RIR 3)",
+          exercises: [
+            { name: "Flexiones Estándar (Push-ups) Asistidas con Banda", sets: "1-2", reps: "8-10", rir: "3", note: "RIR 3" },
+            { name: "Dominadas Supinas (Chin-ups) con Banda Pesada", sets: "1-2", reps: "6-8", rir: "3", note: "RIR 3" },
+            { name: "L-sit (Isometría asistida o en Tuck)", sets: "1-2", reps: "5-10 seg", rir: "3", note: "Versión agrupada o apoyando talones levemente, RIR 3." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Press Inclinado (Máquina Convergente)", sets: "1-2", reps: "8-10", rir: "3", note: "-20% Peso" },
+            { name: "Remo Cable Polea con agarre abierto", sets: "1-2", reps: "8-10", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Pájaros en banco (Haz posterior)", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Elevaciones Laterales", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Curl Scott o Predicador", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Fuerza de Agarre: Plate Pinch", sets: "1", reps: "Tiempo moderado", rir: "3", note: "1 serie x tiempo moderado." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Viernes: {
+      title: "VIERNES: Día 5 - LEGS 2 (Foco Isquiosurales y Glúteo) - Descarga y Resíntesis",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Peso Muerto Rumano (RDL)", sets: "2", reps: "8-10", rir: "3", note: "Movimiento terapéutico para oxigenar la cadena posterior." },
+            { name: "Hip Thrust o Glute Bridge", sets: "1-2", reps: "8-10", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Aislamiento y Rehabilitación (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Curl Femoral (Sentado preferentemente)", sets: "1", reps: "12-15", rir: "3", note: "-20% Peso" },
+            { name: "Abductores", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Elevaciones de Talón Sentado", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Isquiotibiales)." }
+          ]
+        }
+      ]
+    },
+    Sábado: {
+      title: "SÁBADO: Día 6 - BRAZOS (Comodín Analítico) - Descarga y Resíntesis",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Este día es puramente periférico. Si fallas, el macrociclo no sufre daños." },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Toe Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Hell Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Kick ups to the wall", sets: "1", reps: "10/day", rir: "N/A", note: "10 por día" }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Aislamiento Total (-20% Peso / RIR 3)",
+          exercises: [
+            { name: "Extensiones Tras Nuca (Polea)", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Pushdown Clásico (Soga)", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Extensión Unilateral", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Curl Inclinado con Mancuernas", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Curl Predicador", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Curl Martillo", sets: "1", reps: "12-14", rir: "3", note: "-20% Peso" },
+            { name: "Y-raises (Higiene Articular)", sets: "1-2", reps: "12-14", rir: "3", note: "-20% Peso" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "30 min", rir: "N/A", note: "30 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    }
+  },
+  10: {
+    Lunes: {
+      title: "LUNES: Día 1 - PUSH (Enfoque Empujes) - Adaptación a la Densidad y Fuerza Máxima",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Toe Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Hell Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Kick ups to the wall", sets: "1", reps: "10/day", rir: "N/A", note: "10 por día" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Series Cluster / RIR 2)",
+          exercises: [
+            { name: "Flexiones en Pica con Pies Elevados (Decline Pike Push-ups)", sets: "3 Cluster", reps: "2 + 15s + 2 + 15s + 1", rir: "2", note: "Elevación escapular perfecta en cada micro-serie. La altura del cajón debe ser suficiente para que sientas la carga pesada, respetando el RIR 2 general." },
+            { name: "Fondos en Paralelas (Dips) Lastrados", sets: "3 Cluster", reps: "2 + 15s + 2 (8 reps+ obj)", rir: "2", note: "Usa cinturón o chaleco. Micro-series de 2 repeticiones con descansos de 15s hasta completar tu objetivo de la serie." },
+            { name: "Hollow Body Hold (Suelo)", sets: "3", reps: "Tiempo Sub-máximo", rir: "2", note: "RIR 2" }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (Fuerza / RIR 2)",
+          exercises: [
+            { name: "Press en Banca (Máquina)", sets: "3", reps: "4-6", rir: "2", note: "Carga muy pesada, pero control absoluto." },
+            { name: "Press Militar con Mancuernas", sets: "2", reps: "4-6", rir: "2", note: "RIR 2" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento (RIR 1)",
+          exercises: [
+            { name: "Aperturas Pec-Dec", sets: "2", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Elevaciones Laterales", sets: "3", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Pushdown Clásico (Soga)", sets: "2", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "2", reps: "8-10", rir: "1", note: "RIR 1" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Martes: {
+      title: "MARTES: Día 2 - PULL (Enfoque Tracción) - Adaptación a la Densidad y Fuerza Máxima",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Toe Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Hell Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Kick ups to the wall", sets: "1", reps: "10/day", rir: "N/A", note: "10 por día" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Series Cluster / RIR 2)",
+          exercises: [
+            { name: "Dominadas Pronas (Pull-ups) Lastradas", sets: "2 Cluster", reps: "1-2 reps + 15s (4-6 tot)", rir: "2", note: "Micro-series de 1-2 repeticiones, descansando 15s colgando o en el suelo, hasta sumar 4-6 repeticiones totales por serie." },
+            { name: "Dominadas Australianas (Remos barra baja) Lastradas", sets: "2 Cluster", reps: "Cluster", rir: "2", note: "Series Cluster lastradas." },
+            { name: "Dragon Flag a Una Pierna (Clusters)", sets: "3 Cluster", reps: "2 reps x pierna + 15s + 2 reps", rir: "2", note: "Adaptación a la densidad: 2 reps por pierna, pausa 15s, 2 reps, pausa 15s. Máxima tensión sin colapso lumbar." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (Fuerza / RIR 2)",
+          exercises: [
+            { name: "Remo con Pecho Apoyado (Palancas/Barra T)", sets: "2", reps: "4-6", rir: "2", note: "RIR 2" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (RIR 1)",
+          exercises: [
+            { name: "Pullover en Polea o Máquina", sets: "2", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Facepull", sets: "2", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Curl Inclinado con Mancuernas", sets: "2", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Curl Martillo", sets: "2", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Fuerza de Agarre: Dead Hang (Colgado pasivo en barra)", sets: "2", reps: "Tiempo tolerable", rir: "1", note: "2 series x tiempo tolerable." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Miércoles: {
+      title: "MIÉRCOLES: Día 3 - LEGS 1 (Foco Cuádriceps Aislado) - Adaptación a la Densidad y Fuerza Máxima",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (Fuerza y Aislamiento)",
+          exercises: [
+            { name: "Sillón de Cuádriceps (Extensiones)", sets: "3", reps: "8-10", rir: "1", note: "Accesorio RIR 1." },
+            { name: "Prensa Inclinada / Sentadilla Hack", sets: "3", reps: "4-6", rir: "2", note: "Motor principal pesado RIR 2." },
+            { name: "Sentadillas Búlgaras en Smith o Mancuernas", sets: "2", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Aductores", sets: "2", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Elevaciones de Talón de Pie", sets: "3", reps: "8-10", rir: "1", note: "RIR 1" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Spagat / Pancake)." }
+          ]
+        }
+      ]
+    },
+    Jueves: {
+      title: "JUEVES: Día 4 - TREN SUPERIOR HÍBRIDO - Adaptación a la Densidad y Fuerza Máxima",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Toe Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Hell Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Kick ups to the wall", sets: "1", reps: "10/day", rir: "N/A", note: "10 por día" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Series Cluster / RIR 2)",
+          exercises: [
+            { name: "Flexiones Estándar (Push-ups) Lastradas", sets: "3 Cluster", reps: "Cluster", rir: "2", note: "Disco en la espalda o banda pesada. Micro-series separadas por 15s de descanso." },
+            { name: "Dominadas Supinas (Chin-ups) Lastradas", sets: "3 Cluster", reps: "1-2 reps strictly", rir: "2", note: "Micro-series de 1 o 2 reps estrictas." },
+            { name: "L-sit (Isometría)", sets: "3", reps: "Tiempo Sub-máximo", rir: "2", note: "RIR 2" }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (Fuerza / RIR 2)",
+          exercises: [
+            { name: "Press Inclinado (Máquina Convergente)", sets: "3", reps: "4-6", rir: "2", note: "RIR 2" },
+            { name: "Remo Cable Polea con agarre abierto", sets: "3", reps: "4-6", rir: "2", note: "RIR 2" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (RIR 1)",
+          exercises: [
+            { name: "Pájaros en banco (Haz posterior)", sets: "2", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Elevaciones Laterales", sets: "2", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "2", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Curl Scott o Predicador", sets: "2", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Fuerza de Agarre: Plate Pinch", sets: "2", reps: "Tiempo tolerable", rir: "1", note: "2 series x tiempo tolerable." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Viernes: {
+      title: "VIERNES: Día 5 - LEGS 2 (Foco Isquiosurales y Glúteo) - Adaptación a la Densidad y Fuerza Máxima",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (Fuerza y Aislamiento)",
+          exercises: [
+            { name: "Peso Muerto Rumano (RDL)", sets: "4", reps: "4-6", rir: "2", note: "Sobrecarga sistémica masiva, bisagra controlada." },
+            { name: "Hip Thrust o Glute Bridge", sets: "3", reps: "4-6", rir: "2", note: "RIR 2" }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Aislamiento y Rehabilitación (RIR 1)",
+          exercises: [
+            { name: "Curl Femoral (Sentado preferentemente)", sets: "2", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Abductores", sets: "2", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Elevaciones de Talón Sentado", sets: "3", reps: "8-10", rir: "1", note: "RIR 1" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Isquiotibiales)." }
+          ]
+        }
+      ]
+    },
+    Sábado: {
+      title: "SÁBADO: Día 6 - BRAZOS (Comodín Analítico) - Adaptación a la Densidad y Fuerza Máxima",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Día puramente periférico. RIR 1 general." },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Toe Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Hell Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Kick ups to the wall", sets: "1", reps: "10/day", rir: "N/A", note: "10 por día" }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Aislamiento Total (RIR 1)",
+          exercises: [
+            { name: "Extensiones Tras Nuca (Polea)", sets: "3", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Pushdown Clásico (Soga)", sets: "3", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Extensión Unilateral", sets: "2", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Curl Inclinado con Mancuernas", sets: "3", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Curl Predicador", sets: "3", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Curl Martillo", sets: "2", reps: "8-10", rir: "1", note: "RIR 1" },
+            { name: "Y-raises (Higiene Articular)", sets: "3", reps: "8-10", rir: "1", note: "RIR 1" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "30 min", rir: "N/A", note: "30 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    }
+  },
+  11: {
+    Lunes: {
+      title: "LUNES: Día 1 - PUSH (Enfoque Empujes) - TEST y Rendimiento Absoluto",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Toe Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Hell Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Kick ups to the wall", sets: "1", reps: "10/day", rir: "N/A", note: "10 por día" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Activación Neural / Cero Fatiga)",
+          exercises: [
+            { name: "Flexiones en Pica (Pike Push-ups)", sets: "2", reps: "2-3", rir: "3-4", note: "Súper explosivas. RIR 3-4." },
+            { name: "Fondos en Paralelas (Dips)", sets: "2", reps: "2-3", rir: "3-4", note: "Súper explosivas. RIR 3-4." },
+            { name: "Hollow Body Hold (Suelo)", sets: "2", reps: "15 seg", rir: "3-4", note: "Solo activación." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (TEST DE FUERZA)",
+          exercises: [
+            { name: "Press en Banca (Máquina)", sets: "3", reps: "3-5", rir: "1", note: "Carga récord de este ciclo." },
+            { name: "Press Militar con Mancuernas", sets: "2", reps: "3-5", rir: "1", note: "TEST DE FUERZA" }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento (Tapering / RIR 2 - Sin Metodologías)",
+          exercises: [
+            { name: "Aperturas Pec-Dec", sets: "2", reps: "8-10", rir: "2", note: "RIR 2 estricto. Sin metodologías." },
+            { name: "Elevaciones Laterales", sets: "2", reps: "8-10", rir: "2", note: "RIR 2 estricto. Sin metodologías." },
+            { name: "Pushdown Clásico (Soga)", sets: "2", reps: "8-10", rir: "2", note: "RIR 2 estricto. Sin metodologías." },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "2", reps: "8-10", rir: "2", note: "RIR 2 estricto. Sin metodologías." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Martes: {
+      title: "MARTES: Día 2 - PULL (Enfoque Tracción) - TEST y Rendimiento Absoluto",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Toe Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Hell Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Kick ups to the wall", sets: "1", reps: "10/day", rir: "N/A", note: "10 por día" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Activación Neural / Cero Fatiga)",
+          exercises: [
+            { name: "Dominadas Pronas (Pull-ups)", sets: "2", reps: "2-3", rir: "3-4", note: "Tirón explosivo. RIR 3-4." },
+            { name: "Dominadas Australianas (Remos barra baja)", sets: "2", reps: "3-4", rir: "3-4", note: "RIR 3-4" },
+            { name: "Dragon Flag Completas (Activación)", sets: "2", reps: "2-3", rir: "2", note: "Pruebas la palanca completa, pero cortas mucho antes del fallo. RIR 2." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (TEST DE FUERZA)",
+          exercises: [
+            { name: "Remo con Pecho Apoyado (Palancas/Barra T)", sets: "3", reps: "3-5", rir: "1", note: "Carga récord." }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (Tapering / RIR 2 - Sin Metodologías)",
+          exercises: [
+            { name: "Pullover en Polea o Máquina", sets: "2", reps: "8-10", rir: "2", note: "RIR 2" },
+            { name: "Facepull", sets: "2", reps: "8-10", rir: "2", note: "RIR 2" },
+            { name: "Curl Inclinado con Mancuernas", sets: "2", reps: "8-10", rir: "2", note: "RIR 2" },
+            { name: "Curl Martillo", sets: "2", reps: "8-10", rir: "2", note: "RIR 2" },
+            { name: "Fuerza de Agarre: Dead Hang", sets: "2", reps: "20 seg", rir: "2", note: "2 series de solo 20 segundos (descompresión)." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Miércoles: {
+      title: "MIÉRCOLES: Día 3 - LEGS 1 (Foco Cuádriceps Aislado) - TEST y Rendimiento Absoluto",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (TEST Y TAPERING)",
+          exercises: [
+            { name: "Sillón de Cuádriceps (Extensiones)", sets: "2", reps: "8-10", rir: "2", note: "RIR 2 estricto." },
+            { name: "Prensa Inclinada / Sentadilla Hack", sets: "3", reps: "3-5", rir: "0", note: "TEST OFICIAL. Carga máxima." },
+            { name: "Sentadillas Búlgaras en Smith o Mancuernas", sets: "2", reps: "8-10", rir: "2", note: "RIR 2. Cero estrés en rodilla." },
+            { name: "Aductores", sets: "2", reps: "8-10", rir: "2", note: "RIR 2" },
+            { name: "Elevaciones de Talón de Pie", sets: "2", reps: "8-10", rir: "2", note: "RIR 2" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada." }
+          ]
+        }
+      ]
+    },
+    Jueves: {
+      title: "JUEVES: Día 4 - TREN SUPERIOR HÍBRIDO - TEST y Rendimiento Absoluto",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Toe Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Hell Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Kick ups to the wall", sets: "1", reps: "10/day", rir: "N/A", note: "10 por día" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Activación Neural / Cero Fatiga)",
+          exercises: [
+            { name: "Flexiones Estándar (Push-ups)", sets: "2", reps: "3-4", rir: "3-4", note: "Empuje explosivo, RIR 3-4." },
+            { name: "Dominadas Supinas (Chin-ups)", sets: "2", reps: "2-3", rir: "3-4", note: "Tirón explosivo, RIR 3-4." },
+            { name: "L-sit", sets: "2", reps: "10 seg", rir: "3-4", note: "Solo activación, sin llegar al temblor muscular." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (TEST DE FUERZA)",
+          exercises: [
+            { name: "Press Inclinado (Máquina Convergente)", sets: "3", reps: "3-5", rir: "1", note: "Carga récord." },
+            { name: "Remo Cable Polea con agarre abierto", sets: "3", reps: "3-5", rir: "1", note: "Carga récord." }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento (Tapering / RIR 2 - Sin Metodologías)",
+          exercises: [
+            { name: "Pájaros en banco (Haz posterior)", sets: "2", reps: "8-10", rir: "2", note: "RIR 2" },
+            { name: "Elevaciones Laterales", sets: "2", reps: "8-10", rir: "2", note: "RIR 2" },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "2", reps: "8-10", rir: "2", note: "RIR 2" },
+            { name: "Curl Scott o Predicador", sets: "2", reps: "8-10", rir: "2", note: "RIR 2" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Viernes: {
+      title: "VIERNES: Día 5 - LEGS 2 (Foco Isquiosurales y Glúteo) - TEST y Rendimiento Absoluto",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (TEST Y TAPERING)",
+          exercises: [
+            { name: "Peso Muerto Rumano (RDL)", sets: "3", reps: "3-5", rir: "1-2", note: "Carga récord, pero mantienes un RIR 1-2 por seguridad de la columna antes del sábado." },
+            { name: "Hip Thrust o Glute Bridge", sets: "3", reps: "3-5", rir: "0", note: "TEST OFICIAL. Carga máxima." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Aislamiento (Tapering / RIR 2 - Sin Metodologías)",
+          exercises: [
+            { name: "Curl Femoral (Sentado preferentemente)", sets: "2", reps: "8-10", rir: "2", note: "RIR 2" },
+            { name: "Abductores", sets: "2", reps: "8-10", rir: "2", note: "RIR 2" },
+            { name: "Elevaciones de Talón Sentado", sets: "2", reps: "8-10", rir: "2", note: "RIR 2" }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada." }
+          ]
+        }
+      ]
+    },
+    Sábado: {
+      title: "SÁBADO: Día 6 - EL GRAN TEST DE CALISTENIA + Destrucción de Brazos",
+      blocks: [
+        {
+          name: "Bloque 1: TEST OFICIAL (AMRAP - As Many Reps As Possible)",
+          exercises: [
+            { name: "Dominadas Pronas Estrictas (Pull-ups)", sets: "1", reps: "Max (RIR 0)", rir: "0", note: "1 única serie al fallo absoluto (RIR 0). Anota tu PR. Descansa 3 a 5 min entre intentos." },
+            { name: "Fondos en Paralelas (Dips)", sets: "1", reps: "Max (RIR 0)", rir: "0", note: "1 única serie al fallo absoluto (RIR 0). Anota tu PR. Descansa 3 a 5 min entre intentos." },
+            { name: "Dominadas Supinas (Chin-ups)", sets: "1", reps: "Max (RIR 0)", rir: "0", note: "1 única serie al fallo absoluto (RIR 0). Anota tu PR. Descansa 3 a 5 min entre intentos." },
+            { name: "Flexiones en Pica (Pike Push-ups)", sets: "1", reps: "Max (RIR 0)", rir: "0", note: "1 única serie al fallo absoluto (RIR 0). Anota tu PR. Descansa 3 a 5 min entre intentos." },
+            { name: "L-sit (TEST OFICIAL)", sets: "1", reps: "Tiempo Máximo (RIR 0)", rir: "0", note: "1 única serie a Tiempo Máximo (RIR 0)." },
+            { name: "Dragon Flag Completas (TEST OFICIAL)", sets: "1", reps: "Max reps (RIR 0)", rir: "0", note: "1 única serie a Máximas repeticiones (RIR 0)." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Aislamiento Total (RIR 0 + Metodologías al fin liberadas)",
+          exercises: [
+            { name: "Extensiones Tras Nuca (Polea)", sets: "3", reps: "8-10", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Pushdown Clásico (Soga)", sets: "3", reps: "8-10", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Extensión Unilateral", sets: "2", reps: "8-10", rir: "0", note: "Fallo absoluto." },
+            { name: "Curl Inclinado con Mancuernas", sets: "3", reps: "8-10", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Curl Predicador", sets: "3", reps: "8-10", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Curl Martillo", sets: "2", reps: "8-10", rir: "0", note: "Fallo absoluto." },
+            { name: "Y-raises (Higiene Articular)", sets: "3", reps: "8-10", rir: "0", note: "RIR 0 técnico." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "30 min", rir: "N/A", note: "30 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    }
+  },
+  12: {
+    Lunes: {
+      title: "LUNES: Día 1 - PUSH (Enfoque Empujes) - Expansión del Umbral Láctico",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (15 Minutos)",
+          exercises: [
+            { name: "Movilidad de activación", sets: "1", reps: "5 min", rir: "N/A", note: "Movilidad articular" },
+            { name: "Práctica de Handstand", sets: "1", reps: "5 min", rir: "N/A", note: "Calentamiento de muñecas, 1 serie de activación core." },
+            { name: "Toe Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Hell Pulls", sets: "5", reps: "3", rir: "N/A", note: "5 series x 3" },
+            { name: "Kick ups to the wall", sets: "1", reps: "10/day", rir: "N/A", note: "10 por día" }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Clusters Densos / RIR 1)",
+          exercises: [
+            { name: "Flexiones en Pica con Pies Elevados (Decline Pike Push-ups)", sets: "3 Cluster", reps: "3 + 15s + 3 + 15s + 2", rir: "1", note: "Series Cluster Densas. RIR 1 al final del cluster." },
+            { name: "Fondos en Paralelas (Dips) Lastrados o Libres", sets: "3 Cluster", reps: "Cluster Denso", rir: "1", note: "Aumenta el volumen de repeticiones dentro de los 15s de pausa, sin llegar al fallo." },
+            { name: "Hollow Body Hold (Suelo)", sets: "3", reps: "Tiempo Sub-máximo", rir: "1", note: "Cortas 1-2 segundos antes de perder la forma, RIR 1." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (Fuerza Pura / RIR 1)",
+          exercises: [
+            { name: "Press en Banca (Máquina)", sets: "3", reps: "4-5", rir: "1", note: "Carga extrema, RIR 1 innegociable." },
+            { name: "Press Militar con Mancuernas", sets: "2", reps: "4-5", rir: "1", note: "RIR 1 innegociable." }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento (RIR 0 + Metodologías)",
+          exercises: [
+            { name: "Aperturas Pec-Dec", sets: "2", reps: "8-10", rir: "0", note: "Última serie: Drop Set al fallo absoluto." },
+            { name: "Elevaciones Laterales", sets: "3", reps: "8-10", rir: "0", note: "Última serie: Drop Set al fallo absoluto." },
+            { name: "Pushdown Clásico (Soga)", sets: "2", reps: "8-10", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "2", reps: "8-10", rir: "0", note: "Última serie: Rest-Pause." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Martes: {
+      title: "MARTES: Día 2 - PULL (Enfoque Tracción) - Expansión del Umbral Láctico",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (10 Minutos)",
+          exercises: [
+            { name: "Práctica de Handstand", sets: "1", reps: "10 min", rir: "N/A", note: "Calentamiento y 5 minutos de intentos sub-máximos." }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Clusters Densos / RIR 1)",
+          exercises: [
+            { name: "Dominadas Pronas (Pull-ups) Lastradas o Libres", sets: "2 Cluster", reps: "2-3 reps + 15s pausa", rir: "1", note: "Buscas exprimir 2 o 3 repeticiones por micro-serie antes de soltarte a descansar los 15s." },
+            { name: "Dominadas Australianas (Remos barra baja) Lastradas", sets: "2 Cluster", reps: "Cluster Denso", rir: "1", note: "Series Cluster Densas." },
+            { name: "Dragon Flag a Una Pierna (Volumen Alto)", sets: "3", reps: "6-8", rir: "1", note: "Empujas el volumen a una pierna al límite del RIR 1 estricto, soportando el ácido láctico en el core." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (Fuerza Pura / RIR 1)",
+          exercises: [
+            { name: "Remo con Pecho Apoyado (Palancas/Barra T)", sets: "2", reps: "4-5", rir: "1", note: "RIR 1 innegociable." }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (RIR 0 + Metodologías)",
+          exercises: [
+            { name: "Pullover en Polea o Máquina", sets: "2", reps: "8-10", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Facepull", sets: "2", reps: "8-10", rir: "0", note: "Fallo técnico." },
+            { name: "Curl Inclinado con Mancuernas", sets: "2", reps: "8-10", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Curl Martillo", sets: "2", reps: "8-10", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Fuerza de Agarre: Dead Hang (Colgado pasivo en barra)", sets: "2", reps: "Tiempo moderado", rir: "1", note: "Solo para descomprimir." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Miércoles: {
+      title: "MIÉRCOLES: Día 3 - LEGS 1 (Foco Cuádriceps Aislado) - Expansión del Umbral Láctico",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (Híbrido)",
+          exercises: [
+            { name: "Sillón de Cuádriceps (Extensiones)", sets: "3", reps: "8-10", rir: "0", note: "Última serie: Drop Set RIR 0." },
+            { name: "Prensa Inclinada / Sentadilla Hack", sets: "3", reps: "4-5", rir: "1", note: "Motor principal. RIR 1 innegociable." },
+            { name: "Sentadillas Búlgaras en Smith o Mancuernas", sets: "2", reps: "8-10", rir: "1", note: "RIR 1 estricto para proteger la rodilla." },
+            { name: "Aductores", sets: "2", reps: "8-10", rir: "0", note: "Última serie: Rest-Pause al fallo." },
+            { name: "Elevaciones de Talón de Pie", sets: "3", reps: "8-10", rir: "0", note: "Última serie: Drop Set." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Spagat / Pancake)." }
+          ]
+        }
+      ]
+    },
+    Jueves: {
+      title: "JUEVES: Día 4 - TREN SUPERIOR HÍBRIDO - Expansión del Umbral Láctico",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (10 Minutos)",
+          exercises: [
+            { name: "Práctica de Handstand", sets: "1", reps: "10 min", rir: "N/A", note: "Calentamiento y 5 minutos de intentos sub-máximos." }
+          ]
+        },
+        {
+          name: "Bloque 1: Calistenia (Clusters Densos / RIR 1)",
+          exercises: [
+            { name: "Flexiones Estándar (Push-ups) Lastradas", sets: "3 Cluster", reps: "Cluster Denso", rir: "1", note: "Disco en la espalda, agrupando mayor volumen por micro-serie." },
+            { name: "Dominadas Supinas (Chin-ups) Lastradas o Libres", sets: "3 Cluster", reps: "Cluster Denso", rir: "1", note: "Series Cluster Densas." },
+            { name: "L-sit (Isometría)", sets: "3", reps: "Tiempo Sub-máximo", rir: "1", note: "Cortas justo antes del colapso." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Músculos Grandes (Fuerza Pura / RIR 1)",
+          exercises: [
+            { name: "Press Inclinado (Máquina Convergente)", sets: "3", reps: "4-5", rir: "1", note: "RIR 1 innegociable." },
+            { name: "Remo Cable Polea con agarre abierto", sets: "3", reps: "4-5", rir: "1", note: "RIR 1 innegociable." }
+          ]
+        },
+        {
+          name: "Bloque 3: Gimnasio - Aislamiento y Agarre (RIR 0 + Metodologías)",
+          exercises: [
+            { name: "Pájaros en banco (Haz posterior)", sets: "2", reps: "8-10", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Elevaciones Laterales", sets: "2", reps: "8-10", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Extensiones Tras Nuca (Polea)", sets: "2", reps: "8-10", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Curl Scott o Predicador", sets: "2", reps: "8-10", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Fuerza de Agarre: Plate Pinch", sets: "2", reps: "Tiempo tolerable", rir: "1", note: "2 series x tiempo tolerable." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    },
+    Viernes: {
+      title: "VIERNES: Día 5 - LEGS 2 (Foco Isquiosurales y Glúteo) - Expansión del Umbral Láctico",
+      blocks: [
+        {
+          name: "Bloque 0: Activación Articular (5 Minutos)",
+          exercises: [
+            { name: "Rotaciones 90/90, Couch Stretch y Dorsiflexión", sets: "1", reps: "5 min", rir: "N/A", note: "Prohibido el trabajo de Handstand para resetear el SNC." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Tensión Mecánica Pura (Híbrido)",
+          exercises: [
+            { name: "Peso Muerto Rumano (RDL)", sets: "4", reps: "4-5", rir: "1", note: "Sobrecarga de fuerza. RIR 1 innegociable para blindar lumbares." },
+            { name: "Hip Thrust o Glute Bridge", sets: "3", reps: "4-5", rir: "1", note: "RIR 1 innegociable." }
+          ]
+        },
+        {
+          name: "Bloque 2: Gimnasio - Aislamiento y Rehabilitación (RIR 0 + Metodologías)",
+          exercises: [
+            { name: "Curl Femoral (Sentado preferentemente)", sets: "2", reps: "8-10", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Abductores", sets: "2", reps: "8-10", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Elevaciones de Talón Sentado", sets: "3", reps: "8-10", rir: "0", note: "Última serie: Drop Set." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Movilidad Pesada", sets: "1", reps: "20 min", rir: "N/A", note: "20 minutos de Movilidad Pesada (Clase de Flex / Isquiotibiales)." }
+          ]
+        }
+      ]
+    },
+    Sábado: {
+      title: "SÁBADO: Día 6 - BRAZOS (Comodín Analítico) - Expansión del Umbral Láctico",
+      blocks: [
+        {
+          name: "Bloque 0: Neural (10 Minutos)",
+          exercises: [
+            { name: "Práctica de Handstand", sets: "1", reps: "10 min", rir: "N/A", note: "Calentamiento y 5 minutos de intentos sub-máximos." }
+          ]
+        },
+        {
+          name: "Bloque 1: Gimnasio - Aislamiento Total (RIR 0 + Metodologías)",
+          exercises: [
+            { name: "Extensiones Tras Nuca (Polea)", sets: "3", reps: "8-10", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Pushdown Clásico (Soga)", sets: "3", reps: "8-10", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Extensión Unilateral", sets: "2", reps: "8-10", rir: "0", note: "Fallo absoluto." },
+            { name: "Curl Inclinado con Mancuernas", sets: "3", reps: "8-10", rir: "0", note: "Última serie: Rest-Pause." },
+            { name: "Curl Predicador", sets: "3", reps: "8-10", rir: "0", note: "Última serie: Drop Set." },
+            { name: "Curl Martillo", sets: "2", reps: "8-10", rir: "0", note: "Fallo absoluto." },
+            { name: "Y-raises (Higiene Articular)", sets: "3", reps: "8-10", rir: "0", note: "RIR 0 técnico." }
+          ]
+        },
+        {
+          name: "Cierre",
+          exercises: [
+            { name: "Cardio LISS", sets: "1", reps: "30 min", rir: "N/A", note: "30 minutos de Cardio LISS." }
+          ]
+        }
+      ]
+    }
+  }
+};
+
 export const routinesByWeek = {
   // We structure the routines dynamically based on whether it is in Mesocycle 1 (W1-4), Mesocycle 2 (W5-8), Mesocycle 3 Load (W9-11), or Tapering/Peaking (W12)
   getWorkout: (weekNumber, dayName) => {
     const isMeso1 = weekNumber >= 1 && weekNumber <= 4;
     const isMeso2 = weekNumber >= 5 && weekNumber <= 8;
-    const isMeso3 = weekNumber >= 9 && weekNumber <= 11;
-    const isW12 = weekNumber === 12;
+    const isMeso3 = weekNumber >= 9 && weekNumber <= 12;
 
-    const currentWeekObj = macrocycleWeeks.find(w => w.number === weekNumber);
-    const rirVal = currentWeekObj?.rirGeneral ?? 2;
-    const rirAccVal = currentWeekObj?.rirAccessories ?? 2;
-    const isDeload = currentWeekObj?.isDeload ?? false;
-    const isPeaking = currentWeekObj?.isPeaking ?? false;
+    if (isMeso1 && meso1Routines[weekNumber]?.[dayName]) {
+      return meso1Routines[weekNumber][dayName];
+    }
+    if (isMeso2 && meso2Routines[weekNumber]?.[dayName]) {
+      return meso2Routines[weekNumber][dayName];
+    }
+    if (isMeso3 && meso3Routines[weekNumber]?.[dayName]) {
+      return meso3Routines[weekNumber][dayName];
+    }
 
     const getRawWorkout = () => {
       switch (dayName) {
       case "Lunes":
-        if (isMeso1) {
-          return {
-            title: isDeload ? "Push - Descarga 1 (Menstruación)" : weekNumber === 4 ? "Push - Clímax Neural y Estructural" : "Push - Enfoque Empujes",
-            blocks: [
-              {
-                name: "Bloque 1: Calistenia (Fuerza Relativa y Condicionamiento Neural)",
-                exercises: [
-                  { name: "Flexiones en Pica (Pike Push-ups)", sets: isDeload ? "2" : "3", reps: isDeload ? "6 (Inclinadas)" : weekNumber === 4 ? "Max (Obj 5+)" : weekNumber === 2 ? "4" : "3", rir: isDeload ? "3" : weekNumber === 4 ? "0" : weekNumber === 2 ? "1" : "2", note: "Tempo: 3 seg bajando, pausa 1 seg abajo. Elevación escapular máxima." },
-                  { name: "Fondos en Paralelas (Dips)", sets: isDeload ? "2" : "3", reps: isDeload ? "6 (Asistidos en banco)" : weekNumber === 4 ? "Max (Obj 6-8)" : weekNumber === 2 ? "4-5" : "3-4", rir: isDeload ? "3" : weekNumber === 4 ? "0" : weekNumber === 2 ? "1" : "2", note: "Depresión escapular inquebrantable." }
-                ]
-              },
-              {
-                name: "Bloque 2: Gimnasio (Hipertrofia Miofibrilar Pesada - Compuestos)",
-                exercises: [
-                  { name: "Press en Máquina Convergente de Palancas", sets: isDeload ? "1-2" : "3", reps: "8-10", rir: isDeload ? "3" : rirVal, note: "Empuje principal de pecho. Foco en tensión mecánica." },
-                  { name: "Press Militar Libre (Mancuernas)", sets: isDeload ? "1-2" : "3", reps: "8-10", rir: isDeload ? "3" : rirVal, note: "Foco en estabilización para transferencia a calistenia." }
-                ]
-              },
-              {
-                name: "Bloque 3: Gimnasio (Hipertrofia Regional, Estrés Metabólico y Aislamiento)",
-                exercises: [
-                  { name: "Aperturas Pec-Dec", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Aducción pura. Contracción pico máxima." },
-                  { name: "Elevaciones Laterales (Máquina o Mancuernas)", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Abducción del deltoides lateral." },
-                  { name: "Pushdown Clásico (Soga)", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Tríceps: Codo abajo." },
-                  { name: "Rompecráneos en suelo o extensión tras nuca", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Tríceps: Innegociable para salud articular." },
-                  { name: "Rueda Abdominal", sets: isDeload ? "1-2" : "2-3", reps: "12-14", rir: isDeload ? "3" : rirAccVal, note: "Core: Anti-extensión." }
-                ],
-                intensityTechnique: weekNumber === 4 ? "Rest-Pause o DropSet en la última serie" : null
-              }
-            ]
-          };
-        } else if (isMeso2) {
+        if (false) {
           return {
             title: isDeload ? "Push - Descarga 2 (Supercompensación Tisular)" : weekNumber === 8 ? "Push - Clímax Pesado" : "Push - Choque Excéntrico y Estiramiento",
             blocks: [

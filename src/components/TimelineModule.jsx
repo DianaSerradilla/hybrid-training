@@ -6,8 +6,8 @@ import { macrocycleWeeks } from '../data/macrocycleData';
 
 const gymMesoData = {
   1: {
-    title: "Mesociclo 1: Rango Base de Hipertrofia (Semanas 1 a 4)",
-    desc: "Bloque enfocado en establecer la base de volumen e hipertrofia. Las series de los ejercicios principales se trabajan a 8-10 repeticiones con RIR controlado para dominar el patrón biomecánico."
+    title: "Mesociclo 1: Acondicionamiento Neuromuscular y Mielinización (Semanas 1 a 4)",
+    desc: "Bloque enfocado en el acondicionamiento neuromuscular y mielinización. Las series de los ejercicios principales se trabajan a 8-10 repeticiones con RIR controlado para dominar el patrón biomecánico."
   },
   2: {
     title: "Mesociclo 2: Rango de Hipertrofia Pesada (Semanas 5 a 8)",
