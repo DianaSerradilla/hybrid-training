@@ -15,11 +15,18 @@ export default function BodyRecompositionModule() {
   const latestEval = evaluations[evaluations.length - 1];
   const baselineEval = evaluations[0];
   const selectedEval = evaluations[selectedEvalIndex];
-
   // Derived progress calculations
+  const prevEval = evaluations.length > 1 ? evaluations[evaluations.length - 2] : null;
   const fatDiffPct = (latestEval.masses.adiposa.pct - baselineEval.masses.adiposa.pct).toFixed(2);
   const muscleDiffKg = (latestEval.masses.muscular.kg - baselineEval.masses.muscular.kg).toFixed(3);
+  const muscleDiffPrevKg = prevEval ? (latestEval.masses.muscular.kg - prevEval.masses.muscular.kg).toFixed(3) : 0;
   const sum6DiffMm = (latestEval.skinfolds.sum6 - baselineEval.skinfolds.sum6).toFixed(1);
+
+  // Status flags
+  const isMuscleUpBase = Number(muscleDiffKg) >= 0;
+  const isMuscleUpPrev = Number(muscleDiffPrevKg) >= 0;
+  const isFatDown = Number(fatDiffPct) <= 0;
+  const isSum6Down = Number(sum6DiffMm) <= 0;
 
   // Goal progress calculation
   const totalDropNeeded = baselineEval.masses.adiposa.pct - profile.targetBodyFatPct;
@@ -80,8 +87,8 @@ export default function BodyRecompositionModule() {
           </div>
 
           <div className="flex justify-between text-[11px] text-[#9BA8AB] font-mono pt-1">
-            <span>Línea Base: <strong>{baselineEval.masses.adiposa.pct}%</strong> (28/05)</span>
-            <span className="text-[#CCD0CF] font-bold">Actual: {latestEval.masses.adiposa.pct}% (21/07)</span>
+            <span>Línea Base: <strong>{baselineEval.masses.adiposa.pct}%</strong> ({baselineEval.dateDisplay.slice(0, -5)})</span>
+            <span className="text-[#CCD0CF] font-bold">Actual: {latestEval.masses.adiposa.pct}% ({latestEval.dateDisplay.slice(0, -5)})</span>
             <span className="text-emerald-400 font-bold">Objetivo: 20.0%</span>
           </div>
         </div>
@@ -102,10 +109,10 @@ export default function BodyRecompositionModule() {
             <span className="text-2xl font-bold font-outfit text-white">{latestEval.masses.adiposa.pct}%</span>
             <span className="text-xs text-slate-400 font-mono">({latestEval.masses.adiposa.kg} kg)</span>
           </div>
-          <div className="mt-2 flex items-center gap-1.5 text-xs text-emerald-400 font-semibold">
-            <TrendingDown className="w-3.5 h-3.5" />
+          <div className={`mt-2 flex items-center gap-1.5 text-xs font-semibold ${isFatDown ? 'text-emerald-400' : 'text-rose-400'}`}>
+            {isFatDown ? <TrendingDown className="w-3.5 h-3.5" /> : <TrendingUp className="w-3.5 h-3.5" />}
             <span>{fatDiffPct}% acumulado</span>
-            <span className="text-[10px] text-[#4A5C6A] ml-auto font-mono">Medición 3 vs 1</span>
+            <span className="text-[10px] text-[#4A5C6A] ml-auto font-mono">Medición {latestEval.measurementNumber} vs 1</span>
           </div>
         </div>
 
@@ -113,7 +120,7 @@ export default function BodyRecompositionModule() {
         <div className="glass-panel p-4 rounded-xl border border-[#253745] relative overflow-hidden group hover:border-[#4A5C6A] transition-all">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold text-[#9BA8AB] uppercase tracking-wider font-outfit">Masa Muscular</span>
-            <div className="p-2 rounded-lg bg-[#06141B] border border-[#253745] text-emerald-400">
+            <div className={`p-2 rounded-lg bg-[#06141B] border border-[#253745] ${isMuscleUpBase ? 'text-emerald-400' : 'text-rose-400'}`}>
               <Zap className="w-4 h-4" />
             </div>
           </div>
@@ -121,10 +128,12 @@ export default function BodyRecompositionModule() {
             <span className="text-2xl font-bold font-outfit text-white">{latestEval.masses.muscular.kg} kg</span>
             <span className="text-xs text-slate-400 font-mono">({latestEval.masses.muscular.pct}%)</span>
           </div>
-          <div className="mt-2 flex items-center gap-1.5 text-xs text-emerald-400 font-semibold">
-            <TrendingUp className="w-3.5 h-3.5" />
-            <span>+{muscleDiffKg} kg magros</span>
-            <span className="text-[10px] text-emerald-400/80 bg-[#06141B] border border-[#253745] px-1.5 py-0.5 rounded ml-auto">¡Ganancia pura!</span>
+          <div className={`mt-2 flex items-center gap-1.5 text-xs font-semibold ${isMuscleUpBase ? 'text-emerald-400' : 'text-rose-400'}`}>
+            {isMuscleUpBase ? <TrendingUp className="w-3.5 h-3.5" /> : <TrendingDown className="w-3.5 h-3.5" />}
+            <span>{isMuscleUpBase ? `+${muscleDiffKg}` : muscleDiffKg} kg magros</span>
+            <span className="text-[10px] text-[#4A5C6A] ml-auto font-mono">
+              {prevEval ? `(${isMuscleUpPrev ? '+' : ''}${muscleDiffPrevKg} kg vs Med ${prevEval.measurementNumber})` : 'vs Línea Base'}
+            </span>
           </div>
         </div>
 
@@ -140,10 +149,10 @@ export default function BodyRecompositionModule() {
             <span className="text-2xl font-bold font-outfit text-white">{latestEval.skinfolds.sum6} mm</span>
             <span className="text-xs text-slate-400 font-mono">(ISAK 6)</span>
           </div>
-          <div className="mt-2 flex items-center gap-1.5 text-xs text-emerald-400 font-semibold">
-            <TrendingDown className="w-3.5 h-3.5" />
+          <div className={`mt-2 flex items-center gap-1.5 text-xs font-semibold ${isSum6Down ? 'text-emerald-400' : 'text-rose-400'}`}>
+            {isSum6Down ? <TrendingDown className="w-3.5 h-3.5" /> : <TrendingUp className="w-3.5 h-3.5" />}
             <span>{sum6DiffMm} mm reducidos</span>
-            <span className="text-[10px] text-[#4A5C6A] ml-auto font-mono">De 108.5 mm</span>
+            <span className="text-[10px] text-[#4A5C6A] ml-auto font-mono">De {baselineEval.skinfolds.sum6} mm</span>
           </div>
         </div>
 
@@ -162,10 +171,8 @@ export default function BodyRecompositionModule() {
           <div className="mt-2 flex items-center gap-1.5 text-xs text-emerald-400 font-semibold">
             <CheckCircle2 className="w-3.5 h-3.5" />
             <span>Mejora eficiente</span>
-            <span className="text-[10px] text-[#4A5C6A] ml-auto font-mono">De 0.695 a 0.658</span>
           </div>
         </div>
-
       </div>
 
       {/* 3. Evolución Histórica Comparativa entre Mediciones */}
@@ -173,7 +180,7 @@ export default function BodyRecompositionModule() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#253745] pb-4">
           <div>
             <span className="text-[10px] font-bold text-[#9BA8AB] uppercase tracking-widest block font-mono">Comparativa Evolutiva</span>
-            <h3 className="text-lg font-bold font-outfit text-white">Evolución de las 3 Mediciones Antropométricas</h3>
+            <h3 className="text-lg font-bold font-outfit text-white">Evolución de las {evaluations.length} Mediciones Antropométricas</h3>
           </div>
 
           <div className="flex flex-wrap gap-1.5 bg-[#06141B] p-1 rounded-xl border border-[#253745] text-xs">
@@ -208,10 +215,10 @@ export default function BodyRecompositionModule() {
         {activeTab === 'masses' && (
           <div className="space-y-4">
             <p className="text-xs text-slate-300">
-              Fraccionamiento anatómico en 5 masas según el modelo de <strong>D. Kerr (1988)</strong>. Destaca la recomposición con incremento muscular (+0.528 kg total) y descenso de masa grasa (-0.747 kg total).
+              Fraccionamiento anatómico en 5 masas según el modelo de <strong>D. Kerr (1988)</strong>. Destaca la reducción progresiva de masa adiposa (<strong>-{(baselineEval.masses.adiposa.kg - latestEval.masses.adiposa.kg).toFixed(2)} kg total</strong>, bajando del {baselineEval.masses.adiposa.pct}% al {latestEval.masses.adiposa.pct}%) y la recomposición de peso general.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {evaluations.map((ev) => (
                 <div 
                   key={ev.measurementNumber}
@@ -266,7 +273,7 @@ export default function BodyRecompositionModule() {
         {activeTab === 'skinfolds' && (
           <div className="space-y-4">
             <p className="text-xs text-slate-300">
-              Seguimiento de espesor de pliegues cutáneos (mm). Todos los pliegues muestran una tendencia decreciente o de estabilización en zonas clave.
+              Seguimiento de espesor de pliegues cutáneos (mm). Todos los pliegues muestran una clara tendencia decreciente, destacando la fuerte reducción abdominal y general.
             </p>
 
             <div className="overflow-x-auto">
@@ -274,61 +281,46 @@ export default function BodyRecompositionModule() {
                 <thead>
                   <tr className="border-b border-[#253745] text-[#9BA8AB] bg-[#06141B] font-outfit">
                     <th className="p-3">Pliegue (mm)</th>
-                    <th className="p-3">Medición 1 (28/05)</th>
-                    <th className="p-3">Medición 2 (25/06)</th>
-                    <th className="p-3 text-emerald-400">Medición 3 (21/07)</th>
+                    {evaluations.map((ev, idx) => (
+                      <th key={ev.measurementNumber} className={`p-3 ${idx === evaluations.length - 1 ? 'text-emerald-400 font-bold' : ''}`}>
+                        Medición {ev.measurementNumber} ({ev.dateDisplay.slice(0, -5)})
+                      </th>
+                    ))}
                     <th className="p-3 text-right">Variación Total</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-[#253745]/60 text-slate-300 font-mono">
-                  <tr>
-                    <td className="p-3 font-semibold text-white font-sans">Tríceps</td>
-                    <td className="p-3">{baselineEval.skinfolds.triceps} mm</td>
-                    <td className="p-3">{evaluations[1].skinfolds.triceps} mm</td>
-                    <td className="p-3 font-bold text-emerald-400">{latestEval.skinfolds.triceps} mm</td>
-                    <td className="p-3 text-right text-emerald-400 font-bold">-1.5 mm</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 font-semibold text-white font-sans">Subescapular</td>
-                    <td className="p-3">{baselineEval.skinfolds.subescapular} mm</td>
-                    <td className="p-3">{evaluations[1].skinfolds.subescapular} mm</td>
-                    <td className="p-3 font-bold text-emerald-400">{latestEval.skinfolds.subescapular} mm</td>
-                    <td className="p-3 text-right text-emerald-400 font-bold">-2.0 mm</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 font-semibold text-white font-sans">Supraespinal</td>
-                    <td className="p-3">{baselineEval.skinfolds.supraespinal} mm</td>
-                    <td className="p-3">{evaluations[1].skinfolds.supraespinal} mm</td>
-                    <td className="p-3 font-bold text-emerald-400">{latestEval.skinfolds.supraespinal} mm</td>
-                    <td className="p-3 text-right text-emerald-400 font-bold">-0.5 mm</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 font-semibold text-white font-sans">Abdominal</td>
-                    <td className="p-3">{baselineEval.skinfolds.abdominal} mm</td>
-                    <td className="p-3">{evaluations[1].skinfolds.abdominal} mm</td>
-                    <td className="p-3 font-bold text-amber-400">{latestEval.skinfolds.abdominal} mm</td>
-                    <td className="p-3 text-right text-slate-400">0.0 mm</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 font-semibold text-white font-sans">Muslo (Medial)</td>
-                    <td className="p-3">{baselineEval.skinfolds.musloMedial} mm</td>
-                    <td className="p-3">{evaluations[1].skinfolds.musloMedial} mm</td>
-                    <td className="p-3 font-bold text-emerald-400">{latestEval.skinfolds.musloMedial} mm</td>
-                    <td className="p-3 text-right text-emerald-400 font-bold">-2.0 mm</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 font-semibold text-white font-sans">Pantorrilla</td>
-                    <td className="p-3">{baselineEval.skinfolds.pantorrilla} mm</td>
-                    <td className="p-3">{evaluations[1].skinfolds.pantorrilla} mm</td>
-                    <td className="p-3 font-bold text-emerald-400">{latestEval.skinfolds.pantorrilla} mm</td>
-                    <td className="p-3 text-right text-emerald-400 font-bold">-0.5 mm</td>
-                  </tr>
+                  {[
+                    { key: 'triceps', label: 'Tríceps' },
+                    { key: 'subescapular', label: 'Subescapular' },
+                    { key: 'supraespinal', label: 'Supraespinal' },
+                    { key: 'abdominal', label: 'Abdominal' },
+                    { key: 'musloMedial', label: 'Muslo (Medial)' },
+                    { key: 'pantorrilla', label: 'Pantorrilla' },
+                  ].map((sf) => {
+                    const diff = (latestEval.skinfolds[sf.key] - baselineEval.skinfolds[sf.key]).toFixed(1);
+                    return (
+                      <tr key={sf.key}>
+                        <td className="p-3 font-semibold text-white font-sans">{sf.label}</td>
+                        {evaluations.map((ev, idx) => (
+                          <td key={ev.measurementNumber} className={`p-3 ${idx === evaluations.length - 1 ? 'font-bold text-emerald-400' : ''}`}>
+                            {ev.skinfolds[sf.key]} mm
+                          </td>
+                        ))}
+                        <td className={`p-3 text-right font-bold ${diff < 0 ? 'text-emerald-400' : 'text-slate-400'}`}>
+                          {diff < 0 ? `${diff} mm` : `+${diff} mm`}
+                        </td>
+                      </tr>
+                    );
+                  })}
                   <tr className="bg-[#06141B] font-bold">
                     <td className="p-3 text-[#CCD0CF] font-sans">SUMA DE 6 PLIEGUES</td>
-                    <td className="p-3 text-slate-300">{baselineEval.skinfolds.sum6} mm</td>
-                    <td className="p-3 text-slate-300">{evaluations[1].skinfolds.sum6} mm</td>
-                    <td className="p-3 text-emerald-400">{latestEval.skinfolds.sum6} mm</td>
-                    <td className="p-3 text-right text-emerald-400">-6.5 mm</td>
+                    {evaluations.map((ev, idx) => (
+                      <td key={ev.measurementNumber} className={`p-3 ${idx === evaluations.length - 1 ? 'text-emerald-400' : 'text-slate-300'}`}>
+                        {ev.skinfolds.sum6} mm
+                      </td>
+                    ))}
+                    <td className="p-3 text-right text-emerald-400">{sum6DiffMm} mm</td>
                   </tr>
                 </tbody>
               </table>
@@ -340,63 +332,34 @@ export default function BodyRecompositionModule() {
         {activeTab === 'perimeters' && (
           <div className="space-y-4">
             <p className="text-xs text-slate-300">
-              Evolución de perímetros en cm. Se destaca la afinación de la cintura mínima (-1.1 cm) y la meso-esternal (-2.0 cm), junto con la hipertrofia muscular en extremidades.
+              Evolución de perímetros en cm. Se destaca la importante afinación de la cintura mínima (<strong>{(latestEval.perimeters.cinturaMinima - baselineEval.perimeters.cinturaMinima).toFixed(1)} cm</strong>) y la meso-esternal (<strong>{(latestEval.perimeters.toraxMesoesternal - baselineEval.perimeters.toraxMesoesternal).toFixed(1)} cm</strong>).
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 text-xs">
-              <div className="p-3.5 rounded-xl bg-[#06141B] border border-[#253745] space-y-1">
-                <span className="text-[#9BA8AB] font-semibold block">Cintura (mínima)</span>
-                <div className="flex items-baseline justify-between">
-                  <span className="text-xl font-bold font-outfit text-emerald-400">{latestEval.perimeters.cinturaMinima} cm</span>
-                  <span className="text-emerald-400 font-mono font-bold">-1.1 cm</span>
-                </div>
-                <span className="text-[10px] text-[#4A5C6A] block font-mono">Med 1: 73.9 cm → Med 3: 72.8 cm</span>
-              </div>
-
-              <div className="p-3.5 rounded-xl bg-[#06141B] border border-[#253745] space-y-1">
-                <span className="text-[#9BA8AB] font-semibold block">Tórax Mesoesternal</span>
-                <div className="flex items-baseline justify-between">
-                  <span className="text-xl font-bold font-outfit text-emerald-400">{latestEval.perimeters.toraxMesoesternal} cm</span>
-                  <span className="text-emerald-400 font-mono font-bold">-2.0 cm</span>
-                </div>
-                <span className="text-[10px] text-[#4A5C6A] block font-mono">Med 1: 94.4 cm → Med 3: 92.4 cm</span>
-              </div>
-
-              <div className="p-3.5 rounded-xl bg-[#06141B] border border-[#253745] space-y-1">
-                <span className="text-[#9BA8AB] font-semibold block">Brazo Flexionado (Tensión)</span>
-                <div className="flex items-baseline justify-between">
-                  <span className="text-xl font-bold font-outfit text-[#CCD0CF]">{latestEval.perimeters.brazoFlexionado} cm</span>
-                  <span className="text-[#9BA8AB] font-mono font-bold">Excelente tono</span>
-                </div>
-                <span className="text-[10px] text-[#4A5C6A] block font-mono">Med 1: 33.6 cm → Med 3: 33.4 cm</span>
-              </div>
-
-              <div className="p-3.5 rounded-xl bg-[#06141B] border border-[#253745] space-y-1">
-                <span className="text-[#9BA8AB] font-semibold block">Caderas (máxima)</span>
-                <div className="flex items-baseline justify-between">
-                  <span className="text-xl font-bold font-outfit text-white">{latestEval.perimeters.caderasMaxima} cm</span>
-                  <span className="text-slate-400 font-mono">+1.0 cm</span>
-                </div>
-                <span className="text-[10px] text-[#4A5C6A] block font-mono">Med 1: 103.0 cm → Med 3: 104.0 cm</span>
-              </div>
-
-              <div className="p-3.5 rounded-xl bg-[#06141B] border border-[#253745] space-y-1">
-                <span className="text-[#9BA8AB] font-semibold block">Muslo Medial</span>
-                <div className="flex items-baseline justify-between">
-                  <span className="text-xl font-bold font-outfit text-white">{latestEval.perimeters.musloMedial} cm</span>
-                  <span className="text-emerald-400 font-mono font-bold">Estable</span>
-                </div>
-                <span className="text-[10px] text-[#4A5C6A] block font-mono">Med 1: 55.1 cm → Med 3: 55.1 cm</span>
-              </div>
-
-              <div className="p-3.5 rounded-xl bg-[#06141B] border border-[#253745] space-y-1">
-                <span className="text-[#9BA8AB] font-semibold block">Pantorrilla (máxima)</span>
-                <div className="flex items-baseline justify-between">
-                  <span className="text-xl font-bold font-outfit text-[#CCD0CF]">{latestEval.perimeters.pantorrillaMaxima} cm</span>
-                  <span className="text-[#9BA8AB] font-mono font-bold">+0.6 cm</span>
-                </div>
-                <span className="text-[10px] text-[#4A5C6A] block font-mono">Med 1: 38.9 cm → Med 3: 39.5 cm</span>
-              </div>
+              {[
+                { key: 'cinturaMinima', label: 'Cintura (mínima)', unit: 'cm' },
+                { key: 'toraxMesoesternal', label: 'Tórax Mesoesternal', unit: 'cm' },
+                { key: 'brazoFlexionado', label: 'Brazo Flexionado (Tensión)', unit: 'cm' },
+                { key: 'caderasMaxima', label: 'Caderas (máxima)', unit: 'cm' },
+                { key: 'musloMedial', label: 'Muslo Medial', unit: 'cm' },
+                { key: 'pantorrillaMaxima', label: 'Pantorrilla (máxima)', unit: 'cm' },
+              ].map((item) => {
+                const diff = (latestEval.perimeters[item.key] - baselineEval.perimeters[item.key]).toFixed(1);
+                return (
+                  <div key={item.key} className="p-3.5 rounded-xl bg-[#06141B] border border-[#253745] space-y-1">
+                    <span className="text-[#9BA8AB] font-semibold block">{item.label}</span>
+                    <div className="flex items-baseline justify-between">
+                      <span className="text-xl font-bold font-outfit text-emerald-400">{latestEval.perimeters[item.key]} cm</span>
+                      <span className={`font-mono font-bold ${diff < 0 ? 'text-emerald-400' : 'text-slate-300'}`}>
+                        {diff < 0 ? `${diff} cm` : `+${diff} cm`}
+                      </span>
+                    </div>
+                    <span className="text-[10px] text-[#4A5C6A] block font-mono">
+                      Med 1: {baselineEval.perimeters[item.key]} cm → Med {latestEval.measurementNumber}: {latestEval.perimeters[item.key]} cm
+                    </span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         )}

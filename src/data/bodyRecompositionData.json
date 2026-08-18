@@ -212,6 +212,74 @@
         "y": 7.08
       },
       "notes": "¡Recomposición corporal estelar! Ganancia magra de +0.68 kg de masa muscular respecto al mes anterior (30.45 kg totales) mientras la grasa adiposa bajó a 30.15% (20.04 kg). La suma de pliegues disminuyó a 102.0 mm y el índice adiposo/muscular mejoró a 0.658."
+    },
+    {
+      "measurementNumber": 4,
+      "date": "2026-08-18",
+      "dateDisplay": "18/8/2026",
+      "age": 27.46,
+      "basic": {
+        "weightKg": 64.20,
+        "adjustedWeightKg": 69.17,
+        "heightCm": 166.00,
+        "sittingHeightCm": 87.00,
+        "adjustedSittingHeightCm": 89.19
+      },
+      "masses": {
+        "adiposa": { "kg": 19.017, "pct": 29.61, "scoreZ": -0.52, "diffKg": -1.020 },
+        "muscular": { "kg": 29.267, "pct": 45.58, "scoreZ": 1.90, "diffKg": -1.186 },
+        "residual": { "kg": 5.968, "pct": 9.29, "scoreZ": 0.93, "diffKg": 0.078 },
+        "osea": { "kg": 6.691, "pct": 10.44, "scoreZ": 0.07, "diffKg": 0.000 },
+        "piel": { "kg": 3.258, "pct": 5.07, "diffKg": -0.071 },
+        "total": { "kg": 64.200, "pct": 100.00, "scoreZ": 0.53, "diffKg": -2.200 }
+      },
+      "skinfolds": {
+        "triceps": 17.5,
+        "subescapular": 12.5,
+        "supraespinal": 10.5,
+        "abdominal": 17.5,
+        "musloMedial": 21.5,
+        "pantorrilla": 16.5,
+        "sum6": 96.0
+      },
+      "perimeters": {
+        "cabeza": 55.10,
+        "brazoRelajado": 31.80,
+        "brazoFlexionado": 33.20,
+        "antebrazo": 26.50,
+        "toraxMesoesternal": 91.60,
+        "cinturaMinima": 72.20,
+        "caderasMaxima": 102.20,
+        "musloSuperior": 59.90,
+        "musloMedial": 53.80,
+        "pantorrillaMaxima": 39.10
+      },
+      "diameters": {
+        "biacromial": 38.50,
+        "toraxTransverso": 26.20,
+        "toraxAnteroposterior": 19.30,
+        "biIliocrestideo": 25.10,
+        "humeral": 6.40,
+        "femoral": 10.20
+      },
+      "indices": {
+        "waistToHipRatio": 0.706,
+        "muscleToBoneRatio": 4.364,
+        "fatToMuscleRatio": 0.650,
+        "bmi": 23.298,
+        "bsa": 1.716,
+        "bsaOverBm": 267.248,
+        "basalMetabolismKcal": 1388.77,
+        "idealWeightKg": 59.245
+      },
+      "somatotype": {
+        "endo": 4.2,
+        "meso": 6.3,
+        "ecto": 1.8,
+        "x": -2.47,
+        "y": 6.63
+      },
+      "notes": "Cuarta medición: ¡Progreso histórico en recomposición corporal! Reducción de -2.20 kg de peso corporal (64.20 kg) rompiendo por primera vez el umbral del 30% de grasa adiposa (29.61%). Descenso masivo en la suma de 6 pliegues a 96.0 mm (-6.0 mm respecto a la medición anterior y -12.5 mm desde la línea base), destacando la acentuada quema abdominal (17.5 mm vs 22.0 mm) y afinamiento de cintura (72.2 cm). El índice adiposo/muscular optimiza a un récord de 0.650."
     }
   ]
 }
